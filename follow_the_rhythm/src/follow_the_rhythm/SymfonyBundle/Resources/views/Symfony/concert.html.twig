@@ -1,0 +1,36 @@
+{% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}
+
+{% block menuPropreAuBundle %}
+    {# on inclue une portion de vue factorisée dans un autre fichier : #}
+{#{% include "follow_the_rhythmUtilisateurBundle:Accueil:menuActualites.html.twig" %}#}  {#attention erreur il faut changer le nom#}
+    
+{% endblock %}
+
+{% block contenuCentral %}
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="panel panel-default">
+      <!--default panel content-->
+        <div class="panel-heading"><h4>Soumettre un concert</h4></div>
+     
+      <div class="list-group">
+        <div class="list-group-item">
+           
+          <!--AFFICHAGE DU FORMULAIRE-->
+          <form method="post" id=soumettreConcertForm {{form_enctype(formulaireConcert)}}>
+              {{ form_widget(formulaireConcert)}}
+            <input type=submit class="btn btn-primary" onsubmit="return false">
+            <a href="{{path('follow_the_rhythm_accueil')}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+{% endblock %}
+
+

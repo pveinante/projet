@@ -1,0 +1,95 @@
+{% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}
+
+{% block menuPropreAuBundle %}
+    {# on inclue une portion de vue factorisée dans un autre fichier : #}
+{#{% include "follow_the_rhythmUtilisateurBundle:Accueil:menuActualites.html.twig" %}#}  {#attention erreur il faut changer le nom#}
+    
+{% endblock %}
+
+{% block contenuCentral %}
+<body onload="hideV();">
+  <div class="container">
+    <div class="row">
+      <div class="panel panel-default">
+      <!--default panel content-->
+        <div class="panel-heading"><h4>Soumettre une actualité</h4></div>
+     
+      <div class="list-group">
+        <div class="list-group-item">
+           
+          <!--AFFICHAGE DU FORMULAIRE-->
+          <form method="post" id=soumettreActualiteForm name="formSoumettreActu" {{form_enctype(formulaireActualite)}}>
+              {{ form_widget(formulaireActualite)}}
+            <input type=submit class="btn btn-primary" onsubmit="return false" onclick="return confirm('Vous confirmer?');">
+            <input type=button class="btn btn-primary" value="Visualiser" onclick="visualiser();">
+            <a href="{{path('follow_the_rhythm_accueil')}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a></br>
+            </br>
+            <p></p><a href="{{path('follow_the_rhythm_concert')}}"><button class="btn btn-primary">Soumettre un concert</button></a></p>
+            <p></p><a href="{{path('follow_the_rhythm_artiste')}}"><button class="btn btn-primary">Creer un nouvel artiste</button></a></p>
+          </form>
+          
+          <!--VISUALISATION-->
+          <form id=visualForm name=visualForm>
+            <p><label>Visualisation :</label></p>
+            <h2><label id="titreV"></label></h2>
+            <p><label id="artisteV"></label></p>
+            <p><label id="concertV"></label></p>
+            <p><label id="descriptionV"></label></p>
+            <p><label id="dateVs"></label></p>
+            <button type="button" class="btn btn-primary">♥ Coup de cœur</button> 0 Coups de cœurs 
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+<script>
+  //function show() {
+  //  document.getElementById("soumettreActualiteForm").style.display="block";
+  //}
+  //  
+  //function hide() {
+  //  document.getElementById("soumettreActualiteForm").style.display="none";
+  //}
+  
+
+  function visualiser(){
+    document.getElementById("visualForm").style.display="block";
+    var titrev = document.formSoumettreActu.elements[0].value;
+    var artistev = document.formSoumettreActu.elements[1].value;
+    var concertv = document.formSoumettreActu.elements[2].value;
+    var descriptionv = document.formSoumettreActu.elements[3].value;
+    var dateV = getDate();
+    document.getElementById("titreV").innerHTML=titrev;
+    (artistev!="")? document.getElementById("artisteV").innerHTML="Artiste concerné : " + artistev : document.getElementById("artisteV").innerHTML="Pas d'artiste concerné";
+    (concertv!="")? document.getElementById("concertV").innerHTML="Concert concerné : " + concertv : document.getElementById("concertV").innerHTML="Pas de concert lié";
+    document.getElementById("descriptionV").innerHTML=descriptionv;
+    document.getElementById("dateVs").innerHTML="Date : " + dateV;
+  }
+  
+  function hideV() {
+    document.getElementById("visualForm").style.display="none";
+  }
+  
+  function getDate(){
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    
+    var yyyy = today.getFullYear();
+    if(dd<10){
+        dd='0'+dd;
+    } 
+    if(mm<10){
+        mm='0'+mm;
+    } 
+    var today = dd+'/'+mm+'/'+yyyy;
+    return today;
+  }
+
+</script>
+
+{% endblock %}

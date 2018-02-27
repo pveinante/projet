@@ -1,0 +1,40 @@
+{% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}
+
+{% block menuPropreAuBundle %}
+    {# on inclue une portion de vue factorisée dans un autre fichier : #}
+
+{% endblock %}
+
+{% block contenuCentral %}
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="panel panel-default">
+      <!--default panel content-->
+        <div class="panel-heading"><h1>{{utilisateur.pseudo}}</h1></div>
+     
+        <div class="list-group">
+            <div class="list-group-item">
+            <p align="center"><img src="{{ asset('upload/images/Stickman.png') }}" /></p>
+               <p><button class="btn btn-primary" onclick="isNotConnected();">Ajouter</button></p>
+               <p><label><h1>Artistes suivis</h1></label></p>
+                    {% for artisteCourant in tabArtiste %}
+                      <from></from>
+                      <p class="list-group-item"><h2><label>
+                           <a href="{{path('follow_the_rhythm_pageArtiste',{'id':artisteCourant.id})}}" ><label>{{artisteCourant.nomDeScene}}</label></a>
+                      </p>
+                    {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    function isNotConnected(){
+    alert("Il faut être connecté pour accéder à cette fonctionnalité");
+  }
+    
+</script>
+</body>
+{% endblock %}

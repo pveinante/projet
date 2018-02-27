@@ -1,0 +1,38 @@
+{% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}
+
+{% block menuPropreAuBundle %}
+    {# on inclue une portion de vue factorisée dans un autre fichier : #}
+{% endblock %}
+
+{% block contenuCentral %}
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="panel panel-default">
+      <!--default panel content-->
+        <div class="panel-heading"><b><h3>{{concert.nom}}</h3></b></div>
+     
+        <div class="list-group">
+            
+            <div class="list-group-item">
+                <h3>Lieu</h3>
+                {{concert.lieu}}
+            </div>
+            <div class="list-group-item">
+                <h3>Description</h3>
+                {{concert.description}}
+            </div>
+            <div class="list-group-item">
+                <h3>Artiste participant</h3>
+            
+                {% for artisteCourant in artiste %}
+                   <p> <label> <a href="{{path('follow_the_rhythm_pageArtiste',{'id':artisteCourant.id})}}" >{{artisteCourant.nomDeScene}}</a></label></p>
+                {% endfor %}
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+{% endblock %}

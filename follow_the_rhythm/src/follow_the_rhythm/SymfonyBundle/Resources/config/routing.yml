@@ -1,0 +1,35 @@
+follow_the_rhythm_accueil:
+    path:     /accueil
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:index }
+
+follow_the_rhythm_artiste:
+    path:   /artiste
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:artiste }
+    
+follow_the_rhythm_concert:
+    path:   /concert
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:concert }
+
+follow_the_rhythm_contacts:
+    path:   /contacts
+    defaults: {_controller: follow_the_rhythmSymfonyBundle:Symfony:contacts }
+  
+follow_the_rhythm_credits:
+    path:   /credits
+    defaults: {_controller: follow_the_rhythmSymfonyBundle:Symfony:credits }
+    
+follow_the_rhythm_soumettreActualite:
+    path:   /soumettreActualite
+    defaults: {_controller: follow_the_rhythmSymfonyBundle:Symfony:soumettreActualite }
+
+follow_the_rhythm_pageArtiste:
+    path:   /pageArtiste/{id}
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:pageArtiste }
+    
+follow_the_rhythm_pageUtilisateur:
+    path:   /pageUtilisateur/{id}
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:pageUtilisateur }
+    
+follow_the_rhythm_pageConcert:
+    path:   /pageConcert/{id}
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:pageConcert }

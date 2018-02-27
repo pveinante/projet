@@ -1,0 +1,59 @@
+{% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}
+
+{% block menuPropreAuBundle %}
+    {# on inclue une portion de vue factorisée dans un autre fichier : #}
+{% endblock %}
+
+{% block contenuCentral %}
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="panel panel-default">
+      <!--default panel content-->
+        <div class="panel-heading"><b><h3>{{artiste.nomDeScene}}</h3></b></div>
+     
+        <div class="list-group">
+            <div class="list-group-item">
+            <p align="center"><img src="{{ asset('upload/images/Stickman.png') }}" /></p>
+               <p><button class="btn btn-primary" onclick="isNotConnected();">Suivre</button> {% if artiste.nbFollower > 1 %}{{artiste.nbFollower}} followers {% else %} {{artiste.nbFollower}} follower {% endif %} </p>
+           
+               <p><label><b><h3>Actualités concernant {{artiste.nomDeScene}}</h3></b></label></p>
+        
+                    {% for actualiteCourante in tabActualites %}
+                      <from></from>
+                      <p class="list-group-item"><h2><label>{{actualiteCourante.titre}}</label></h2>
+                    <!-- si pas de concert concerné -->
+                      {% if actualiteCourante.concert is empty %}
+                          <p><label>Pas de concert lié</label></p>
+                      {% else %}
+                          <p><label>Concert lié : <a href="{{path('follow_the_rhythm_pageConcert',{'id':actualiteCourante.concert.id})}}" >{{actualiteCourante.concert.nom}}</a> </label></p>
+                      {% endif %}
+                          <p><label>{{actualiteCourante.description}}</label></p>
+                          <p><label>Date : {{actualiteCourante.dateActualite|date("d/m/Y")}}</label></p>
+                    <!--Si coup(s) de coeur > 1-->
+                      {% if actualiteCourante.nbCoupDeCoeurs > 1 %}
+                          <button type="button" class="btn btn-primary"  onclick="isNotConnected();">♥ Coup de cœur</button> {{actualiteCourante.nbCoupDeCoeurs}} Coups de cœur 
+                      {% else %}
+                          <button type="button" class="btn btn-primary"  onclick="isNotConnected();">♥ Coup de cœur</button> {{actualiteCourante.nbCoupDeCoeurs}} Coup de cœur
+                      {% endif %}   
+                      {% if actualiteCourante.moderateur is empty %}
+                      {% else %}
+                         <!-- <p><label>Soumis par : {#actualiteCourante.moderateur.id#}</label></p> -->
+                      {% endif %}  
+                      
+                        </p>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    function isNotConnected(){
+    alert("Il faut être connecté pour accéder à cette fonctionnalité");
+  }
+    
+</script>
+</body>
+{% endblock %}

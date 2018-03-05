@@ -10,18 +10,19 @@ namespace follow_the_rhythm\SymfonyBundle\Repository;
  */
 class ConcertRepository extends \Doctrine\ORM\EntityRepository
 {
-   /* public function getArtisteDUnConcert($id){
+   public function getConcertArtiste(){
         //On recupère le gestionnaire d'entité
         $gestionnaireEntite=$this->_em;
         
         //On créé la requête
-        $requete=$gestionnaireEntite->createQuery('SELECT a FROM follow_the_rhythmSymfonyBundle:Artiste a JOIN a.concert c where c.id = :id');
+        $requete=$gestionnaireEntite->createQuery('SELECT a,c FROM follow_the_rhythmSymfonyBundle:Artiste a LEFT JOIN a.concert c');
         
         //On définie la valeur de l'identifiant du concert dont on cherche l'artiste
-        $requete->setParameter('id',$id);
         
         $artiste=$requete->getResult();
         //On retourne le résultat de la requête
         return $artiste;
-    }*/
+    }
+    
+
 }

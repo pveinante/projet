@@ -33,3 +33,11 @@ follow_the_rhythm_pageUtilisateur:
 follow_the_rhythm_pageConcert:
     path:   /pageConcert/{id}
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:pageConcert }
+    
+follow_the_rhythm_accueilForum:
+    path:   /accueilForum
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:accueilForum }
+        
+follow_the_rhythm_accueilArtistesUniquement:
+    path:   /accueilArtistesUniquement
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:accueilArtistesUniquement }

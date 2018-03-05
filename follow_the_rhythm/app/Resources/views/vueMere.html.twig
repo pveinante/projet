@@ -18,23 +18,33 @@
         
         {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
         {% endblock %}
       {#fin de la mise en place du code html#}
     </head>
 
-    <body>
+    <body background="{{ asset('upload/images/bg3.jpg') }}" style="background-size: cover;">
         <div class="container">
           <div class="row ">
             {#Titre de la page avec lien vers la page d'accueil#}
-            <div class="jumbotron">
+           <div class="jumbotron">
               {% block header %}
                  <p align="center"><a href ="{{path('follow_the_rhythm_accueil') }}"><img src="{{ asset('upload/images/Follow2.png') }}" /></a></p>
                  <!--<a href="{#path('follow_the_rhythm_accueil') #}"><h1> <FONT COLOR="#9400d3">Follow The Rhythm</FONT></h1></a>
                  <h2>L'actualité Musicale</h2>-->
               {% endblock %}
+          </div>
+          </div>
+        </div>      
+        
+        <div class="container">
+          <div class="row">
+            <div class="btn-group" role="group" data-toggle="buttons">
+              <button type="button" class="btn btn-secondary"><a href="{{path('follow_the_rhythm_accueil')}}"><i class="fa fa-list"></i> Actualités</a></button>
+              <button type="button" class="btn btn-secondary"><a href="{{path('follow_the_rhythm_accueilForum')}}"><i class="	fa fa-wechat"></i> Forum</a></button>
             </div>
           </div>
-        </div>            
+        </div>
         {#fin du code responsable du titre#}
 
         <!--
@@ -96,19 +106,20 @@
         {% block contenuCentral %}
         {% endblock %}
         
+        
        <div class="row">
           <div class="col-sm-12">
             {% block footer %}
             <hr>
-            <small>Tous droits réservés © 2017</small></Br>
-            <small>Ce site est un projet de 2nd année réalisé par des étudiants de l'IUT informatique de Bayonne</small></Br>
+            <small><font color="white">Tous droits réservés © 2017</font></small></Br>
+            <small><font color="white">Ce site est un projet de 2nd année réalisé par des étudiants de l'IUT informatique de Bayonne</font></small></Br>
             <a href="{{path('follow_the_rhythm_contacts')}}">Nous contacter !</a>
             <a href="{{path('follow_the_rhythm_credits')}}">Crédits</a>
             {% endblock %}
           </div>
        </div>
           
-
+      
         {% block javascripts %}
         <script type="text/javascript" src="{{ asset('js/jquery.js')}}"></script>
         <script type="text/javascript" src="{{ asset('js/bootstrap.js')}}"></script>

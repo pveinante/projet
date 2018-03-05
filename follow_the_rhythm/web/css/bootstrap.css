@@ -21,7 +21,9 @@ html {
 }
 body {
   margin: 0;
+  background-size: cover;
 }
+
 article,
 aside,
 details,

@@ -2,6 +2,7 @@
 
 namespace follow_the_rhythm\SymfonyBundle\Entity;
 
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**

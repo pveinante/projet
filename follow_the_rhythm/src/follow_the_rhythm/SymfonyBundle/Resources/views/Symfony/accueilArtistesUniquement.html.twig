@@ -1,40 +1,31 @@
 {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}
 
 {% block menuPropreAuBundle %}
-
 {% endblock %}
 
 {% block contenuCentral %}
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <button type="button" class="btn btn-secondary"><a href="{{path('follow_the_rhythm_accueilArtistesUniquement')}}">Actualites sur les artistes uniquement</a></button>
-      </div>
-    </div>
-  </div>  
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+              <button type="button" class="btn btn-secondary"><a href="{{path('follow_the_rhythm_accueil')}}">Toutes les actualites</a></button>
+            </div>
+        </div>
+    </div>  
 
   <div class="container">
     <div class="row">
       <div class="panel panel-default">
       <!--default panel content-->
-        <div class="panel-heading"><h2><b><span class="glyphicon glyphicon-music"></span> Liste des Actualités</b></h2>
-          <div class = "dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" id="boutonOrdreChrono" data-toggle="dropdown">
-              	Trier par ordre <span class="glyphicon glyphicon-menu-down"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li><a href="">Chronologique</a></li>
-              <li><a href="">Antéchronologique</a></li>
-            </ul>
-          </div>
-     <!--     <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Trier par ordre<span class="caret"></span></button>
+        <div class="panel-heading"><h4>Liste des Actualités</h4>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Trier par ordre
+            <span class="caret"></span></button>
             <ul class="dropdown-menu">
               <li>Chronologique</li>
               <li>Antéchronologique</li>
             </ul>
-          </div>-->
+          </div>
         </div>
      
       <div class="list-group">
@@ -44,22 +35,13 @@
           
       <!--AFFICHAGE DES ACTUALITEES-->
         {% for actualiteCourante in tabActualites %}
-        
+            {% if actualiteCourante.concert is empty %}
           <div class="list-group-item"><h2><label>{{actualiteCourante.titre}}</label></h2>
-        <!-- si pas d'artiste concerné -->
-          {% if actualiteCourante.artiste is empty %}
-              <p><label>Pas d'artiste concerné</label></p>
-          {% else %}
+              
               <p><label>Artiste concerné : <a href="{{path('follow_the_rhythm_pageArtiste',{'id':actualiteCourante.artiste.id})}}" >{{actualiteCourante.artiste.nomDeScene}}</a> </label></p>
-          {% endif %}
-        <!-- si pas de concert concerné -->
-          {% if actualiteCourante.concert is empty %}
-              <p><label>Pas de concert lié</label></p>
-          {% else %}
-              <p><label>Concert lié : <a href="{{path('follow_the_rhythm_pageConcert',{'id':actualiteCourante.concert.id})}}" >{{actualiteCourante.concert.nom}}</a> </label></p>
-              <p><label>Lieu : {{actualiteCourante.concert.lieu}}</label></p>
-          {% endif %}
+              
               <p><label>{{actualiteCourante.description}}</label></p>
+              
               <p><label>Date : {{actualiteCourante.dateActualite|date("d/m/Y")}}</label></p>
         <!--Si coup(s) de coeur > 1-->
           {% if actualiteCourante.nbCoupDeCoeurs > 1 %}
@@ -72,6 +54,7 @@
              <!-- <p><label>Soumis par : {#actualiteCourante.moderateur.id#}</label></p> -->
           {% endif %}  
             </div>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
@@ -81,11 +64,5 @@
   function isNotConnected(){
     alert("Il faut être connecté pour accéder à cette fonctionnalité");
   }
-  
-  /*function afficherArtistesUniquement(){
-    
-  }*/
 </script>
 {% endblock %}
-
-

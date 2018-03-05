@@ -20,4 +20,15 @@ class ActualiteRepository extends \Doctrine\ORM\EntityRepository
         //On retourne le résultat de la requête
         return $requete->getResult();
     }
+    /*
+        public function getActualiteUniquementArtiste(){
+        //On recupère le gestionnaire d'entité
+        $gestionnaireEntite=$this->_em;
+        
+        //On créé la requête
+        $requete=$gestionnaireEntite->createQuery('SELECT a FROM follow_the_rhythmSymfonyBundle:Actualite a WHERE a.concert = NULL');
+        
+        //On retourne le résultat de la requête
+        return $requete->getResult();
+    }*/
 }

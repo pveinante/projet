@@ -19,7 +19,7 @@ class SymfonyController extends Controller
 {
     public function indexAction()
     {
-      //-------------------------------AFFICHER ACTUALITE/ARTISTE---------------------------
+      //-------------------------------AFFICHER ACTUALITE/ARTISTE/CONCERT---------------------------
       //on récupère le gestionnaire d'entité
       $gestionnaireEntite = $this->getDoctrine()->getManager();
       
@@ -34,6 +34,22 @@ class SymfonyController extends Controller
     }
     
     
+    
+    public function accueilArtistesUniquementAction(){
+          //-------------------------------AFFICHER ACTUALITE/ARTISTE UNIQUEMENT---------------------------
+      //on récupère le gestionnaire d'entité
+      $gestionnaireEntite = $this->getDoctrine()->getManager();
+      
+      //on récupère les repositories des entités
+      $repositoryActualite = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Actualite');
+      
+      //On récupère toutes les actualité de la BD
+      $tabActualites = $repositoryActualite->findAll();
+     
+      return $this->render('follow_the_rhythmSymfonyBundle:Symfony:accueilArtistesUniquement.html.twig',
+      array('tabActualites'=>$tabActualites));  
+      
+    }
     
     
     
@@ -92,25 +108,25 @@ class SymfonyController extends Controller
       $repositoryArtiste = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Artiste');
       
       
-      //-------------------------------FORMULAIRE SOUMETTRE CONCERT--------------
-      //création objet Actualite "vide"
+      //-------------------------------FORMULAIRE SOUMETTRE Artiste--------------
+      //création objet Artiste "vide"
       $artiste = new Artiste();
       
       $formulaireArtiste = $this->createForm(new ArtisteType, $artiste); //création du formulaire
         
-      //Récupération des données dans $concert dès que le formulaire est soumis
+      //Récupération des données dans $artiste dès que le formulaire est soumis
       $formulaireArtiste->handleRequest($requeteUtilisateur);
       
       if($formulaireArtiste->isValid()) //Le formulaire a été soumis
       {
-        //On enregistre l'objet $concert dans la BD
+        //On enregistre l'objet $artiste dans la BD
         $artiste->setNbFollower(0);
         $gestionnaireEntite->persist($artiste);
         $gestionnaireEntite->flush();
         return $this->redirect($this->generateUrl('follow_the_rhythm_accueil'));
       }
       
-      //On envoie les données à la vue concert
+      //On envoie les données à la vue artiste
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:artiste.html.twig', 
       array('formulaireArtiste'=>$formulaireArtiste->createView()));
     }
@@ -159,8 +175,12 @@ class SymfonyController extends Controller
             return $this->render('follow_the_rhythmSymfonyBundle:Symfony:contacts.html.twig');
     }
     
-     public function creditsAction(){
+    public function creditsAction(){
             return $this->render('follow_the_rhythmSymfonyBundle:Symfony:credits.html.twig');
+    }
+    
+    public function accueilForumAction(){
+            return $this->render('follow_the_rhythmSymfonyBundle:Symfony:accueilForum.html.twig');
     }
     
     
@@ -208,7 +228,8 @@ class SymfonyController extends Controller
       
       //on récupère le repository de l'entité concert
       $repositoryConcert = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Concert');
-   
+      
+     
       
       //on recupère le concert recherché
       $concert = $repositoryConcert->find($id);

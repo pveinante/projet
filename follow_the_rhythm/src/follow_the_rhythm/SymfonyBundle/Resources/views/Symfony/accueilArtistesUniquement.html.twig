@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
-              <button type="button" class="btn btn-secondary"><a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}">Toutes les actualites</a></button>
+              <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><button type="button" class="btn btn-secondary">Toutes les actualites</button></a>
             </div>
         </div>
     </div>  
@@ -18,14 +18,9 @@
       <div class="panel panel-default">
       <!--default panel content-->
         <div class="panel-heading"><h4>Liste des Actualités</h4>
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Trier par ordre
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-              <li>Chronologique</li>
-              <li>Antéchronologique</li>
-            </ul>
-          </div>
+        Trier les actualités par ordre:
+          <button class="btn btn-secondary" type="button"><a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 2})}}" >Chronologique</a></button>
+          <button class="btn btn-secondary" type="button"><a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 1})}}" >Antéchronologique</a></button>       
         </div>
      
       <div class="list-group">
@@ -35,9 +30,11 @@
           
       <!--AFFICHAGE DES ACTUALITEES-->
         {% for actualiteCourante in tabActualites %}
+        {% if actualiteCourante.artiste is empty %}
+        {% else %}
             {% if actualiteCourante.concert is empty %}
           <div class="list-group-item"><h2><label>{{actualiteCourante.titre}}</label></h2>
-              
+          
               <p><label>Artiste concerné : <a href="{{path('follow_the_rhythm_pageArtiste',{'id':actualiteCourante.artiste.id})}}" >{{actualiteCourante.artiste.nomDeScene}}</a> </label></p>
               
               <p><label>{{actualiteCourante.description}}</label></p>
@@ -55,6 +52,7 @@
           {% endif %}  
             </div>
           {% endif %}
+           {% endif %}
         {% endfor %}
       </div>
     </div>

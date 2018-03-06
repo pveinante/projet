@@ -9,7 +9,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm">
-        <button type="button" class="btn btn-secondary"><a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 1})}}">Actualites sur les artistes uniquement</a></button>
+       <a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 1})}}"><button type="button" class="btn btn-secondary">Actualites sur les artistes uniquement</button></a>
       </div>
     </div>
   </div>  
@@ -18,16 +18,9 @@
     <div class="row">
       <div class="panel panel-default">
         <div class="panel-heading"><h2><b><span class="glyphicon glyphicon-music"></span> Liste des Actualités</b></h2>
-          <div class = "dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button"  data-toggle="dropdown">
-              	Trier par ordre <span class="glyphicon glyphicon-menu-down"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li><a href="#">Chronologique</a></li>
-              <li><a href="#">Antéchronologique</a></li>
-            </ul>
-          </div>
-          
+          Trier les actualités par ordre:
+          <button class="btn btn-secondary" type="button"><a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 2})}}" >Chronologique</a></button>
+          <button class="btn btn-secondary" type="button"><a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}" >Antéchronologique</a></button>          
      <!--     <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Trier par ordre<span class="caret"></span></button>
             <ul class="dropdown-menu">
@@ -59,7 +52,7 @@
               <p><label>Concert lié : <a href="{{path('follow_the_rhythm_pageConcert',{'id':actualiteCourante.concert.id})}}" >{{actualiteCourante.concert.nom}}</a> </label></p>
               <p><label>Lieu : {{actualiteCourante.concert.lieu}}</label></p>
           {% endif %}
-              <p><label>{{actualiteCourante.description}}</label></p>
+              <p align="justify"><label>{{actualiteCourante.description}}</label></p>
               <p><label>Date : {{actualiteCourante.dateActualite|date("d/m/Y")}}</label></p>
         <!--Si coup(s) de coeur > 1-->
           {% if actualiteCourante.nbCoupDeCoeurs > 1 %}
@@ -70,7 +63,7 @@
           {% if actualiteCourante.moderateur is empty %}
           {% else %}
              <!-- <p><label>Soumis par : {#actualiteCourante.moderateur.id#}</label></p> -->
-          {% endif %}  
+          {% endif %}
             </div>
         {% endfor %}
         {#Pagination#}

@@ -54,7 +54,8 @@ class SymfonyController extends Controller
     
     
     
-    public function accueilArtistesUniquementAction($page = 1, $sens = 1){
+    public function accueilArtistesUniquementAction($page = 1, $sens = 1)
+    {
           //-------------------------------AFFICHER ACTUALITE/ARTISTE UNIQUEMENT---------------------------
       //on récupère le gestionnaire d'entité
       $gestionnaireEntite = $this->getDoctrine()->getManager();
@@ -63,10 +64,21 @@ class SymfonyController extends Controller
       
       //on récupère les repositories des entités
       $repositoryActualite = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Actualite');
+      if ($sens==1){
+      $tabActualites = $repositoryActualite->findAllPagineEtTrieDesc($page, $nbActualiteParPage);
+      }
       
-      //On récupère toutes les actualité de la BD
-      $tabActualites = $repositoryActualite->findAll();
-     
+      else if($sens==2){
+      $tabActualites = $repositoryActualite->findAllPagineEtTrieAsc($page, $nbActualiteParPage);      
+      }
+      
+       $pagination = array(
+          'page' => $page,
+          'nbPages' => ceil(count($tabActualites) / $nbActualiteParPage),
+          'nomRoute' => 'follow_the_rhythm_accueilArtistesUniquement',
+          'paramsRoute' => array()
+      );
+      
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:accueilArtistesUniquement.html.twig',
       array('tabActualites'=>$tabActualites));  
       
@@ -144,7 +156,7 @@ class SymfonyController extends Controller
         $artiste->setNbFollower(0);
         $gestionnaireEntite->persist($artiste);
         $gestionnaireEntite->flush();
-        return $this->redirect($this->generateUrl('follow_the_rhythm_accueil',array('page'=>1)));
+        return $this->redirect($this->generateUrl('follow_the_rhythm_accueil',array('page'=>1, 'sens'=>1)));
       }
       
       //On envoie les données à la vue artiste

@@ -244,6 +244,7 @@ th {
   h3 {
     orphans: 3;
     widows: 3;
+    text-align:justify;
   }
   h2,
   h3 {
@@ -6759,3 +6760,4 @@ button.close {
     display: none !important;
   }
 }
+

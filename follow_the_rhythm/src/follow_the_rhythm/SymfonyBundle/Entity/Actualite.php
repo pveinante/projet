@@ -29,8 +29,8 @@ class Actualite
      * @Assert\Length(
      *              min="4",
      *              max="100",
-     *              minMessage= "Le titre dois faire au moins 4 caractères.",
-     *              maxMessage= "Le titre dois faire au plus 100 caractères.")
+     *              minMessage= "Le titre doit faire au moins 4 caractères.",
+     *              maxMessage= "Le titre doit faire au plus 100 caractères.")
      */
     private $titre;
 
@@ -41,8 +41,8 @@ class Actualite
      * @Assert\Length(
      *              min="10",
      *              max="1000",
-     *              minMessage= "Le titre dois faire au moins {{ limit }} caractères.",
-     *              maxMessage= "Le titre dois faire au plus {{ limit }} caractères.")
+     *              minMessage= "La description doit faire au moins {{ limit }} caractères.",
+     *              maxMessage= "La description doit faire au plus {{ limit }} caractères.")
      */
     private $description;
 

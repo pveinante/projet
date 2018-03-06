@@ -20,9 +20,9 @@
           <!--AFFICHAGE DU FORMULAIRE-->
           <form method="post" id=soumettreActualiteForm name="formSoumettreActu" {{form_enctype(formulaireActualite)}}>
               {{ form_widget(formulaireActualite)}}
-            <input type=submit class="btn btn-primary" onsubmit="return false" onclick="return confirm('Vous confirmer?');">
+            <input type=submit class="btn btn-primary" onsubmit="return false" onclick="return confirm('Vous confirmez?');">
             <input type=button class="btn btn-primary" value="Visualiser" onclick="visualiser();">
-            <a href="{{path('follow_the_rhythm_accueil')}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a></br>
+            <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a></br>
             </br>
             <p></p><a href="{{path('follow_the_rhythm_concert')}}"><!--<button class="btn btn-primary">-->Soumettre un nouveau concert<!--</button>--></a></p>
             <p></p><a href="{{path('follow_the_rhythm_artiste')}}"><!--<button class="btn btn-primary">-->Creer un nouvel artiste<!--</button>--></a></p>

@@ -1,5 +1,5 @@
 follow_the_rhythm_accueil:
-    path:     /accueil
+    path:     /accueil/{page}/{sens}
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:index }
 
 follow_the_rhythm_artiste:
@@ -39,5 +39,5 @@ follow_the_rhythm_accueilForum:
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:accueilForum }
         
 follow_the_rhythm_accueilArtistesUniquement:
-    path:   /accueilArtistesUniquement
+    path:   /accueilArtistesUniquement/{page}/{sens}
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:accueilArtistesUniquement }

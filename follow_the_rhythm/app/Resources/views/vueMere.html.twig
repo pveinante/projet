@@ -29,7 +29,7 @@
             {#Titre de la page avec lien vers la page d'accueil#}
            <div class="jumbotron">
               {% block header %}
-                 <p align="center"><a href ="{{path('follow_the_rhythm_accueil') }}"><img src="{{ asset('upload/images/Follow2.png') }}" /></a></p>
+                 <p align="center"><a href ="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1}) }}"><img src="{{ asset('upload/images/Follow2.png') }}" /></a></p>
                  <!--<a href="{#path('follow_the_rhythm_accueil') #}"><h1> <FONT COLOR="#9400d3">Follow The Rhythm</FONT></h1></a>
                  <h2>L'actualité Musicale</h2>-->
               {% endblock %}
@@ -39,10 +39,16 @@
         
         <div class="container">
           <div class="row">
+          <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default"><a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><i class="fa fa-list"></i> Actualités</a></button>
+          <button type="button" class="btn btn-default"><a href="{{path('follow_the_rhythm_accueilForum')}}"><i class="	fa fa-wechat"></i> Forum</a></button>
+        </div>
+            <!--
             <div class="btn-group" role="group" data-toggle="buttons">
-              <button type="button" class="btn btn-secondary"><a href="{{path('follow_the_rhythm_accueil')}}"><i class="fa fa-list"></i> Actualités</a></button>
+              <button type="button" class="btn btn-secondary"><a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><i class="fa fa-list"></i> Actualités</a></button>
               <button type="button" class="btn btn-secondary"><a href="{{path('follow_the_rhythm_accueilForum')}}"><i class="	fa fa-wechat"></i> Forum</a></button>
             </div>
+            -->
           </div>
         </div>
         {#fin du code responsable du titre#}

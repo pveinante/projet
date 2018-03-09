@@ -8,19 +8,12 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-sm">
-       <a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 1})}}"><button type="button" class="btn btn-secondary">Actualites sur les artistes uniquement</button></a>
-      </div>
-    </div>
-  </div>  
-
-  <div class="container">
-    <div class="row">
       <div class="panel panel-default">
-        <div class="panel-heading"><h2><b><span class="glyphicon glyphicon-music"></span> Liste des Actualités</b></h2>
-          Trier les actualités par ordre:
-          <button class="btn btn-secondary" type="button"><a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 2})}}" >Chronologique</a></button>
-          <button class="btn btn-secondary" type="button"><a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}" >Antéchronologique</a></button>          
+        <div class="panel-heading"><h2><b><span class="fa fa-list"></span> Liste des Actualités</b></h2>
+          Options de tri:
+           <a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 1})}}"><button type="button" class="btn btn-secondary">Actualites sur les artistes uniquement</button></a>
+          <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 2})}}" ><button class="btn btn-secondary" type="button">Chronologique</button></a>
+          <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}" ><button class="btn btn-secondary" type="button">Antéchronologique</button></a>          
      <!--     <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Trier par ordre<span class="caret"></span></button>
             <ul class="dropdown-menu">
@@ -34,7 +27,6 @@
 
       <!--Bouton "soumettre actualité"-->
         <div class="list-group-item"><a href="{{path('follow_the_rhythm_soumettreActualite')}}"><button type="button" class="btn btn-primary"> + Soumettre actualité</button></a></div>
-          
       <!--AFFICHAGE DES ACTUALITEES-->
         {% for actualiteCourante in tabActualites %}
         
@@ -52,8 +44,8 @@
               <p><label>Concert lié : <a href="{{path('follow_the_rhythm_pageConcert',{'id':actualiteCourante.concert.id})}}" >{{actualiteCourante.concert.nom}}</a> </label></p>
               <p><label>Lieu : {{actualiteCourante.concert.lieu}}</label></p>
           {% endif %}
-              <p align="justify"><label>{{actualiteCourante.description}}</label></p>
-              <p><label>Date : {{actualiteCourante.dateActualite|date("d/m/Y")}}</label></p>
+          <p align="justify"><label>{{actualiteCourante.description}}</label></p>
+          <p><label>Date : {{actualiteCourante.dateActualite|date("d/m/Y")}}</label></p>
         <!--Si coup(s) de coeur > 1-->
           {% if actualiteCourante.nbCoupDeCoeurs > 1 %}
               <button type="button" class="btn btn-primary"  onclick="isNotConnected();">♥ Coup de cœur</button> {{actualiteCourante.nbCoupDeCoeurs}} Coups de cœur 
@@ -66,7 +58,6 @@
           {% endif %}
             </div>
         {% endfor %}
-        {#Pagination#}
       </div>
     </div>
   </div>
@@ -81,6 +72,8 @@
     
   }*/
 </script>
+{#Pagination#}
+<div align="center"><a href="#"><button class="btn btn-primary"><i class="fa fa-angle-double-up"></i> Haut de page <i class="fa fa-angle-double-up"></i></button></a></div>
 <div align=center>{% include "::pagination.html.twig" %}</div>
 {% endblock %}
 

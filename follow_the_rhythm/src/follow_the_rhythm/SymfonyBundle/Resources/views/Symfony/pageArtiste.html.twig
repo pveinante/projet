@@ -10,18 +10,18 @@
     <div class="row">
       <div class="panel panel-default">
       <!--default panel content-->
-        <div class="panel-heading"><b><h3>{{artiste.nomDeScene}}</h3></b></div>
+        <div class="panel-heading"><b><h2><i class="fa fa-user-circle"></i> {{artiste.nomDeScene}}</h2></b></div>
      
         <div class="list-group">
             <div class="list-group-item">
             <p align="center"><img src="{{ asset('upload/images/Stickman.png') }}" /></p>
                <p><button class="btn btn-primary" onclick="isNotConnected();">Suivre</button> {% if artiste.nbFollower > 1 %}{{artiste.nbFollower}} followers {% else %} {{artiste.nbFollower}} follower {% endif %} </p>
-           
+               <p><h4>Nom complet de l'artiste: {{artiste.nomComplet}}</h4></p>
                <p><label><b><h3>Actualités concernant {{artiste.nomDeScene}}</h3></b></label></p>
         
                     {% for actualiteCourante in tabActualites %}
-                      <from></from>
-                      <p class="list-group-item"><h2><label>{{actualiteCourante.titre}}</label></h2>
+                      
+                      <div class="list-group-item"><h2><label>{{actualiteCourante.titre}}</label></h2>
                     <!-- si pas de concert concerné -->
                       {% if actualiteCourante.concert is empty %}
                           <p><label>Pas de concert lié</label></p>
@@ -41,7 +41,7 @@
                          <!-- <p><label>Soumis par : {#actualiteCourante.moderateur.id#}</label></p> -->
                       {% endif %}  
                       
-                        </p>
+                        </div>
         {% endfor %}
         </div>
       </div>

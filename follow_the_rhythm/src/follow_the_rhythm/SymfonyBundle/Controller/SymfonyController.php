@@ -272,6 +272,24 @@ class SymfonyController extends Controller
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:pageConcert.html.twig',
       array('concert'=>$concert, 'artiste'=>$artiste));
     }
+    
+    //--------------------------------------------------------JSON-----------------------------------------------------------------
+    
+     public function newsAction()
+    {
+      //-------------------------------AFFICHER ACTUALITE/ARTISTE/CONCERT---------------------------
+      //on récupère le gestionnaire d'entité
+      $gestionnaireEntite = $this->getDoctrine()->getManager();
+      
+      //on récupère les repositories des entités
+      $repositoryActualite = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Actualite');
+      
+      //On récupère toutes les actualité de la BD
+      $tabActualites = $repositoryActualite->findAll();
+     
+      return $this->render('follow_the_rhythmSymfonyBundle:Symfony:news.json.twig',
+      array('tabActualites'=>$tabActualites));
+    }
     //--------------------------------------------------------METHODES TEST--------------------------------------------------------
     
     /*public function ajouterAction()

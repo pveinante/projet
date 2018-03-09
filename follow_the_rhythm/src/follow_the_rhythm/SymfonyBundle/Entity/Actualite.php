@@ -40,7 +40,7 @@ class Actualite
      * @ORM\Column(name="description", type="text")
      * @Assert\Length(
      *              min="10",
-     *              max="1000",
+     *              max="2000",
      *              minMessage= "La description doit faire au moins {{ limit }} caractères.",
      *              maxMessage= "La description doit faire au plus {{ limit }} caractères.")
      */

@@ -5,23 +5,16 @@
 
 {% block contenuCentral %}
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-              <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><button type="button" class="btn btn-secondary">Toutes les actualites</button></a>
-            </div>
-        </div>
-    </div>  
-
   <div class="container">
     <div class="row">
       <div class="panel panel-default">
       <!--default panel content-->
-        <div class="panel-heading"><h4>Liste des Actualités</h4>
-        Trier les actualités par ordre:
-          <button class="btn btn-secondary" type="button"><a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 2})}}" >Chronologique</a></button>
-          <button class="btn btn-secondary" type="button"><a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 1})}}" >Antéchronologique</a></button>       
+        <div class="panel-heading"><h2><b><span class="glyphicon glyphicon-music"></span> Liste des Actualités</b></h2>
+        Options de tri:
+          <a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 2})}}" ><button class="btn btn-secondary" type="button">Chronologique</button></a>
+          <a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 1})}}" ><button class="btn btn-secondary" type="button">Antéchronologique</button></a>
         </div>
+
      
       <div class="list-group">
 

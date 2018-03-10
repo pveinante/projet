@@ -1,16 +1,17 @@
 {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}
-
-{% block menuPropreAuBundle %}
-    {# on inclue une portion de vue factorisée dans un autre fichier : #}
-{% include "follow_the_rhythmSymfonyBundle:Symfony:menu.html.twig"%} 
-{% endblock %}
     
 {% block contenuCentral %}
 <div class="container">
     <div class="row">
         <div class="panel panel-default">
-            <div class="panel-heading"><h2><b>Forum</b></h2></div>
-            <h4>Prochainement, le forum de Follow the rhythm</h4></Br>
+            <div class="panel-heading"><h2><b><i class="fa fa-wechat"></i> Forum</b></h2></div>
+            <div class="list-group">
+                <div class="list-group-item">
+                    <div align="justify"> 
+                        <h4>Prochainement, le forum de Follow the rhythm</h4></Br>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

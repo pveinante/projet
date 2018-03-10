@@ -1,65 +1,66 @@
 {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}
 
-{% block menuPropreAuBundle %}
-    {# on inclue une portion de vue factorisée dans un autre fichier : #}
-{% include "follow_the_rhythmSymfonyBundle:Symfony:menu.html.twig"%} {#attention erreur il faut changer le nom#}
-{% endblock %}
-    
 {% block contenuCentral %}
        
-  <div class="container">
-    <div class="row">
-      <div class="panel panel-default">
-        <div class="panel-heading"><h2><b><span class="glyphicon glyphicon-user"></span> Contacts</b></h2> 
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h2><b><span class="glyphicon glyphicon-user"></span> Contacts</b></h2> 
+                </div>
+                <div class="list-group">
+                    <div class="list-group-item">
+                        <div align="justify"> 
+                            <h3><b>Étudiants ayant participés à la réalisation de ce site : </b></h3></Br>
+                            <table style="width:100%">
+                                <tr>
+                                    <td>Photo1</td>
+                                    <td>BAQUE LEO</td>
+                                    <td>lbaque001@iutbayonne.univ-pau.fr</td>
+                                    <td>Semestre 3</td>
+                                </tr>
+                                <tr>
+                                    <td>Photo2</td>
+                                    <td>BELDERRAIN Jeremy</td>
+                                    <td>jeremy.belderrain@laposte.net</td>
+                                    <td>Semestre 3 & 4</td>
+                                </tr>
+                                <tr>
+                                    <td>Photo3</td>
+                                    <td>GONCALVES Anthony</td>
+                                    <td>anthogoncalves1998@gmail.com</td>
+                                    <td>Semestre 4</td>
+                                </tr>
+                                <tr>
+                                    <td>Photo4</td>
+                                    <td>HAMEL Sullivan</td>
+                                    <td>sullivanhamel@gmail.com</td>
+                                    <td>Semestre 3 & 4</td>
+                                </tr>
+                                <tr>
+                                    <td>Photo5</td>
+                                    <td>VEINANTE Paul</td>
+                                    <td>paulopaco@hotmail.fr</td>
+                                    <td>Semestre 3 & 4</td>
+                                </tr>
+                            </table>
+                              
+                            <h3><b>Tuteur - Commanditaire :</b></h3></Br>
+                               
+                            <table style="width:100%">
+                                <tr>
+                                    <td>Photo6</td>
+                                    <td>MARQUESUZAA Christophe</td>
+                                    <td>christophe.marquesuzaa@iutbayonne.univ-pau.fr</td>
+                                    <td>Semestre 3 & 4</td>
+                                </tr>
+                            </table></br>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-         <h3><b>Étudiants ayant participés à la réalisation de ce site : </b></h3></Br>
-        <table style="width:100%">
-          <tr>
-            <td>Photo1</td>
-            <td>BAQUE LEO</td>
-            <td>lbaque001@iutbayonne.univ-pau.fr</td>
-            <td>Semestre 3</td>
-          </tr>
-          <tr>
-            <td>Photo2</td>
-            <td>BELDERRAIN Jeremy</td>
-            <td>jeremy.belderrain@laposte.net</td>
-            <td>Semestre 3 & 4</td>
-          </tr>
-          <tr>
-            <td>Photo3</td>
-            <td>GONCALVES Anthony</td>
-            <td>anthogoncalves1998@gmail.com</td>
-            <td>Semestre 4</td>
-          </tr>
-          <tr>
-            <td>Photo4</td>
-            <td>HAMEL Sullivan</td>
-            <td>sullivanhamel@gmail.com</td>
-            <td>Semestre 3 & 4</td>
-          </tr>
-          <tr>
-            <td>Photo5</td>
-            <td>VEINANTE Paul</td>
-            <td>paulopaco@hotmail.fr</td>
-            <td>Semestre 3 & 4</td>
-          </tr>
-        </table>
-        
-        <h3><b>Tuteur - Commanditaire :</b></h3></Br>
-         
-        <table style="width:100%">
-          <tr>
-            <td>Photo6</td>
-            <td>MARQUESUZAA Christophe</td>
-            <td>christophe.marquesuzaa@iutbayonne.univ-pau.fr</td>
-            <td>Semestre 3 & 4</td>
-          </tr>
-        </table>
-        </div>
-        </div>
-      </div>
     </div>
+    
 {% endblock %}
 
 

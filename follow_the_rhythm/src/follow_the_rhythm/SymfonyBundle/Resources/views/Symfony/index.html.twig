@@ -1,9 +1,5 @@
 {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}
 
-{% block menuPropreAuBundle %}
-
-{% endblock %}
-
 {% block contenuCentral %}
 
   <div class="container">
@@ -26,7 +22,8 @@
       <div class="list-group">
 
       <!--Bouton "soumettre actualité"-->
-        <div class="list-group-item"><a href="{{path('follow_the_rhythm_soumettreActualite')}}"><button type="button" class="btn btn-primary"> + Soumettre actualité</button></a></div>
+        <div class="list-group-item"><a href="{{path('follow_the_rhythm_soumettreActualite')}}"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Soumettre actualité</button></a></div>
+        <div class="list-group-item"><a href="{{path('follow_the_rhythm_modifierSupprimerActualite')}}"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Modifier/Supprimer actualité</button></a></div>
       <!--AFFICHAGE DES ACTUALITEES-->
         {% for actualiteCourante in tabActualites %}
         
@@ -48,9 +45,9 @@
           <p><label>Date : {{actualiteCourante.dateActualite|date("d/m/Y")}}</label></p>
         <!--Si coup(s) de coeur > 1-->
           {% if actualiteCourante.nbCoupDeCoeurs > 1 %}
-              <button type="button" class="btn btn-primary"  onclick="isNotConnected();">♥ Coup de cœur</button> {{actualiteCourante.nbCoupDeCoeurs}} Coups de cœur 
+              <button type="button" class="btn btn-primary"  onclick="isNotConnected();"><span class="glyphicon glyphicon-heart"></span> Coup de cœur</button> {{actualiteCourante.nbCoupDeCoeurs}} Coups de cœur 
           {% else %}
-              <button type="button" class="btn btn-primary"  onclick="isNotConnected();">♥ Coup de cœur</button> {{actualiteCourante.nbCoupDeCoeurs}} Coup de cœur
+              <button type="button" class="btn btn-primary"  onclick="isNotConnected();"><span class="glyphicon glyphicon-heart"></span> Coup de cœur</button> {{actualiteCourante.nbCoupDeCoeurs}} Coup de cœur
           {% endif %}   
           {% if actualiteCourante.moderateur is empty %}
           {% else %}

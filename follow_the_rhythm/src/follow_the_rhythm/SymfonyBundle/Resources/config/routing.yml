@@ -43,6 +43,14 @@ follow_the_rhythm_accueilForum:
 follow_the_rhythm_accueilArtistesUniquement:
     path:   /accueilArtistesUniquement/{page}/{sens}
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:accueilArtistesUniquement }
+    
+follow_the_rhythm_modifierSupprimerActualite:
+    path:   /modifierSupprimerActualite
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:modifierSupprimerActualite }
+    
+follow_the_rhythm_modifierActualite:
+    path:     /modifierActualite/{id}
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:modifierActualite }
 #-----------------------------------------------------------------------------------------------------------------------------------
 #JSON 
 

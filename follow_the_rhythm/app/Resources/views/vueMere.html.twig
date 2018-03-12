@@ -19,24 +19,28 @@
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+            <link rel="stylesheet" href="/follow_the_rhythm/web/css/followTheRhythm.css">
         {% endblock %}
         {#fin de la mise en place du code html#}
     </head>
 
     <body background="{{ asset('upload/images/bg3.jpg') }}" style="background-size: cover;">
-        <div class="container">
-            <div class="row ">
+            <div style="background-size: auto 128px; background-position: center;" class="header col-lg-12 col-md-12 col-sm-12 col-xs-12">
             {#Titre de la page avec lien vers la page d'accueil#}
-                <div class="jumbotron">
                     {% block header %}
-                        <p align="center"><a href ="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1}) }}"><img class=img-responsive src="{{ asset('upload/images/Follow2.png') }}" style=width:20% /></a></p>
+                        <!-- <p align="center"><a href ="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1}) }}"><img class=img-responsive src="{{ asset('upload/images/Follow2.png') }}" style=width:20% /></a></p>
                         <!--<a href="{#path('follow_the_rhythm_accueil') #}"><h1> <FONT COLOR="#9400d3">Follow The Rhythm</FONT></h1></a>
                         <h2>L'actualité Musicale</h2>-->
                     {% endblock %}
-                </div>
+            </div>
+        {#fin du code responsable du titre#}
+        
+        {#Espace entre la banière et le menu #}
+        <div class="row">
+            <div class="col-sm-12">
+                </br>
             </div>
         </div>
-        {#fin du code responsable du titre#}
         
         <div class="container">
             <div class="row">

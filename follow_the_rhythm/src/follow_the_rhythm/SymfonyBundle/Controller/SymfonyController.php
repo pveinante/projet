@@ -166,9 +166,6 @@ class SymfonyController extends Controller
       //on récupère le repository des entités
       $repositoryConcert = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Concert');
       
-      //On récupère tous les concert de la BD ainsi que les Artistes liés
-      $tabConcerts = $repositoryConcert->getConcertArtiste();
-      
       //-------------------------------FORMULAIRE SOUMETTRE CONCERT--------------
       //création objet Actualite "vide"
       $concert = new Concert();
@@ -188,8 +185,7 @@ class SymfonyController extends Controller
       
       //On envoie les données à la vue concert
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:concert.html.twig', 
-      array('tabConcert'=>$tabConcerts,
-            'formulaireConcert'=>$formulaireConcert->createView()));
+      array('formulaireConcert'=>$formulaireConcert->createView()));
    
     }
     

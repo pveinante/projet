@@ -2,6 +2,7 @@
 
 namespace follow_the_rhythm\SymfonyBundle\Entity;
 
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -141,4 +142,46 @@ class Concert
         $this->utilisateur = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+
+    /**
+     * Add artiste
+     *
+     * @param \follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste
+     *
+     * @return Concert
+     */
+    public function addArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste)
+    {
+        $this->artiste[] = $artiste;
+
+        return $this;
+    }
+
+    /**
+     * Remove artiste
+     *
+     * @param \follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste
+     */
+    public function removeArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste)
+    {
+        $this->artiste->removeElement($artiste);
+    }
+
+    /**
+     * Get artiste
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getArtiste()
+    {
+        return $this->artiste;
+    }
+    
+    public function setArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste = null)
+    {
+        $this->artiste = $artiste;
+
+        return $this;
+    }
+    
 }

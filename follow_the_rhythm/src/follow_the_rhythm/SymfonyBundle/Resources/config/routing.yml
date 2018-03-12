@@ -1,5 +1,10 @@
 #HTML
 
+
+follow_the_rhythm_bienvenue:
+    path:     /
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:index }
+    
 follow_the_rhythm_accueil:
     path:     /accueil/{page}/{sens}
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:index }

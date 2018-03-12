@@ -18,7 +18,7 @@ class ConcertRepository extends \Doctrine\ORM\EntityRepository
         $requete=$gestionnaireEntite->createQuery('SELECT a,c FROM follow_the_rhythmSymfonyBundle:Artiste a LEFT JOIN a.concert c');
         
         //On définie la valeur de l'identifiant du concert dont on cherche l'artiste
-        
+    
         $artiste=$requete->getResult();
         //On retourne le résultat de la requête
         return $artiste;

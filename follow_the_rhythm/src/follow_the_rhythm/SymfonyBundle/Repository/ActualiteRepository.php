@@ -56,13 +56,25 @@ class ActualiteRepository extends \Doctrine\ORM\EntityRepository
                 'La valeur de l\'argument $nbMaxParPage est incorrecte (valeur : ' . $nbMaxParPage . ').'
             );
         }
+      
+      /*   
+         $gestionnaireEntite=$this->_em;
+        //On créé la requête
+        $requete=$gestionnaireEntite->createQuery('SELECT ar,ac FROM follow_the_rhythmSymfonyBundle:Artiste ar LEFT JOIN ar.actualite ac');
+        
+        //On définie la valeur de l'identifiant du concert dont on cherche l'artiste
     
-        $qb = $this->createQueryBuilder('a')
+        $query=$requete->getResult();
+        //On retourne le résultat de la requête
+        
+    */
+         $qb = $this->createQueryBuilder('a')
             ->where('CURRENT_DATE()+1 >= a.dateActualite')
             ->orderBy('a.dateActualite', 'DESC');
         
         $query = $qb->getQuery();
 
+        
         $premierResultat = ($page - 1) * $nbMaxParPage;
         $query->setFirstResult($premierResultat)->setMaxResults($nbMaxParPage);
         $paginator = new Paginator($query);
@@ -91,7 +103,15 @@ class ActualiteRepository extends \Doctrine\ORM\EntityRepository
                 'La valeur de l\'argument $nbMaxParPage est incorrecte (valeur : ' . $nbMaxParPage . ').'
             );
         }
+        /*
+         $gestionnaireEntite=$this->_em;
+        //On créé la requête
+        $requete=$gestionnaireEntite->createQuery('SELECT ar,ac FROM follow_the_rhythmSymfonyBundle:Artiste ar LEFT JOIN ar.actualite ac');
+        
+        //On définie la valeur de l'identifiant du concert dont on cherche l'artiste
     
+        $query=$requete->getResult();
+    */
         $qb = $this->createQueryBuilder('a')
             ->where('CURRENT_DATE()+1 >= a.dateActualite')
             ->orderBy('a.dateActualite', 'ASC');

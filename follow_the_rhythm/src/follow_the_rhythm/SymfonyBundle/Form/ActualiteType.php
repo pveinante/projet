@@ -16,13 +16,20 @@ class ActualiteType extends AbstractType
     {
         $builder
         ->add('titre','text')
-        ->add('artiste','entity', array('required'=>false,'label'=>'Artiste Concerné',
-                                     'class' => 'follow_the_rhythmSymfonyBundle:Artiste',
-                                     'property' => 'nomDeScene'))
+        ->add('artiste','entity', array('required'=>false,'label'=>'Artistes Concerné',
+                                      'class' => 'follow_the_rhythmSymfonyBundle:Artiste',
+                                      'property' => 'nomDeScene'))
+        ->add('artiste', 'collection', array (
+                                              'type' => new ArtisteType(),
+                                              'allow_add' => true,
+                                              'allow_delete' => true,
+                                              'by_reference' => false,
+                                              'label' => 'Créer Artistes concernés'))
         ->add('concert','entity', array('required'=>false,'label'=>'Concert Concerné',
                                       'class' => 'follow_the_rhythmSymfonyBundle:Concert',
                                       'property' => 'nom'))
         ->add('description','textarea')
+       
         //->add('artiste', new ArtisteType()) //A Voir!! ne peut pas coexister avec ->add('artiste', 'entity'....
         ;
     }

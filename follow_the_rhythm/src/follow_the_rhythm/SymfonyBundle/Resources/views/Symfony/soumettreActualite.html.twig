@@ -1,7 +1,7 @@
 {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}
 
 {% block contenuCentral %}
-<body onload="hideV();">
+<!--<body onload="hideV();">-->
   <div class="container">
     <div class="row">
       <div class="panel panel-default">
@@ -30,7 +30,7 @@
             <p><label id="concertV"></label></p>
             <p><label id="descriptionV"></label></p>
             <p><label id="dateVs"></label></p>
-            <button type="button" class="btn btn-primary">♥ Coup de cœur</button> 0 Coups de cœurs 
+            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Coup de cœur</button> 0 Coups de cœurs 
           </form>
           
         </div>
@@ -38,9 +38,67 @@
     </div>
   </div>
 </div>
-</body>
+<!--</body>-->
 
+{# On charge la bibliothèque jQuery #}
+<script src="{{ asset('js/jquery.js')}}"></script>
+{# Script permettant d'ajouter et supprimer dynamiquement des formulaires artistes #}
 <script>
+jQuery(document).ready(function($){
+
+    $(document).ready(function() {
+        // On récupère la balise <div>qui contient l'attribut « data-prototype » qui nous intéresse.
+        var $codeHTMLFormulaireArtiste = $('div#actualite_artiste');
+        // On ajoute un lien pour ajouter une nouvel artiste
+        var $lienAjoutArtiste = $('<a href="#" id="add_artiste">Ajouter un artiste</a>');
+        $codeHTMLFormulaireArtiste.append($lienAjoutArtiste);
+        // On ajoute un nouveau champ artiste à chaque clic sur le lien d'ajout.
+        $lienAjoutArtiste.click(function(e) {
+            addArtiste($codeHTMLFormulaireArtiste);
+            e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+            return false;
+        });
+        // On définit un compteur unique pour nommer les champs artiste qu'on va ajouter dynamiquement
+        var compteurArtistes = $codeHTMLFormulaireArtiste.find(':input').length;
+        // On ajoute le code html d'un premier formulaire artiste s'il n'en existe pas déjà un (cas d'ajout d'un nouveau livre).
+        if (compteurArtistes == 0) {
+            addArtiste($codeHTMLFormulaireArtiste);
+        } else {
+            // Pour chaque formulaire artiste affiché, on ajoute un lien de suppression
+            $codeHTMLFormulaireArtiste.children('div').each(function() {
+                ajouterLienSuppression($(this));
+            });
+        }
+        // La fonction qui ajoute un formulaire artiste
+        function addArtiste($codeHTMLFormulaireArtiste) {
+            // Dans le contenu de l'attribut « data-prototype », on remplace :
+            // - le texte "__name__label__" qu'il contient par notre label (ici un label vide pour ne pas surcharger le formulaire)
+            // - le texte "__name__" qu'il contient par le numéro du champ
+            var $codeHtmlNouvelArtiste = $($codeHTMLFormulaireArtiste.attr('data-prototype').replace(/__name__label__/g, ' ')
+                                          .replace(/__name__/g, compteurArtistes));
+            // On ajoute au code html un lien pour pouvoir supprimer l'artiste
+            ajouterLienSuppression($codeHtmlNouvelArtiste);
+            // On ajoute le code html qu'on vient de modifier à la fin de la balise <div>
+            $codeHTMLFormulaireArtiste.append($codeHtmlNouvelArtiste);
+            // On incrémente le compteur pour que le prochain ajout se fasse avec un autre numéro
+            compteurArtistes++;
+        }
+        // La fonction qui ajoute un lien de suppression d'un artiste
+        function ajouterLienSuppression($codeHtmlNouvelArtiste) {
+            // Création du lien
+            $lienSuppression = $('<a href="#">Supprimer cet artiste</a>');
+            // Ajout du lien
+            $codeHtmlNouvelArtiste.append($lienSuppression);
+            // Ajout du listener sur le clic du lien
+            $lienSuppression.click(function(e) {
+                $codeHtmlNouvelArtiste.remove();
+                e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+                return false;
+            });
+        }
+    });
+});
+
   //function show() {
   //  document.getElementById("soumettreActualiteForm").style.display="block";
   //}
@@ -50,7 +108,7 @@
   //}
   
 
-  function visualiser(){
+ /* function visualiser(){
     document.getElementById("visualForm").style.display="block";
     var titrev = document.formSoumettreActu.elements[0].value;
     var artistev = document.formSoumettreActu.elements[1].value;
@@ -82,7 +140,7 @@
     } 
     var today = dd+'/'+mm+'/'+yyyy;
     return today;
-  }
+  }*/
 
 </script>
 

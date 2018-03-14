@@ -62,9 +62,9 @@ class Actualite
 
    /**
      *
-     * @ORM\ManyToOne(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste")
-     * @ORM\JoinColumn(name="artiste_id", referencedColumnName="id")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste",mappedBy="actualite")
+     * @ORM\JoinTable(name="actualite_artistes"),
+     * @ORM\JoinColumn=(nullable=true);
      */
     private $artiste;
 

@@ -27,8 +27,16 @@
         {% else %}
             {% if actualiteCourante.concert is empty %}
           <div class="list-group-item"><h2><label>{{actualiteCourante.titre}}</label></h2>
-          
-              <p><label>Artiste concerné : <a href="{{path('follow_the_rhythm_pageArtiste',{'id':actualiteCourante.artiste.id})}}" >{{actualiteCourante.artiste.nomDeScene}}</a> </label></p>
+           <p><label>
+            {% if actualiteCourante.artiste|length > 1 %}
+          Artistes concernés:
+          {% else %}
+          Artiste concerné:
+          {% endif %}   
+            {% for list in actualiteCourante.artiste %}
+             <a href="{{path('follow_the_rhythm_pageArtiste',{'id':list.id})}}">{{list.nomDeScene}}</a>{% if not loop.last %},{% endif %}
+          {% endfor %}
+          </p></label>
               
               <p><label>{{actualiteCourante.description}}</label></p>
               

@@ -7,7 +7,7 @@
       <div class="panel panel-default">
         <div class="panel-heading"><h2><b><span class="fa fa-list"></span> Liste des Actualités</b></h2>
           Options de tri:
-          <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><button type="button" class="btn btn-secondary">Toutes les actualités</button></a>
+          <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><button type="button" class="btn btn-secondary"autofocus>Toutes les actualités</button></a>
           <a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 1})}}"><button type="button" class="btn btn-secondary">Actualites sur les artistes uniquement</button></a>
           <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 2})}}" title="De la plus ancienne à la plus récente"><button class="btn btn-secondary" type="button">Chronologique</button></a>
           <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}" title="De la plus récente à la plus ancienne"><button class="btn btn-secondary" type="button" autofocus>Antéchronologique</button></a>          
@@ -33,7 +33,16 @@
           {% if actualiteCourante.artiste is empty %}
               <p><label>Pas d'artiste concerné</label></p>
           {% else %}
-              <p><label>Artiste concerné : <a href="{{path('follow_the_rhythm_pageArtiste',{'id':actualiteCourante.artiste.id})}}" >{{actualiteCourante.artiste.nomDeScene}}</a> </label></p>
+          <p><label>
+            {% if actualiteCourante.artiste|length > 1 %}
+          Artistes concernés:
+          {% else %}
+          Artiste concerné:
+          {% endif %}   
+            {% for list in actualiteCourante.artiste %}
+             <a href="{{path('follow_the_rhythm_pageArtiste',{'id':list.id})}}">{{list.nomDeScene}}</a>{% if not loop.last %},{% endif %}
+          {% endfor %}
+          </p></label>
           {% endif %}
         <!-- si pas de concert concerné -->
           {% if actualiteCourante.concert is empty %}

@@ -15,8 +15,8 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c5c07c9afe9c5488386ffe155ee69061e4bc00591ea609a073dce1b3cf333fe5 = $this->env->getExtension("native_profiler");
-        $__internal_c5c07c9afe9c5488386ffe155ee69061e4bc00591ea609a073dce1b3cf333fe5->enter($__internal_c5c07c9afe9c5488386ffe155ee69061e4bc00591ea609a073dce1b3cf333fe5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:news.json.twig"));
+        $__internal_a6aa19e569e4641a75a6bffde28231cfebf493d77aa63d9e8a678d6adbf6d620 = $this->env->getExtension("native_profiler");
+        $__internal_a6aa19e569e4641a75a6bffde28231cfebf493d77aa63d9e8a678d6adbf6d620->enter($__internal_a6aa19e569e4641a75a6bffde28231cfebf493d77aa63d9e8a678d6adbf6d620_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:news.json.twig"));
 
         // line 2
         $context["cpt"] = 0;
@@ -32,16 +32,49 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
             echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "titre", array()), "html", null, true);
             echo "\",";
             if (twig_test_empty($this->getAttribute($context["actualiteCourante"], "artiste", array()))) {
-                echo "\"artiste\":null,";
+                echo "\"artiste\":null";
             } else {
-                echo "\"artiste\":{\"id\":";
-                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["actualiteCourante"], "artiste", array()), "id", array()), "html", null, true);
-                echo ",\"nomDeScene\":\"";
-                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["actualiteCourante"], "artiste", array()), "nomDeScene", array()), "html", null, true);
-                echo "\",\"nomComplet\",\"";
-                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["actualiteCourante"], "artiste", array()), "nomComplet", array()), "html", null, true);
-                echo "\"},";
+                echo "\"artiste\":[";
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["actualiteCourante"], "artiste", array()));
+                $context['loop'] = array(
+                  'parent' => $context['_parent'],
+                  'index0' => 0,
+                  'index'  => 1,
+                  'first'  => true,
+                );
+                if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof Countable)) {
+                    $length = count($context['_seq']);
+                    $context['loop']['revindex0'] = $length - 1;
+                    $context['loop']['revindex'] = $length;
+                    $context['loop']['length'] = $length;
+                    $context['loop']['last'] = 1 === $length;
+                }
+                foreach ($context['_seq'] as $context["_key"] => $context["list"]) {
+                    echo "{\"NomDeScene\":\"";
+                    echo twig_escape_filter($this->env, $this->getAttribute($context["list"], "nomDeScene", array()), "html", null, true);
+                    echo "\",\"nomComplet\":\"";
+                    echo twig_escape_filter($this->env, $this->getAttribute($context["list"], "nomComplet", array()), "html", null, true);
+                    echo "\"";
+                    if ( !$this->getAttribute($context["loop"], "last", array())) {
+                        echo "},";
+                    } else {
+                        echo "}]";
+                    }
+                    ++$context['loop']['index0'];
+                    ++$context['loop']['index'];
+                    $context['loop']['first'] = false;
+                    if (isset($context['loop']['length'])) {
+                        --$context['loop']['revindex0'];
+                        --$context['loop']['revindex'];
+                        $context['loop']['last'] = 0 === $context['loop']['revindex0'];
+                    }
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['list'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
             }
+            echo ",";
             if (twig_test_empty($this->getAttribute($context["actualiteCourante"], "concert", array()))) {
                 echo "\"concert\":null,";
             } else {
@@ -69,7 +102,7 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
         $context = array_intersect_key($context, $_parent) + $_parent;
         echo "]";
         
-        $__internal_c5c07c9afe9c5488386ffe155ee69061e4bc00591ea609a073dce1b3cf333fe5->leave($__internal_c5c07c9afe9c5488386ffe155ee69061e4bc00591ea609a073dce1b3cf333fe5_prof);
+        $__internal_a6aa19e569e4641a75a6bffde28231cfebf493d77aa63d9e8a678d6adbf6d620->leave($__internal_a6aa19e569e4641a75a6bffde28231cfebf493d77aa63d9e8a678d6adbf6d620_prof);
 
     }
 
@@ -90,4 +123,4 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
 }
 /* {# API Liste des actualités+artiste(concerné ou pas)+concert(lié ou pas) #}*/
 /* {% set cpt=0 %}*/
-/* [{% for actualiteCourante in tabActualites %}{% set cpt=cpt+1 %}{"id":{{actualiteCourante.id}},"titre":"{{actualiteCourante.titre}}",{% if actualiteCourante.artiste is empty %}"artiste":null,{% else %}"artiste":{"id":{{actualiteCourante.artiste.id}},"nomDeScene":"{{actualiteCourante.artiste.nomDeScene}}","nomComplet","{{actualiteCourante.artiste.nomComplet}}"},{% endif %}{% if actualiteCourante.concert is empty %}"concert":null,{% else %}"concert":{"id":{{actualiteCourante.concert.id}},"nom":"{{actualiteCourante.concert.nom}},"lieu":"{{actualiteCourante.concert.lieu}}"},{% endif %}"description":"{{actualiteCourante.description}}","date":"{{actualiteCourante.dateActualite|date("d/m/Y")}}","nbCoupDeCoeurs":{{actualiteCourante.nbCoupDeCoeurs}}}{% if cpt<tabActualites|length %},{% endif %}{% endfor %}]*/
+/* [{% for actualiteCourante in tabActualites %}{% set cpt=cpt+1 %}{"id":{{actualiteCourante.id}},"titre":"{{actualiteCourante.titre}}",{% if actualiteCourante.artiste is empty %}"artiste":null{% else %}"artiste":[{% for list in actualiteCourante.artiste %}{"NomDeScene":"{{list.nomDeScene}}","nomComplet":"{{list.nomComplet}}"{% if not loop.last %}},{% else %}}]{% endif %}{% endfor %}{% endif %},{% if actualiteCourante.concert is empty %}"concert":null,{% else %}"concert":{"id":{{actualiteCourante.concert.id}},"nom":"{{actualiteCourante.concert.nom}},"lieu":"{{actualiteCourante.concert.lieu}}"},{% endif %}"description":"{{actualiteCourante.description}}","date":"{{actualiteCourante.dateActualite|date("d/m/Y")}}","nbCoupDeCoeurs":{{actualiteCourante.nbCoupDeCoeurs}}}{% if cpt<tabActualites|length %},{% endif %}{% endfor %}]*/

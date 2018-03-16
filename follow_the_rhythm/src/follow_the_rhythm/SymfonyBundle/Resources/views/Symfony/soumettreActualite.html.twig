@@ -1,7 +1,8 @@
 {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}
 
 {% block contenuCentral %}
-<!--<body onload="hideV();">-->
+
+<body onload="hideV();">
   <div class="container">
     <div class="row">
       <div class="panel panel-default">
@@ -38,13 +39,13 @@
     </div>
   </div>
 </div>
-<!--</body>-->
+</body>
 
 {# On charge la bibliothèque jQuery #}
-<script src="{{ asset('js/jquery.js')}}"></script>
+<script src="{{ asset('js/jquery-3.3.1.js')}}"></script>
 {# Script permettant d'ajouter et supprimer dynamiquement des formulaires artistes #}
 <script>
-jQuery(document).ready(function($){
+// jQuery(document).ready(function($){
 
     $(document).ready(function() {
         // On récupère la balise <div>qui contient l'attribut « data-prototype » qui nous intéresse.
@@ -97,7 +98,7 @@ jQuery(document).ready(function($){
             });
         }
     });
-});
+//});
 
   //function show() {
   //  document.getElementById("soumettreActualiteForm").style.display="block";
@@ -108,7 +109,7 @@ jQuery(document).ready(function($){
   //}
   
 
- /* function visualiser(){
+ function visualiser(){
     document.getElementById("visualForm").style.display="block";
     var titrev = document.formSoumettreActu.elements[0].value;
     var artistev = document.formSoumettreActu.elements[1].value;
@@ -140,7 +141,7 @@ jQuery(document).ready(function($){
     } 
     var today = dd+'/'+mm+'/'+yyyy;
     return today;
-  }*/
+  }
 
 </script>
 

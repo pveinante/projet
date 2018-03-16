@@ -431,5 +431,9 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/docs/3.3/customize/?id=3162658151e502a01c64205c96ba6aa8"
+  "customizerUrl": "http://getbootstrap.com/docs/3.3/customize/?id=3162658151e502a01c64205c96ba6aa8",
+   "require": {
+        // …
+        "phpunit/phpunit": "5.7.*"
+    }
 }

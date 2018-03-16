@@ -25,6 +25,18 @@ class ActualiteRepository extends \Doctrine\ORM\EntityRepository
         return $requete->getResult();
     }
     
+   /* public function getSearchList ($formvalue) 
+	{
+        $gestionnaireEntite=$this->_em;
+        
+        $requete=$gestionnaireEntite->createQuery('SELECT a FROM follow_the_rhythmSymfonyBundle:Actualite where a. LIKE :formvalue');
+		$qb = $this->createQueryBuilder('a');
+ 
+		$qb->where('a. LIKE :formvalue')
+			  ->orWhere('a.process LIKE :formvalue')
+			  ->setParameter('formvalue', '%'. $formvalue .'%');
+		return $requete->getResult();
+	}*/
     
     
     //fonction copiée/collée sur internet

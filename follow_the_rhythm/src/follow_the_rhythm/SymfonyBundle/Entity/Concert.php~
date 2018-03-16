@@ -35,6 +35,13 @@ class Concert
      * @ORM\Column(name="lieu", type="string", length=255)
      */
     private $lieu;
+    
+    /**
+     * @var \DateTime
+     * 
+     * @ORM\Column(name="dateConcert", type="datetime")
+     */
+    private $dateConcert;
 
     /**
      * @var string
@@ -45,7 +52,7 @@ class Concert
 
    /**
      *
-     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste", inversedBy="concerts")
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste", mappedBy="concert")
      * @ORM\JoinTable(name="concerts_artistes")
      * @ORM\JoinColumn(nullable=false)
      */
@@ -177,11 +184,5 @@ class Concert
         return $this->artiste;
     }
     
-    public function setArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste = null)
-    {
-        $this->artiste = $artiste;
-
-        return $this;
-    }
     
 }

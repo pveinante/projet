@@ -44,14 +44,14 @@ class Artiste
 
     /**
      *
-     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Actualite", inversedBy="artistes")
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Actualite", inversedBy="artiste")
      * @ORM\JoinColumn(nullable=true)
      */
     private $actualite;    
 
    /**
      *
-     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Concert", inversedBy="artistes")
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Concert", inversedBy="artiste")
      * @ORM\JoinColumn(nullable=true)
      */
     private $concert;

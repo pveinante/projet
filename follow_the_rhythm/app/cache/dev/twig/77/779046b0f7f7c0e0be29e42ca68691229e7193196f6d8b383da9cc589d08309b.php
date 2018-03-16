@@ -15,8 +15,8 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a6aa19e569e4641a75a6bffde28231cfebf493d77aa63d9e8a678d6adbf6d620 = $this->env->getExtension("native_profiler");
-        $__internal_a6aa19e569e4641a75a6bffde28231cfebf493d77aa63d9e8a678d6adbf6d620->enter($__internal_a6aa19e569e4641a75a6bffde28231cfebf493d77aa63d9e8a678d6adbf6d620_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:news.json.twig"));
+        $__internal_50c649a63a178ece9f84e6d649ade13945fcacdbb4b98e5b6a162f5c7d8fe146 = $this->env->getExtension("native_profiler");
+        $__internal_50c649a63a178ece9f84e6d649ade13945fcacdbb4b98e5b6a162f5c7d8fe146->enter($__internal_50c649a63a178ece9f84e6d649ade13945fcacdbb4b98e5b6a162f5c7d8fe146_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:news.json.twig"));
 
         // line 2
         $context["cpt"] = 0;
@@ -82,7 +82,7 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["actualiteCourante"], "concert", array()), "id", array()), "html", null, true);
                 echo ",\"nom\":\"";
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["actualiteCourante"], "concert", array()), "nom", array()), "html", null, true);
-                echo ",\"lieu\":\"";
+                echo "\",\"lieu\":\"";
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["actualiteCourante"], "concert", array()), "lieu", array()), "html", null, true);
                 echo "\"},";
             }
@@ -102,7 +102,7 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
         $context = array_intersect_key($context, $_parent) + $_parent;
         echo "]";
         
-        $__internal_a6aa19e569e4641a75a6bffde28231cfebf493d77aa63d9e8a678d6adbf6d620->leave($__internal_a6aa19e569e4641a75a6bffde28231cfebf493d77aa63d9e8a678d6adbf6d620_prof);
+        $__internal_50c649a63a178ece9f84e6d649ade13945fcacdbb4b98e5b6a162f5c7d8fe146->leave($__internal_50c649a63a178ece9f84e6d649ade13945fcacdbb4b98e5b6a162f5c7d8fe146_prof);
 
     }
 
@@ -123,4 +123,4 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
 }
 /* {# API Liste des actualités+artiste(concerné ou pas)+concert(lié ou pas) #}*/
 /* {% set cpt=0 %}*/
-/* [{% for actualiteCourante in tabActualites %}{% set cpt=cpt+1 %}{"id":{{actualiteCourante.id}},"titre":"{{actualiteCourante.titre}}",{% if actualiteCourante.artiste is empty %}"artiste":null{% else %}"artiste":[{% for list in actualiteCourante.artiste %}{"NomDeScene":"{{list.nomDeScene}}","nomComplet":"{{list.nomComplet}}"{% if not loop.last %}},{% else %}}]{% endif %}{% endfor %}{% endif %},{% if actualiteCourante.concert is empty %}"concert":null,{% else %}"concert":{"id":{{actualiteCourante.concert.id}},"nom":"{{actualiteCourante.concert.nom}},"lieu":"{{actualiteCourante.concert.lieu}}"},{% endif %}"description":"{{actualiteCourante.description}}","date":"{{actualiteCourante.dateActualite|date("d/m/Y")}}","nbCoupDeCoeurs":{{actualiteCourante.nbCoupDeCoeurs}}}{% if cpt<tabActualites|length %},{% endif %}{% endfor %}]*/
+/* [{% for actualiteCourante in tabActualites %}{% set cpt=cpt+1 %}{"id":{{actualiteCourante.id}},"titre":"{{actualiteCourante.titre}}",{% if actualiteCourante.artiste is empty %}"artiste":null{% else %}"artiste":[{% for list in actualiteCourante.artiste %}{"NomDeScene":"{{list.nomDeScene}}","nomComplet":"{{list.nomComplet}}"{% if not loop.last %}},{% else %}}]{% endif %}{% endfor %}{% endif %},{% if actualiteCourante.concert is empty %}"concert":null,{% else %}"concert":{"id":{{actualiteCourante.concert.id}},"nom":"{{actualiteCourante.concert.nom}}","lieu":"{{actualiteCourante.concert.lieu}}"},{% endif %}"description":"{{actualiteCourante.description}}","date":"{{actualiteCourante.dateActualite|date("d/m/Y")}}","nbCoupDeCoeurs":{{actualiteCourante.nbCoupDeCoeurs}}}{% if cpt<tabActualites|length %},{% endif %}{% endfor %}]*/

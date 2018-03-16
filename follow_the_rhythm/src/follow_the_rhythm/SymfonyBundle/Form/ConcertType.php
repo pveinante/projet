@@ -5,6 +5,7 @@ namespace follow_the_rhythm\SymfonyBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 
 class ConcertType extends AbstractType
 {
@@ -18,6 +19,7 @@ class ConcertType extends AbstractType
             ->add('nom')
             ->add('lieu')
             ->add('description')
+            ->add('dateConcert', DateType::class)
             ->add('artiste','entity', array('label'=>'Artiste Concerné',
                                      'class' => 'follow_the_rhythmSymfonyBundle:Artiste',
                                      

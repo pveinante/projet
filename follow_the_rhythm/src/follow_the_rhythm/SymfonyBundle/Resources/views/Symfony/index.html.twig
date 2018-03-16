@@ -49,10 +49,11 @@
               <p><label>Pas de concert lié</label></p>
           {% else %}
               <p><label>Concert lié : <a href="{{path('follow_the_rhythm_pageConcert',{'id':actualiteCourante.concert.id})}}" >{{actualiteCourante.concert.nom}}</a> </label></p>
+              <p><label>Date de l'événement : {{actualiteCourante.concert.dateConcert|date("d/m/Y")}}</label></p>
               <p><label>Lieu : {{actualiteCourante.concert.lieu}}</label></p>
           {% endif %}
           <p align="justify"><label>{{actualiteCourante.description}}</label></p>
-          <p><label>Date : {{actualiteCourante.dateActualite|date("d/m/Y")}}</label></p>
+          <p><label>Date de publication: {{actualiteCourante.dateActualite|date("d/m/Y")}}</label></p>
         <!--Si coup(s) de coeur > 1-->
           {% if actualiteCourante.nbCoupDeCoeurs > 1 %}
               <button type="button" class="btn btn-primary"  onclick="isNotConnected();"><span class="glyphicon glyphicon-heart"></span> Coup de cœur</button> {{actualiteCourante.nbCoupDeCoeurs}} Coups de cœur 

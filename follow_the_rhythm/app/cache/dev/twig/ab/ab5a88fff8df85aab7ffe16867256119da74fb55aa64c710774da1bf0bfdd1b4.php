@@ -21,20 +21,20 @@ class __TwigTemplate_2f43b8fe43b5d651f7df2b1ddcac48bd7c4399b993f2f6f19ed20f5b458
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d5b81de1e32d2f5f8560f972df5596e7e1646169481a40726dfa736a14e17646 = $this->env->getExtension("native_profiler");
-        $__internal_d5b81de1e32d2f5f8560f972df5596e7e1646169481a40726dfa736a14e17646->enter($__internal_d5b81de1e32d2f5f8560f972df5596e7e1646169481a40726dfa736a14e17646_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:pageConcert.html.twig"));
+        $__internal_7af752e87d3718c4dd65226c8314b8ee97d011f5c6b8b1ccbeacd1fba1714f02 = $this->env->getExtension("native_profiler");
+        $__internal_7af752e87d3718c4dd65226c8314b8ee97d011f5c6b8b1ccbeacd1fba1714f02->enter($__internal_7af752e87d3718c4dd65226c8314b8ee97d011f5c6b8b1ccbeacd1fba1714f02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:pageConcert.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d5b81de1e32d2f5f8560f972df5596e7e1646169481a40726dfa736a14e17646->leave($__internal_d5b81de1e32d2f5f8560f972df5596e7e1646169481a40726dfa736a14e17646_prof);
+        $__internal_7af752e87d3718c4dd65226c8314b8ee97d011f5c6b8b1ccbeacd1fba1714f02->leave($__internal_7af752e87d3718c4dd65226c8314b8ee97d011f5c6b8b1ccbeacd1fba1714f02_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_88da959d5c751a508a1fc79561194060486bf38358dc353b6c927635fe80f033 = $this->env->getExtension("native_profiler");
-        $__internal_88da959d5c751a508a1fc79561194060486bf38358dc353b6c927635fe80f033->enter($__internal_88da959d5c751a508a1fc79561194060486bf38358dc353b6c927635fe80f033_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_943ec805d3f71053ddaeddfad878467385a43388ca46921b99793bf90ff67f4d = $this->env->getExtension("native_profiler");
+        $__internal_943ec805d3f71053ddaeddfad878467385a43388ca46921b99793bf90ff67f4d->enter($__internal_943ec805d3f71053ddaeddfad878467385a43388ca46921b99793bf90ff67f4d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<body>
@@ -47,7 +47,11 @@ class __TwigTemplate_2f43b8fe43b5d651f7df2b1ddcac48bd7c4399b993f2f6f19ed20f5b458
         // line 10
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["concert"]) ? $context["concert"] : $this->getContext($context, "concert")), "nom", array()), "html", null, true);
         echo "</b></h2> 
-            <input type=\"button\" class=\"btn btn-primary\" value=\"J'y serais\" onclick=\"allerConcert();\">
+            <label>";
+        // line 11
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["concert"]) ? $context["concert"] : $this->getContext($context, "concert")), "dateConcert", array()), "d/m/Y"), "html", null, true);
+        echo "</label>
+            <input type=\"button\" class=\"btn btn-primary\" value=\"J'y serais!\" onclick=\"allerConcert();\">
         </div>
      
        
@@ -55,22 +59,21 @@ class __TwigTemplate_2f43b8fe43b5d651f7df2b1ddcac48bd7c4399b993f2f6f19ed20f5b458
         <div class=\"list-group\">
             
             <div class=\"list-group-item\">
-                <h3>Lieu</h3>
-                ";
-        // line 20
+                <p><label><h3>Lieu</h3></label></p>
+                <p><label>";
+        // line 21
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["concert"]) ? $context["concert"] : $this->getContext($context, "concert")), "lieu", array()), "html", null, true);
-        echo "
+        echo "</label></p>
             </div>
             <div class=\"list-group-item\">
-                <h3>Description</h3>
-                ";
-        // line 24
+                <p><label><h3>Description</h3></label></p>
+                <p><label>";
+        // line 25
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["concert"]) ? $context["concert"] : $this->getContext($context, "concert")), "description", array()), "html", null, true);
-        echo "
+        echo "</label></p>
             </div>
             <div class=\"list-group-item\">
-                <h3>Artiste participant</h3>
-            
+                <p><label><h3>Artiste participant</h3></label></p>
                 ";
         // line 29
         $context['_parent'] = $context;
@@ -102,7 +105,7 @@ function allerConcert(){
 </script>
 ";
         
-        $__internal_88da959d5c751a508a1fc79561194060486bf38358dc353b6c927635fe80f033->leave($__internal_88da959d5c751a508a1fc79561194060486bf38358dc353b6c927635fe80f033_prof);
+        $__internal_943ec805d3f71053ddaeddfad878467385a43388ca46921b99793bf90ff67f4d->leave($__internal_943ec805d3f71053ddaeddfad878467385a43388ca46921b99793bf90ff67f4d_prof);
 
     }
 
@@ -118,7 +121,7 @@ function allerConcert(){
 
     public function getDebugInfo()
     {
-        return array (  91 => 32,  80 => 30,  76 => 29,  68 => 24,  61 => 20,  48 => 10,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  94 => 32,  83 => 30,  79 => 29,  72 => 25,  65 => 21,  52 => 11,  48 => 10,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -131,7 +134,8 @@ function allerConcert(){
 /*       <!--default panel content-->*/
 /*         <div class="panel-heading">*/
 /*             <h2><b>{{concert.nom}}</b></h2> */
-/*             <input type="button" class="btn btn-primary" value="J'y serais" onclick="allerConcert();">*/
+/*             <label>{{concert.dateConcert|date("d/m/Y")}}</label>*/
+/*             <input type="button" class="btn btn-primary" value="J'y serais!" onclick="allerConcert();">*/
 /*         </div>*/
 /*      */
 /*        */
@@ -139,16 +143,15 @@ function allerConcert(){
 /*         <div class="list-group">*/
 /*             */
 /*             <div class="list-group-item">*/
-/*                 <h3>Lieu</h3>*/
-/*                 {{concert.lieu}}*/
+/*                 <p><label><h3>Lieu</h3></label></p>*/
+/*                 <p><label>{{concert.lieu}}</label></p>*/
 /*             </div>*/
 /*             <div class="list-group-item">*/
-/*                 <h3>Description</h3>*/
-/*                 {{concert.description}}*/
+/*                 <p><label><h3>Description</h3></label></p>*/
+/*                 <p><label>{{concert.description}}</label></p>*/
 /*             </div>*/
 /*             <div class="list-group-item">*/
-/*                 <h3>Artiste participant</h3>*/
-/*             */
+/*                 <p><label><h3>Artiste participant</h3></label></p>*/
 /*                 {% for artisteCourant in artiste %}*/
 /*                    <p> <label> <a href="{{path('follow_the_rhythm_pageArtiste',{'id':artisteCourant.id})}}" >{{artisteCourant.nomDeScene}}</a></label></p>*/
 /*                 {% endfor %}*/

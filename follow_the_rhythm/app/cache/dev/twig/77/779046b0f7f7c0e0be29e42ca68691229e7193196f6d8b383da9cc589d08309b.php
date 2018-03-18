@@ -15,12 +15,15 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_50c649a63a178ece9f84e6d649ade13945fcacdbb4b98e5b6a162f5c7d8fe146 = $this->env->getExtension("native_profiler");
-        $__internal_50c649a63a178ece9f84e6d649ade13945fcacdbb4b98e5b6a162f5c7d8fe146->enter($__internal_50c649a63a178ece9f84e6d649ade13945fcacdbb4b98e5b6a162f5c7d8fe146_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:news.json.twig"));
+        $__internal_dd45e9f6966d38bd4a9e7e59728e1bac99424dd42ed8b7af2b3432951c6d8173 = $this->env->getExtension("native_profiler");
+        $__internal_dd45e9f6966d38bd4a9e7e59728e1bac99424dd42ed8b7af2b3432951c6d8173->enter($__internal_dd45e9f6966d38bd4a9e7e59728e1bac99424dd42ed8b7af2b3432951c6d8173_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:news.json.twig"));
 
         // line 2
-        $context["cpt"] = 0;
+        echo "
+";
         // line 3
+        $context["cpt"] = 0;
+        // line 4
         echo "[";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["tabActualites"]) ? $context["tabActualites"] : $this->getContext($context, "tabActualites")));
@@ -102,7 +105,7 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
         $context = array_intersect_key($context, $_parent) + $_parent;
         echo "]";
         
-        $__internal_50c649a63a178ece9f84e6d649ade13945fcacdbb4b98e5b6a162f5c7d8fe146->leave($__internal_50c649a63a178ece9f84e6d649ade13945fcacdbb4b98e5b6a162f5c7d8fe146_prof);
+        $__internal_dd45e9f6966d38bd4a9e7e59728e1bac99424dd42ed8b7af2b3432951c6d8173->leave($__internal_dd45e9f6966d38bd4a9e7e59728e1bac99424dd42ed8b7af2b3432951c6d8173_prof);
 
     }
 
@@ -118,9 +121,10 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
 
     public function getDebugInfo()
     {
-        return array (  24 => 3,  22 => 2,);
+        return array (  27 => 4,  25 => 3,  22 => 2,);
     }
 }
 /* {# API Liste des actualités+artiste(concerné ou pas)+concert(lié ou pas) #}*/
+/* */
 /* {% set cpt=0 %}*/
 /* [{% for actualiteCourante in tabActualites %}{% set cpt=cpt+1 %}{"id":{{actualiteCourante.id}},"titre":"{{actualiteCourante.titre}}",{% if actualiteCourante.artiste is empty %}"artiste":null{% else %}"artiste":[{% for list in actualiteCourante.artiste %}{"NomDeScene":"{{list.nomDeScene}}","nomComplet":"{{list.nomComplet}}"{% if not loop.last %}},{% else %}}]{% endif %}{% endfor %}{% endif %},{% if actualiteCourante.concert is empty %}"concert":null,{% else %}"concert":{"id":{{actualiteCourante.concert.id}},"nom":"{{actualiteCourante.concert.nom}}","lieu":"{{actualiteCourante.concert.lieu}}"},{% endif %}"description":"{{actualiteCourante.description}}","date":"{{actualiteCourante.dateActualite|date("d/m/Y")}}","nbCoupDeCoeurs":{{actualiteCourante.nbCoupDeCoeurs}}}{% if cpt<tabActualites|length %},{% endif %}{% endfor %}]*/

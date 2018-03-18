@@ -1,5 +1,4 @@
 <?php
-
 namespace follow_the_rhythm\SymfonyBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -190,15 +189,15 @@ class SymfonyController extends Controller
     }
     
     public function contactsAction(){
-            return $this->render('follow_the_rhythmSymfonyBundle:Symfony:contacts.html.twig');
+      return $this->render('follow_the_rhythmSymfonyBundle:Symfony:contacts.html.twig');
     }
     
     public function creditsAction(){
-            return $this->render('follow_the_rhythmSymfonyBundle:Symfony:credits.html.twig');
+      return $this->render('follow_the_rhythmSymfonyBundle:Symfony:credits.html.twig');
     }
     
     public function accueilForumAction(){
-            return $this->render('follow_the_rhythmSymfonyBundle:Symfony:accueilForum.html.twig');
+      return $this->render('follow_the_rhythmSymfonyBundle:Symfony:accueilForum.html.twig');
     }
     
     
@@ -262,6 +261,7 @@ class SymfonyController extends Controller
     
      public function newsAction()
     {
+      header("Access-Control-Allow-Origin: *");
       //-------------------------------AFFICHER ACTUALITE/ARTISTE/CONCERT---------------------------
       //on récupère le gestionnaire d'entité
       $gestionnaireEntite = $this->getDoctrine()->getManager();

@@ -56,6 +56,31 @@ follow_the_rhythm_modifierSupprimerActualite:
 follow_the_rhythm_modifierActualite:
     path:     /modifierActualite/{id}
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:modifierActualite }
+    
+follow_the_rhythm_aide:
+    path:     /aide
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:aide }
+
+#-----------------------------------------------------------------------------------------------------------------------------------
+#Forum 
+
+follow_the_rhythm_categorieNews:
+    path:     /forum/news
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:categorieNews }
+
+follow_the_rhythm_categorieEspacePrive:
+    path:     /forum/espacePrive
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:categorieEspacePrive }
+
+follow_the_rhythm_categorieConcert:
+    path:     /forum/concert
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:categorieConcert }
+
+follow_the_rhythm_categoriePromotions:
+    path:     /forum/promotion
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:categoriePromotion }
+    
+
 #-----------------------------------------------------------------------------------------------------------------------------------
 #JSON 
 

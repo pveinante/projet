@@ -5,10 +5,29 @@
     <div class="row">
         <div class="panel panel-default">
             <div class="panel-heading"><h2><b><i class="fa fa-wechat"></i> Forum</b></h2></div>
+            <div class="container">
+	            <div class ="row">
+		            <div class ="col-lg-6">
+			            <h4>Catégorie</h4>
+		            </div>
+		            <div class ="col-lg-1">
+			            <h4 align="center">Sujets</h4>
+		            </div>
+		            <div class ="col-lg-1">
+			            <h4 align="center">Messages</h4> 
+		            </div>
+		            <div class ="col-lg-4">
+			            <h4 align="center">Derniers Messages</h4>
+		            </div>
+	            </div>
+            </div>
             <div class="list-group">
                 <div class="list-group-item">
                     <div align="justify"> 
-                        <h4>Prochainement, le forum de Follow the rhythm</h4></Br>
+                        <a href="{{path('follow_the_rhythm_categorieNews')}}"> News</a></br><hr>
+                        <a href="{{path('follow_the_rhythm_categorieEspacePrive')}}"> Espace privé</a></br><hr>
+                        <a href="{{path('follow_the_rhythm_categorieConcert')}}"> Concerts</a></br><hr>
+                        <a href="{{path('follow_the_rhythm_categoriePromotions')}}"> Promotions</a></br><hr>
                     </div>
                 </div>
             </div>

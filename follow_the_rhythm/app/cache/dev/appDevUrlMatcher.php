@@ -197,6 +197,34 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // follow_the_rhythm_aide
+        if ($pathinfo === '/aide') {
+            return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::aideAction',  '_route' => 'follow_the_rhythm_aide',);
+        }
+
+        if (0 === strpos($pathinfo, '/forum')) {
+            // follow_the_rhythm_categorieNews
+            if ($pathinfo === '/forum/news') {
+                return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::categorieNewsAction',  '_route' => 'follow_the_rhythm_categorieNews',);
+            }
+
+            // follow_the_rhythm_categorieEspacePrive
+            if ($pathinfo === '/forum/espacePrive') {
+                return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::categorieEspacePriveAction',  '_route' => 'follow_the_rhythm_categorieEspacePrive',);
+            }
+
+            // follow_the_rhythm_categorieConcert
+            if ($pathinfo === '/forum/concert') {
+                return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::categorieConcertAction',  '_route' => 'follow_the_rhythm_categorieConcert',);
+            }
+
+            // follow_the_rhythm_categoriePromotions
+            if ($pathinfo === '/forum/promotion') {
+                return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::categoriePromotionAction',  '_route' => 'follow_the_rhythm_categoriePromotions',);
+            }
+
+        }
+
         // follow_the_rhythm_news
         if ($pathinfo === '/API/news') {
             return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::newsAction',  '_route' => 'follow_the_rhythm_news',);

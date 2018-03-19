@@ -200,7 +200,9 @@ class SymfonyController extends Controller
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:accueilForum.html.twig');
     }
     
-    
+    public function aideAction(){
+      return $this->render('follow_the_rhythmSymfonyBundle:Symfony:aide.html.twig');
+    }
     
     public function pageArtisteAction($id){
       //on récupère le gestionnaire d'entité
@@ -255,6 +257,20 @@ class SymfonyController extends Controller
       
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:pageConcert.html.twig',
       array('concert'=>$concert, 'artiste'=>$artiste));
+    }
+    
+    //--------------------------------------------------------FORUM-----------------------------------------------------------------
+     public function categorieNewsAction(){
+      return $this->render('follow_the_rhythmSymfonyBundle:Symfony:categorieNews.html.twig');
+    }
+     public function categorieEspacePriveAction(){
+      return $this->render('follow_the_rhythmSymfonyBundle:Symfony:categorieEspacePrive.html.twig');
+    }
+     public function categorieConcertAction(){
+      return $this->render('follow_the_rhythmSymfonyBundle:Symfony:categorieConcert.html.twig');
+    }
+     public function categoriePromotionAction(){
+      return $this->render('follow_the_rhythmSymfonyBundle:Symfony:categoriePromotion.html.twig');
     }
     
     //--------------------------------------------------------JSON-----------------------------------------------------------------

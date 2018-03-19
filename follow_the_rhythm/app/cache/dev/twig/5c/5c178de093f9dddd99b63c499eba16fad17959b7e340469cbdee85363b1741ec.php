@@ -22,8 +22,8 @@ class __TwigTemplate_5f3a6ba8148f13a0adf66b15fff7f26d35ca77f7100550bf018df9bf425
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a01200d6a743116ff0e93e30065e79bc3bf30260d812040cf36d7bc55f776e2d = $this->env->getExtension("native_profiler");
-        $__internal_a01200d6a743116ff0e93e30065e79bc3bf30260d812040cf36d7bc55f776e2d->enter($__internal_a01200d6a743116ff0e93e30065e79bc3bf30260d812040cf36d7bc55f776e2d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::vueMere.html.twig"));
+        $__internal_1b451ebc1d39b9d29a03fe22e8d24f5794ae6e48341513a901f73d8425fec42b = $this->env->getExtension("native_profiler");
+        $__internal_1b451ebc1d39b9d29a03fe22e8d24f5794ae6e48341513a901f73d8425fec42b->enter($__internal_1b451ebc1d39b9d29a03fe22e8d24f5794ae6e48341513a901f73d8425fec42b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::vueMere.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -90,15 +90,19 @@ class __TwigTemplate_5f3a6ba8148f13a0adf66b15fff7f26d35ca77f7100550bf018df9bf425
         // line 50
         echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_contacts");
         echo "\"> <button type=\"button\" class=\"btn btn-default\"><i class=\"fa fa-address-book\"></i> Nous contacter</button></a>
+                    <a href=\"";
+        // line 51
+        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_aide");
+        echo "\"> <button type=\"button\" class=\"btn btn-default\"><i class=\"fa fa-question-circle\" aria-hidden=\"true\"></i> Aide</button></a>
                 </div>
                     <!--
                     <div class=\"btn-group\" role=\"group\" data-toggle=\"buttons\">
                     <button type=\"button\" class=\"btn btn-secondary\"><a href=\"";
-        // line 54
+        // line 55
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueil", array("page" => 1, "sens" => 1)), "html", null, true);
         echo "\"><i class=\"fa fa-list\"></i> Actualités</a></button>
                     <button type=\"button\" class=\"btn btn-secondary\"><a href=\"";
-        // line 55
+        // line 56
         echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueilForum");
         echo "\"><i class=\"\tfa fa-wechat\"></i> Forum</a></button>
                     </div>
@@ -108,61 +112,61 @@ class __TwigTemplate_5f3a6ba8148f13a0adf66b15fff7f26d35ca77f7100550bf018df9bf425
         </div>
         
         ";
-        // line 62
+        // line 63
         $this->displayBlock('menuPropreAuBundle', $context, $blocks);
-        // line 64
+        // line 65
         echo "        
         <div class=\"row\">
             <div class=\"col-sm-12\">
                 ";
-        // line 67
+        // line 68
         $this->displayBlock('contenuCentral', $context, $blocks);
-        // line 69
+        // line 70
         echo "            </div>
        </div>
         
         <div class=\"row\">
             <div class=\"col-sm-12\">
                 ";
-        // line 75
+        // line 76
         echo "                ";
         $this->displayBlock('footer', $context, $blocks);
-        // line 83
+        // line 84
         echo "            </div>
        </div>
           
       
         ";
-        // line 87
+        // line 88
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 91
+        // line 92
         echo "    </body>
 </html>
 ";
         
-        $__internal_a01200d6a743116ff0e93e30065e79bc3bf30260d812040cf36d7bc55f776e2d->leave($__internal_a01200d6a743116ff0e93e30065e79bc3bf30260d812040cf36d7bc55f776e2d_prof);
+        $__internal_1b451ebc1d39b9d29a03fe22e8d24f5794ae6e48341513a901f73d8425fec42b->leave($__internal_1b451ebc1d39b9d29a03fe22e8d24f5794ae6e48341513a901f73d8425fec42b_prof);
 
     }
 
     // line 14
     public function block_title($context, array $blocks = array())
     {
-        $__internal_a81e2f0976927719ec6ae23b94dff8e02746778c48747306246a121f59b0f7be = $this->env->getExtension("native_profiler");
-        $__internal_a81e2f0976927719ec6ae23b94dff8e02746778c48747306246a121f59b0f7be->enter($__internal_a81e2f0976927719ec6ae23b94dff8e02746778c48747306246a121f59b0f7be_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_f949f77e491af4cd4b54b6997f15d4d73f060a8b4dd006bfc09123f845dd8930 = $this->env->getExtension("native_profiler");
+        $__internal_f949f77e491af4cd4b54b6997f15d4d73f060a8b4dd006bfc09123f845dd8930->enter($__internal_f949f77e491af4cd4b54b6997f15d4d73f060a8b4dd006bfc09123f845dd8930_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         // line 15
         echo "                Follow The Rhythm 
             ";
         
-        $__internal_a81e2f0976927719ec6ae23b94dff8e02746778c48747306246a121f59b0f7be->leave($__internal_a81e2f0976927719ec6ae23b94dff8e02746778c48747306246a121f59b0f7be_prof);
+        $__internal_f949f77e491af4cd4b54b6997f15d4d73f060a8b4dd006bfc09123f845dd8930->leave($__internal_f949f77e491af4cd4b54b6997f15d4d73f060a8b4dd006bfc09123f845dd8930_prof);
 
     }
 
     // line 19
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_d5fdba20efd72e5fae93664fd965e7c188b334ee136b0454dd3936dc353f0862 = $this->env->getExtension("native_profiler");
-        $__internal_d5fdba20efd72e5fae93664fd965e7c188b334ee136b0454dd3936dc353f0862->enter($__internal_d5fdba20efd72e5fae93664fd965e7c188b334ee136b0454dd3936dc353f0862_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_e2d6a4719cf68a925368cb40f67c68702b2e29288f21de3a501b2b867a46639d = $this->env->getExtension("native_profiler");
+        $__internal_e2d6a4719cf68a925368cb40f67c68702b2e29288f21de3a501b2b867a46639d->enter($__internal_e2d6a4719cf68a925368cb40f67c68702b2e29288f21de3a501b2b867a46639d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 20
         echo "            <link rel=\"stylesheet\" href=\"";
@@ -172,15 +176,15 @@ class __TwigTemplate_5f3a6ba8148f13a0adf66b15fff7f26d35ca77f7100550bf018df9bf425
             <link rel=\"stylesheet\" href=\"/follow_the_rhythm/web/css/followTheRhythm.css\">
         ";
         
-        $__internal_d5fdba20efd72e5fae93664fd965e7c188b334ee136b0454dd3936dc353f0862->leave($__internal_d5fdba20efd72e5fae93664fd965e7c188b334ee136b0454dd3936dc353f0862_prof);
+        $__internal_e2d6a4719cf68a925368cb40f67c68702b2e29288f21de3a501b2b867a46639d->leave($__internal_e2d6a4719cf68a925368cb40f67c68702b2e29288f21de3a501b2b867a46639d_prof);
 
     }
 
     // line 30
     public function block_header($context, array $blocks = array())
     {
-        $__internal_728c611520cacccb8c30846f269c2178861834a312da359b836457af48be3a82 = $this->env->getExtension("native_profiler");
-        $__internal_728c611520cacccb8c30846f269c2178861834a312da359b836457af48be3a82->enter($__internal_728c611520cacccb8c30846f269c2178861834a312da359b836457af48be3a82_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
+        $__internal_3207cdedfb5c309788b4b4c94aab33c9fbba9f30542cd54794b97d9cc4c8a69d = $this->env->getExtension("native_profiler");
+        $__internal_3207cdedfb5c309788b4b4c94aab33c9fbba9f30542cd54794b97d9cc4c8a69d->enter($__internal_3207cdedfb5c309788b4b4c94aab33c9fbba9f30542cd54794b97d9cc4c8a69d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "header"));
 
         // line 31
         echo "                        <!-- <p align=\"center\"><a href =\"";
@@ -194,81 +198,81 @@ class __TwigTemplate_5f3a6ba8148f13a0adf66b15fff7f26d35ca77f7100550bf018df9bf425
                         <h2>L'actualité Musicale</h2>-->
                     ";
         
-        $__internal_728c611520cacccb8c30846f269c2178861834a312da359b836457af48be3a82->leave($__internal_728c611520cacccb8c30846f269c2178861834a312da359b836457af48be3a82_prof);
+        $__internal_3207cdedfb5c309788b4b4c94aab33c9fbba9f30542cd54794b97d9cc4c8a69d->leave($__internal_3207cdedfb5c309788b4b4c94aab33c9fbba9f30542cd54794b97d9cc4c8a69d_prof);
 
     }
 
-    // line 62
+    // line 63
     public function block_menuPropreAuBundle($context, array $blocks = array())
     {
-        $__internal_1f619a791e77f06e293892270f7edb835afbb3a8473555a091f1681b977b59fb = $this->env->getExtension("native_profiler");
-        $__internal_1f619a791e77f06e293892270f7edb835afbb3a8473555a091f1681b977b59fb->enter($__internal_1f619a791e77f06e293892270f7edb835afbb3a8473555a091f1681b977b59fb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "menuPropreAuBundle"));
+        $__internal_add5fdd0baff95824a326751c0b1089860be08baccabc67929b3dafb48f7fbf8 = $this->env->getExtension("native_profiler");
+        $__internal_add5fdd0baff95824a326751c0b1089860be08baccabc67929b3dafb48f7fbf8->enter($__internal_add5fdd0baff95824a326751c0b1089860be08baccabc67929b3dafb48f7fbf8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "menuPropreAuBundle"));
 
         echo "         
         ";
         
-        $__internal_1f619a791e77f06e293892270f7edb835afbb3a8473555a091f1681b977b59fb->leave($__internal_1f619a791e77f06e293892270f7edb835afbb3a8473555a091f1681b977b59fb_prof);
+        $__internal_add5fdd0baff95824a326751c0b1089860be08baccabc67929b3dafb48f7fbf8->leave($__internal_add5fdd0baff95824a326751c0b1089860be08baccabc67929b3dafb48f7fbf8_prof);
 
     }
 
-    // line 67
+    // line 68
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_3187a3934d6932a30e1c3094423e9d85c86d53d4f18a8ff2ec55c0bbe5d0267b = $this->env->getExtension("native_profiler");
-        $__internal_3187a3934d6932a30e1c3094423e9d85c86d53d4f18a8ff2ec55c0bbe5d0267b->enter($__internal_3187a3934d6932a30e1c3094423e9d85c86d53d4f18a8ff2ec55c0bbe5d0267b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_3325cab03d203aa1c8d3a4d29168143c007ebfa77b99d549d798b1df5356492f = $this->env->getExtension("native_profiler");
+        $__internal_3325cab03d203aa1c8d3a4d29168143c007ebfa77b99d549d798b1df5356492f->enter($__internal_3325cab03d203aa1c8d3a4d29168143c007ebfa77b99d549d798b1df5356492f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
-        // line 68
+        // line 69
         echo "                ";
         
-        $__internal_3187a3934d6932a30e1c3094423e9d85c86d53d4f18a8ff2ec55c0bbe5d0267b->leave($__internal_3187a3934d6932a30e1c3094423e9d85c86d53d4f18a8ff2ec55c0bbe5d0267b_prof);
+        $__internal_3325cab03d203aa1c8d3a4d29168143c007ebfa77b99d549d798b1df5356492f->leave($__internal_3325cab03d203aa1c8d3a4d29168143c007ebfa77b99d549d798b1df5356492f_prof);
 
     }
 
-    // line 75
+    // line 76
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_9d72b8e70ecbfdfef3e0eef7fc055867bd745d7c81ddc60ecb93edfa5a75d103 = $this->env->getExtension("native_profiler");
-        $__internal_9d72b8e70ecbfdfef3e0eef7fc055867bd745d7c81ddc60ecb93edfa5a75d103->enter($__internal_9d72b8e70ecbfdfef3e0eef7fc055867bd745d7c81ddc60ecb93edfa5a75d103_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_c8d07ca689087636876efac5f5d9e432b164d3bf8345ac065f99972ed22e1625 = $this->env->getExtension("native_profiler");
+        $__internal_c8d07ca689087636876efac5f5d9e432b164d3bf8345ac065f99972ed22e1625->enter($__internal_c8d07ca689087636876efac5f5d9e432b164d3bf8345ac065f99972ed22e1625_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 76
+        // line 77
         echo "                <hr>
                     <font color=\"white\">Tous droits réservés © 2018</font></br>
-                    <font color=\"white\">Ce site est un projet de 2nd année réalisé par des étudiants de DUT informatique de l'<a href=\"";
-        // line 78
+                    <font color=\"white\">Ce site est un projet de 2nde année réalisé par des étudiants de DUT informatique de l'<a href=\"";
+        // line 79
         echo "https://www.iutbayonne.univ-pau.fr/";
         echo "\"><FONT COLOR=\"#00CED1\">IUT de Bayonne et du Pays Basque</FONT></a></font></Br>
                     <a href=\"";
-        // line 79
+        // line 80
         echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_contacts");
         echo "\">Nous contacter !</a>
                     <a href=\"";
-        // line 80
+        // line 81
         echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_credits");
         echo "\">Crédits</a> </Br>
                     <h1> </h1>
                 ";
         
-        $__internal_9d72b8e70ecbfdfef3e0eef7fc055867bd745d7c81ddc60ecb93edfa5a75d103->leave($__internal_9d72b8e70ecbfdfef3e0eef7fc055867bd745d7c81ddc60ecb93edfa5a75d103_prof);
+        $__internal_c8d07ca689087636876efac5f5d9e432b164d3bf8345ac065f99972ed22e1625->leave($__internal_c8d07ca689087636876efac5f5d9e432b164d3bf8345ac065f99972ed22e1625_prof);
 
     }
 
-    // line 87
+    // line 88
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_c05c97f83efc9b9d246f124abb71cb1954bef00080501e3a106d7f5cb6456e46 = $this->env->getExtension("native_profiler");
-        $__internal_c05c97f83efc9b9d246f124abb71cb1954bef00080501e3a106d7f5cb6456e46->enter($__internal_c05c97f83efc9b9d246f124abb71cb1954bef00080501e3a106d7f5cb6456e46_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_fac2836d93da18d918da5b794c6871e5a29b68512b590346d3eb3ecec75c14db = $this->env->getExtension("native_profiler");
+        $__internal_fac2836d93da18d918da5b794c6871e5a29b68512b590346d3eb3ecec75c14db->enter($__internal_fac2836d93da18d918da5b794c6871e5a29b68512b590346d3eb3ecec75c14db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 88
+        // line 89
         echo "            <script type=\"text/javascript\" src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/jquery.js"), "html", null, true);
         echo "\"></script>
             <script type=\"text/javascript\" src=\"";
-        // line 89
+        // line 90
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/bootstrap.js"), "html", null, true);
         echo "\"></script>
         ";
         
-        $__internal_c05c97f83efc9b9d246f124abb71cb1954bef00080501e3a106d7f5cb6456e46->leave($__internal_c05c97f83efc9b9d246f124abb71cb1954bef00080501e3a106d7f5cb6456e46_prof);
+        $__internal_fac2836d93da18d918da5b794c6871e5a29b68512b590346d3eb3ecec75c14db->leave($__internal_fac2836d93da18d918da5b794c6871e5a29b68512b590346d3eb3ecec75c14db_prof);
 
     }
 
@@ -284,7 +288,7 @@ class __TwigTemplate_5f3a6ba8148f13a0adf66b15fff7f26d35ca77f7100550bf018df9bf425
 
     public function getDebugInfo()
     {
-        return array (  267 => 89,  262 => 88,  256 => 87,  246 => 80,  242 => 79,  238 => 78,  234 => 76,  228 => 75,  221 => 68,  215 => 67,  202 => 62,  193 => 32,  186 => 31,  180 => 30,  168 => 20,  162 => 19,  154 => 15,  148 => 14,  139 => 91,  137 => 87,  131 => 83,  128 => 75,  121 => 69,  119 => 67,  114 => 64,  112 => 62,  102 => 55,  98 => 54,  91 => 50,  87 => 49,  83 => 48,  72 => 39,  69 => 37,  66 => 35,  63 => 30,  58 => 27,  54 => 25,  52 => 24,  50 => 19,  46 => 17,  44 => 14,  40 => 12,  35 => 8,  32 => 3,  29 => 1,);
+        return array (  271 => 90,  266 => 89,  260 => 88,  250 => 81,  246 => 80,  242 => 79,  238 => 77,  232 => 76,  225 => 69,  219 => 68,  206 => 63,  197 => 32,  190 => 31,  184 => 30,  172 => 20,  166 => 19,  158 => 15,  152 => 14,  143 => 92,  141 => 88,  135 => 84,  132 => 76,  125 => 70,  123 => 68,  118 => 65,  116 => 63,  106 => 56,  102 => 55,  95 => 51,  91 => 50,  87 => 49,  83 => 48,  72 => 39,  69 => 37,  66 => 35,  63 => 30,  58 => 27,  54 => 25,  52 => 24,  50 => 19,  46 => 17,  44 => 14,  40 => 12,  35 => 8,  32 => 3,  29 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -337,6 +341,7 @@ class __TwigTemplate_5f3a6ba8148f13a0adf66b15fff7f26d35ca77f7100550bf018df9bf425
 /*                     <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><button type="button" class="btn btn-default"><i class="fa fa-list"></i> Actualités</button></a>*/
 /*                     <a href="{{path('follow_the_rhythm_accueilForum')}}"> <button type="button" class="btn btn-default"><i class="	fa fa-wechat"></i> Forum</button></a>*/
 /*                     <a href="{{path('follow_the_rhythm_contacts')}}"> <button type="button" class="btn btn-default"><i class="fa fa-address-book"></i> Nous contacter</button></a>*/
+/*                     <a href="{{path('follow_the_rhythm_aide')}}"> <button type="button" class="btn btn-default"><i class="fa fa-question-circle" aria-hidden="true"></i> Aide</button></a>*/
 /*                 </div>*/
 /*                     <!--*/
 /*                     <div class="btn-group" role="group" data-toggle="buttons">*/
@@ -364,7 +369,7 @@ class __TwigTemplate_5f3a6ba8148f13a0adf66b15fff7f26d35ca77f7100550bf018df9bf425
 /*                 {% block footer %}*/
 /*                 <hr>*/
 /*                     <font color="white">Tous droits réservés © 2018</font></br>*/
-/*                     <font color="white">Ce site est un projet de 2nd année réalisé par des étudiants de DUT informatique de l'<a href="{{'https://www.iutbayonne.univ-pau.fr/' }}"><FONT COLOR="#00CED1">IUT de Bayonne et du Pays Basque</FONT></a></font></Br>*/
+/*                     <font color="white">Ce site est un projet de 2nde année réalisé par des étudiants de DUT informatique de l'<a href="{{'https://www.iutbayonne.univ-pau.fr/' }}"><FONT COLOR="#00CED1">IUT de Bayonne et du Pays Basque</FONT></a></font></Br>*/
 /*                     <a href="{{path('follow_the_rhythm_contacts')}}">Nous contacter !</a>*/
 /*                     <a href="{{path('follow_the_rhythm_credits')}}">Crédits</a> </Br>*/
 /*                     <h1> </h1>*/

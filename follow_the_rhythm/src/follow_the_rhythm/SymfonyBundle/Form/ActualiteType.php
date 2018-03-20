@@ -16,14 +16,11 @@ class ActualiteType extends AbstractType
     {
         $builder
         ->add('titre','text')
-        ->add('artiste', 'collection', array(
-                                              'allow_add' => true,
-                                              'allow_delete' => true,
-                                              'by_reference' => false,
-                                              'label' => 'Créer Artistes concernés'))
+        
         ->add('artiste', 'collection', array (
                                               'type' => new ArtisteType(),
                                               'allow_add' => true,
+                                              'prototype' => true,
                                               'allow_delete' => true,
                                               'by_reference' => false,
                                               'label' => 'Créer Artistes concernés'))

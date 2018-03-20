@@ -21,20 +21,20 @@ class __TwigTemplate_b21d12ff313f30ab4a85cbb14533994408e3e80c3cf51f11500e4d7235f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1af7eaff5c8ed7ba9dc00c866e99cf0b8b2878275d9eb49a9fa1b1c5a7a6ab1d = $this->env->getExtension("native_profiler");
-        $__internal_1af7eaff5c8ed7ba9dc00c866e99cf0b8b2878275d9eb49a9fa1b1c5a7a6ab1d->enter($__internal_1af7eaff5c8ed7ba9dc00c866e99cf0b8b2878275d9eb49a9fa1b1c5a7a6ab1d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:index.html.twig"));
+        $__internal_7bdce076ea1062d158965ea2547fdf6b839a6140de962ebe07727455ea34c243 = $this->env->getExtension("native_profiler");
+        $__internal_7bdce076ea1062d158965ea2547fdf6b839a6140de962ebe07727455ea34c243->enter($__internal_7bdce076ea1062d158965ea2547fdf6b839a6140de962ebe07727455ea34c243_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1af7eaff5c8ed7ba9dc00c866e99cf0b8b2878275d9eb49a9fa1b1c5a7a6ab1d->leave($__internal_1af7eaff5c8ed7ba9dc00c866e99cf0b8b2878275d9eb49a9fa1b1c5a7a6ab1d_prof);
+        $__internal_7bdce076ea1062d158965ea2547fdf6b839a6140de962ebe07727455ea34c243->leave($__internal_7bdce076ea1062d158965ea2547fdf6b839a6140de962ebe07727455ea34c243_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_a3a4ab634d05082291797720617c8c2f47ca76a9bc597af1bcd465664d8f8960 = $this->env->getExtension("native_profiler");
-        $__internal_a3a4ab634d05082291797720617c8c2f47ca76a9bc597af1bcd465664d8f8960->enter($__internal_a3a4ab634d05082291797720617c8c2f47ca76a9bc597af1bcd465664d8f8960_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_3402e1f8cd8396589aa83ba2bb2c47a0d38d85521f9efe1b00dc2269378edb13 = $this->env->getExtension("native_profiler");
+        $__internal_3402e1f8cd8396589aa83ba2bb2c47a0d38d85521f9efe1b00dc2269378edb13->enter($__internal_3402e1f8cd8396589aa83ba2bb2c47a0d38d85521f9efe1b00dc2269378edb13_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "
@@ -42,24 +42,23 @@ class __TwigTemplate_b21d12ff313f30ab4a85cbb14533994408e3e80c3cf51f11500e4d7235f
     <div class=\"row\">
       <div class=\"panel panel-default\">
         <div class=\"panel-heading\"><h2><b><span class=\"fa fa-list\"></span> Liste des Actualités</b></h2>
-    
           Options de tri:
           <a href=\"";
-        // line 11
+        // line 10
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueil", array("page" => 1, "sens" => 1)), "html", null, true);
         echo "\"><button type=\"button\" class=\"btn btn-secondary\"autofocus>Toutes les actualités</button></a>
           <a href=\"";
-        // line 12
+        // line 11
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueilArtistesUniquement", array("page" => 1, "sens" => 1)), "html", null, true);
         echo "\"><button type=\"button\" class=\"btn btn-secondary\">Actualites sur les artistes uniquement</button></a>
           <a href=\"";
-        // line 13
+        // line 12
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueil", array("page" => 1, "sens" => 2)), "html", null, true);
-        echo "\" title=\"De la plus ancienne à la plus récente\"><button class=\"btn btn-secondary\" type=\"button\"><span class=\"glyphicon glyphicon-time\"></span><span class=\"glyphicon glyphicon-sort-by-order\"></span> Chronologique</button></a>
+        echo "\" title=\"De la plus ancienne à la plus récente\"><button class=\"btn btn-secondary\" type=\"button\">Chronologique</button></a>
           <a href=\"";
-        // line 14
+        // line 13
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueil", array("page" => 1, "sens" => 1)), "html", null, true);
-        echo "\" title=\"De la plus récente à la plus ancienne\"><button class=\"btn btn-secondary\" type=\"button\" autofocus><span class=\"glyphicon glyphicon-time\"></span><span class=\"glyphicon glyphicon-sort-by-order-alt\"></span>Antéchronologique</button></a>          
+        echo "\" title=\"De la plus récente à la plus ancienne\"><button class=\"btn btn-secondary\" type=\"button\" autofocus>Antéchronologique</button></a>          
      <!--     <div class=\"dropdown\">
             <button class=\"btn btn-default dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Trier par ordre<span class=\"caret\"></span></button>
             <ul class=\"dropdown-menu\">
@@ -72,54 +71,51 @@ class __TwigTemplate_b21d12ff313f30ab4a85cbb14533994408e3e80c3cf51f11500e4d7235f
       <div class=\"list-group\">
 
       <!--Bouton \"soumettre actualité\"-->
-        <div class=\"list-group-item\">
-          <label>Options modérateur : </label><a href=\"";
-        // line 28
+        <div class=\"list-group-item\"><a href=\"";
+        // line 26
         echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreActualite");
-        echo "\"><button type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Soumettre actualité</button></a>
-          <a href=\"";
-        // line 29
+        echo "\"><button type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Soumettre actualité</button></a></div>
+        <div class=\"list-group-item\"><a href=\"";
+        // line 27
         echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_modifierSupprimerActualite");
-        echo "\"><button type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-edit\"></span> Modifier/Supprimer actualité</button></a>
-        </div>
-        
+        echo "\"><button type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-edit\"></span> Modifier/Supprimer actualité</button></a></div>
       <!--AFFICHAGE DES ACTUALITEES-->
         ";
-        // line 33
+        // line 29
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["tabActualites"]) ? $context["tabActualites"] : $this->getContext($context, "tabActualites")));
         foreach ($context['_seq'] as $context["_key"] => $context["actualiteCourante"]) {
-            // line 34
+            // line 30
             echo "        
           <div class=\"list-group-item\"><h2><label>";
-            // line 35
+            // line 31
             echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "titre", array()), "html", null, true);
             echo "</label></h2>
         <!-- si pas d'artiste concerné -->
           ";
-            // line 37
+            // line 33
             if (twig_test_empty($this->getAttribute($context["actualiteCourante"], "artiste", array()))) {
-                // line 38
+                // line 34
                 echo "              <p><label>Pas d'artiste concerné</label></p>
           ";
             } else {
-                // line 40
+                // line 36
                 echo "          <p><label>
             ";
-                // line 41
+                // line 37
                 if ((twig_length_filter($this->env, $this->getAttribute($context["actualiteCourante"], "artiste", array())) > 1)) {
-                    // line 42
+                    // line 38
                     echo "          Artistes concernés:
           ";
                 } else {
-                    // line 44
+                    // line 40
                     echo "          Artiste concerné:
           ";
                 }
-                // line 45
+                // line 41
                 echo "   
             ";
-                // line 46
+                // line 42
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["actualiteCourante"], "artiste", array()));
                 $context['loop'] = array(
@@ -136,7 +132,7 @@ class __TwigTemplate_b21d12ff313f30ab4a85cbb14533994408e3e80c3cf51f11500e4d7235f
                     $context['loop']['last'] = 1 === $length;
                 }
                 foreach ($context['_seq'] as $context["_key"] => $context["list"]) {
-                    // line 47
+                    // line 43
                     echo "             <a href=\"";
                     echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_pageArtiste", array("id" => $this->getAttribute($context["list"], "id", array()))), "html", null, true);
                     echo "\">";
@@ -145,7 +141,7 @@ class __TwigTemplate_b21d12ff313f30ab4a85cbb14533994408e3e80c3cf51f11500e4d7235f
                     if ( !$this->getAttribute($context["loop"], "last", array())) {
                         echo ",";
                     }
-                    // line 48
+                    // line 44
                     echo "          ";
                     ++$context['loop']['index0'];
                     ++$context['loop']['index'];
@@ -159,80 +155,80 @@ class __TwigTemplate_b21d12ff313f30ab4a85cbb14533994408e3e80c3cf51f11500e4d7235f
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['list'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 49
+                // line 45
                 echo "          </p></label>
           ";
             }
-            // line 51
+            // line 47
             echo "        <!-- si pas de concert concerné -->
           ";
-            // line 52
+            // line 48
             if (twig_test_empty($this->getAttribute($context["actualiteCourante"], "concert", array()))) {
-                // line 53
+                // line 49
                 echo "              <p><label>Pas de concert lié</label></p>
           ";
             } else {
-                // line 55
+                // line 51
                 echo "              <p><label>Concert lié : <a href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_pageConcert", array("id" => $this->getAttribute($this->getAttribute($context["actualiteCourante"], "concert", array()), "id", array()))), "html", null, true);
                 echo "\" >";
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["actualiteCourante"], "concert", array()), "nom", array()), "html", null, true);
                 echo "</a> </label></p>
               <p><label>Date de l'événement : ";
-                // line 56
+                // line 52
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($this->getAttribute($context["actualiteCourante"], "concert", array()), "dateConcert", array()), "d/m/Y"), "html", null, true);
                 echo "</label></p>
               <p><label>Lieu : ";
-                // line 57
+                // line 53
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["actualiteCourante"], "concert", array()), "lieu", array()), "html", null, true);
                 echo "</label></p>
           ";
             }
-            // line 59
+            // line 55
             echo "          <p align=\"justify\"><label>";
             echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "description", array()), "html", null, true);
             echo "</label></p>
           <p><label>Date de publication: ";
-            // line 60
+            // line 56
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["actualiteCourante"], "dateActualite", array()), "d/m/Y"), "html", null, true);
             echo "</label></p>
         <!--Si coup(s) de coeur > 1-->
           ";
-            // line 62
+            // line 58
             if (($this->getAttribute($context["actualiteCourante"], "nbCoupDeCoeurs", array()) > 1)) {
-                // line 63
+                // line 59
                 echo "              <button type=\"button\" class=\"btn btn-primary\"  onclick=\"isNotConnected();\"><span class=\"glyphicon glyphicon-heart\"></span> Coup de cœur</button> ";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "nbCoupDeCoeurs", array()), "html", null, true);
                 echo " Coups de cœur 
           ";
             } else {
-                // line 65
+                // line 61
                 echo "              <button type=\"button\" class=\"btn btn-primary\"  onclick=\"isNotConnected();\"><span class=\"glyphicon glyphicon-heart\"></span> Coup de cœur</button> ";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "nbCoupDeCoeurs", array()), "html", null, true);
                 echo " Coup de cœur
           ";
             }
-            // line 66
+            // line 62
             echo "   
           ";
-            // line 67
+            // line 63
             if (twig_test_empty($this->getAttribute($context["actualiteCourante"], "moderateur", array()))) {
-                // line 68
+                // line 64
                 echo "          ";
             } else {
-                // line 69
+                // line 65
                 echo "             <!-- <p><label>Soumis par : ";
                 echo "</label></p> -->
           ";
             }
-            // line 71
+            // line 67
             echo "            </div>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['actualiteCourante'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 73
+        // line 69
         echo "      </div>
     </div>
   </div>
@@ -248,15 +244,15 @@ class __TwigTemplate_b21d12ff313f30ab4a85cbb14533994408e3e80c3cf51f11500e4d7235f
   }*/
 </script>
 ";
-        // line 88
+        // line 84
         echo "<div align=\"center\"><a href=\"#\"><button class=\"btn btn-primary\"><i class=\"fa fa-angle-double-up\"></i> Haut de page <i class=\"fa fa-angle-double-up\"></i></button></a></div>
 <div align=center>";
-        // line 89
-        $this->loadTemplate("::pagination.html.twig", "follow_the_rhythmSymfonyBundle:Symfony:index.html.twig", 89)->display($context);
+        // line 85
+        $this->loadTemplate("::pagination.html.twig", "follow_the_rhythmSymfonyBundle:Symfony:index.html.twig", 85)->display($context);
         echo "</div>
 ";
         
-        $__internal_a3a4ab634d05082291797720617c8c2f47ca76a9bc597af1bcd465664d8f8960->leave($__internal_a3a4ab634d05082291797720617c8c2f47ca76a9bc597af1bcd465664d8f8960_prof);
+        $__internal_3402e1f8cd8396589aa83ba2bb2c47a0d38d85521f9efe1b00dc2269378edb13->leave($__internal_3402e1f8cd8396589aa83ba2bb2c47a0d38d85521f9efe1b00dc2269378edb13_prof);
 
     }
 
@@ -272,7 +268,7 @@ class __TwigTemplate_b21d12ff313f30ab4a85cbb14533994408e3e80c3cf51f11500e4d7235f
 
     public function getDebugInfo()
     {
-        return array (  255 => 89,  252 => 88,  236 => 73,  229 => 71,  224 => 69,  221 => 68,  219 => 67,  216 => 66,  210 => 65,  204 => 63,  202 => 62,  197 => 60,  192 => 59,  187 => 57,  183 => 56,  176 => 55,  172 => 53,  170 => 52,  167 => 51,  163 => 49,  149 => 48,  140 => 47,  123 => 46,  120 => 45,  116 => 44,  112 => 42,  110 => 41,  107 => 40,  103 => 38,  101 => 37,  96 => 35,  93 => 34,  89 => 33,  82 => 29,  78 => 28,  61 => 14,  57 => 13,  53 => 12,  49 => 11,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  251 => 85,  248 => 84,  232 => 69,  225 => 67,  220 => 65,  217 => 64,  215 => 63,  212 => 62,  206 => 61,  200 => 59,  198 => 58,  193 => 56,  188 => 55,  183 => 53,  179 => 52,  172 => 51,  168 => 49,  166 => 48,  163 => 47,  159 => 45,  145 => 44,  136 => 43,  119 => 42,  116 => 41,  112 => 40,  108 => 38,  106 => 37,  103 => 36,  99 => 34,  97 => 33,  92 => 31,  89 => 30,  85 => 29,  80 => 27,  76 => 26,  60 => 13,  56 => 12,  52 => 11,  48 => 10,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -283,12 +279,11 @@ class __TwigTemplate_b21d12ff313f30ab4a85cbb14533994408e3e80c3cf51f11500e4d7235f
 /*     <div class="row">*/
 /*       <div class="panel panel-default">*/
 /*         <div class="panel-heading"><h2><b><span class="fa fa-list"></span> Liste des Actualités</b></h2>*/
-/*     */
 /*           Options de tri:*/
 /*           <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><button type="button" class="btn btn-secondary"autofocus>Toutes les actualités</button></a>*/
 /*           <a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 1})}}"><button type="button" class="btn btn-secondary">Actualites sur les artistes uniquement</button></a>*/
-/*           <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 2})}}" title="De la plus ancienne à la plus récente"><button class="btn btn-secondary" type="button"><span class="glyphicon glyphicon-time"></span><span class="glyphicon glyphicon-sort-by-order"></span> Chronologique</button></a>*/
-/*           <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}" title="De la plus récente à la plus ancienne"><button class="btn btn-secondary" type="button" autofocus><span class="glyphicon glyphicon-time"></span><span class="glyphicon glyphicon-sort-by-order-alt"></span>Antéchronologique</button></a>          */
+/*           <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 2})}}" title="De la plus ancienne à la plus récente"><button class="btn btn-secondary" type="button">Chronologique</button></a>*/
+/*           <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}" title="De la plus récente à la plus ancienne"><button class="btn btn-secondary" type="button" autofocus>Antéchronologique</button></a>          */
 /*      <!--     <div class="dropdown">*/
 /*             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Trier par ordre<span class="caret"></span></button>*/
 /*             <ul class="dropdown-menu">*/
@@ -301,11 +296,8 @@ class __TwigTemplate_b21d12ff313f30ab4a85cbb14533994408e3e80c3cf51f11500e4d7235f
 /*       <div class="list-group">*/
 /* */
 /*       <!--Bouton "soumettre actualité"-->*/
-/*         <div class="list-group-item">*/
-/*           <label>Options modérateur : </label><a href="{{path('follow_the_rhythm_soumettreActualite')}}"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Soumettre actualité</button></a>*/
-/*           <a href="{{path('follow_the_rhythm_modifierSupprimerActualite')}}"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Modifier/Supprimer actualité</button></a>*/
-/*         </div>*/
-/*         */
+/*         <div class="list-group-item"><a href="{{path('follow_the_rhythm_soumettreActualite')}}"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Soumettre actualité</button></a></div>*/
+/*         <div class="list-group-item"><a href="{{path('follow_the_rhythm_modifierSupprimerActualite')}}"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Modifier/Supprimer actualité</button></a></div>*/
 /*       <!--AFFICHAGE DES ACTUALITEES-->*/
 /*         {% for actualiteCourante in tabActualites %}*/
 /*         */

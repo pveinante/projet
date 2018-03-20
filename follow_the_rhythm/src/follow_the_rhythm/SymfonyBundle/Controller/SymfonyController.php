@@ -95,7 +95,7 @@ class SymfonyController extends Controller
       $actualite = new Actualite();
       
       $formulaireActualite = $this->createForm(new ActualiteType, $actualite); //création du formulaire
-      
+        
       //Récupération des données dans $actualite dès que le formulaire est soumis
       $formulaireActualite->handleRequest($requeteUtilisateur);
       

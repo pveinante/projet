@@ -16,11 +16,14 @@ class ActualiteType extends AbstractType
     {
         $builder
         ->add('titre','text')
-        
+        ->add('artiste', 'entity', array('label' => 'Artistes concernés',
+                                        'class' => 'follow_the_rhythmSymfonyBundle:Artiste',
+                                        'property'=>'nomDeScene',
+                                        'multiple'=>'true',
+                                        'expanded'=>'true'))
         ->add('artiste', 'collection', array (
                                               'type' => new ArtisteType(),
                                               'allow_add' => true,
-                                              'prototype' => true,
                                               'allow_delete' => true,
                                               'by_reference' => false,
                                               'label' => 'Créer Artistes concernés'))

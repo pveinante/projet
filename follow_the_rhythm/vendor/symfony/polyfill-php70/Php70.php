@@ -36,7 +36,7 @@ final class Php70
     public static function preg_replace_callback_array(array $patterns, $subject, $limit = -1, &$count = 0)
     {
         $count = 0;
-        $result = ''.$subject;
+        $result = (string) $subject;
         if (0 === $limit = self::intArg($limit, __FUNCTION__, 3)) {
             return $result;
         }
@@ -51,7 +51,11 @@ final class Php70
 
     public static function error_clear_last()
     {
-        set_error_handler('var_dump', 0);
+        static $handler;
+        if (!$handler) {
+             $handler = function() { return false; };
+        }
+        set_error_handler($handler);
         @trigger_error('');
         restore_error_handler();
     }

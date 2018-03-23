@@ -16,7 +16,7 @@ class ArtisteType extends AbstractType
     {
         $builder
             ->add('nomComplet','text',array('required'=>false))
-            ->add('nomDeScene','text',array('required'=>false))
+            ->add('nomDeScene','text',array('required'=>false, 'label'=>'Nom de scène'))
         ;
     }
     

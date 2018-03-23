@@ -21,20 +21,20 @@ class __TwigTemplate_bf1e4ef303fadbba9ccca112d95b4afda7e770c1ffd808d089fbb798415
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_72459522021bb6039d795a4ba4065d55cdaba935bfc01320ba117d7b14049d02 = $this->env->getExtension("native_profiler");
-        $__internal_72459522021bb6039d795a4ba4065d55cdaba935bfc01320ba117d7b14049d02->enter($__internal_72459522021bb6039d795a4ba4065d55cdaba935bfc01320ba117d7b14049d02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:modifierActualite.html.twig"));
+        $__internal_2036e94db0b58f6643fb5cbfd0dec32295edc3a0a2430bf38227e36ae093050c = $this->env->getExtension("native_profiler");
+        $__internal_2036e94db0b58f6643fb5cbfd0dec32295edc3a0a2430bf38227e36ae093050c->enter($__internal_2036e94db0b58f6643fb5cbfd0dec32295edc3a0a2430bf38227e36ae093050c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:modifierActualite.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_72459522021bb6039d795a4ba4065d55cdaba935bfc01320ba117d7b14049d02->leave($__internal_72459522021bb6039d795a4ba4065d55cdaba935bfc01320ba117d7b14049d02_prof);
+        $__internal_2036e94db0b58f6643fb5cbfd0dec32295edc3a0a2430bf38227e36ae093050c->leave($__internal_2036e94db0b58f6643fb5cbfd0dec32295edc3a0a2430bf38227e36ae093050c_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_8218e412163d533fb6fcbbdc2c03ecc036ee872061510293ce4a546f80d54b22 = $this->env->getExtension("native_profiler");
-        $__internal_8218e412163d533fb6fcbbdc2c03ecc036ee872061510293ce4a546f80d54b22->enter($__internal_8218e412163d533fb6fcbbdc2c03ecc036ee872061510293ce4a546f80d54b22_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_25157221ba6e047440561d4daa75cde80bd7fb433d317b44fed68c74c6d37a00 = $this->env->getExtension("native_profiler");
+        $__internal_25157221ba6e047440561d4daa75cde80bd7fb433d317b44fed68c74c6d37a00->enter($__internal_25157221ba6e047440561d4daa75cde80bd7fb433d317b44fed68c74c6d37a00_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<body onload=\"hideV();\">
@@ -81,7 +81,7 @@ class __TwigTemplate_bf1e4ef303fadbba9ccca112d95b4afda7e770c1ffd808d089fbb798415
             <p><label id=\"concertV\"></label></p>
             <p><label id=\"descriptionV\"></label></p>
             <p><label id=\"dateVs\"></label></p>
-            <button type=\"button\" class=\"btn btn-primary\">♥ Coup de cœur</button> 0 Coups de cœurs 
+            <button type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-heart\"></span> Coup de cœur</button> 0 Coups de cœurs 
           </form>
           
         </div>
@@ -139,7 +139,7 @@ class __TwigTemplate_bf1e4ef303fadbba9ccca112d95b4afda7e770c1ffd808d089fbb798415
 
 ";
         
-        $__internal_8218e412163d533fb6fcbbdc2c03ecc036ee872061510293ce4a546f80d54b22->leave($__internal_8218e412163d533fb6fcbbdc2c03ecc036ee872061510293ce4a546f80d54b22_prof);
+        $__internal_25157221ba6e047440561d4daa75cde80bd7fb433d317b44fed68c74c6d37a00->leave($__internal_25157221ba6e047440561d4daa75cde80bd7fb433d317b44fed68c74c6d37a00_prof);
 
     }
 
@@ -190,7 +190,7 @@ class __TwigTemplate_bf1e4ef303fadbba9ccca112d95b4afda7e770c1ffd808d089fbb798415
 /*             <p><label id="concertV"></label></p>*/
 /*             <p><label id="descriptionV"></label></p>*/
 /*             <p><label id="dateVs"></label></p>*/
-/*             <button type="button" class="btn btn-primary">♥ Coup de cœur</button> 0 Coups de cœurs */
+/*             <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Coup de cœur</button> 0 Coups de cœurs */
 /*           </form>*/
 /*           */
 /*         </div>*/

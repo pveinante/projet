@@ -62,7 +62,7 @@ class Actualite
 
    /**
      *
-     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste",mappedBy="actualite")
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste",mappedBy="actualite",cascade={"persist"})
      * @ORM\JoinTable(name="actualite_artistes"),
      * @ORM\JoinColumn=(nullable=true);
      */

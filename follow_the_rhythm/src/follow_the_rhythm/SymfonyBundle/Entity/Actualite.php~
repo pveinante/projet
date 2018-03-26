@@ -63,7 +63,7 @@ class Actualite
    /**
      *
      * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste",mappedBy="actualite",cascade={"persist"})
-     * @ORM\JoinTable(name="actualite_artistes"),
+     * @ORM\JoinTable(name="artiste_actualite"),
      * @ORM\JoinColumn=(nullable=true);
      */
     private $artiste;
@@ -276,7 +276,8 @@ class Actualite
      */
     public function addArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste)
     {
-        $this->artiste[] = $artiste;
+        $this->artiste[]= $artiste;
+        $artiste->addActualite($this);
 
         return $this;
     }
@@ -290,4 +291,6 @@ class Actualite
     {
         $this->artiste->removeElement($artiste);
     }
+    
+       
 }

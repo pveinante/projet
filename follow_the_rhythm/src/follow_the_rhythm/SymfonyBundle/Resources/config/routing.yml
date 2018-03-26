@@ -1,6 +1,5 @@
 #HTML
 
-
 follow_the_rhythm_bienvenue:
     path:     /
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:index }

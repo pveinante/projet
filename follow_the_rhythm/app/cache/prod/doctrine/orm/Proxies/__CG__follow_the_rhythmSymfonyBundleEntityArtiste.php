@@ -64,10 +64,10 @@ class Artiste extends \follow_the_rhythm\SymfonyBundle\Entity\Artiste implements
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'id', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'nomComplet', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'nomDeScene', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'nbFollower', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'concert');
+            return array('__isInitialized__', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'id', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'nomComplet', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'nomDeScene', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'nbFollower', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'actualite', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'concert');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'id', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'nomComplet', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'nomDeScene', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'nbFollower', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'concert');
+        return array('__isInitialized__', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'id', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'nomComplet', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'nomDeScene', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'nbFollower', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'actualite', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste' . "\0" . 'concert');
     }
 
     /**
@@ -285,6 +285,39 @@ class Artiste extends \follow_the_rhythm\SymfonyBundle\Entity\Artiste implements
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getConcert', array());
 
         return parent::getConcert();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeActualite(\follow_the_rhythm\SymfonyBundle\Entity\Actualite $actualite)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeActualite', array($actualite));
+
+        return parent::removeActualite($actualite);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getActualite()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getActualite', array());
+
+        return parent::getActualite();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addActualite(\follow_the_rhythm\SymfonyBundle\Entity\Actualite $actualite)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addActualite', array($actualite));
+
+        return parent::addActualite($actualite);
     }
 
 }

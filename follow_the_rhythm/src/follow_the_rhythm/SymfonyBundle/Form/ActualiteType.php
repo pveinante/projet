@@ -22,7 +22,7 @@ class ActualiteType extends AbstractType
                                               'allow_add' => true,
                                               'prototype' => true,
                                               'allow_delete' => true,
-                                              'by_reference' => true,
+                                              'by_reference' => false,
                                               'label' => 'Créer Artistes concernés'))
         ->add('concert','entity', array('required'=>false,'label'=>'Concert Concerné','empty_value'=>"Sélectionnez un concert",
                                       'class' => 'follow_the_rhythmSymfonyBundle:Concert',

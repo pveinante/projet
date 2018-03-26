@@ -21,20 +21,20 @@ class __TwigTemplate_077259dd08abdf54703c66832bebd794d98affc269a9c352bae3760c065
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_bb4b25b0113af74fe6ae03d16685ba34504f489cf050bd138d3a8ed0a4b6993b = $this->env->getExtension("native_profiler");
-        $__internal_bb4b25b0113af74fe6ae03d16685ba34504f489cf050bd138d3a8ed0a4b6993b->enter($__internal_bb4b25b0113af74fe6ae03d16685ba34504f489cf050bd138d3a8ed0a4b6993b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categoriePromotion.html.twig"));
+        $__internal_874359620164537d5967a0b1e6f5669067522bc1a7fe046b2aba68de2d326e84 = $this->env->getExtension("native_profiler");
+        $__internal_874359620164537d5967a0b1e6f5669067522bc1a7fe046b2aba68de2d326e84->enter($__internal_874359620164537d5967a0b1e6f5669067522bc1a7fe046b2aba68de2d326e84_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categoriePromotion.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_bb4b25b0113af74fe6ae03d16685ba34504f489cf050bd138d3a8ed0a4b6993b->leave($__internal_bb4b25b0113af74fe6ae03d16685ba34504f489cf050bd138d3a8ed0a4b6993b_prof);
+        $__internal_874359620164537d5967a0b1e6f5669067522bc1a7fe046b2aba68de2d326e84->leave($__internal_874359620164537d5967a0b1e6f5669067522bc1a7fe046b2aba68de2d326e84_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_d484c5c9b6e292e10ca090d84923382486488d582fd9a08e3aa177e4ea7e9444 = $this->env->getExtension("native_profiler");
-        $__internal_d484c5c9b6e292e10ca090d84923382486488d582fd9a08e3aa177e4ea7e9444->enter($__internal_d484c5c9b6e292e10ca090d84923382486488d582fd9a08e3aa177e4ea7e9444_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_50e388cda159f23b44914691253e47732b22ec18ab097c5c9be3e520cc71031e = $this->env->getExtension("native_profiler");
+        $__internal_50e388cda159f23b44914691253e47732b22ec18ab097c5c9be3e520cc71031e->enter($__internal_50e388cda159f23b44914691253e47732b22ec18ab097c5c9be3e520cc71031e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<div class=\"container\">
@@ -46,10 +46,22 @@ class __TwigTemplate_077259dd08abdf54703c66832bebd794d98affc269a9c352bae3760c065
         echo "\"><button style='margin-left: 32px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Nouveau topic</button></a></h2></div>
             <div class=\"list-group\">
                 <div class=\"list-group-item\">
-                    <div align=\"justify\"> 
-                        <h4>Prochainement, la catégorie promotions du forum de Follow the rhythm</h4></Br>
-                    </div>
-                </div>
+                    ";
+        // line 10
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["tabTopics"]) ? $context["tabTopics"] : $this->getContext($context, "tabTopics")));
+        foreach ($context['_seq'] as $context["_key"] => $context["topicCourant"]) {
+            // line 11
+            echo "                    <div class=\"list-group-item\"><h2><label>";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["topicCourant"], "titre", array()), "html", null, true);
+            echo "</label></h2></div>
+                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['topicCourant'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 13
+        echo "                </div>
             </div>
         </div>
     </div>
@@ -57,7 +69,7 @@ class __TwigTemplate_077259dd08abdf54703c66832bebd794d98affc269a9c352bae3760c065
     
 ";
         
-        $__internal_d484c5c9b6e292e10ca090d84923382486488d582fd9a08e3aa177e4ea7e9444->leave($__internal_d484c5c9b6e292e10ca090d84923382486488d582fd9a08e3aa177e4ea7e9444_prof);
+        $__internal_50e388cda159f23b44914691253e47732b22ec18ab097c5c9be3e520cc71031e->leave($__internal_50e388cda159f23b44914691253e47732b22ec18ab097c5c9be3e520cc71031e_prof);
 
     }
 
@@ -73,7 +85,7 @@ class __TwigTemplate_077259dd08abdf54703c66832bebd794d98affc269a9c352bae3760c065
 
     public function getDebugInfo()
     {
-        return array (  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  64 => 13,  55 => 11,  51 => 10,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -85,9 +97,9 @@ class __TwigTemplate_077259dd08abdf54703c66832bebd794d98affc269a9c352bae3760c065
 /*             <div class="panel-heading"><h2><b><i class="fa fa-microphone" aria-hidden="true"></i> Promotions</b><a href="{{path('follow_the_rhythm_soumettreTopicPromotions')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a></h2></div>*/
 /*             <div class="list-group">*/
 /*                 <div class="list-group-item">*/
-/*                     <div align="justify"> */
-/*                         <h4>Prochainement, la catégorie promotions du forum de Follow the rhythm</h4></Br>*/
-/*                     </div>*/
+/*                     {% for topicCourant in tabTopics %}*/
+/*                     <div class="list-group-item"><h2><label>{{topicCourant.titre}}</label></h2></div>*/
+/*                     {% endfor %}*/
 /*                 </div>*/
 /*             </div>*/
 /*         </div>*/

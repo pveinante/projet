@@ -21,20 +21,20 @@ class __TwigTemplate_0a6597c5e08da3050ba93c61aed9797538146e4615b987f68bb2cabf1ef
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_54b315dd28509f2b578e3c2d3da38226e74858b19cbde8002af88613aa64b150 = $this->env->getExtension("native_profiler");
-        $__internal_54b315dd28509f2b578e3c2d3da38226e74858b19cbde8002af88613aa64b150->enter($__internal_54b315dd28509f2b578e3c2d3da38226e74858b19cbde8002af88613aa64b150_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieNews.html.twig"));
+        $__internal_f6acfade6bcffe53e8a2c297729859e6b0bd9a77e59db30123d31649718b7736 = $this->env->getExtension("native_profiler");
+        $__internal_f6acfade6bcffe53e8a2c297729859e6b0bd9a77e59db30123d31649718b7736->enter($__internal_f6acfade6bcffe53e8a2c297729859e6b0bd9a77e59db30123d31649718b7736_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieNews.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_54b315dd28509f2b578e3c2d3da38226e74858b19cbde8002af88613aa64b150->leave($__internal_54b315dd28509f2b578e3c2d3da38226e74858b19cbde8002af88613aa64b150_prof);
+        $__internal_f6acfade6bcffe53e8a2c297729859e6b0bd9a77e59db30123d31649718b7736->leave($__internal_f6acfade6bcffe53e8a2c297729859e6b0bd9a77e59db30123d31649718b7736_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_74146b67cdaee87880bca5c2298c4e73b8f2f4b1ad2b71aed9801e1b3f16e5a7 = $this->env->getExtension("native_profiler");
-        $__internal_74146b67cdaee87880bca5c2298c4e73b8f2f4b1ad2b71aed9801e1b3f16e5a7->enter($__internal_74146b67cdaee87880bca5c2298c4e73b8f2f4b1ad2b71aed9801e1b3f16e5a7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_2230c13dc2e716aeb6cdbd564577f19e98ce051063038e8e21f329118f514929 = $this->env->getExtension("native_profiler");
+        $__internal_2230c13dc2e716aeb6cdbd564577f19e98ce051063038e8e21f329118f514929->enter($__internal_2230c13dc2e716aeb6cdbd564577f19e98ce051063038e8e21f329118f514929_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<div class=\"container\">
@@ -42,14 +42,26 @@ class __TwigTemplate_0a6597c5e08da3050ba93c61aed9797538146e4615b987f68bb2cabf1ef
         <div class=\"panel panel-default\">
             <div class=\"panel-heading\"><h2><b><i class=\"fa fa-newspaper-o\" aria-hidden=\"true\"></i> News</b><a href=\"";
         // line 7
-        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreActualite");
+        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreTopicPromotions");
         echo "\"><button style='margin-left: 32px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Nouveau topic</button></a></h2></div>
             <div class=\"list-group\">
                 <div class=\"list-group-item\">
-                    <div align=\"justify\"> 
-                        <h4>Prochainement, la catégorie news du forum de Follow the rhythm</h4></Br>
-                    </div>
-                </div>
+                    ";
+        // line 10
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["tabTopics"]) ? $context["tabTopics"] : $this->getContext($context, "tabTopics")));
+        foreach ($context['_seq'] as $context["_key"] => $context["topicCourant"]) {
+            // line 11
+            echo "                    <div class=\"list-group-item\"><h2><label>";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["topicCourant"], "titre", array()), "html", null, true);
+            echo "</label></h2></div>
+                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['topicCourant'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 13
+        echo "                </div>
             </div>
         </div>
     </div>
@@ -57,7 +69,7 @@ class __TwigTemplate_0a6597c5e08da3050ba93c61aed9797538146e4615b987f68bb2cabf1ef
     
 ";
         
-        $__internal_74146b67cdaee87880bca5c2298c4e73b8f2f4b1ad2b71aed9801e1b3f16e5a7->leave($__internal_74146b67cdaee87880bca5c2298c4e73b8f2f4b1ad2b71aed9801e1b3f16e5a7_prof);
+        $__internal_2230c13dc2e716aeb6cdbd564577f19e98ce051063038e8e21f329118f514929->leave($__internal_2230c13dc2e716aeb6cdbd564577f19e98ce051063038e8e21f329118f514929_prof);
 
     }
 
@@ -73,7 +85,7 @@ class __TwigTemplate_0a6597c5e08da3050ba93c61aed9797538146e4615b987f68bb2cabf1ef
 
     public function getDebugInfo()
     {
-        return array (  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  64 => 13,  55 => 11,  51 => 10,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -82,12 +94,12 @@ class __TwigTemplate_0a6597c5e08da3050ba93c61aed9797538146e4615b987f68bb2cabf1ef
 /* <div class="container">*/
 /*     <div class="row">*/
 /*         <div class="panel panel-default">*/
-/*             <div class="panel-heading"><h2><b><i class="fa fa-newspaper-o" aria-hidden="true"></i> News</b><a href="{{path('follow_the_rhythm_soumettreActualite')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a></h2></div>*/
+/*             <div class="panel-heading"><h2><b><i class="fa fa-newspaper-o" aria-hidden="true"></i> News</b><a href="{{path('follow_the_rhythm_soumettreTopicPromotions')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a></h2></div>*/
 /*             <div class="list-group">*/
 /*                 <div class="list-group-item">*/
-/*                     <div align="justify"> */
-/*                         <h4>Prochainement, la catégorie news du forum de Follow the rhythm</h4></Br>*/
-/*                     </div>*/
+/*                     {% for topicCourant in tabTopics %}*/
+/*                     <div class="list-group-item"><h2><label>{{topicCourant.titre}}</label></h2></div>*/
+/*                     {% endfor %}*/
 /*                 </div>*/
 /*             </div>*/
 /*         </div>*/

@@ -44,7 +44,8 @@ class Artiste
 
     /**
      *
-     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Actualite", inversedBy="artiste")
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Actualite", inversedBy="artiste",cascade={"persist"})
+     * @ORM\JoinTable(name="artiste_actualite")
      * @ORM\JoinColumn(nullable=true)
      */
     private $actualite;    
@@ -178,4 +179,40 @@ class Artiste
     {
         return $this->concert;
     }
+    
+
+    /**
+     * Remove actualite
+     *
+     * @param \follow_the_rhythm\SymfonyBundle\Entity\Actualite $actualite
+     */
+    public function removeActualite(\follow_the_rhythm\SymfonyBundle\Entity\Actualite $actualite)
+    {
+        $this->actualite->removeElement($actualite);
+    }
+
+
+    /**
+     * Get actualite
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getActualite()
+    {
+        return $this->actualite;
+    }
+
+    /**
+     * Add actualite
+     *
+     * @param \follow_the_rhythm\SymfonyBundle\Entity\Actualite $actualite
+     *
+     * @return Artiste
+     */
+    public function addActualite(\follow_the_rhythm\SymfonyBundle\Entity\Actualite $actualite)
+    {
+            $this->actualite[]=$actualite;
+    }
+    
+ 
 }

@@ -64,10 +64,10 @@ class Concert extends \follow_the_rhythm\SymfonyBundle\Entity\Concert implements
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'id', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'nom', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'lieu', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'description', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'artiste');
+            return array('__isInitialized__', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'id', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'nom', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'lieu', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'dateConcert', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'description', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'artiste');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'id', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'nom', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'lieu', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'description', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'artiste');
+        return array('__isInitialized__', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'id', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'nom', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'lieu', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'dateConcert', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'description', '' . "\0" . 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert' . "\0" . 'artiste');
     }
 
     /**
@@ -285,6 +285,28 @@ class Concert extends \follow_the_rhythm\SymfonyBundle\Entity\Concert implements
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getArtiste', array());
 
         return parent::getArtiste();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setDateConcert($dateConcert)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDateConcert', array($dateConcert));
+
+        return parent::setDateConcert($dateConcert);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getDateConcert()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDateConcert', array());
+
+        return parent::getDateConcert();
     }
 
 }

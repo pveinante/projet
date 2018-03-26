@@ -342,4 +342,26 @@ class Actualite extends \follow_the_rhythm\SymfonyBundle\Entity\Actualite implem
         return parent::getConcert();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function addArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addArtiste', array($artiste));
+
+        return parent::addArtiste($artiste);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeArtiste', array($artiste));
+
+        return parent::removeArtiste($artiste);
+    }
+
 }

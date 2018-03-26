@@ -1,6 +1,6 @@
 <?php
 
-/* @WebProfiler/Profiler/profiler.css.twig */
+/* WebProfilerBundle:Profiler:profiler.css.twig */
 class __TwigTemplate_14e2f275ce2012da8703d97eeefecd3d3828245caa791d58299c219ca75955e2 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_14e2f275ce2012da8703d97eeefecd3d3828245caa791d58299c219ca75
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_313866eacae32f169979269c2cae50a7e5772cc43afa8b8d7bf8df9dca86e57f = $this->env->getExtension("native_profiler");
-        $__internal_313866eacae32f169979269c2cae50a7e5772cc43afa8b8d7bf8df9dca86e57f->enter($__internal_313866eacae32f169979269c2cae50a7e5772cc43afa8b8d7bf8df9dca86e57f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/profiler.css.twig"));
+        $__internal_88deec72730847205867b67fdf0fd8cced6eb5779f32751718b8e7e75c967f47 = $this->env->getExtension("native_profiler");
+        $__internal_88deec72730847205867b67fdf0fd8cced6eb5779f32751718b8e7e75c967f47->enter($__internal_88deec72730847205867b67fdf0fd8cced6eb5779f32751718b8e7e75c967f47_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:profiler.css.twig"));
 
         // line 3
         $context["mixins"] = array("break_long_words" => "-ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto;", "monospace_font" => "font-family: monospace; font-size: 13px; font-size-adjust: 0.5;", "sans_serif_font" => "font-family: Helvetica, Arial, sans-serif;", "subtle_border_and_shadow" => "background: #FFF; border: 1px solid #E0E0E0; box-shadow: 0px 0px 1px rgba(128, 128, 128, .2);");
@@ -1004,13 +1004,13 @@ table.logs .sf-call-stack abbr {
 }
 ";
         
-        $__internal_313866eacae32f169979269c2cae50a7e5772cc43afa8b8d7bf8df9dca86e57f->leave($__internal_313866eacae32f169979269c2cae50a7e5772cc43afa8b8d7bf8df9dca86e57f_prof);
+        $__internal_88deec72730847205867b67fdf0fd8cced6eb5779f32751718b8e7e75c967f47->leave($__internal_88deec72730847205867b67fdf0fd8cced6eb5779f32751718b8e7e75c967f47_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "@WebProfiler/Profiler/profiler.css.twig";
+        return "WebProfilerBundle:Profiler:profiler.css.twig";
     }
 
     public function isTraitable()

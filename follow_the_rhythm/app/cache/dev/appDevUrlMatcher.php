@@ -154,9 +154,27 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::soumettreActualiteAction',  '_route' => 'follow_the_rhythm_soumettreActualite',);
             }
 
-            // follow_the_rhythm_soumettreTopicPromotions
-            if ($pathinfo === '/soumettreTopicPromotions') {
-                return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::soumettreTopicPromotionsAction',  '_route' => 'follow_the_rhythm_soumettreTopicPromotions',);
+            if (0 === strpos($pathinfo, '/soumettreTopic')) {
+                // follow_the_rhythm_soumettreTopicPromotions
+                if ($pathinfo === '/soumettreTopicPromotions') {
+                    return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::soumettreTopicPromotionsAction',  '_route' => 'follow_the_rhythm_soumettreTopicPromotions',);
+                }
+
+                // follow_the_rhythm_soumettreTopicNews
+                if ($pathinfo === '/soumettreTopicNews') {
+                    return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::soumettreTopicNewsAction',  '_route' => 'follow_the_rhythm_soumettreTopicNews',);
+                }
+
+                // follow_the_rhythm_soumettreTopicEspacePrive
+                if ($pathinfo === '/soumettreTopicEspacePrive') {
+                    return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::soumettreTopicEspacePriveAction',  '_route' => 'follow_the_rhythm_soumettreTopicEspacePrive',);
+                }
+
+                // follow_the_rhythm_soumettreTopicConcerts
+                if ($pathinfo === '/soumettreTopicConcerts') {
+                    return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::soumettreTopicConcertsAction',  '_route' => 'follow_the_rhythm_soumettreTopicConcerts',);
+                }
+
             }
 
         }

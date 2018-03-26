@@ -163,7 +163,7 @@ class SymfonyController extends Controller
       array('formulaireTopic' => $formulaireTopic->createView()));
     }
     
-    public function soumettreTopicPromotionsAction(Request $requeteUtilisateur){
+    public function soumettreTopicNewsAction(Request $requeteUtilisateur){
        //on récupère le gestionnaire d'entité
       $gestionnaireEntite = $this->getDoctrine()->getManager();
       
@@ -188,7 +188,7 @@ class SymfonyController extends Controller
           ]);
         $topic->setUtilisateur($utilisateur[0]);
         $repositoryCategories = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Categorie')->findBy([
-          "nom" => "Promotions"
+          "nom" => "News"
           ]);
         $topic->setCategorie();
         //On met à l'actualité le seul modérateur éxistant
@@ -198,7 +198,7 @@ class SymfonyController extends Controller
         
       // Envoi du formulaire vers la vue
       //return $this->render('follow_the_rhythmSymfonyBundle:Symfony:soumettreTopic.html.twig',array('formulaireTopic'=>$formulaireTopic->createView()));
-      return $this->redirect($this->generateUrl('follow_the_rhythm_categoriePromotions',array('page'=>1,'sens'=>1)));
+      return $this->redirect($this->generateUrl('follow_the_rhythm_categorieNews',array('page'=>1,'sens'=>1)));
     
       }
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:soumettreTopic.html.twig',

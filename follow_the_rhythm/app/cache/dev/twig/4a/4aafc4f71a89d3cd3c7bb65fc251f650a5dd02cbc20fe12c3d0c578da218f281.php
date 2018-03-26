@@ -21,20 +21,20 @@ class __TwigTemplate_b61c8b18dc1a580e9a09fade46cc7c8eaaf90eb30609e8ae14e6863ceda
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3b581eeb97636de0f00c1273e5ab9548296d7c793f2870d18f818804e15bb7e6 = $this->env->getExtension("native_profiler");
-        $__internal_3b581eeb97636de0f00c1273e5ab9548296d7c793f2870d18f818804e15bb7e6->enter($__internal_3b581eeb97636de0f00c1273e5ab9548296d7c793f2870d18f818804e15bb7e6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieEspacePrive.html.twig"));
+        $__internal_b3029b34450545055cf20a80ef0abd616e0a9e030266b38d26a3e65d5e26d72a = $this->env->getExtension("native_profiler");
+        $__internal_b3029b34450545055cf20a80ef0abd616e0a9e030266b38d26a3e65d5e26d72a->enter($__internal_b3029b34450545055cf20a80ef0abd616e0a9e030266b38d26a3e65d5e26d72a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieEspacePrive.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_3b581eeb97636de0f00c1273e5ab9548296d7c793f2870d18f818804e15bb7e6->leave($__internal_3b581eeb97636de0f00c1273e5ab9548296d7c793f2870d18f818804e15bb7e6_prof);
+        $__internal_b3029b34450545055cf20a80ef0abd616e0a9e030266b38d26a3e65d5e26d72a->leave($__internal_b3029b34450545055cf20a80ef0abd616e0a9e030266b38d26a3e65d5e26d72a_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_9e9c70c848403b25898b151c5cd793ff043fa1e2c748b42edbc6f9890e3cb17b = $this->env->getExtension("native_profiler");
-        $__internal_9e9c70c848403b25898b151c5cd793ff043fa1e2c748b42edbc6f9890e3cb17b->enter($__internal_9e9c70c848403b25898b151c5cd793ff043fa1e2c748b42edbc6f9890e3cb17b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_5a2784a2044b6194ce981f539fb688b3bd13324c7179681385fecb056c222d39 = $this->env->getExtension("native_profiler");
+        $__internal_5a2784a2044b6194ce981f539fb688b3bd13324c7179681385fecb056c222d39->enter($__internal_5a2784a2044b6194ce981f539fb688b3bd13324c7179681385fecb056c222d39_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<div class=\"container\">
@@ -42,7 +42,7 @@ class __TwigTemplate_b61c8b18dc1a580e9a09fade46cc7c8eaaf90eb30609e8ae14e6863ceda
         <div class=\"panel panel-default\">
             <div class=\"panel-heading\"><h2><b><i class=\"fa fa-commenting\" aria-hidden=\"true\"></i> Espace Privé</b><a href=\"";
         // line 7
-        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreTopicPromotions");
+        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreTopicEspacePrive");
         echo "\"><button style='margin-left: 32px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Nouveau topic</button></a></h2></div>
             <div class=\"list-group\">
                 <div class=\"list-group-item\">
@@ -69,7 +69,7 @@ class __TwigTemplate_b61c8b18dc1a580e9a09fade46cc7c8eaaf90eb30609e8ae14e6863ceda
     
 ";
         
-        $__internal_9e9c70c848403b25898b151c5cd793ff043fa1e2c748b42edbc6f9890e3cb17b->leave($__internal_9e9c70c848403b25898b151c5cd793ff043fa1e2c748b42edbc6f9890e3cb17b_prof);
+        $__internal_5a2784a2044b6194ce981f539fb688b3bd13324c7179681385fecb056c222d39->leave($__internal_5a2784a2044b6194ce981f539fb688b3bd13324c7179681385fecb056c222d39_prof);
 
     }
 
@@ -94,7 +94,7 @@ class __TwigTemplate_b61c8b18dc1a580e9a09fade46cc7c8eaaf90eb30609e8ae14e6863ceda
 /* <div class="container">*/
 /*     <div class="row">*/
 /*         <div class="panel panel-default">*/
-/*             <div class="panel-heading"><h2><b><i class="fa fa-commenting" aria-hidden="true"></i> Espace Privé</b><a href="{{path('follow_the_rhythm_soumettreTopicPromotions')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a></h2></div>*/
+/*             <div class="panel-heading"><h2><b><i class="fa fa-commenting" aria-hidden="true"></i> Espace Privé</b><a href="{{path('follow_the_rhythm_soumettreTopicEspacePrive')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a></h2></div>*/
 /*             <div class="list-group">*/
 /*                 <div class="list-group-item">*/
 /*                     {% for topicCourant in tabTopics %}*/

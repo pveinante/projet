@@ -21,20 +21,20 @@ class __TwigTemplate_0a6597c5e08da3050ba93c61aed9797538146e4615b987f68bb2cabf1ef
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f6acfade6bcffe53e8a2c297729859e6b0bd9a77e59db30123d31649718b7736 = $this->env->getExtension("native_profiler");
-        $__internal_f6acfade6bcffe53e8a2c297729859e6b0bd9a77e59db30123d31649718b7736->enter($__internal_f6acfade6bcffe53e8a2c297729859e6b0bd9a77e59db30123d31649718b7736_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieNews.html.twig"));
+        $__internal_a2b4da4b265a931c12d8235ee6a3141bdc1a303762e0c22f09a6c905d410d731 = $this->env->getExtension("native_profiler");
+        $__internal_a2b4da4b265a931c12d8235ee6a3141bdc1a303762e0c22f09a6c905d410d731->enter($__internal_a2b4da4b265a931c12d8235ee6a3141bdc1a303762e0c22f09a6c905d410d731_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieNews.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f6acfade6bcffe53e8a2c297729859e6b0bd9a77e59db30123d31649718b7736->leave($__internal_f6acfade6bcffe53e8a2c297729859e6b0bd9a77e59db30123d31649718b7736_prof);
+        $__internal_a2b4da4b265a931c12d8235ee6a3141bdc1a303762e0c22f09a6c905d410d731->leave($__internal_a2b4da4b265a931c12d8235ee6a3141bdc1a303762e0c22f09a6c905d410d731_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_2230c13dc2e716aeb6cdbd564577f19e98ce051063038e8e21f329118f514929 = $this->env->getExtension("native_profiler");
-        $__internal_2230c13dc2e716aeb6cdbd564577f19e98ce051063038e8e21f329118f514929->enter($__internal_2230c13dc2e716aeb6cdbd564577f19e98ce051063038e8e21f329118f514929_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_ef3e02354e0c473f81dbaedd02eaef6c2efe626b5aeffa0d463d461b22fda7f2 = $this->env->getExtension("native_profiler");
+        $__internal_ef3e02354e0c473f81dbaedd02eaef6c2efe626b5aeffa0d463d461b22fda7f2->enter($__internal_ef3e02354e0c473f81dbaedd02eaef6c2efe626b5aeffa0d463d461b22fda7f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<div class=\"container\">
@@ -42,7 +42,7 @@ class __TwigTemplate_0a6597c5e08da3050ba93c61aed9797538146e4615b987f68bb2cabf1ef
         <div class=\"panel panel-default\">
             <div class=\"panel-heading\"><h2><b><i class=\"fa fa-newspaper-o\" aria-hidden=\"true\"></i> News</b><a href=\"";
         // line 7
-        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreTopicPromotions");
+        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreTopicNews");
         echo "\"><button style='margin-left: 32px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Nouveau topic</button></a></h2></div>
             <div class=\"list-group\">
                 <div class=\"list-group-item\">
@@ -69,7 +69,7 @@ class __TwigTemplate_0a6597c5e08da3050ba93c61aed9797538146e4615b987f68bb2cabf1ef
     
 ";
         
-        $__internal_2230c13dc2e716aeb6cdbd564577f19e98ce051063038e8e21f329118f514929->leave($__internal_2230c13dc2e716aeb6cdbd564577f19e98ce051063038e8e21f329118f514929_prof);
+        $__internal_ef3e02354e0c473f81dbaedd02eaef6c2efe626b5aeffa0d463d461b22fda7f2->leave($__internal_ef3e02354e0c473f81dbaedd02eaef6c2efe626b5aeffa0d463d461b22fda7f2_prof);
 
     }
 
@@ -94,7 +94,7 @@ class __TwigTemplate_0a6597c5e08da3050ba93c61aed9797538146e4615b987f68bb2cabf1ef
 /* <div class="container">*/
 /*     <div class="row">*/
 /*         <div class="panel panel-default">*/
-/*             <div class="panel-heading"><h2><b><i class="fa fa-newspaper-o" aria-hidden="true"></i> News</b><a href="{{path('follow_the_rhythm_soumettreTopicPromotions')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a></h2></div>*/
+/*             <div class="panel-heading"><h2><b><i class="fa fa-newspaper-o" aria-hidden="true"></i> News</b><a href="{{path('follow_the_rhythm_soumettreTopicNews')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a></h2></div>*/
 /*             <div class="list-group">*/
 /*                 <div class="list-group-item">*/
 /*                     {% for topicCourant in tabTopics %}*/

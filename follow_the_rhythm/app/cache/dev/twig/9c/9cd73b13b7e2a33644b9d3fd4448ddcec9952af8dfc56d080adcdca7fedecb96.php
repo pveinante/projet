@@ -21,20 +21,20 @@ class __TwigTemplate_0c0c454b8514cde3e3eb3ba0268227e607c55092ec3e3458c483d62ec31
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e651f4a6b5065b80647437ea09877dd9f41a9fe6dbea0ead316c0a71543db562 = $this->env->getExtension("native_profiler");
-        $__internal_e651f4a6b5065b80647437ea09877dd9f41a9fe6dbea0ead316c0a71543db562->enter($__internal_e651f4a6b5065b80647437ea09877dd9f41a9fe6dbea0ead316c0a71543db562_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieConcert.html.twig"));
+        $__internal_2ea403b9c1e66f1ec90a73996ec4cf65fd5590c0380afacc72a6ee7438c64b77 = $this->env->getExtension("native_profiler");
+        $__internal_2ea403b9c1e66f1ec90a73996ec4cf65fd5590c0380afacc72a6ee7438c64b77->enter($__internal_2ea403b9c1e66f1ec90a73996ec4cf65fd5590c0380afacc72a6ee7438c64b77_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieConcert.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_e651f4a6b5065b80647437ea09877dd9f41a9fe6dbea0ead316c0a71543db562->leave($__internal_e651f4a6b5065b80647437ea09877dd9f41a9fe6dbea0ead316c0a71543db562_prof);
+        $__internal_2ea403b9c1e66f1ec90a73996ec4cf65fd5590c0380afacc72a6ee7438c64b77->leave($__internal_2ea403b9c1e66f1ec90a73996ec4cf65fd5590c0380afacc72a6ee7438c64b77_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_c24f954ed2183defa20aca1571f91bc43d2c2d7981363494c8681244deaa7c7f = $this->env->getExtension("native_profiler");
-        $__internal_c24f954ed2183defa20aca1571f91bc43d2c2d7981363494c8681244deaa7c7f->enter($__internal_c24f954ed2183defa20aca1571f91bc43d2c2d7981363494c8681244deaa7c7f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_773ab9a22ab0fea8f0767b29e5fe4ff5b3a0edfd1c7f4e2c20e25a48abfed8f0 = $this->env->getExtension("native_profiler");
+        $__internal_773ab9a22ab0fea8f0767b29e5fe4ff5b3a0edfd1c7f4e2c20e25a48abfed8f0->enter($__internal_773ab9a22ab0fea8f0767b29e5fe4ff5b3a0edfd1c7f4e2c20e25a48abfed8f0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<div class=\"container\">
@@ -42,7 +42,7 @@ class __TwigTemplate_0c0c454b8514cde3e3eb3ba0268227e607c55092ec3e3458c483d62ec31
         <div class=\"panel panel-default\">
             <div class=\"panel-heading\"><h2><b><i class=\"fa fa-music\" aria-hidden=\"true\"></i> Concerts</b><a href=\"";
         // line 7
-        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreTopicPromotions");
+        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreTopicConcerts");
         echo "\"><button style='margin-left: 32px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Nouveau topic</button></a></h2></div>
             <div class=\"list-group\">
                 <div class=\"list-group-item\">
@@ -69,7 +69,7 @@ class __TwigTemplate_0c0c454b8514cde3e3eb3ba0268227e607c55092ec3e3458c483d62ec31
     
 ";
         
-        $__internal_c24f954ed2183defa20aca1571f91bc43d2c2d7981363494c8681244deaa7c7f->leave($__internal_c24f954ed2183defa20aca1571f91bc43d2c2d7981363494c8681244deaa7c7f_prof);
+        $__internal_773ab9a22ab0fea8f0767b29e5fe4ff5b3a0edfd1c7f4e2c20e25a48abfed8f0->leave($__internal_773ab9a22ab0fea8f0767b29e5fe4ff5b3a0edfd1c7f4e2c20e25a48abfed8f0_prof);
 
     }
 
@@ -94,7 +94,7 @@ class __TwigTemplate_0c0c454b8514cde3e3eb3ba0268227e607c55092ec3e3458c483d62ec31
 /* <div class="container">*/
 /*     <div class="row">*/
 /*         <div class="panel panel-default">*/
-/*             <div class="panel-heading"><h2><b><i class="fa fa-music" aria-hidden="true"></i> Concerts</b><a href="{{path('follow_the_rhythm_soumettreTopicPromotions')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a></h2></div>*/
+/*             <div class="panel-heading"><h2><b><i class="fa fa-music" aria-hidden="true"></i> Concerts</b><a href="{{path('follow_the_rhythm_soumettreTopicConcerts')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a></h2></div>*/
 /*             <div class="list-group">*/
 /*                 <div class="list-group-item">*/
 /*                     {% for topicCourant in tabTopics %}*/

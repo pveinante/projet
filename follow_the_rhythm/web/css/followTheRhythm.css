@@ -8,13 +8,16 @@
     height: 128px;
 }
 
-.lienCache
+#lienlogo
 {
+    z-index: 99;
     background-color: black;
     position: fixed;
     text-align: center;
     line-height: 128px;
     height: 128px;
+    display: inline-block;
+    width: 100%;
 }
 
 #titre {display:inline-block;margin-right:10px; width:200px;} 

@@ -1,32 +1,32 @@
 {# API Liste des actualités+artiste(concerné ou pas)+concert(lié ou pas) #}
-
-{% set cpt=0 %}
-[{% for actualiteCourante in tabActualites %}
-    {% set cpt=cpt+1 %}{"id":{{actualiteCourante.id}},
-    "titre":"{{actualiteCourante.titre}}",
-    {% if actualiteCourante.artiste is empty %}
-        "artiste":null
-    {% else %}
-        "artiste":[
-        {% for list in actualiteCourante.artiste %}
-            {"nomDeScene":"{{list.nomDeScene}}",
-            "nomComplet":"{{list.nomComplet}}"
-            {% if not loop.last %}
-                },
-            {% else %}
-                }]
-            {% endif %}
-        {% endfor %}
-    {% endif %}
-    ,
-    {% if actualiteCourante.concert is empty %}
-        "concert":null,
-    {% else %}
-        "concert":
-        {"id":{{actualiteCourante.concert.id}},"nom":"{{actualiteCourante.concert.nom}}","lieu":"{{actualiteCourante.concert.lieu}}","date":"{{actualiteCourante.concert.dateConcert|date("d/m/Y")}}"},
-    {% endif %}
-        "description":"{{actualiteCourante.description}}","date":"{{actualiteCourante.dateActualite|date("d/m/Y")}}","nbCoupDeCoeurs":{{actualiteCourante.nbCoupDeCoeurs}}}
-    {% if cpt<tabActualites|length %}
-    ,
-    {% endif %}
+    {% set cpt=0 %}
+    [{% for actualiteCourante in tabActualites %}
+       {% set cpt=cpt+1 %}
+        {"id":{{actualiteCourante.id}},
+        "titre":"{{actualiteCourante.titre}}",
+        {% if actualiteCourante.artiste is empty %}
+            "artiste":null
+        {% else %}
+            "artiste":[
+            {% for list in actualiteCourante.artiste %}
+                {"nomDeScene":"{{list.nomDeScene}}",
+                "nomComplet":"{{list.nomComplet}}"
+                {% if not loop.last %}
+                    },
+                {% else %}
+                    }]
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        ,
+        {% if actualiteCourante.concert is empty %}
+            "concert":null,
+        {% else %}
+            "concert":
+            {"id":{{actualiteCourante.concert.id}},"nom":"{{actualiteCourante.concert.nom}}","lieu":"{{actualiteCourante.concert.lieu}}","date":"{{actualiteCourante.concert.dateConcert|date("d/m/Y")}}"},
+        {% endif %}
+            "description":"{{actualiteCourante.description}}","date":"{{actualiteCourante.dateActualite|date("d/m/Y")}}","nbCoupDeCoeurs":{{actualiteCourante.nbCoupDeCoeurs}}}
+        {% if cpt<tabActualites|length %}
+        ,
+        {% endif %}
 {% endfor %}]

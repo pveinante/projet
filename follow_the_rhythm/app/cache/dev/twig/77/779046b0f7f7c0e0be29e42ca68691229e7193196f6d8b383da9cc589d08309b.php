@@ -15,39 +15,38 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_32d35a457ec84256118c2abb51aa07f8dd0b66cc643621982fed9b085566228a = $this->env->getExtension("native_profiler");
-        $__internal_32d35a457ec84256118c2abb51aa07f8dd0b66cc643621982fed9b085566228a->enter($__internal_32d35a457ec84256118c2abb51aa07f8dd0b66cc643621982fed9b085566228a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:news.json.twig"));
+        $__internal_e9935274a24ea442e34052398d8598b31880d3a962a77e105ab4dabed00294c4 = $this->env->getExtension("native_profiler");
+        $__internal_e9935274a24ea442e34052398d8598b31880d3a962a77e105ab4dabed00294c4->enter($__internal_e9935274a24ea442e34052398d8598b31880d3a962a77e105ab4dabed00294c4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:news.json.twig"));
 
         // line 2
-        echo "
-";
-        // line 3
+        echo "    ";
         $context["cpt"] = 0;
-        // line 4
-        echo "[";
+        // line 3
+        echo "    [";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["tabActualites"]) ? $context["tabActualites"] : $this->getContext($context, "tabActualites")));
         foreach ($context['_seq'] as $context["_key"] => $context["actualiteCourante"]) {
-            // line 5
-            echo "    ";
+            // line 4
+            echo "       ";
             $context["cpt"] = ((isset($context["cpt"]) ? $context["cpt"] : $this->getContext($context, "cpt")) + 1);
-            echo "{\"id\":";
+            // line 5
+            echo "        {\"id\":";
             echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "id", array()), "html", null, true);
             echo ",
-    \"titre\":\"";
+        \"titre\":\"";
             // line 6
             echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "titre", array()), "html", null, true);
             echo "\",
-    ";
+        ";
             // line 7
             if (twig_test_empty($this->getAttribute($context["actualiteCourante"], "artiste", array()))) {
                 // line 8
-                echo "        \"artiste\":null
-    ";
+                echo "            \"artiste\":null
+        ";
             } else {
                 // line 10
-                echo "        \"artiste\":[
-        ";
+                echo "            \"artiste\":[
+            ";
                 // line 11
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["actualiteCourante"], "artiste", array()));
@@ -66,26 +65,26 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
                 }
                 foreach ($context['_seq'] as $context["_key"] => $context["list"]) {
                     // line 12
-                    echo "            {\"nomDeScene\":\"";
+                    echo "                {\"nomDeScene\":\"";
                     echo twig_escape_filter($this->env, $this->getAttribute($context["list"], "nomDeScene", array()), "html", null, true);
                     echo "\",
-            \"nomComplet\":\"";
+                \"nomComplet\":\"";
                     // line 13
                     echo twig_escape_filter($this->env, $this->getAttribute($context["list"], "nomComplet", array()), "html", null, true);
                     echo "\"
-            ";
+                ";
                     // line 14
                     if ( !$this->getAttribute($context["loop"], "last", array())) {
                         // line 15
-                        echo "                },
-            ";
+                        echo "                    },
+                ";
                     } else {
                         // line 17
-                        echo "                }]
-            ";
+                        echo "                    }]
+                ";
                     }
                     // line 19
-                    echo "        ";
+                    echo "            ";
                     ++$context['loop']['index0'];
                     ++$context['loop']['index'];
                     $context['loop']['first'] = false;
@@ -99,20 +98,20 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['list'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
                 // line 20
-                echo "    ";
+                echo "        ";
             }
             // line 21
-            echo "    ,
-    ";
+            echo "        ,
+        ";
             // line 22
             if (twig_test_empty($this->getAttribute($context["actualiteCourante"], "concert", array()))) {
                 // line 23
-                echo "        \"concert\":null,
-    ";
+                echo "            \"concert\":null,
+        ";
             } else {
                 // line 25
-                echo "        \"concert\":
-        {\"id\":";
+                echo "            \"concert\":
+            {\"id\":";
                 // line 26
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["actualiteCourante"], "concert", array()), "id", array()), "html", null, true);
                 echo ",\"nom\":\"";
@@ -122,22 +121,22 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
                 echo "\",\"date\":\"";
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($this->getAttribute($context["actualiteCourante"], "concert", array()), "dateConcert", array()), "d/m/Y"), "html", null, true);
                 echo "\"},
-    ";
+        ";
             }
             // line 28
-            echo "        \"description\":\"";
+            echo "            \"description\":\"";
             echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "description", array()), "html", null, true);
             echo "\",\"date\":\"";
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["actualiteCourante"], "dateActualite", array()), "d/m/Y"), "html", null, true);
             echo "\",\"nbCoupDeCoeurs\":";
             echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "nbCoupDeCoeurs", array()), "html", null, true);
             echo "}
-    ";
+        ";
             // line 29
             if (((isset($context["cpt"]) ? $context["cpt"] : $this->getContext($context, "cpt")) < twig_length_filter($this->env, (isset($context["tabActualites"]) ? $context["tabActualites"] : $this->getContext($context, "tabActualites"))))) {
                 // line 30
-                echo "    ,
-    ";
+                echo "        ,
+        ";
             }
         }
         $_parent = $context['_parent'];
@@ -146,7 +145,7 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
         // line 32
         echo "]";
         
-        $__internal_32d35a457ec84256118c2abb51aa07f8dd0b66cc643621982fed9b085566228a->leave($__internal_32d35a457ec84256118c2abb51aa07f8dd0b66cc643621982fed9b085566228a_prof);
+        $__internal_e9935274a24ea442e34052398d8598b31880d3a962a77e105ab4dabed00294c4->leave($__internal_e9935274a24ea442e34052398d8598b31880d3a962a77e105ab4dabed00294c4_prof);
 
     }
 
@@ -162,38 +161,38 @@ class __TwigTemplate_6f562d5115ac850a7b9213f5adfbd1b1a30d39bb39484897266c6c52bea
 
     public function getDebugInfo()
     {
-        return array (  147 => 32,  139 => 30,  137 => 29,  128 => 28,  117 => 26,  114 => 25,  110 => 23,  108 => 22,  105 => 21,  102 => 20,  88 => 19,  84 => 17,  80 => 15,  78 => 14,  74 => 13,  69 => 12,  52 => 11,  49 => 10,  45 => 8,  43 => 7,  39 => 6,  32 => 5,  27 => 4,  25 => 3,  22 => 2,);
+        return array (  146 => 32,  138 => 30,  136 => 29,  127 => 28,  116 => 26,  113 => 25,  109 => 23,  107 => 22,  104 => 21,  101 => 20,  87 => 19,  83 => 17,  79 => 15,  77 => 14,  73 => 13,  68 => 12,  51 => 11,  48 => 10,  44 => 8,  42 => 7,  38 => 6,  33 => 5,  30 => 4,  25 => 3,  22 => 2,);
     }
 }
 /* {# API Liste des actualités+artiste(concerné ou pas)+concert(lié ou pas) #}*/
-/* */
-/* {% set cpt=0 %}*/
-/* [{% for actualiteCourante in tabActualites %}*/
-/*     {% set cpt=cpt+1 %}{"id":{{actualiteCourante.id}},*/
-/*     "titre":"{{actualiteCourante.titre}}",*/
-/*     {% if actualiteCourante.artiste is empty %}*/
-/*         "artiste":null*/
-/*     {% else %}*/
-/*         "artiste":[*/
-/*         {% for list in actualiteCourante.artiste %}*/
-/*             {"nomDeScene":"{{list.nomDeScene}}",*/
-/*             "nomComplet":"{{list.nomComplet}}"*/
-/*             {% if not loop.last %}*/
-/*                 },*/
-/*             {% else %}*/
-/*                 }]*/
-/*             {% endif %}*/
-/*         {% endfor %}*/
-/*     {% endif %}*/
-/*     ,*/
-/*     {% if actualiteCourante.concert is empty %}*/
-/*         "concert":null,*/
-/*     {% else %}*/
-/*         "concert":*/
-/*         {"id":{{actualiteCourante.concert.id}},"nom":"{{actualiteCourante.concert.nom}}","lieu":"{{actualiteCourante.concert.lieu}}","date":"{{actualiteCourante.concert.dateConcert|date("d/m/Y")}}"},*/
-/*     {% endif %}*/
-/*         "description":"{{actualiteCourante.description}}","date":"{{actualiteCourante.dateActualite|date("d/m/Y")}}","nbCoupDeCoeurs":{{actualiteCourante.nbCoupDeCoeurs}}}*/
-/*     {% if cpt<tabActualites|length %}*/
-/*     ,*/
-/*     {% endif %}*/
+/*     {% set cpt=0 %}*/
+/*     [{% for actualiteCourante in tabActualites %}*/
+/*        {% set cpt=cpt+1 %}*/
+/*         {"id":{{actualiteCourante.id}},*/
+/*         "titre":"{{actualiteCourante.titre}}",*/
+/*         {% if actualiteCourante.artiste is empty %}*/
+/*             "artiste":null*/
+/*         {% else %}*/
+/*             "artiste":[*/
+/*             {% for list in actualiteCourante.artiste %}*/
+/*                 {"nomDeScene":"{{list.nomDeScene}}",*/
+/*                 "nomComplet":"{{list.nomComplet}}"*/
+/*                 {% if not loop.last %}*/
+/*                     },*/
+/*                 {% else %}*/
+/*                     }]*/
+/*                 {% endif %}*/
+/*             {% endfor %}*/
+/*         {% endif %}*/
+/*         ,*/
+/*         {% if actualiteCourante.concert is empty %}*/
+/*             "concert":null,*/
+/*         {% else %}*/
+/*             "concert":*/
+/*             {"id":{{actualiteCourante.concert.id}},"nom":"{{actualiteCourante.concert.nom}}","lieu":"{{actualiteCourante.concert.lieu}}","date":"{{actualiteCourante.concert.dateConcert|date("d/m/Y")}}"},*/
+/*         {% endif %}*/
+/*             "description":"{{actualiteCourante.description}}","date":"{{actualiteCourante.dateActualite|date("d/m/Y")}}","nbCoupDeCoeurs":{{actualiteCourante.nbCoupDeCoeurs}}}*/
+/*         {% if cpt<tabActualites|length %}*/
+/*         ,*/
+/*         {% endif %}*/
 /* {% endfor %}]*/

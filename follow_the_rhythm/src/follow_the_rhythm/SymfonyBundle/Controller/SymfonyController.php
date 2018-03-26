@@ -278,6 +278,7 @@ class SymfonyController extends Controller
      public function newsAction()
     {
       header("Access-Control-Allow-Origin: *");
+      header("SContent-Type: application/json");
       //-------------------------------AFFICHER ACTUALITE/ARTISTE/CONCERT---------------------------
       //on récupère le gestionnaire d'entité
       $gestionnaireEntite = $this->getDoctrine()->getManager();
@@ -291,6 +292,7 @@ class SymfonyController extends Controller
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:news.json.twig',
       array('tabActualites'=>$tabActualites));
     }
+    
     
     public function modifierSupprimerActualiteAction(){
       //--------------------------AFFICHER CONCERT----------------------------

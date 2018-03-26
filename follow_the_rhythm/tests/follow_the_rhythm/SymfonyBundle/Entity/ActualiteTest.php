@@ -41,7 +41,7 @@ class ActualiteTest extends \PHPUnit_Framework_TestCase
         $actu = new Actualite(); 
 		$artiste = new Artiste();
 		
-		$artiste->setNomComplet("Johnny");		
+		$artiste->setNom("Johnny");		
         $resultat = $actu->setArtiste($artiste); 
  
         $this->assertEquals($artiste, $resultat); 
@@ -117,15 +117,15 @@ class ActualiteTest extends \PHPUnit_Framework_TestCase
         $actu = new Actualite(); 
 		$artiste = new Artiste();
 		
-		$artiste->setNomComplet("Johnny");		
+		$artiste->setNom("Johnny");		
         $actu->setArtiste($artiste); 
-		$resultat = $actu->getArtiste()->getNomComplet();
+		$resultat = $actu->getArtiste()->getNom();
  
         $this->assertEquals("Johnny", $resultat);  
     }
 	
 	// TEST DE LA METHODE getModerateur()
-    public function testGetModerateur() 
+    public function testSetModerateur() 
     { 
         $actu = new Actualite(); 
 		$moderateur = new Moderateur();
@@ -138,7 +138,7 @@ class ActualiteTest extends \PHPUnit_Framework_TestCase
     } 
 	
     // TEST DE LA METHODE getConcert()
-    public function testGetConcert() 
+    public function testSetConcert() 
     { 
         $actu = new Actualite(); 
 		$concert = new Concert();
@@ -147,11 +147,11 @@ class ActualiteTest extends \PHPUnit_Framework_TestCase
         $actu->setConcert($concert);
 		$resultat = $actu->getConcert()->getNom();
  
-        $this->assertEquals("Musilac 2018", $resultat); 
+        $this->assertEquals"Musilac 2018", $resultat); 
     }  
     
     // TEST DE LA METHODE getDateActualite()
-    public function testGetDateActualite() 
+    public function testSetDateActualite() 
     { 
         $actu = new Actualite(); 
 		$date = new DateTime('2018-03-26T08:30:00.000000Z');
@@ -161,7 +161,5 @@ class ActualiteTest extends \PHPUnit_Framework_TestCase
  
         $this->assertEquals('2018-03-26T08:30:00.000000Z', $resultat); 
     } 
-
-}
 
 ?>

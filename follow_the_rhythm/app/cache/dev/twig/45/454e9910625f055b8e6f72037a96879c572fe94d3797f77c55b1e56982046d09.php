@@ -21,20 +21,20 @@ class __TwigTemplate_4752fa556d8341fbfce7da0afdb1625d3cc5001c296ef0fcd68b4100192
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_567176ebb52421ad9cf400d2302c191f4cfe79a1747bbcabddddbf12d4d17b93 = $this->env->getExtension("native_profiler");
-        $__internal_567176ebb52421ad9cf400d2302c191f4cfe79a1747bbcabddddbf12d4d17b93->enter($__internal_567176ebb52421ad9cf400d2302c191f4cfe79a1747bbcabddddbf12d4d17b93_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:concert.html.twig"));
+        $__internal_e4e3eac70e22114fea56f1e9b255aa4c4993f2ac740f60e90ae3507efca8feff = $this->env->getExtension("native_profiler");
+        $__internal_e4e3eac70e22114fea56f1e9b255aa4c4993f2ac740f60e90ae3507efca8feff->enter($__internal_e4e3eac70e22114fea56f1e9b255aa4c4993f2ac740f60e90ae3507efca8feff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:concert.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_567176ebb52421ad9cf400d2302c191f4cfe79a1747bbcabddddbf12d4d17b93->leave($__internal_567176ebb52421ad9cf400d2302c191f4cfe79a1747bbcabddddbf12d4d17b93_prof);
+        $__internal_e4e3eac70e22114fea56f1e9b255aa4c4993f2ac740f60e90ae3507efca8feff->leave($__internal_e4e3eac70e22114fea56f1e9b255aa4c4993f2ac740f60e90ae3507efca8feff_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_f5b18289d39a8e0b1bbdc9e838762a1f7ec3ee508a6cd2f89646c2321f3e3237 = $this->env->getExtension("native_profiler");
-        $__internal_f5b18289d39a8e0b1bbdc9e838762a1f7ec3ee508a6cd2f89646c2321f3e3237->enter($__internal_f5b18289d39a8e0b1bbdc9e838762a1f7ec3ee508a6cd2f89646c2321f3e3237_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_6d1bb22fb79d6152d034444c8d1c9b68e38781a722b430e207ae4d9628bb1bb2 = $this->env->getExtension("native_profiler");
+        $__internal_6d1bb22fb79d6152d034444c8d1c9b68e38781a722b430e207ae4d9628bb1bb2->enter($__internal_6d1bb22fb79d6152d034444c8d1c9b68e38781a722b430e207ae4d9628bb1bb2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<body>
@@ -60,12 +60,13 @@ class __TwigTemplate_4752fa556d8341fbfce7da0afdb1625d3cc5001c296ef0fcd68b4100192
         // line 17
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueil", array("page" => 1, "sens" => 1)), "html", null, true);
         echo "\"><input type=button class=\"btn btn-primary\" value=\"Annuler\" onclick=\"return confirm('Êtes vous sûr? Les données saisies seront effacées');\"></a>
-          </form>
-          <p></p><a href=\"";
-        // line 19
+            <p></p><a href=\"";
+        // line 18
         echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_artiste");
         echo "\"><button class=\"btn btn-primary\">Ajouter un nouvel artiste</button></a></p>
            
+          </form>
+          
         </div>
       </div>
     </div>
@@ -75,7 +76,7 @@ class __TwigTemplate_4752fa556d8341fbfce7da0afdb1625d3cc5001c296ef0fcd68b4100192
 
 ";
         
-        $__internal_f5b18289d39a8e0b1bbdc9e838762a1f7ec3ee508a6cd2f89646c2321f3e3237->leave($__internal_f5b18289d39a8e0b1bbdc9e838762a1f7ec3ee508a6cd2f89646c2321f3e3237_prof);
+        $__internal_6d1bb22fb79d6152d034444c8d1c9b68e38781a722b430e207ae4d9628bb1bb2->leave($__internal_6d1bb22fb79d6152d034444c8d1c9b68e38781a722b430e207ae4d9628bb1bb2_prof);
 
     }
 
@@ -91,7 +92,7 @@ class __TwigTemplate_4752fa556d8341fbfce7da0afdb1625d3cc5001c296ef0fcd68b4100192
 
     public function getDebugInfo()
     {
-        return array (  66 => 19,  61 => 17,  57 => 16,  53 => 15,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  65 => 18,  61 => 17,  57 => 16,  53 => 15,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -111,9 +112,10 @@ class __TwigTemplate_4752fa556d8341fbfce7da0afdb1625d3cc5001c296ef0fcd68b4100192
 /*           <form method="post" id=soumettreConcertForm {{form_enctype(formulaireConcert)}}>*/
 /*               {{ form_widget(formulaireConcert)}}*/
 /*             <input type=submit class="btn btn-primary" onsubmit="return false"> <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a>*/
-/*           </form>*/
-/*           <p></p><a href="{{path('follow_the_rhythm_artiste')}}"><button class="btn btn-primary">Ajouter un nouvel artiste</button></a></p>*/
+/*             <p></p><a href="{{path('follow_the_rhythm_artiste')}}"><button class="btn btn-primary">Ajouter un nouvel artiste</button></a></p>*/
 /*            */
+/*           </form>*/
+/*           */
 /*         </div>*/
 /*       </div>*/
 /*     </div>*/

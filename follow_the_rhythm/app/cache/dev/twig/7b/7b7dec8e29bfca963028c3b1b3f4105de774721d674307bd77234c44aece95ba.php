@@ -21,20 +21,20 @@ class __TwigTemplate_7cdbe34ba1ee94debeb6af7f9a4f9ab5407632f7197f23ea4a1de1185e8
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_61ea28642e8dc67e733ed278b1d1c8d6283c409c489bfc1c300b2547a9b77b53 = $this->env->getExtension("native_profiler");
-        $__internal_61ea28642e8dc67e733ed278b1d1c8d6283c409c489bfc1c300b2547a9b77b53->enter($__internal_61ea28642e8dc67e733ed278b1d1c8d6283c409c489bfc1c300b2547a9b77b53_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:accueilArtistesUniquement.html.twig"));
+        $__internal_bd1707c71b8da9e6a184e0b619a2221907eb218a23b14919de9b291acf7be713 = $this->env->getExtension("native_profiler");
+        $__internal_bd1707c71b8da9e6a184e0b619a2221907eb218a23b14919de9b291acf7be713->enter($__internal_bd1707c71b8da9e6a184e0b619a2221907eb218a23b14919de9b291acf7be713_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:accueilArtistesUniquement.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_61ea28642e8dc67e733ed278b1d1c8d6283c409c489bfc1c300b2547a9b77b53->leave($__internal_61ea28642e8dc67e733ed278b1d1c8d6283c409c489bfc1c300b2547a9b77b53_prof);
+        $__internal_bd1707c71b8da9e6a184e0b619a2221907eb218a23b14919de9b291acf7be713->leave($__internal_bd1707c71b8da9e6a184e0b619a2221907eb218a23b14919de9b291acf7be713_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_ebb83b06e04922f1d2e7c1c84cc9f28845379168ae36d63ff363d9379ec250e3 = $this->env->getExtension("native_profiler");
-        $__internal_ebb83b06e04922f1d2e7c1c84cc9f28845379168ae36d63ff363d9379ec250e3->enter($__internal_ebb83b06e04922f1d2e7c1c84cc9f28845379168ae36d63ff363d9379ec250e3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_4f12a0b39fcc092707410cab76745f2c31d3c8e9289b0754f620cac81d120903 = $this->env->getExtension("native_profiler");
+        $__internal_4f12a0b39fcc092707410cab76745f2c31d3c8e9289b0754f620cac81d120903->enter($__internal_4f12a0b39fcc092707410cab76745f2c31d3c8e9289b0754f620cac81d120903_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "
@@ -52,16 +52,16 @@ class __TwigTemplate_7cdbe34ba1ee94debeb6af7f9a4f9ab5407632f7197f23ea4a1de1185e8
           <a href=\"";
         // line 13
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueilArtistesUniquement", array("page" => 1, "sens" => 1)), "html", null, true);
-        echo "\" title=\"Affiche seulement les actualités qui concernent des artistes et non des concerts\"><button type=\"button\" class=\"btn btn-secondary\" autofocus>Actualites sur les artistes uniquement</button></a>
+        echo "\"title=\"Affiche seulement les actualités qui concernent des artistes et non des concerts\"><button type=\"button\" class=\"btn btn-secondary\" autofocus>Actualites sur les artistes uniquement</button></a>
           <a href=\"";
         // line 14
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueilArtistesUniquement", array("page" => 1, "sens" => 2)), "html", null, true);
-        echo "\" title=\"Tri les actualités de la plus ancienne à la plus récente\"><button class=\"btn btn-secondary\" type=\"button\"><span class=\"glyphicon glyphicon-time\"></span><span class=\"glyphicon glyphicon-sort-by-order\"></span> Chronologique</button></a>
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueil", array("page" => 1, "sens" => 2)), "html", null, true);
+        echo "\" title=\"De la plus ancienne à la plus récente\"><button class=\"btn btn-secondary\" type=\"button\">Chronologique</button></a>
           <a href=\"";
         // line 15
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueilArtistesUniquement", array("page" => 1, "sens" => 1)), "html", null, true);
-        echo "\" title=\"Tri les actualités de la plus récente à la plus ancienne\"><button class=\"btn btn-secondary\" type=\"button\"><span class=\"glyphicon glyphicon-time\"></span><span class=\"glyphicon glyphicon-sort-by-order-alt\"></span>Antéchronologique</button></a>          
-       </div>
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueil", array("page" => 1, "sens" => 1)), "html", null, true);
+        echo "\" title=\"De la plus récente à la plus ancienne\"><button class=\"btn btn-secondary\" type=\"button\">Antéchronologique</button></a>  
+        </div>
 
      
       <div class=\"list-group\">
@@ -218,7 +218,7 @@ class __TwigTemplate_7cdbe34ba1ee94debeb6af7f9a4f9ab5407632f7197f23ea4a1de1185e8
 </script>
 ";
         
-        $__internal_ebb83b06e04922f1d2e7c1c84cc9f28845379168ae36d63ff363d9379ec250e3->leave($__internal_ebb83b06e04922f1d2e7c1c84cc9f28845379168ae36d63ff363d9379ec250e3_prof);
+        $__internal_4f12a0b39fcc092707410cab76745f2c31d3c8e9289b0754f620cac81d120903->leave($__internal_4f12a0b39fcc092707410cab76745f2c31d3c8e9289b0754f620cac81d120903_prof);
 
     }
 
@@ -249,10 +249,10 @@ class __TwigTemplate_7cdbe34ba1ee94debeb6af7f9a4f9ab5407632f7197f23ea4a1de1185e8
 /*          */
 /*          <label>Options de tri :</label>*/
 /*           <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}" title="Affiche toutes les actualités"><button type="button" class="btn btn-secondary">Toutes les actualités</button></a>*/
-/*           <a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 1})}}" title="Affiche seulement les actualités qui concernent des artistes et non des concerts"><button type="button" class="btn btn-secondary" autofocus>Actualites sur les artistes uniquement</button></a>*/
-/*           <a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 2})}}" title="Tri les actualités de la plus ancienne à la plus récente"><button class="btn btn-secondary" type="button"><span class="glyphicon glyphicon-time"></span><span class="glyphicon glyphicon-sort-by-order"></span> Chronologique</button></a>*/
-/*           <a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 1})}}" title="Tri les actualités de la plus récente à la plus ancienne"><button class="btn btn-secondary" type="button"><span class="glyphicon glyphicon-time"></span><span class="glyphicon glyphicon-sort-by-order-alt"></span>Antéchronologique</button></a>          */
-/*        </div>*/
+/*           <a href="{{path('follow_the_rhythm_accueilArtistesUniquement',{'page': 1, 'sens': 1})}}"title="Affiche seulement les actualités qui concernent des artistes et non des concerts"><button type="button" class="btn btn-secondary" autofocus>Actualites sur les artistes uniquement</button></a>*/
+/*           <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 2})}}" title="De la plus ancienne à la plus récente"><button class="btn btn-secondary" type="button">Chronologique</button></a>*/
+/*           <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}" title="De la plus récente à la plus ancienne"><button class="btn btn-secondary" type="button">Antéchronologique</button></a>  */
+/*         </div>*/
 /* */
 /*      */
 /*       <div class="list-group">*/

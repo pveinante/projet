@@ -15,9 +15,10 @@
           <form method="post" id=soumettreConcertForm {{form_enctype(formulaireConcert)}}>
               {{ form_widget(formulaireConcert)}}
             <input type=submit class="btn btn-primary" onsubmit="return false"> <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a>
-          </form>
-          <p></p><a href="{{path('follow_the_rhythm_artiste')}}"><button class="btn btn-primary">Ajouter un nouvel artiste</button></a></p>
+            <p></p><a href="{{path('follow_the_rhythm_artiste')}}"><button class="btn btn-primary">Ajouter un nouvel artiste</button></a></p>
            
+          </form>
+          
         </div>
       </div>
     </div>

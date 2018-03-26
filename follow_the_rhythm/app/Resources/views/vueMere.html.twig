@@ -25,15 +25,15 @@
     </head>
 
     <body background="{{ asset('upload/images/bg3.jpg') }}" style="background-size: cover;">
-            <div style="background-size: auto 128px; background-position: center;" class="header col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <a href="/follow_the_rhythm/web/app_dev.php/accueil/1/1"> <div style="background-size: auto 128px; background-position: center;" class="header col-lg-12 col-md-12 col-sm-12 col-xs-12">
             {#Titre de la page avec lien vers la page d'accueil#}
                     {% block header %}
-                        <p id='lienlogo'><a href="{#path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1}) #}">Accueil</a></p>
                         <!-- <p align="center"><a href ="{#path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1}) #}"><img class=img-responsive src="{# asset('upload/images/Follow2.png') #}" style=width:20% /></a></p>
                         <!--<a href="{#path('follow_the_rhythm_accueil') #}"><h1> <FONT COLOR="#9400d3">Follow The Rhythm</FONT></h1></a>
                         <h2>L'actualité Musicale</h2>-->
                     {% endblock %}
             </div>
+            </a>
         {#fin du code responsable du titre#}
         
         {#Espace entre la banière et le menu #}

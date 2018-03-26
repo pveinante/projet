@@ -21,26 +21,29 @@ class __TwigTemplate_b61c8b18dc1a580e9a09fade46cc7c8eaaf90eb30609e8ae14e6863ceda
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ba9a42f06bef867b4264b28459de24df5d240b7a6028149d9bd1d6ba1c20ed14 = $this->env->getExtension("native_profiler");
-        $__internal_ba9a42f06bef867b4264b28459de24df5d240b7a6028149d9bd1d6ba1c20ed14->enter($__internal_ba9a42f06bef867b4264b28459de24df5d240b7a6028149d9bd1d6ba1c20ed14_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieEspacePrive.html.twig"));
+        $__internal_388a1f8ff82263da554063fab5e4077b27887a425469b8d54e630626eb3a6f62 = $this->env->getExtension("native_profiler");
+        $__internal_388a1f8ff82263da554063fab5e4077b27887a425469b8d54e630626eb3a6f62->enter($__internal_388a1f8ff82263da554063fab5e4077b27887a425469b8d54e630626eb3a6f62_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieEspacePrive.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_ba9a42f06bef867b4264b28459de24df5d240b7a6028149d9bd1d6ba1c20ed14->leave($__internal_ba9a42f06bef867b4264b28459de24df5d240b7a6028149d9bd1d6ba1c20ed14_prof);
+        $__internal_388a1f8ff82263da554063fab5e4077b27887a425469b8d54e630626eb3a6f62->leave($__internal_388a1f8ff82263da554063fab5e4077b27887a425469b8d54e630626eb3a6f62_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_303ab25f79b4f6b736621c2921a1f0cf5cac3c5b77f49be0af600a4da7401900 = $this->env->getExtension("native_profiler");
-        $__internal_303ab25f79b4f6b736621c2921a1f0cf5cac3c5b77f49be0af600a4da7401900->enter($__internal_303ab25f79b4f6b736621c2921a1f0cf5cac3c5b77f49be0af600a4da7401900_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_3fcdba266702ff1730c53536ebcaac87b9180cbca5dc2e7b1c8a211ab2b3c450 = $this->env->getExtension("native_profiler");
+        $__internal_3fcdba266702ff1730c53536ebcaac87b9180cbca5dc2e7b1c8a211ab2b3c450->enter($__internal_3fcdba266702ff1730c53536ebcaac87b9180cbca5dc2e7b1c8a211ab2b3c450_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<div class=\"container\">
     <div class=\"row\">
         <div class=\"panel panel-default\">
-            <div class=\"panel-heading\"><h2><b><i class=\"fa fa-user-o\" aria-hidden=\"true\"></i><i class=\"fa fa-commenting\" aria-hidden=\"true\"></i> Espace privé</b></h2></div>
+            <div class=\"panel-heading\"><h2><b><i class=\"fa fa-commenting\" aria-hidden=\"true\"></i> Espace privé</b><a href=\"";
+        // line 7
+        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreActualite");
+        echo "\"><button style='margin-left: 32px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Nouveau topic</button></a></h2></div>
             <div class=\"list-group\">
                 <div class=\"list-group-item\">
                     <div align=\"justify\"> 
@@ -54,7 +57,7 @@ class __TwigTemplate_b61c8b18dc1a580e9a09fade46cc7c8eaaf90eb30609e8ae14e6863ceda
     
 ";
         
-        $__internal_303ab25f79b4f6b736621c2921a1f0cf5cac3c5b77f49be0af600a4da7401900->leave($__internal_303ab25f79b4f6b736621c2921a1f0cf5cac3c5b77f49be0af600a4da7401900_prof);
+        $__internal_3fcdba266702ff1730c53536ebcaac87b9180cbca5dc2e7b1c8a211ab2b3c450->leave($__internal_3fcdba266702ff1730c53536ebcaac87b9180cbca5dc2e7b1c8a211ab2b3c450_prof);
 
     }
 
@@ -70,7 +73,7 @@ class __TwigTemplate_b61c8b18dc1a580e9a09fade46cc7c8eaaf90eb30609e8ae14e6863ceda
 
     public function getDebugInfo()
     {
-        return array (  40 => 4,  34 => 3,  11 => 1,);
+        return array (  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -79,7 +82,7 @@ class __TwigTemplate_b61c8b18dc1a580e9a09fade46cc7c8eaaf90eb30609e8ae14e6863ceda
 /* <div class="container">*/
 /*     <div class="row">*/
 /*         <div class="panel panel-default">*/
-/*             <div class="panel-heading"><h2><b><i class="fa fa-user-o" aria-hidden="true"></i><i class="fa fa-commenting" aria-hidden="true"></i> Espace privé</b></h2></div>*/
+/*             <div class="panel-heading"><h2><b><i class="fa fa-commenting" aria-hidden="true"></i> Espace privé</b><a href="{{path('follow_the_rhythm_soumettreActualite')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a></h2></div>*/
 /*             <div class="list-group">*/
 /*                 <div class="list-group-item">*/
 /*                     <div align="justify"> */

@@ -148,9 +148,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // follow_the_rhythm_soumettreActualite
-        if ($pathinfo === '/soumettreActualite') {
-            return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::soumettreActualiteAction',  '_route' => 'follow_the_rhythm_soumettreActualite',);
+        if (0 === strpos($pathinfo, '/soumettre')) {
+            // follow_the_rhythm_soumettreActualite
+            if ($pathinfo === '/soumettreActualite') {
+                return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::soumettreActualiteAction',  '_route' => 'follow_the_rhythm_soumettreActualite',);
+            }
+
+            // follow_the_rhythm_soumettreTopicPromotions
+            if ($pathinfo === '/soumettreTopicPromotions') {
+                return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::soumettreTopicPromotionsAction',  '_route' => 'follow_the_rhythm_soumettreTopicPromotions',);
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/page')) {

@@ -28,6 +28,10 @@ follow_the_rhythm_credits:
 follow_the_rhythm_soumettreActualite:
     path:   /soumettreActualite
     defaults: {_controller: follow_the_rhythmSymfonyBundle:Symfony:soumettreActualite }
+    
+follow_the_rhythm_soumettreTopicPromotions:
+    path:   /soumettreTopicPromotions
+    defaults: {_controller: follow_the_rhythmSymfonyBundle:Symfony:soumettreTopicPromotions }
 
 follow_the_rhythm_pageArtiste:
     path:   /pageArtiste/{id}

@@ -7,12 +7,14 @@ use follow_the_rhythm\SymfonyBundle\Entity\Artiste;
 use follow_the_rhythm\SymfonyBundle\Entity\Actualite;
 use follow_the_rhythm\SymfonyBundle\Entity\Concert;
 use follow_the_rhythm\SymfonyBundle\Entity\Moderateur;
+use follow_the_rhythm\SymfonyBundle\Entity\Topic;
 
 use Symfony\Component\HttpFoundation\Request;
 
 use follow_the_rhythm\SymfonyBundle\Form\ActualiteType;
 use follow_the_rhythm\SymfonyBundle\Form\ArtisteType;
 use follow_the_rhythm\SymfonyBundle\Form\ConcertType;
+use follow_the_rhythm\SymfonyBundle\Form\TopicType;
 
 class SymfonyController extends Controller
 {
@@ -116,6 +118,40 @@ class SymfonyController extends Controller
       }
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:soumettreActualite.html.twig',
       array('formulaireActualite' => $formulaireActualite->createView()));
+    }
+    
+    public function soumettreTopicPromotionsAction(Request $requeteUtilisateur){
+       //on récupère le gestionnaire d'entité
+      $gestionnaireEntite = $this->getDoctrine()->getManager();
+      
+      //on récupère le repository des entités
+      $repositoryActualite = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Topic');
+      
+      //Création du formulaire
+      $topic = new Topic();
+      
+      $formulaireTopic = $this->createForm(new TopicType, $topic); //création du formulaire
+      
+      //Récupération des données dans $Topic dès que le formulaire est soumis
+      $formulaireTopic->handleRequest($requeteUtilisateur);
+      
+      if($formulaireTopic->isValid()) //Le formulaire a été soumis
+      {
+        //On enregistre l'objet $Topic dans la BD
+        $topic->setDateTopic(new \Datetime());
+        $topic->setNbCoupDeCoeurs(0);
+        //On met à l'actualité le seul modérateur éxistant
+        //$topic->setModerateur(1);   //IMPORTANT!
+        $gestionnaireEntite->persist($Topic);
+        $gestionnaireEntite->flush();
+        
+      // Envoi du formulaire vers la vue
+      //return $this->render('follow_the_rhythmSymfonyBundle:Symfony:soumettreTopic.html.twig',array('formulaireTopic'=>$formulaireTopic->createView()));
+      return $this->redirect($this->generateUrl('follow_the_rhythm_accueil',array('page'=>1,'sens'=>1)));
+    
+      }
+      return $this->render('follow_the_rhythmSymfonyBundle:Symfony:soumettreActualite.html.twig',
+      array('formulaireTopic' => $formulaireTopic->createView()));
     }
     
     

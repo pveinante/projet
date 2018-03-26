@@ -8,6 +8,14 @@
     height: 128px;
 }
 
+.lienCache
+{
+    background-color: black;
+    position: fixed;
+    text-align: center;
+    line-height: 128px;
+    height: 128px;
+}
 
 #titre {display:inline-block;margin-right:10px; width:200px;} 
 #chYT {display:inline-block; width:200px;} 

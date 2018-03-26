@@ -2,6 +2,7 @@
 
 namespace follow_the_rhythm\SymfonyBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -25,6 +26,11 @@ class Actualite
      * @var string
      *
      * @ORM\Column(name="titre", type="string", length=255)
+     * @Assert\Length(
+     *              min="4",
+     *              max="100",
+     *              minMessage= "Le titre doit faire au moins 4 caractères.",
+     *              maxMessage= "Le titre doit faire au plus 100 caractères.")
      */
     private $titre;
 
@@ -32,6 +38,11 @@ class Actualite
      * @var string
      *
      * @ORM\Column(name="description", type="text")
+     * @Assert\Length(
+     *              min="10",
+     *              max="2000",
+     *              minMessage= "La description doit faire au moins {{ limit }} caractères.",
+     *              maxMessage= "La description doit faire au plus {{ limit }} caractères.")
      */
     private $description;
 
@@ -51,9 +62,9 @@ class Actualite
 
    /**
      *
-     * @ORM\ManyToOne(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste")
-     * @ORM\JoinColumn(name="artiste_id", referencedColumnName="id")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste",mappedBy="actualite",cascade={"persist"})
+     * @ORM\JoinTable(name="actualite_artistes"),
+     * @ORM\JoinColumn=(nullable=true);
      */
     private $artiste;
 
@@ -223,5 +234,60 @@ class Actualite
     public function getModerateur()
     {
         return $this->moderateur;
+    }
+
+    /**
+     * Set concert
+     *
+     * @param \follow_the_rhythm\SymfonyBundle\Entity\Concert $concert
+     *
+     * @return Actualite
+     */
+    public function setConcert(\follow_the_rhythm\SymfonyBundle\Entity\Concert $concert = null)
+    {
+        $this->concert = $concert;
+
+        return $this;
+    }
+
+    /**
+     * Get concert
+     *
+     * @return \follow_the_rhythm\SymfonyBundle\Entity\Concert
+     */
+    public function getConcert()
+    {
+        return $this->concert;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->artiste = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add artiste
+     *
+     * @param \follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste
+     *
+     * @return Actualite
+     */
+    public function addArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste)
+    {
+        $this->artiste[] = $artiste;
+
+        return $this;
+    }
+
+    /**
+     * Remove artiste
+     *
+     * @param \follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste
+     */
+    public function removeArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste)
+    {
+        $this->artiste->removeElement($artiste);
     }
 }

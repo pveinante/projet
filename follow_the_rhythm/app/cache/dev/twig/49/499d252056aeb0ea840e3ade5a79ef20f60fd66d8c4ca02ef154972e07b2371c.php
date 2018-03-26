@@ -21,26 +21,29 @@ class __TwigTemplate_0a6597c5e08da3050ba93c61aed9797538146e4615b987f68bb2cabf1ef
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6b6c4f2d2063be3830e8020f4ccbc7762aef5134c7b1770a3479fda3b23f655d = $this->env->getExtension("native_profiler");
-        $__internal_6b6c4f2d2063be3830e8020f4ccbc7762aef5134c7b1770a3479fda3b23f655d->enter($__internal_6b6c4f2d2063be3830e8020f4ccbc7762aef5134c7b1770a3479fda3b23f655d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieNews.html.twig"));
+        $__internal_54b315dd28509f2b578e3c2d3da38226e74858b19cbde8002af88613aa64b150 = $this->env->getExtension("native_profiler");
+        $__internal_54b315dd28509f2b578e3c2d3da38226e74858b19cbde8002af88613aa64b150->enter($__internal_54b315dd28509f2b578e3c2d3da38226e74858b19cbde8002af88613aa64b150_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieNews.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_6b6c4f2d2063be3830e8020f4ccbc7762aef5134c7b1770a3479fda3b23f655d->leave($__internal_6b6c4f2d2063be3830e8020f4ccbc7762aef5134c7b1770a3479fda3b23f655d_prof);
+        $__internal_54b315dd28509f2b578e3c2d3da38226e74858b19cbde8002af88613aa64b150->leave($__internal_54b315dd28509f2b578e3c2d3da38226e74858b19cbde8002af88613aa64b150_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_baabbd6105f84a177aeb3861cf1c7b84de46edf7843feb6cb71161c42f8fab71 = $this->env->getExtension("native_profiler");
-        $__internal_baabbd6105f84a177aeb3861cf1c7b84de46edf7843feb6cb71161c42f8fab71->enter($__internal_baabbd6105f84a177aeb3861cf1c7b84de46edf7843feb6cb71161c42f8fab71_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_74146b67cdaee87880bca5c2298c4e73b8f2f4b1ad2b71aed9801e1b3f16e5a7 = $this->env->getExtension("native_profiler");
+        $__internal_74146b67cdaee87880bca5c2298c4e73b8f2f4b1ad2b71aed9801e1b3f16e5a7->enter($__internal_74146b67cdaee87880bca5c2298c4e73b8f2f4b1ad2b71aed9801e1b3f16e5a7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<div class=\"container\">
     <div class=\"row\">
         <div class=\"panel panel-default\">
-            <div class=\"panel-heading\"><h2><b><i class=\"fa fa-newspaper-o\" aria-hidden=\"true\"></i> News</b></h2></div>
+            <div class=\"panel-heading\"><h2><b><i class=\"fa fa-newspaper-o\" aria-hidden=\"true\"></i> News</b><a href=\"";
+        // line 7
+        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreActualite");
+        echo "\"><button style='margin-left: 32px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Nouveau topic</button></a></h2></div>
             <div class=\"list-group\">
                 <div class=\"list-group-item\">
                     <div align=\"justify\"> 
@@ -54,7 +57,7 @@ class __TwigTemplate_0a6597c5e08da3050ba93c61aed9797538146e4615b987f68bb2cabf1ef
     
 ";
         
-        $__internal_baabbd6105f84a177aeb3861cf1c7b84de46edf7843feb6cb71161c42f8fab71->leave($__internal_baabbd6105f84a177aeb3861cf1c7b84de46edf7843feb6cb71161c42f8fab71_prof);
+        $__internal_74146b67cdaee87880bca5c2298c4e73b8f2f4b1ad2b71aed9801e1b3f16e5a7->leave($__internal_74146b67cdaee87880bca5c2298c4e73b8f2f4b1ad2b71aed9801e1b3f16e5a7_prof);
 
     }
 
@@ -70,7 +73,7 @@ class __TwigTemplate_0a6597c5e08da3050ba93c61aed9797538146e4615b987f68bb2cabf1ef
 
     public function getDebugInfo()
     {
-        return array (  40 => 4,  34 => 3,  11 => 1,);
+        return array (  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -79,7 +82,7 @@ class __TwigTemplate_0a6597c5e08da3050ba93c61aed9797538146e4615b987f68bb2cabf1ef
 /* <div class="container">*/
 /*     <div class="row">*/
 /*         <div class="panel panel-default">*/
-/*             <div class="panel-heading"><h2><b><i class="fa fa-newspaper-o" aria-hidden="true"></i> News</b></h2></div>*/
+/*             <div class="panel-heading"><h2><b><i class="fa fa-newspaper-o" aria-hidden="true"></i> News</b><a href="{{path('follow_the_rhythm_soumettreActualite')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a></h2></div>*/
 /*             <div class="list-group">*/
 /*                 <div class="list-group-item">*/
 /*                     <div align="justify"> */

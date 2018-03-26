@@ -42,9 +42,16 @@ class Artiste
      */
     private $nbFollower;
 
+    /**
+     *
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Actualite", inversedBy="artiste")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $actualite;    
+
    /**
      *
-     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Concert", inversedBy="artistes")
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Concert", inversedBy="artiste")
      * @ORM\JoinColumn(nullable=true)
      */
     private $concert;
@@ -130,5 +137,45 @@ class Artiste
     {
         return $this->nbFollower;
     }
-}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->concert = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
+    /**
+     * Add concert
+     *
+     * @param \follow_the_rhythm\SymfonyBundle\Entity\Concert $concert
+     *
+     * @return Artiste
+     */
+    public function addConcert(\follow_the_rhythm\SymfonyBundle\Entity\Concert $concert)
+    {
+        $this->concert[] = $concert;
+
+        return $this;
+    }
+
+    /**
+     * Remove concert
+     *
+     * @param \follow_the_rhythm\SymfonyBundle\Entity\Concert $concert
+     */
+    public function removeConcert(\follow_the_rhythm\SymfonyBundle\Entity\Concert $concert)
+    {
+        $this->concert->removeElement($concert);
+    }
+
+    /**
+     * Get concert
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getConcert()
+    {
+        return $this->concert;
+    }
+}

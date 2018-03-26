@@ -20,10 +20,11 @@ class ConcertType extends AbstractType
             ->add('lieu')
             ->add('description')
             ->add('dateConcert', DateType::class)
-            ->add('artiste','entity', array('label'=>'Artiste Concerné',
+            ->add('artiste','entity', array('label'=>'Artistes Concernés',
                                      'class' => 'follow_the_rhythmSymfonyBundle:Artiste',
-                                     
-                                     'property' => 'nomDeScene'))
+                                     'property' => 'nomDeScene',
+                                     'multiple' => 'true',
+                                     'expanded' => 'false'))
         ;
     }
     

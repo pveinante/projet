@@ -259,4 +259,35 @@ class Actualite
     {
         return $this->concert;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->artiste = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add artiste
+     *
+     * @param \follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste
+     *
+     * @return Actualite
+     */
+    public function addArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste)
+    {
+        $this->artiste[] = $artiste;
+
+        return $this;
+    }
+
+    /**
+     * Remove artiste
+     *
+     * @param \follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste
+     */
+    public function removeArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste)
+    {
+        $this->artiste->removeElement($artiste);
+    }
 }

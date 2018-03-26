@@ -105,7 +105,7 @@ class SymfonyController extends Controller
         $actualite->setDateActualite(new \Datetime());
         $actualite->setNbCoupDeCoeurs(0);
         //On met à l'actualité le seul modérateur éxistant
-        //$actualite->setModerateur(xxx);   //IMPORTANT!
+        //$actualite->setModerateur(1);   //IMPORTANT!
         $gestionnaireEntite->persist($actualite);
         $gestionnaireEntite->flush();
         

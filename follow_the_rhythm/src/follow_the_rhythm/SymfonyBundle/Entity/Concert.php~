@@ -185,4 +185,28 @@ class Concert
     }
     
     
+
+    /**
+     * Set dateConcert
+     *
+     * @param \DateTime $dateConcert
+     *
+     * @return Concert
+     */
+    public function setDateConcert($dateConcert)
+    {
+        $this->dateConcert = $dateConcert;
+
+        return $this;
+    }
+
+    /**
+     * Get dateConcert
+     *
+     * @return \DateTime
+     */
+    public function getDateConcert()
+    {
+        return $this->dateConcert;
+    }
 }

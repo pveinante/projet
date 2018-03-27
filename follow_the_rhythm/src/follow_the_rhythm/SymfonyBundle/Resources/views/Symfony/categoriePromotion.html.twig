@@ -5,11 +5,50 @@
     <div class="row">
         <div class="panel panel-default">
             <div class="panel-heading"><h2><b><i class="fa fa-microphone" aria-hidden="true"></i> Promotions</b><a href="{{path('follow_the_rhythm_soumettreTopicPromotions')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a></h2></div>
-            <div class="list-group">
-                <div class="list-group-item">
-                    {% for topicCourant in tabTopics %}
-                    <div class="list-group-item"><h2><label>{{topicCourant.titre}}</label></h2></div>
-                    {% endfor %}
+            {% if tabTopics is empty %}
+            <div class="container">
+	            <div class ="row">
+		            <div class ="col-lg-12">
+			            <h5>Aucun topic pour le moment.</h5>
+		            </div>
+	            </div>
+            </div>
+            {% else %}
+            <div class="container">
+	            <div class ="row">
+		            <div class ="col-lg-6">
+			            <h4>Sujet du topic</h4>
+		            </div>
+		            <div class ="col-lg-2">
+			            <h4 align="center">Créateur</h4>
+		            </div>
+		            <div class ="col-lg-1">
+			            <h4 align="center">Messages</h4> 
+		            </div>
+		            <div class ="col-lg-3">
+			            <h4 align="center">Dernier message le</h4>
+		            </div>
+	            </div>
+            </div>
+            {% for topicCourant in tabTopics %}
+                <div class="container">
+	            <div class ="row">
+		            <div class ="col-lg-6">
+			            <a href="{{path('follow_the_rhythm_messages',{'topicId':topicCourant.id})}}"><h5>{{topicCourant.titre}}</h5></a>
+		            </div>
+		            <div class ="col-lg-2">
+			            <a href="{{path('follow_the_rhythm_categorieNews')}}"><h5 align="center">{{topicCourant.utilisateur.pseudo}}</h5></a>
+		            </div>
+		            <div class ="col-lg-1">
+			            <h5 align="center">0</h5> 
+		            </div>
+		            <div class ="col-lg-3">
+			            <h5 align="center">27/03/2018</h5>
+		            </div>
+	            </div>
+            </div>
+            {% endfor %}
+            {% endif %}
                 </div>
             </div>
         </div>

@@ -160,6 +160,7 @@ class Concert
     public function addArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste)
     {
         $this->artiste[] = $artiste;
+        $artiste->addConcert($this);
 
         return $this;
     }

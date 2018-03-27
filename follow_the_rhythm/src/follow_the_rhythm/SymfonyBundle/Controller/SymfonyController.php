@@ -1,22 +1,17 @@
 <?php
 namespace follow_the_rhythm\SymfonyBundle\Controller;
-
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use follow_the_rhythm\SymfonyBundle\Entity\Artiste;
 use follow_the_rhythm\SymfonyBundle\Entity\Actualite;
 use follow_the_rhythm\SymfonyBundle\Entity\Concert;
 use follow_the_rhythm\SymfonyBundle\Entity\Moderateur;
 use follow_the_rhythm\SymfonyBundle\Entity\Topic;
 use follow_the_rhythm\SymfonyBundle\Entity\Utilisateur;
-
 use Symfony\Component\HttpFoundation\Request;
-
 use follow_the_rhythm\SymfonyBundle\Form\ActualiteType;
 use follow_the_rhythm\SymfonyBundle\Form\ArtisteType;
 use follow_the_rhythm\SymfonyBundle\Form\ConcertType;
 use follow_the_rhythm\SymfonyBundle\Form\TopicType;
-
 class SymfonyController extends Controller
 {
     public function indexAction($page = 1, $sens = 1)
@@ -139,8 +134,10 @@ class SymfonyController extends Controller
       if($formulaireTopic->isValid()) //Le formulaire a été soumis
       {
         //On enregistre l'objet $Topic dans la BD
-        $topic->setDate(new \Datetime());
+        $date = new \Datetime();
+        date_add($date, date_interval_create_from_date_string('2 hours'));
         $topic->setNbSignalement(0);
+        $topic->setDate($date);
         $utilisateur = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Utilisateur')->findBy([
           "id" => "1"
           ]);
@@ -148,7 +145,7 @@ class SymfonyController extends Controller
         $repositoryCategories = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Categorie')->findBy([
           "nom" => "Promotions"
           ]);
-        $topic->setCategorie();
+        $topic->setCategorie($repositoryCategories[0]);
         //On met à l'actualité le seul modérateur éxistant
         // $topic->setModerateur(1);   //IMPORTANT!
         $gestionnaireEntite->persist($topic);
@@ -160,7 +157,7 @@ class SymfonyController extends Controller
     
       }
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:soumettreTopic.html.twig',
-      array('formulaireTopic' => $formulaireTopic->createView()));
+      array('formulaireTopic' => $formulaireTopic->createView(), 'categorie' => 4, 'categorie_nom' => 'Promotions'));
     }
     
     public function soumettreTopicNewsAction(Request $requeteUtilisateur){
@@ -181,8 +178,10 @@ class SymfonyController extends Controller
       if($formulaireTopic->isValid()) //Le formulaire a été soumis
       {
         //On enregistre l'objet $Topic dans la BD
-        $topic->setDate(new \Datetime());
+        $date = new \Datetime();
+        date_add($date, date_interval_create_from_date_string('2 hours'));
         $topic->setNbSignalement(0);
+        $topic->setDate($date);
         $utilisateur = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Utilisateur')->findBy([
           "id" => "1"
           ]);
@@ -190,7 +189,7 @@ class SymfonyController extends Controller
         $repositoryCategories = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Categorie')->findBy([
           "nom" => "News"
           ]);
-        $topic->setCategorie();
+        $topic->setCategorie($repositoryCategories[0]);
         //On met à l'actualité le seul modérateur éxistant
         // $topic->setModerateur(1);   //IMPORTANT!
         $gestionnaireEntite->persist($topic);
@@ -202,7 +201,7 @@ class SymfonyController extends Controller
     
       }
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:soumettreTopic.html.twig',
-      array('formulaireTopic' => $formulaireTopic->createView()));
+      array('formulaireTopic' => $formulaireTopic->createView(), 'categorie' => 1, 'categorie_nom' => 'News'));
     }
     
     public function soumettreTopicEspacePriveAction(Request $requeteUtilisateur){
@@ -223,8 +222,10 @@ class SymfonyController extends Controller
       if($formulaireTopic->isValid()) //Le formulaire a été soumis
       {
         //On enregistre l'objet $Topic dans la BD
-        $topic->setDate(new \Datetime());
+        $date = new \Datetime();
+        date_add($date, date_interval_create_from_date_string('2 hours'));
         $topic->setNbSignalement(0);
+        $topic->setDate($date);
         $utilisateur = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Utilisateur')->findBy([
           "id" => "1"
           ]);
@@ -232,7 +233,7 @@ class SymfonyController extends Controller
         $repositoryCategories = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Categorie')->findBy([
           "nom" => ">Espace Privé"
           ]);
-        $topic->setCategorie();
+        $topic->setCategorie($repositoryCategories[0]);
         //On met à l'actualité le seul modérateur éxistant
         // $topic->setModerateur(1);   //IMPORTANT!
         $gestionnaireEntite->persist($topic);
@@ -244,7 +245,7 @@ class SymfonyController extends Controller
     
       }
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:soumettreTopic.html.twig',
-      array('formulaireTopic' => $formulaireTopic->createView()));
+      array('formulaireTopic' => $formulaireTopic->createView(), 'categorie' => 2, 'categorie_nom' => 'Espace privé'));
     }
     
     public function soumettreTopicConcertsAction(Request $requeteUtilisateur){
@@ -265,8 +266,10 @@ class SymfonyController extends Controller
       if($formulaireTopic->isValid()) //Le formulaire a été soumis
       {
         //On enregistre l'objet $Topic dans la BD
-        $topic->setDate(new \Datetime());
+        $date = new \Datetime();
+        date_add($date, date_interval_create_from_date_string('2 hours'));
         $topic->setNbSignalement(0);
+        $topic->setDate($date);
         $utilisateur = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Utilisateur')->findBy([
           "id" => "1"
           ]);
@@ -274,7 +277,7 @@ class SymfonyController extends Controller
         $repositoryCategories = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Categorie')->findBy([
           "nom" => "Concerts"
           ]);
-        $topic->setCategorie();
+        $topic->setCategorie($repositoryCategories[0]);
         //On met à l'actualité le seul modérateur éxistant
         // $topic->setModerateur(1);   //IMPORTANT!
         $gestionnaireEntite->persist($topic);
@@ -282,11 +285,11 @@ class SymfonyController extends Controller
         
       // Envoi du formulaire vers la vue
       //return $this->render('follow_the_rhythmSymfonyBundle:Symfony:soumettreTopic.html.twig',array('formulaireTopic'=>$formulaireTopic->createView()));
-      return $this->redirect($this->generateUrl('follow_the_rhythm_categorieConcerts',array('page'=>1,'sens'=>1)));
+      return $this->redirect($this->generateUrl('follow_the_rhythm_categorieConcert',array('page'=>1,'sens'=>1)));
     
       }
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:soumettreTopic.html.twig',
-      array('formulaireTopic' => $formulaireTopic->createView()));
+      array('formulaireTopic' => $formulaireTopic->createView(), 'categorie' => 3, 'categorie_nom' => 'Concerts'));
     }
     
     public function artisteAction(Request $requeteUtilisateur){
@@ -340,7 +343,6 @@ class SymfonyController extends Controller
       
       $formulaireConcert = $this->createForm(new ConcertType, $concert); //création du formulaire
       
-
       //Récupération des données dans $concert dès que le formulaire est soumis
       $formulaireConcert->handleRequest($requeteUtilisateur);
       
@@ -349,6 +351,7 @@ class SymfonyController extends Controller
         //On enregistre l'objet $concert dans la BD
         $gestionnaireEntite->persist($concert);
         $gestionnaireEntite->flush();
+        return $this->redirect($this->generateUrl('follow_the_rhythm_accueil',array('page'=>1, 'sens'=>1)));
       }
       
       //On envoie les données à la vue concert
@@ -435,10 +438,17 @@ class SymfonyController extends Controller
       
       //on récupère les repositories des entités
       $repositoryTopic = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Topic');
-      $tabTopics = $repositoryTopic->findBy(["categorie" => NULL]);
-
+      $tabTopics = $repositoryTopic->findBy(["categorie" => 1]);
+      $tabNbMessages[0] = 0;
+      foreach ($tabTopics as $topicActuel)
+      {
+        $repositoryMessage = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Message');
+        $tabMessage = $repositoryMessage->findBy(["topic" => $topicActuel->getId()]);
+        $tabNbMessages [$topicActuel->getId()] = count($tabMessage);
+        if (empty($tabTopics)) $tabMessages[0] = 0;
+      }
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:categorieNews.html.twig',
-      array('tabTopics'=>$tabTopics));
+      array('tabTopics'=>$tabTopics, 'tabNbMessages'=>$tabNbMessages));
     }
      public function categorieEspacePriveAction(){
       //on récupère le gestionnaire d'entité
@@ -446,10 +456,17 @@ class SymfonyController extends Controller
       
       //on récupère les repositories des entités
       $repositoryTopic = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Topic');
-      $tabTopics = $repositoryTopic->findBy(["categorie" => NULL]);
-
+      $tabTopics = $repositoryTopic->findBy(["categorie" => 2]);
+      $tabNbMessages[0] = 0;
+      foreach ($tabTopics as $topicActuel)
+      {
+        $repositoryMessage = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Message');
+        $tabMessage = $repositoryMessage->findBy(["topic" => $topicActuel->getId()]);
+        $tabNbMessages [$topicActuel->getId()] = count($tabMessage);
+        if (empty($tabTopics)) array_push($tabNbMessages, 0);
+      }
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:categorieEspacePrive.html.twig',
-      array('tabTopics'=>$tabTopics));
+      array('tabTopics'=>$tabTopics, 'tabNbMessages'=>$tabNbMessages));
     }
      public function categorieConcertAction(){
       //on récupère le gestionnaire d'entité
@@ -457,21 +474,54 @@ class SymfonyController extends Controller
       
       //on récupère les repositories des entités
       $repositoryTopic = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Topic');
-      $tabTopics = $repositoryTopic->findBy(["categorie" => NULL]);
-
+      $tabTopics = $repositoryTopic->findBy(["categorie" => 3]);
+      $tabNbMessages[0] = 0;
+      foreach ($tabTopics as $topicActuel)
+      {
+        $repositoryMessage = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Message');
+        $tabMessage = $repositoryMessage->findBy(["topic" => $topicActuel->getId()]);
+        $tabNbMessages [$topicActuel->getId()] = count($tabMessage);
+        if (empty($tabTopics)) $tabMessages[0] = 0;
+      }
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:categorieConcert.html.twig',
-      array('tabTopics'=>$tabTopics));
+      array('tabTopics'=>$tabTopics, 'tabNbMessages'=>$tabNbMessages));
     }
+    
      public function categoriePromotionAction(){
       //on récupère le gestionnaire d'entité
       $gestionnaireEntite = $this->getDoctrine()->getManager();
       
       //on récupère les repositories des entités
       $repositoryTopic = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Topic');
-      $tabTopics = $repositoryTopic->findBy(["categorie" => NULL]);
-
-      return $this->render('follow_the_rhythmSymfonyBundle:Symfony:categoriePromotion.html.twig',
-      array('tabTopics'=>$tabTopics));
+      $tabTopics = $repositoryTopic->findBy(["categorie" => 4]);
+      $tabNbMessages[0] = 0;
+      foreach ($tabTopics as $topicActuel)
+      {
+        $repositoryMessage = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Message');
+        $tabMessage = $repositoryMessage->findBy(["topic" => $topicActuel->getId()]);
+        $tabNbMessages [$topicActuel->getId()] = count($tabMessage);
+        if (empty($tabTopics)) $tabMessages[0] = 0;
+      }
+      return $this->render('follow_the_rhythmSymfonyBundle:Symfony:categorieConcert.html.twig',
+      array('tabTopics'=>$tabTopics, 'tabNbMessages'=>$tabNbMessages));
+      
+    }
+    
+    public function messagesAction($topicId = 1){
+      //on récupère le gestionnaire d'entité
+      $gestionnaireEntite = $this->getDoctrine()->getManager();
+      
+      //on récupère les repositories des entités
+      $repositoryMessages = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Message');
+      $tabMessages = $repositoryMessages->findBy(["topic" => $topicId]);
+      foreach ($tabMessages as $message)
+      {
+        $repositoryPseudo = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Utilisateur');
+        $id = $repositoryPseudo->findBy(["id" => $message->getUtilisateur()->getId()]);
+        $tabCreateur [$message->getId()] = $id[0]->getPseudo();
+      }
+      return $this->render('follow_the_rhythmSymfonyBundle:Symfony:messages.html.twig',
+      array('tabMessage'=>$tabMessages, 'tabCreateur' => $tabCreateur));
       
     }
     

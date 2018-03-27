@@ -1,4 +1,5 @@
 #HTML
+
 follow_the_rhythm_bienvenue:
     path:     /
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:index }
@@ -30,15 +31,15 @@ follow_the_rhythm_soumettreActualite:
 follow_the_rhythm_soumettreTopicPromotions:
     path:   /soumettreTopicPromotions
     defaults: {_controller: follow_the_rhythmSymfonyBundle:Symfony:soumettreTopicPromotions }
-
+    
 follow_the_rhythm_soumettreTopicNews:
     path:   /soumettreTopicNews
     defaults: {_controller: follow_the_rhythmSymfonyBundle:Symfony:soumettreTopicNews }
-
+    
 follow_the_rhythm_soumettreTopicEspacePrive:
     path:   /soumettreTopicEspacePrive
     defaults: {_controller: follow_the_rhythmSymfonyBundle:Symfony:soumettreTopicEspacePrive }
-
+    
 follow_the_rhythm_soumettreTopicConcerts:
     path:   /soumettreTopicConcerts
     defaults: {_controller: follow_the_rhythmSymfonyBundle:Symfony:soumettreTopicConcerts }
@@ -93,6 +94,10 @@ follow_the_rhythm_categorieConcert:
 follow_the_rhythm_categoriePromotions:
     path:     /forum/promotion
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:categoriePromotion }
+    
+follow_the_rhythm_messages:
+    path:     /forum/topic/{topicId}
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:messages }
     
 
 #-----------------------------------------------------------------------------------------------------------------------------------

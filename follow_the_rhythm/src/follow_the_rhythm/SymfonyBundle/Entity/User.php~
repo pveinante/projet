@@ -1,0 +1,95 @@
+<?php
+// src/AppBundle/Entity/User.php
+
+namespace follow_the_rhythm\SymfonyBundle\Entity;
+
+use FOS\UserBundle\Entity\User as BaseUser;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="fos_user")
+ */
+class User extends BaseUser
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pseudo", type="string", length=255)
+     */
+    private $pseudo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mdp", type="string", length=255)
+     */
+    private $mdp;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="nbSignalement", type="integer")
+     */
+    private $nbSignalement;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste")
+     * @ORM\JoinTable(name="user_artistes",
+     *      joinColumns={@ORM\JoinColumn(name="utilisateur_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="artiste_id", referencedColumnName="id")}
+     *      )
+     */
+    private $artiste;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Concert")
+     * @ORM\JoinTable(name="user_concerts",
+     *      joinColumns={@ORM\JoinColumn(name="utilisateur_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="concert_id", referencedColumnName="id")}
+     *      )
+     */
+    private $concert;
+
+      /**
+     *
+     * @ORM\OneToOne(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Moderateur")
+     * @ORM\JoinColumn(name="moderateur_id", referencedColumnName="id", nullable=true)
+     */
+    private $moderateur;
+
+
+
+    /**
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\User", mappedBy="myFriends")
+     */
+    private $UsersIAdd;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\User", inversedBy="UsersIAdd")
+     * @ORM\JoinTable(name="amis",
+     *      joinColumns={@ORM\JoinColumn(name="utilisateur_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="amis_utilisateur_id", referencedColumnName="id")}
+     *      )
+     */
+    private $myFriends;
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+    }
+}

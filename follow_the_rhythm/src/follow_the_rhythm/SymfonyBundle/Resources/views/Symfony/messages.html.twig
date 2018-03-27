@@ -1,0 +1,39 @@
+{% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}
+
+{% block contenuCentral %}
+
+  <div class="container">
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading"><h2><b><span class="fa fa-commenting"></span> Topic - Titre du sujet</b></h2>
+        </div>
+     
+      <div class="list-group">
+
+      <!--AFFICHAGE DES MESSAGES-->
+        {% for messageCourant in tabMessage %}
+        
+          <div class="list-group-item">
+            <p></p><label>{{tabCreateur[messageCourant.id]}} le 27/03/2018 à 10.00</label></p>
+            <p align="justify"><label>{{messageCourant.contenu}}</label></p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function isNotConnected(){
+    alert("Il faut être connecté pour accéder à cette fonctionnalité");
+  }
+  
+  /*function afficherArtistesUniquement(){
+    
+  }*/
+</script>
+{#Pagination#}
+<div align="center"><a href="#"><button class="btn btn-primary"><i class="fa fa-angle-double-up"></i> Haut de page <i class="fa fa-angle-double-up"></i></button></a></div>
+{% endblock %}
+
+

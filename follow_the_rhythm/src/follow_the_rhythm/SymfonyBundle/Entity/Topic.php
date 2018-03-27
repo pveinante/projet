@@ -44,7 +44,7 @@ class Topic
 
    /**
      *
-     * @ORM\ManyToOne(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Utilisateur")
+     * @ORM\ManyToOne(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\User")
      * @ORM\JoinColumn(nullable=false)
      */
     private $utilisateur;
@@ -141,11 +141,11 @@ class Topic
     /**
      * Set utilisateur
      *
-     * @param \follow_the_rhythm\SymfonyBundle\Entity\Utilisateur $utilisateur
+     * @param \follow_the_rhythm\SymfonyBundle\Entity\User $utilisateur
      *
      * @return Topic
      */
-    public function setUtilisateur(\follow_the_rhythm\SymfonyBundle\Entity\Utilisateur $utilisateur)
+    public function setUtilisateur(\follow_the_rhythm\SymfonyBundle\Entity\User $utilisateur)
     {
         $this->utilisateur = $utilisateur;
 
@@ -155,7 +155,7 @@ class Topic
     /**
      * Get utilisateur
      *
-     * @return \follow_the_rhythm\SymfonyBundle\Entity\Utilisateur
+     * @return \follow_the_rhythm\SymfonyBundle\Entity\User
      */
     public function getUtilisateur()
     {

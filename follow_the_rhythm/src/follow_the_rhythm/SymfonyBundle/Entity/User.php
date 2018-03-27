@@ -21,20 +21,6 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="pseudo", type="string", length=255)
-     */
-    private $pseudo;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="mdp", type="string", length=255)
-     */
-    private $mdp;
-
-    /**
      * @var int
      *
      * @ORM\Column(name="nbSignalement", type="integer")
@@ -44,7 +30,7 @@ class User extends BaseUser
     /**
      * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste")
      * @ORM\JoinTable(name="user_artistes",
-     *      joinColumns={@ORM\JoinColumn(name="utilisateur_id", referencedColumnName="id")},
+     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="artiste_id", referencedColumnName="id")}
      *      )
      */
@@ -53,7 +39,7 @@ class User extends BaseUser
     /**
      * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Concert")
      * @ORM\JoinTable(name="user_concerts",
-     *      joinColumns={@ORM\JoinColumn(name="utilisateur_id", referencedColumnName="id")},
+     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="concert_id", referencedColumnName="id")}
      *      )
      */
@@ -76,8 +62,8 @@ class User extends BaseUser
     /**
      * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\User", inversedBy="UsersIAdd")
      * @ORM\JoinTable(name="amisUser",
-     *      joinColumns={@ORM\JoinColumn(name="utilisateur_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@ORM\JoinColumn(name="amis_utilisateur_id", referencedColumnName="id")}
+     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="amis_user_id", referencedColumnName="id")}
      *      )
      */
     private $myFriends;
@@ -92,54 +78,6 @@ class User extends BaseUser
     {
         parent::__construct();
         // your own logic
-    }
-
-    /**
-     * Set pseudo
-     *
-     * @param string $pseudo
-     *
-     * @return User
-     */
-    public function setPseudo($pseudo)
-    {
-        $this->pseudo = $pseudo;
-
-        return $this;
-    }
-
-    /**
-     * Get pseudo
-     *
-     * @return string
-     */
-    public function getPseudo()
-    {
-        return $this->pseudo;
-    }
-
-    /**
-     * Set mdp
-     *
-     * @param string $mdp
-     *
-     * @return User
-     */
-    public function setMdp($mdp)
-    {
-        $this->mdp = $mdp;
-
-        return $this;
-    }
-
-    /**
-     * Get mdp
-     *
-     * @return string
-     */
-    public function getMdp()
-    {
-        return $this->mdp;
     }
 
     /**

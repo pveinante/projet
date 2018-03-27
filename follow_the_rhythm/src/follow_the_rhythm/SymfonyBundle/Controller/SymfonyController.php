@@ -4,13 +4,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use follow_the_rhythm\SymfonyBundle\Entity\Artiste;
 use follow_the_rhythm\SymfonyBundle\Entity\Actualite;
 use follow_the_rhythm\SymfonyBundle\Entity\Concert;
+use follow_the_rhythm\SymfonyBundle\Entity\Message;
 use follow_the_rhythm\SymfonyBundle\Entity\Moderateur;
 use follow_the_rhythm\SymfonyBundle\Entity\Topic;
-use follow_the_rhythm\SymfonyBundle\Entity\Utilisateur;
+use follow_the_rhythm\SymfonyBundle\Entity\User;
 use Symfony\Component\HttpFoundation\Request;
 use follow_the_rhythm\SymfonyBundle\Form\ActualiteType;
 use follow_the_rhythm\SymfonyBundle\Form\ArtisteType;
 use follow_the_rhythm\SymfonyBundle\Form\ConcertType;
+use follow_the_rhythm\SymfonyBundle\Form\MessageType;
 use follow_the_rhythm\SymfonyBundle\Form\TopicType;
 class SymfonyController extends Controller
 {
@@ -138,7 +140,7 @@ class SymfonyController extends Controller
         date_add($date, date_interval_create_from_date_string('2 hours'));
         $topic->setNbSignalement(0);
         $topic->setDate($date);
-        $utilisateur = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Utilisateur')->findBy([
+        $utilisateur = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:User')->findBy([
           "id" => "1"
           ]);
         $topic->setUtilisateur($utilisateur[0]);
@@ -182,7 +184,7 @@ class SymfonyController extends Controller
         date_add($date, date_interval_create_from_date_string('2 hours'));
         $topic->setNbSignalement(0);
         $topic->setDate($date);
-        $utilisateur = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Utilisateur')->findBy([
+        $utilisateur = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:User')->findBy([
           "id" => "1"
           ]);
         $topic->setUtilisateur($utilisateur[0]);
@@ -226,7 +228,7 @@ class SymfonyController extends Controller
         date_add($date, date_interval_create_from_date_string('2 hours'));
         $topic->setNbSignalement(0);
         $topic->setDate($date);
-        $utilisateur = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Utilisateur')->findBy([
+        $utilisateur = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:User')->findBy([
           "id" => "1"
           ]);
         $topic->setUtilisateur($utilisateur[0]);
@@ -270,7 +272,7 @@ class SymfonyController extends Controller
         date_add($date, date_interval_create_from_date_string('2 hours'));
         $topic->setNbSignalement(0);
         $topic->setDate($date);
-        $utilisateur = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Utilisateur')->findBy([
+        $utilisateur = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:User')->findBy([
           "id" => "1"
           ]);
         $topic->setUtilisateur($utilisateur[0]);
@@ -399,7 +401,7 @@ class SymfonyController extends Controller
       $gestionnaireEntite = $this->getDoctrine()->getManager();
       
       //on récupère le repository de l'entité utilisateur
-      $repositoryUtilisateur = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Utilisateur');
+      $repositoryUtilisateur = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:User');
       
       //on recupère l'utilisateur recherché
       //$tabArtiste = $repositoryUtilisateur->getArtisteDunUtilisateur($id);
@@ -507,21 +509,65 @@ class SymfonyController extends Controller
       
     }
     
-    public function messagesAction($topicId = 1){
+    public function messagesAction($topicId = 1, Request $requeteUtilisateur){
       //on récupère le gestionnaire d'entité
       $gestionnaireEntite = $this->getDoctrine()->getManager();
       
       //on récupère les repositories des entités
       $repositoryMessages = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Message');
       $tabMessages = $repositoryMessages->findBy(["topic" => $topicId]);
+      $tabCreateur[0] = 0;
+      
+      // on récupère le titre du topic
+      $repositoryTopic = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Topic');
+      $tabTopics = $repositoryTopic->findBy(["id" => $topicId]);
+      
+      // on récupère le pesudo du créateur de chaque message
       foreach ($tabMessages as $message)
       {
-        $repositoryPseudo = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Utilisateur');
+        $repositoryPseudo = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:User');
         $id = $repositoryPseudo->findBy(["id" => $message->getUtilisateur()->getId()]);
-        $tabCreateur [$message->getId()] = $id[0]->getPseudo();
+        $tabCreateur [$message->getId()] = $id[0]->getUsername();
+      }
+      
+       //on récupère le gestionnaire d'entité
+      $gestionnaireEntite = $this->getDoctrine()->getManager();
+      
+      //on récupère le repository des entités
+      $repositoryMessage = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Message');
+      
+      //Création du formulaire
+      $messageForm = new Message();
+      
+      $formulaireMessage = $this->createForm(new MessageType, $messageForm); //création du formulaire
+      
+      //Récupération des données dans $actualite dès que le formulaire est soumis
+      $formulaireMessage->handleRequest($requeteUtilisateur);
+      
+      if($formulaireMessage->isValid()) //Le formulaire a été soumis
+      {
+        //On enregistre l'objet $actualite dans la BD
+        $messageForm->setDate(new \Datetime());
+        $topic = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Topic')->findBy([
+          "id" => "12"
+          ]);
+        $messageForm->setTopic();
+        $utilisateur = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:User')->findBy([
+          "id" => "1"
+          ]);
+        $messageForm->setUtilisateur($utilisateur[0]);
+        //On met à l'actualité le seul modérateur éxistant
+        //$actualite->setModerateur(1);   //IMPORTANT!
+        $gestionnaireEntite->persist($messageForm);
+        $gestionnaireEntite->flush();
+        
+      // Envoi du formulaire vers la vue
+      //return $this->render('follow_the_rhythmSymfonyBundle:Symfony:soumettreActualite.html.twig',array('formulaireActualite'=>$formulaireActualite->createView()));
+      return $this->redirect($this->generateUrl('follow_the_rhythm_accueil',array('page'=>1,'sens'=>1)));
+    
       }
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:messages.html.twig',
-      array('tabMessage'=>$tabMessages, 'tabCreateur' => $tabCreateur));
+      array('tabMessage'=>$tabMessages, 'tabCreateur' => $tabCreateur, 'titre' => $tabTopics[0]->getTitre(), 'formulaireMessage' => $formulaireMessage->createView()));
       
     }
     

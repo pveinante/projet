@@ -257,7 +257,7 @@ class Topic extends \follow_the_rhythm\SymfonyBundle\Entity\Topic implements \Do
     /**
      * {@inheritDoc}
      */
-    public function setUtilisateur(\follow_the_rhythm\SymfonyBundle\Entity\Utilisateur $utilisateur)
+    public function setUtilisateur(\follow_the_rhythm\SymfonyBundle\Entity\User $utilisateur)
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUtilisateur', array($utilisateur));

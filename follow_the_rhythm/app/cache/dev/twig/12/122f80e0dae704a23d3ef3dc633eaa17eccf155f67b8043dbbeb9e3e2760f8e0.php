@@ -21,20 +21,20 @@ class __TwigTemplate_ce40ab0342ee6873920b7e8d6803ee3134f8823ce231e95230f414c9d19
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_64275ebf969e0d057414d7701579ef0a9c93c37351248443baf26614be8f0952 = $this->env->getExtension("native_profiler");
-        $__internal_64275ebf969e0d057414d7701579ef0a9c93c37351248443baf26614be8f0952->enter($__internal_64275ebf969e0d057414d7701579ef0a9c93c37351248443baf26614be8f0952_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieNews.html.twig"));
+        $__internal_4f6a998231aa177ef007f3c8ed2092e02b5becd25c14c4bad8a851c1c394787a = $this->env->getExtension("native_profiler");
+        $__internal_4f6a998231aa177ef007f3c8ed2092e02b5becd25c14c4bad8a851c1c394787a->enter($__internal_4f6a998231aa177ef007f3c8ed2092e02b5becd25c14c4bad8a851c1c394787a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieNews.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_64275ebf969e0d057414d7701579ef0a9c93c37351248443baf26614be8f0952->leave($__internal_64275ebf969e0d057414d7701579ef0a9c93c37351248443baf26614be8f0952_prof);
+        $__internal_4f6a998231aa177ef007f3c8ed2092e02b5becd25c14c4bad8a851c1c394787a->leave($__internal_4f6a998231aa177ef007f3c8ed2092e02b5becd25c14c4bad8a851c1c394787a_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_2b51be65d1a60e9dc8552840f6724bcea9feace54e3d4401e59018c6a0a6b4af = $this->env->getExtension("native_profiler");
-        $__internal_2b51be65d1a60e9dc8552840f6724bcea9feace54e3d4401e59018c6a0a6b4af->enter($__internal_2b51be65d1a60e9dc8552840f6724bcea9feace54e3d4401e59018c6a0a6b4af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_e15990fb7967826d8953bd28ed65bd80211a6722588ab79885df1a7cf119df42 = $this->env->getExtension("native_profiler");
+        $__internal_e15990fb7967826d8953bd28ed65bd80211a6722588ab79885df1a7cf119df42->enter($__internal_e15990fb7967826d8953bd28ed65bd80211a6722588ab79885df1a7cf119df42_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<div class=\"container\">
@@ -95,7 +95,7 @@ class __TwigTemplate_ce40ab0342ee6873920b7e8d6803ee3134f8823ce231e95230f414c9d19
                 // line 40
                 echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_categorieNews");
                 echo "\"><h5 align=\"center\">";
-                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["topicCourant"], "utilisateur", array()), "pseudo", array()), "html", null, true);
+                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["topicCourant"], "utilisateur", array()), "username", array()), "html", null, true);
                 echo "</h5></a>
 \t\t            </div>
 \t\t            <div class =\"col-lg-1\">
@@ -123,7 +123,7 @@ class __TwigTemplate_ce40ab0342ee6873920b7e8d6803ee3134f8823ce231e95230f414c9d19
     
 ";
         
-        $__internal_2b51be65d1a60e9dc8552840f6724bcea9feace54e3d4401e59018c6a0a6b4af->leave($__internal_2b51be65d1a60e9dc8552840f6724bcea9feace54e3d4401e59018c6a0a6b4af_prof);
+        $__internal_e15990fb7967826d8953bd28ed65bd80211a6722588ab79885df1a7cf119df42->leave($__internal_e15990fb7967826d8953bd28ed65bd80211a6722588ab79885df1a7cf119df42_prof);
 
     }
 
@@ -181,7 +181,7 @@ class __TwigTemplate_ce40ab0342ee6873920b7e8d6803ee3134f8823ce231e95230f414c9d19
 /* 			            <a href="{{path('follow_the_rhythm_messages',{'topicId':topicCourant.id})}}"><h5>{{topicCourant.titre}}</h5></a>*/
 /* 		            </div>*/
 /* 		            <div class ="col-lg-2">*/
-/* 			            <a href="{{path('follow_the_rhythm_categorieNews')}}"><h5 align="center">{{topicCourant.utilisateur.pseudo}}</h5></a>*/
+/* 			            <a href="{{path('follow_the_rhythm_categorieNews')}}"><h5 align="center">{{topicCourant.utilisateur.username}}</h5></a>*/
 /* 		            </div>*/
 /* 		            <div class ="col-lg-1">*/
 /* 			            <h5 align="center">0</h5> */

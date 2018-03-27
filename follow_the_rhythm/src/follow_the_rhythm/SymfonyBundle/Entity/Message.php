@@ -44,7 +44,7 @@ class Message
 
    /**
      *
-     * @ORM\ManyToOne(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Utilisateur")
+     * @ORM\ManyToOne(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\User")
      * @ORM\JoinColumn(nullable=false)
      */
     private $utilisateur;
@@ -141,11 +141,11 @@ class Message
     /**
      * Set utilisateur
      *
-     * @param \follow_the_rhythm\SymfonyBundle\Entity\Utilisateur $utilisateur
+     * @param \follow_the_rhythm\SymfonyBundle\Entity\User $utilisateur
      *
      * @return Message
      */
-    public function setUtilisateur(\follow_the_rhythm\SymfonyBundle\Entity\Utilisateur $utilisateur)
+    public function setUtilisateur(\follow_the_rhythm\SymfonyBundle\Entity\User $utilisateur)
     {
         $this->utilisateur = $utilisateur;
 
@@ -155,7 +155,7 @@ class Message
     /**
      * Get utilisateur
      *
-     * @return \follow_the_rhythm\SymfonyBundle\Entity\Utilisateur
+     * @return \follow_the_rhythm\SymfonyBundle\Entity\User
      */
     public function getUtilisateur()
     {
@@ -185,4 +185,17 @@ class Message
     {
         return $this->topic;
     }
+    
+    public function getMessage()
+    {
+        return $this->contenu;
+    }
+
+    public function setMessage($message)
+    {
+        $this->contenu = $message;
+        
+        return $this;
+    }
+    
 }

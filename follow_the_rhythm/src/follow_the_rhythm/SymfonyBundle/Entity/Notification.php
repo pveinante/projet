@@ -37,7 +37,7 @@ class Notification
 
    /**
      *
-     * @ORM\ManyToOne(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Utilisateur")
+     * @ORM\ManyToOne(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\User")
      * @ORM\JoinColumn(nullable=false)
      */
     private $utilisateur;
@@ -103,11 +103,11 @@ class Notification
     /**
      * Set utilisateur
      *
-     * @param \follow_the_rhythm\SymfonyBundle\Entity\Utilisateur $utilisateur
+     * @param \follow_the_rhythm\SymfonyBundle\Entity\User $utilisateur
      *
      * @return Notification
      */
-    public function setUtilisateur(\follow_the_rhythm\SymfonyBundle\Entity\Utilisateur $utilisateur)
+    public function setUtilisateur(\follow_the_rhythm\SymfonyBundle\Entity\User $utilisateur)
     {
         $this->utilisateur = $utilisateur;
 
@@ -117,7 +117,7 @@ class Notification
     /**
      * Get utilisateur
      *
-     * @return \follow_the_rhythm\SymfonyBundle\Entity\Utilisateur
+     * @return \follow_the_rhythm\SymfonyBundle\Entity\User
      */
     public function getUtilisateur()
     {

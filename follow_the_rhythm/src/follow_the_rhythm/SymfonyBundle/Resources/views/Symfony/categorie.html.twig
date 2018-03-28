@@ -1,0 +1,59 @@
+{% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}
+    
+{% block contenuCentral %}
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h2><b><i class="fa fa-{{icon[catId]}}" aria-hidden="true"></i> {{cat[catId]}}</b><a title='Créer un nouveau topic dans cette catégorie.' href="{{path('follow_the_rhythm_soumettreTopicNews')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a></h2></div>
+            {% if tabTopics is empty %}
+            <div class="container">
+	            <div class ="row">
+		            <div class ="col-lg-12">
+			            <h5>Aucun topic pour le moment.</h5>
+		            </div>
+	            </div>
+            </div>
+            {% else %}
+            <div class="container">
+	            <div class ="row">
+		            <div class ="col-lg-6">
+			            <h4>Sujet du topic</h4>
+		            </div>
+		            <div class ="col-lg-2">
+			            <h4 align="center">Créateur</h4>
+		            </div>
+		            <div class ="col-lg-1">
+			            <h4 align="center">Messages</h4> 
+		            </div>
+		            <div class ="col-lg-3">
+			            <h4 align="center">Dernier message le</h4>
+		            </div>
+	            </div>
+            </div>
+            {% for topicCourant in tabTopics %}
+                <div class="container">
+	            <div class ="row">
+		            <div class ="col-lg-6">
+			            <a href="{{path('follow_the_rhythm_messages',{'topicId':topicCourant.id, 'page':1, 'nbParPage':25})}}"><h5>{{topicCourant.titre}}</h5></a>
+		            </div>
+		            <div class ="col-lg-2">
+			            <a href="{{path('follow_the_rhythm_pageUtilisateur',{'id':topicCourant.utilisateur.id})}}"><h5 align="center">{{topicCourant.utilisateur.username}}</h5></a>
+		            </div>
+		            <div class ="col-lg-1">
+			            <h5 align="center">{{tabNbMessages[topicCourant.id]}}</h5> 
+		            </div>
+		            <div class ="col-lg-3">
+			            <h5 align="center">{% if tabNbMessages[topicCourant.id] != 0 %}{{dateD[topicCourant.id]|date('d-m-Y') }} à {{dateD[topicCourant.id]|date('H.i')}}{% endif %}</h5>
+		            </div>
+	            </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+            <a title="Renvoie à l'accueil du forum." href="/follow_the_rhythm/web/app_dev.php/accueilaccueilForum"><button style='margin-top: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour au forum</button></a><a title="Renvoie à l'accueil de Follow the Rhythm." href="/follow_the_rhythm/web/app_dev.php/accueil/1/1"><button style='margin-left: 8px; margin-top: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour à l'accueil</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}

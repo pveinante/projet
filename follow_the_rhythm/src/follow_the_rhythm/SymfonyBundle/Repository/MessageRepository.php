@@ -1,6 +1,8 @@
 <?php
 
 namespace follow_the_rhythm\SymfonyBundle\Repository;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * MessageRepository
@@ -10,4 +12,49 @@ namespace follow_the_rhythm\SymfonyBundle\Repository;
  */
 class MessageRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findAllPagineEtTrieAsc($page, $nbMaxParPage, $topic)
+    {
+        if (!is_numeric($page)) {
+            throw new InvalidArgumentException(
+                'La valeur de l\'argument $page est incorrecte (valeur : ' . $page . ').'
+            );
+        }
+
+        if ($page < 1) {
+            throw new NotFoundHttpException('La page demandée n\'existe pas');
+        }
+
+        if (!is_numeric($nbMaxParPage)) {
+            throw new InvalidArgumentException(
+                'La valeur de l\'argument $nbMaxParPage est incorrecte (valeur : ' . $nbMaxParPage . ').'
+            );
+        }
+        
+         $gestionnaireEntite=$this->_em;
+        //On créé la requête
+        
+        //On définie la valeur de l'identifiant du concert dont on cherche l'artiste
+    
+        /* $qb = $this->createQueryBuilder('a')
+            ->where('CURRENT_DATE()+1 >= a.date')
+            ->orderBy('a.date', 'ASC');
+        
+        $query = $qb->getQuery();
+        */
+        $requete=$gestionnaireEntite->createQuery('SELECT m.contenu FROM follow_the_rhythmSymfonyBundle:Message m WHERE m.topic = '.$topic);
+        
+        //On définie la valeur de l'identifiant du concert dont on cherche l'artiste
+    
+        $query=$requete->getResult();
+
+        $premierResultat = ($page - 1) * $nbMaxParPage;
+        $query->setFirstResult($premierResultat)->setMaxResults($nbMaxParPage);
+        $paginator = new Paginator($query);
+
+        if ( ($paginator->count() <= $premierResultat) && $page != 1) {
+            throw new NotFoundHttpException('La page demandée n\'existe pas.'); // page 404, sauf pour la première page
+        }
+
+        return $paginator;
+    }
 }

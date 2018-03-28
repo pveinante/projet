@@ -52,8 +52,8 @@ class Artiste
 
    /**
      *
-     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Concert", inversedBy="artiste")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Concert", inversedBy="artiste",cascade={"persist"})
+     * @ORM\JoinTable(name="artiste_concert")
      */
     private $concert;
 
@@ -156,9 +156,6 @@ class Artiste
     public function addConcert(\follow_the_rhythm\SymfonyBundle\Entity\Concert $concert)
     {
         $this->concert[] = $concert;
-        $concert->addArtiste($this);
-
-        return $this;
     }
 
     /**
@@ -215,5 +212,12 @@ class Artiste
             $this->actualite[]=$actualite;
     }
     
+     /**
+     * To String
+     */
+    public function _toString()
+    {
+            return $this->getNomComplet();
+    }
  
 }

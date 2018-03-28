@@ -12,6 +12,7 @@ class __TwigTemplate_f48a71c678b224f829400a2ddb6c480fc4f657ad4af731888ac38acc76c
         $this->blocks = array(
             'contenuCentral' => array($this, 'block_contenuCentral'),
             'fos_user_content' => array($this, 'block_fos_user_content'),
+            'fos_user_stylesheets' => array($this, 'block_fos_user_stylesheets'),
         );
     }
 
@@ -22,119 +23,131 @@ class __TwigTemplate_f48a71c678b224f829400a2ddb6c480fc4f657ad4af731888ac38acc76c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a2f4627c8bd8b14e887a1846f8826fb0f2bcaa6d65ba21873a97b9e05a973ee2 = $this->env->getExtension("native_profiler");
-        $__internal_a2f4627c8bd8b14e887a1846f8826fb0f2bcaa6d65ba21873a97b9e05a973ee2->enter($__internal_a2f4627c8bd8b14e887a1846f8826fb0f2bcaa6d65ba21873a97b9e05a973ee2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle::layout.html.twig"));
+        $__internal_a2b44f941e6e5635379cfa1d00a04dcf11a51873cb912d2f004db19a7102367c = $this->env->getExtension("native_profiler");
+        $__internal_a2b44f941e6e5635379cfa1d00a04dcf11a51873cb912d2f004db19a7102367c->enter($__internal_a2b44f941e6e5635379cfa1d00a04dcf11a51873cb912d2f004db19a7102367c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle::layout.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_a2f4627c8bd8b14e887a1846f8826fb0f2bcaa6d65ba21873a97b9e05a973ee2->leave($__internal_a2f4627c8bd8b14e887a1846f8826fb0f2bcaa6d65ba21873a97b9e05a973ee2_prof);
+        $__internal_a2b44f941e6e5635379cfa1d00a04dcf11a51873cb912d2f004db19a7102367c->leave($__internal_a2b44f941e6e5635379cfa1d00a04dcf11a51873cb912d2f004db19a7102367c_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_ca1b833e5873a407cf77ae2f6c405b9d6c25478d4736abb9df223a475ceaee64 = $this->env->getExtension("native_profiler");
-        $__internal_ca1b833e5873a407cf77ae2f6c405b9d6c25478d4736abb9df223a475ceaee64->enter($__internal_ca1b833e5873a407cf77ae2f6c405b9d6c25478d4736abb9df223a475ceaee64_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_0cc428dac563e903bb7a4f898301ad1c04f35b0eb22c686dc72dcf2f0c79b717 = $this->env->getExtension("native_profiler");
+        $__internal_0cc428dac563e903bb7a4f898301ad1c04f35b0eb22c686dc72dcf2f0c79b717->enter($__internal_0cc428dac563e903bb7a4f898301ad1c04f35b0eb22c686dc72dcf2f0c79b717_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<div class=\"container\">
     <div class=\"row\">
         <div class=\"panel panel-default\">
-        <!--default panel content-->
-        <div class=\"panel-heading\"><h2><b><i class=\"fa fa-user\" aria-hidden=\"true\"></i> Se connecter</b></h2></div>
-            <div class=\"list-group\">
-                <div class=\"list-group-item\">
-                    <div>
-                        ";
-        // line 12
+        <div>
+            ";
+        // line 8
         if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 13
-            echo "                            ";
+            // line 9
+            echo "                ";
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("layout.logged_in_as", array("%username%" => $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array())), "FOSUserBundle"), "html", null, true);
             echo " |
-                            <a href=\"";
-            // line 14
+                <a href=\"";
+            // line 10
             echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
             echo "\">
-                                ";
-            // line 15
+                    ";
+            // line 11
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("layout.logout", array(), "FOSUserBundle"), "html", null, true);
             echo "
-                            </a>
-                        ";
+                </a>
+            ";
         } else {
-            // line 18
-            echo "                            <a href=\"";
+            // line 14
+            echo "                <a href=\"";
             echo $this->env->getExtension('routing')->getPath("fos_user_security_login");
             echo "\">";
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("layout.login", array(), "FOSUserBundle"), "html", null, true);
             echo "</a>
-                        ";
+            ";
         }
-        // line 20
-        echo "                    </div>
-                    
-                    ";
-        // line 22
+        // line 16
+        echo "        </div>
+        
+        ";
+        // line 18
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "flashBag", array()), "all", array()));
         foreach ($context['_seq'] as $context["type"] => $context["messages"]) {
-            // line 23
-            echo "                        ";
+            // line 19
+            echo "            ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($context["messages"]);
             foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-                // line 24
-                echo "                            <div class=\"";
+                // line 20
+                echo "                 <div class=\"alert alert-";
                 echo twig_escape_filter($this->env, $context["type"], "html", null, true);
                 echo "\">
-                                ";
-                // line 25
+                    ";
+                // line 21
                 echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans($context["message"], array(), "FOSUserBundle"), "html", null, true);
                 echo "
-                            </div>
-                        ";
+                </div>
+            ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 28
-            echo "                    ";
+            // line 24
+            echo "        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['type'], $context['messages'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
-        echo "                    
-                    <div>
-                        ";
-        // line 31
+        // line 25
+        echo "        
+        <div>
+            ";
+        // line 27
         $this->displayBlock('fos_user_content', $context, $blocks);
+        // line 29
+        echo "        </div>
+        <div>
+            ";
+        // line 31
+        $this->displayBlock('fos_user_stylesheets', $context, $blocks);
         // line 33
-        echo "                    </div>
-                </div>
-            </div>
+        echo "            </div>
         </div>
     </div>
 </div>
-
 ";
         
-        $__internal_ca1b833e5873a407cf77ae2f6c405b9d6c25478d4736abb9df223a475ceaee64->leave($__internal_ca1b833e5873a407cf77ae2f6c405b9d6c25478d4736abb9df223a475ceaee64_prof);
+        $__internal_0cc428dac563e903bb7a4f898301ad1c04f35b0eb22c686dc72dcf2f0c79b717->leave($__internal_0cc428dac563e903bb7a4f898301ad1c04f35b0eb22c686dc72dcf2f0c79b717_prof);
+
+    }
+
+    // line 27
+    public function block_fos_user_content($context, array $blocks = array())
+    {
+        $__internal_d4a2fefad958e6b9354106c9decc46ec8ff176c8c8e8ad615dc42ed2310ec2b4 = $this->env->getExtension("native_profiler");
+        $__internal_d4a2fefad958e6b9354106c9decc46ec8ff176c8c8e8ad615dc42ed2310ec2b4->enter($__internal_d4a2fefad958e6b9354106c9decc46ec8ff176c8c8e8ad615dc42ed2310ec2b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+
+        // line 28
+        echo "            ";
+        
+        $__internal_d4a2fefad958e6b9354106c9decc46ec8ff176c8c8e8ad615dc42ed2310ec2b4->leave($__internal_d4a2fefad958e6b9354106c9decc46ec8ff176c8c8e8ad615dc42ed2310ec2b4_prof);
 
     }
 
     // line 31
-    public function block_fos_user_content($context, array $blocks = array())
+    public function block_fos_user_stylesheets($context, array $blocks = array())
     {
-        $__internal_6905f254bf8f1dadb1a8b093b5c200dcf603454ea9b1ac198af2faf47bf6adaf = $this->env->getExtension("native_profiler");
-        $__internal_6905f254bf8f1dadb1a8b093b5c200dcf603454ea9b1ac198af2faf47bf6adaf->enter($__internal_6905f254bf8f1dadb1a8b093b5c200dcf603454ea9b1ac198af2faf47bf6adaf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_74c839a74ae8a5ba40aa7c0e85555d93adb761d0de4faeb8b0ed8bc4f08ea653 = $this->env->getExtension("native_profiler");
+        $__internal_74c839a74ae8a5ba40aa7c0e85555d93adb761d0de4faeb8b0ed8bc4f08ea653->enter($__internal_74c839a74ae8a5ba40aa7c0e85555d93adb761d0de4faeb8b0ed8bc4f08ea653_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_stylesheets"));
 
         // line 32
-        echo "                        ";
+        echo "            ";
         
-        $__internal_6905f254bf8f1dadb1a8b093b5c200dcf603454ea9b1ac198af2faf47bf6adaf->leave($__internal_6905f254bf8f1dadb1a8b093b5c200dcf603454ea9b1ac198af2faf47bf6adaf_prof);
+        $__internal_74c839a74ae8a5ba40aa7c0e85555d93adb761d0de4faeb8b0ed8bc4f08ea653->leave($__internal_74c839a74ae8a5ba40aa7c0e85555d93adb761d0de4faeb8b0ed8bc4f08ea653_prof);
 
     }
 
@@ -150,7 +163,7 @@ class __TwigTemplate_f48a71c678b224f829400a2ddb6c480fc4f657ad4af731888ac38acc76c
 
     public function getDebugInfo()
     {
-        return array (  135 => 32,  129 => 31,  115 => 33,  113 => 31,  109 => 29,  103 => 28,  94 => 25,  89 => 24,  84 => 23,  80 => 22,  76 => 20,  68 => 18,  62 => 15,  58 => 14,  53 => 13,  51 => 12,  41 => 4,  35 => 3,  11 => 1,);
+        return array (  148 => 32,  142 => 31,  135 => 28,  129 => 27,  118 => 33,  116 => 31,  112 => 29,  110 => 27,  106 => 25,  100 => 24,  91 => 21,  86 => 20,  81 => 19,  77 => 18,  73 => 16,  65 => 14,  59 => 11,  55 => 10,  50 => 9,  48 => 8,  42 => 4,  36 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -159,37 +172,34 @@ class __TwigTemplate_f48a71c678b224f829400a2ddb6c480fc4f657ad4af731888ac38acc76c
 /* <div class="container">*/
 /*     <div class="row">*/
 /*         <div class="panel panel-default">*/
-/*         <!--default panel content-->*/
-/*         <div class="panel-heading"><h2><b><i class="fa fa-user" aria-hidden="true"></i> Se connecter</b></h2></div>*/
-/*             <div class="list-group">*/
-/*                 <div class="list-group-item">*/
-/*                     <div>*/
-/*                         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}*/
-/*                             {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |*/
-/*                             <a href="{{ path('fos_user_security_logout') }}">*/
-/*                                 {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}*/
-/*                             </a>*/
-/*                         {% else %}*/
-/*                             <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>*/
-/*                         {% endif %}*/
-/*                     </div>*/
-/*                     */
-/*                     {% for type, messages in app.session.flashBag.all %}*/
-/*                         {% for message in messages %}*/
-/*                             <div class="{{ type }}">*/
-/*                                 {{ message|trans({}, 'FOSUserBundle') }}*/
-/*                             </div>*/
-/*                         {% endfor %}*/
-/*                     {% endfor %}*/
-/*                     */
-/*                     <div>*/
-/*                         {% block fos_user_content %}*/
-/*                         {% endblock fos_user_content %}*/
-/*                     </div>*/
+/*         <div>*/
+/*             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}*/
+/*                 {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |*/
+/*                 <a href="{{ path('fos_user_security_logout') }}">*/
+/*                     {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}*/
+/*                 </a>*/
+/*             {% else %}*/
+/*                 <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>*/
+/*             {% endif %}*/
+/*         </div>*/
+/*         */
+/*         {% for type, messages in app.session.flashBag.all %}*/
+/*             {% for message in messages %}*/
+/*                  <div class="alert alert-{{ type }}">*/
+/*                     {{ message|trans({}, 'FOSUserBundle') }}*/
 /*                 </div>*/
+/*             {% endfor %}*/
+/*         {% endfor %}*/
+/*         */
+/*         <div>*/
+/*             {% block fos_user_content %}*/
+/*             {% endblock fos_user_content %}*/
+/*         </div>*/
+/*         <div>*/
+/*             {% block fos_user_stylesheets %}*/
+/*             {% endblock fos_user_stylesheets %}*/
 /*             </div>*/
 /*         </div>*/
 /*     </div>*/
 /* </div>*/
-/* */
 /* {% endblock %}*/

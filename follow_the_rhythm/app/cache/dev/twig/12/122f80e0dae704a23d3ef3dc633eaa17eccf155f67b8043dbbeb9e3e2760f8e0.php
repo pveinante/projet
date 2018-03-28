@@ -21,20 +21,20 @@ class __TwigTemplate_ce40ab0342ee6873920b7e8d6803ee3134f8823ce231e95230f414c9d19
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4f6a998231aa177ef007f3c8ed2092e02b5becd25c14c4bad8a851c1c394787a = $this->env->getExtension("native_profiler");
-        $__internal_4f6a998231aa177ef007f3c8ed2092e02b5becd25c14c4bad8a851c1c394787a->enter($__internal_4f6a998231aa177ef007f3c8ed2092e02b5becd25c14c4bad8a851c1c394787a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieNews.html.twig"));
+        $__internal_ac4bdb3b5d8436c30703fd61545956c42fd7988317710742e81d8ff2ee449a22 = $this->env->getExtension("native_profiler");
+        $__internal_ac4bdb3b5d8436c30703fd61545956c42fd7988317710742e81d8ff2ee449a22->enter($__internal_ac4bdb3b5d8436c30703fd61545956c42fd7988317710742e81d8ff2ee449a22_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorieNews.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4f6a998231aa177ef007f3c8ed2092e02b5becd25c14c4bad8a851c1c394787a->leave($__internal_4f6a998231aa177ef007f3c8ed2092e02b5becd25c14c4bad8a851c1c394787a_prof);
+        $__internal_ac4bdb3b5d8436c30703fd61545956c42fd7988317710742e81d8ff2ee449a22->leave($__internal_ac4bdb3b5d8436c30703fd61545956c42fd7988317710742e81d8ff2ee449a22_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_e15990fb7967826d8953bd28ed65bd80211a6722588ab79885df1a7cf119df42 = $this->env->getExtension("native_profiler");
-        $__internal_e15990fb7967826d8953bd28ed65bd80211a6722588ab79885df1a7cf119df42->enter($__internal_e15990fb7967826d8953bd28ed65bd80211a6722588ab79885df1a7cf119df42_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_323c38a8d38bef83e45f8f5163cc1eebe624a1695f531867a6a1d0f34c5de94c = $this->env->getExtension("native_profiler");
+        $__internal_323c38a8d38bef83e45f8f5163cc1eebe624a1695f531867a6a1d0f34c5de94c->enter($__internal_323c38a8d38bef83e45f8f5163cc1eebe624a1695f531867a6a1d0f34c5de94c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<div class=\"container\">
@@ -85,7 +85,7 @@ class __TwigTemplate_ce40ab0342ee6873920b7e8d6803ee3134f8823ce231e95230f414c9d19
 \t\t            <div class =\"col-lg-6\">
 \t\t\t            <a href=\"";
                 // line 37
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_messages", array("topicId" => $this->getAttribute($context["topicCourant"], "id", array()))), "html", null, true);
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_messages", array("topicId" => $this->getAttribute($context["topicCourant"], "id", array()), "page" => 1)), "html", null, true);
                 echo "\"><h5>";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["topicCourant"], "titre", array()), "html", null, true);
                 echo "</h5></a>
@@ -93,16 +93,26 @@ class __TwigTemplate_ce40ab0342ee6873920b7e8d6803ee3134f8823ce231e95230f414c9d19
 \t\t            <div class =\"col-lg-2\">
 \t\t\t            <a href=\"";
                 // line 40
-                echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_categorieNews");
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_pageUtilisateur", array("id" => $this->getAttribute($this->getAttribute($context["topicCourant"], "utilisateur", array()), "id", array()))), "html", null, true);
                 echo "\"><h5 align=\"center\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["topicCourant"], "utilisateur", array()), "username", array()), "html", null, true);
                 echo "</h5></a>
 \t\t            </div>
 \t\t            <div class =\"col-lg-1\">
-\t\t\t            <h5 align=\"center\">0</h5> 
+\t\t\t            <h5 align=\"center\">";
+                // line 43
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tabNbMessages"]) ? $context["tabNbMessages"] : $this->getContext($context, "tabNbMessages")), $this->getAttribute($context["topicCourant"], "id", array()), array(), "array"), "html", null, true);
+                echo "</h5> 
 \t\t            </div>
 \t\t            <div class =\"col-lg-3\">
-\t\t\t            <h5 align=\"center\">27/03/2018</h5>
+\t\t\t            <h5 align=\"center\">";
+                // line 46
+                if (($this->getAttribute((isset($context["tabNbMessages"]) ? $context["tabNbMessages"] : $this->getContext($context, "tabNbMessages")), $this->getAttribute($context["topicCourant"], "id", array()), array(), "array") != 0)) {
+                    echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["dateD"]) ? $context["dateD"] : $this->getContext($context, "dateD")), $this->getAttribute($context["topicCourant"], "id", array()), array(), "array"), "d-m-Y"), "html", null, true);
+                    echo " à ";
+                    echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["dateD"]) ? $context["dateD"] : $this->getContext($context, "dateD")), $this->getAttribute($context["topicCourant"], "id", array()), array(), "array"), "H.i"), "html", null, true);
+                }
+                echo "</h5>
 \t\t            </div>
 \t            </div>
             </div>
@@ -123,7 +133,7 @@ class __TwigTemplate_ce40ab0342ee6873920b7e8d6803ee3134f8823ce231e95230f414c9d19
     
 ";
         
-        $__internal_e15990fb7967826d8953bd28ed65bd80211a6722588ab79885df1a7cf119df42->leave($__internal_e15990fb7967826d8953bd28ed65bd80211a6722588ab79885df1a7cf119df42_prof);
+        $__internal_323c38a8d38bef83e45f8f5163cc1eebe624a1695f531867a6a1d0f34c5de94c->leave($__internal_323c38a8d38bef83e45f8f5163cc1eebe624a1695f531867a6a1d0f34c5de94c_prof);
 
     }
 
@@ -139,7 +149,7 @@ class __TwigTemplate_ce40ab0342ee6873920b7e8d6803ee3134f8823ce231e95230f414c9d19
 
     public function getDebugInfo()
     {
-        return array (  118 => 52,  115 => 51,  96 => 40,  88 => 37,  83 => 34,  79 => 33,  61 => 17,  51 => 9,  49 => 8,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  128 => 52,  125 => 51,  110 => 46,  104 => 43,  96 => 40,  88 => 37,  83 => 34,  79 => 33,  61 => 17,  51 => 9,  49 => 8,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -178,16 +188,16 @@ class __TwigTemplate_ce40ab0342ee6873920b7e8d6803ee3134f8823ce231e95230f414c9d19
 /*                 <div class="container">*/
 /* 	            <div class ="row">*/
 /* 		            <div class ="col-lg-6">*/
-/* 			            <a href="{{path('follow_the_rhythm_messages',{'topicId':topicCourant.id})}}"><h5>{{topicCourant.titre}}</h5></a>*/
+/* 			            <a href="{{path('follow_the_rhythm_messages',{'topicId':topicCourant.id, 'page':1})}}"><h5>{{topicCourant.titre}}</h5></a>*/
 /* 		            </div>*/
 /* 		            <div class ="col-lg-2">*/
-/* 			            <a href="{{path('follow_the_rhythm_categorieNews')}}"><h5 align="center">{{topicCourant.utilisateur.username}}</h5></a>*/
+/* 			            <a href="{{path('follow_the_rhythm_pageUtilisateur',{'id':topicCourant.utilisateur.id})}}"><h5 align="center">{{topicCourant.utilisateur.username}}</h5></a>*/
 /* 		            </div>*/
 /* 		            <div class ="col-lg-1">*/
-/* 			            <h5 align="center">0</h5> */
+/* 			            <h5 align="center">{{tabNbMessages[topicCourant.id]}}</h5> */
 /* 		            </div>*/
 /* 		            <div class ="col-lg-3">*/
-/* 			            <h5 align="center">27/03/2018</h5>*/
+/* 			            <h5 align="center">{% if tabNbMessages[topicCourant.id] != 0 %}{{dateD[topicCourant.id]|date('d-m-Y') }} à {{dateD[topicCourant.id]|date('H.i')}}{% endif %}</h5>*/
 /* 		            </div>*/
 /* 	            </div>*/
 /*             </div>*/

@@ -208,5 +208,6 @@
   'WebProfilerBundle:Profiler:results.html.twig' => '/home/ubuntu/workspace/follow_the_rhythm/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/results.html.twig',
   'WebProfilerBundle:Profiler:toolbar_item.html.twig' => '/home/ubuntu/workspace/follow_the_rhythm/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/toolbar_item.html.twig',
   '::vueMere.html.twig' => '/home/ubuntu/workspace/follow_the_rhythm/app/Resources/views/vueMere.html.twig',
+  '::pagination_2.html.twig' => '/home/ubuntu/workspace/follow_the_rhythm/app/Resources/views/pagination_2.html.twig',
   '::pagination.html.twig' => '/home/ubuntu/workspace/follow_the_rhythm/app/Resources/views/pagination.html.twig',
 );

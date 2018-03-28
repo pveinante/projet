@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="panel panel-default">
-            <div class="panel-heading"><h2><b><i class="fa fa-wechat"></i> Forum</b></h2></div>
+            <div class="panel-heading"><h2><b><i class="fa fa-wechat"></i> Forum</b><a title="Renvoie à l'accueil de Follow the Rhythm." href="/follow_the_rhythm/web/app_dev.php/accueil/1/1"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour à l'accueil</button></a></h2></div>
             <div class="container">
 	            <div class ="row">
 		            <div class ="col-lg-6">
@@ -21,15 +21,69 @@
 		            </div>
 	            </div>
             </div>
-            <div class="list-group">
-                <div class="list-group-item">
-                    <div align="justify"> 
-                        <a href="{{path('follow_the_rhythm_categorieNews')}}"> News</a></br><hr>
-                        <a href="{{path('follow_the_rhythm_categorieEspacePrive')}}"> Espace privé</a></br><hr>
-                        <a href="{{path('follow_the_rhythm_categorieConcert')}}"> Concerts</a></br><hr>
-                        <a href="{{path('follow_the_rhythm_categoriePromotions')}}"> Promotions</a></br><hr>
-                    </div>
-                </div>
+            <div class="container">
+	            <div class ="row">
+		            <div class ="col-lg-6">
+			            <h5><a title="Discuter des news du moment." href="{{path('follow_the_rhythm_categorie',{'catId':1})}}"> News</a></h5>
+		            </div>
+		            <div class ="col-lg-1">
+			            <h5 align="center">{{tabTopics[1]}}</h5>
+		            </div>
+		            <div class ="col-lg-1">
+			            <h5 align="center">{{tabNbMessTopics[1]}}</h5>
+		            </div>
+		            <div class ="col-lg-4">
+			            <h5 align="center">News</h5>
+		            </div>
+	            </div>
+            </div>
+            <div class="container">
+	            <div class ="row">
+		            <div class ="col-lg-6">
+			            <h5><a title="Entrer dans l'espace privé." href="{{path('follow_the_rhythm_categorie',{'catId':2})}}"> Espace Privé</a></h5>
+		            </div>
+		            <div class ="col-lg-1">
+			            <h5 align="center">{{tabTopics[2]}}</h5>
+		            </div>
+		            <div class ="col-lg-1">
+			            <h5 align="center">{{tabNbMessTopics[2]}}</h5>
+		            </div>
+		            <div class ="col-lg-4">
+			            <h5 align="center">News</h5>
+		            </div>
+	            </div>
+            </div>
+            <div class="container">
+	            <div class ="row">
+		            <div class ="col-lg-6">
+			            <h5><a title="Discuter des prochains concerts." href="{{path('follow_the_rhythm_categorie',{'catId':3})}}"> Concerts</a></h5>
+		            </div>
+		            <div class ="col-lg-1">
+			            <h5 align="center">{{tabTopics[3]}}</h5>
+		            </div>
+		            <div class ="col-lg-1">
+			            <h5 align="center">{{tabNbMessTopics[3]}}</h5>
+		            </div>
+		            <div class ="col-lg-4">
+			            <h5 align="center">News</h5>
+		            </div>
+	            </div>
+            </div>
+            <div class="container">
+	            <div class ="row">
+		            <div class ="col-lg-6">
+			            <h5><a title="Discuter des promotions." href="{{path('follow_the_rhythm_categorie',{'catId':4})}}"> Promotion</a></h5>
+		            </div>
+		            <div class ="col-lg-1">
+			            <h5 align="center">{{tabTopics[4]}}</h5>
+		            </div>
+		            <div class ="col-lg-1">
+			            <h5 align="center">{{tabNbMessTopics[4]}}</h5>
+		            </div>
+		            <div class ="col-lg-4">
+			            <h5 align="center">News</h5>
+		            </div>
+	            </div>
             </div>
         </div>
     </div>

@@ -15,8 +15,8 @@ class __TwigTemplate_291c362790f61e3f00e6d4f9770f6527367e64cf6e4be15fc942e998d0b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ce62af4325401bd1608b6440add410922c8efeb407b0a7129b298ee477f70fd3 = $this->env->getExtension("native_profiler");
-        $__internal_ce62af4325401bd1608b6440add410922c8efeb407b0a7129b298ee477f70fd3->enter($__internal_ce62af4325401bd1608b6440add410922c8efeb407b0a7129b298ee477f70fd3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::pagination.html.twig"));
+        $__internal_5a01f8fa71536801607a07696387dfa4dfae680229720fa17bbf7aed48d60d20 = $this->env->getExtension("native_profiler");
+        $__internal_5a01f8fa71536801607a07696387dfa4dfae680229720fa17bbf7aed48d60d20->enter($__internal_5a01f8fa71536801607a07696387dfa4dfae680229720fa17bbf7aed48d60d20_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::pagination.html.twig"));
 
         // line 1
         if (($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nbPages", array()) > 0)) {
@@ -27,7 +27,7 @@ class __TwigTemplate_291c362790f61e3f00e6d4f9770f6527367e64cf6e4be15fc942e998d0b
             if (($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "page", array()) > 1)) {
                 // line 4
                 echo "            <li>
-                <a href=\"";
+                <a title=\"Première page\" href=\"";
                 // line 5
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => 1, "sens" => 1))), "html", null, true);
                 echo "\">
@@ -35,7 +35,7 @@ class __TwigTemplate_291c362790f61e3f00e6d4f9770f6527367e64cf6e4be15fc942e998d0b
                 </a>
             </li>
             <li>
-                <a href=\"";
+                <a title=\"Page précédente\" href=\"";
                 // line 10
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute(                // line 11
 (isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => ($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "page", array()) - 1), "sens" => 1))), "html", null, true);
@@ -59,8 +59,10 @@ class __TwigTemplate_291c362790f61e3f00e6d4f9770f6527367e64cf6e4be15fc942e998d0b
                     echo "class=\"active\"";
                 }
                 echo ">
-                <a href=\"";
+                <a title=\"Page ";
                 // line 20
+                echo twig_escape_filter($this->env, $context["p"], "html", null, true);
+                echo "\" href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => $context["p"], "sens" => 1))), "html", null, true);
                 echo "\">
                     ";
@@ -81,7 +83,7 @@ class __TwigTemplate_291c362790f61e3f00e6d4f9770f6527367e64cf6e4be15fc942e998d0b
             if (($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "page", array()) < $this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nbPages", array()))) {
                 // line 27
                 echo "            <li>
-                <a href=\"";
+                <a title=\"Page suivante\" href=\"";
                 // line 28
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute(                // line 29
 (isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => ($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "page", array()) + 1), "sens" => 1))), "html", null, true);
@@ -90,7 +92,7 @@ class __TwigTemplate_291c362790f61e3f00e6d4f9770f6527367e64cf6e4be15fc942e998d0b
                 </a>
             </li>
             <li>
-                <a href=\"";
+                <a title=\"Dernière page\" href=\"";
                 // line 34
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute(                // line 35
 (isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => $this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nbPages", array()), "sens" => 1))), "html", null, true);
@@ -105,7 +107,7 @@ class __TwigTemplate_291c362790f61e3f00e6d4f9770f6527367e64cf6e4be15fc942e998d0b
 ";
         }
         
-        $__internal_ce62af4325401bd1608b6440add410922c8efeb407b0a7129b298ee477f70fd3->leave($__internal_ce62af4325401bd1608b6440add410922c8efeb407b0a7129b298ee477f70fd3_prof);
+        $__internal_5a01f8fa71536801607a07696387dfa4dfae680229720fa17bbf7aed48d60d20->leave($__internal_5a01f8fa71536801607a07696387dfa4dfae680229720fa17bbf7aed48d60d20_prof);
 
     }
 
@@ -121,19 +123,19 @@ class __TwigTemplate_291c362790f61e3f00e6d4f9770f6527367e64cf6e4be15fc942e998d0b
 
     public function getDebugInfo()
     {
-        return array (  104 => 40,  96 => 35,  95 => 34,  87 => 29,  86 => 28,  83 => 27,  81 => 26,  78 => 25,  68 => 21,  64 => 20,  57 => 19,  52 => 18,  49 => 16,  41 => 11,  40 => 10,  32 => 5,  29 => 4,  27 => 3,  24 => 2,  22 => 1,);
+        return array (  106 => 40,  98 => 35,  97 => 34,  89 => 29,  88 => 28,  85 => 27,  83 => 26,  80 => 25,  70 => 21,  64 => 20,  57 => 19,  52 => 18,  49 => 16,  41 => 11,  40 => 10,  32 => 5,  29 => 4,  27 => 3,  24 => 2,  22 => 1,);
     }
 }
 /* {% if pagination.nbPages > 0 %}*/
 /*     <ul class="pagination">*/
 /*         {% if pagination.page > 1 %}*/
 /*             <li>*/
-/*                 <a href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': 1, 'sens': 1})) }}">*/
+/*                 <a title="Première page" href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': 1, 'sens': 1})) }}">*/
 /*                     <<*/
 /*                 </a>*/
 /*             </li>*/
 /*             <li>*/
-/*                 <a href="{{ path(pagination.nomRoute,*/
+/*                 <a title="Page précédente" href="{{ path(pagination.nomRoute,*/
 /*                 pagination.paramsRoute|merge({'page': pagination.page-1, 'sens': 1})) }}">*/
 /*                     <*/
 /*                 </a>*/
@@ -143,7 +145,7 @@ class __TwigTemplate_291c362790f61e3f00e6d4f9770f6527367e64cf6e4be15fc942e998d0b
 /*         {# Affichage de toutes les pages entre p-4 et p+4 sauf si < 1 ou > nbPages #}*/
 /*         {% for p in range(max(pagination.page-4, 1), min(pagination.page+4, pagination.nbPages)) %}*/
 /*             <li {% if p == pagination.page %}class="active"{% endif %}>*/
-/*                 <a href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': p, 'sens': 1})) }}">*/
+/*                 <a title="Page {{ p }}" href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': p, 'sens': 1})) }}">*/
 /*                     {{ p }}*/
 /*                 </a>*/
 /*             </li>*/
@@ -151,13 +153,13 @@ class __TwigTemplate_291c362790f61e3f00e6d4f9770f6527367e64cf6e4be15fc942e998d0b
 /* */
 /*         {% if pagination.page < pagination.nbPages %}*/
 /*             <li>*/
-/*                 <a href="{{ path(pagination.nomRoute,*/
+/*                 <a title="Page suivante" href="{{ path(pagination.nomRoute,*/
 /*                 pagination.paramsRoute|merge({'page': pagination.page+1, 'sens': 1})) }}">*/
 /*                     >*/
 /*                 </a>*/
 /*             </li>*/
 /*             <li>*/
-/*                 <a href="{{ path(pagination.nomRoute,*/
+/*                 <a title="Dernière page" href="{{ path(pagination.nomRoute,*/
 /*                 pagination.paramsRoute|merge({'page': pagination.nbPages, 'sens': 1})) }}">*/
 /*                     >>*/
 /*                 </a>*/

@@ -39,7 +39,7 @@ class Categorie
     /**
      * Get id
      *
-     * @return int
+     * @return intwget https://phar.phpunit.de/phpunit-6.5.phar
      */
     public function getId()
     {
@@ -94,4 +94,3 @@ class Categorie
         return $this->nom;
     }
 }
-

@@ -25,7 +25,7 @@ class User extends BaseUser
      *
      * @ORM\Column(name="nbSignalement", type="integer")
      */
-    private $nbSignalement;
+    private $nbSignalement = 0;
 
     /**
      * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste")

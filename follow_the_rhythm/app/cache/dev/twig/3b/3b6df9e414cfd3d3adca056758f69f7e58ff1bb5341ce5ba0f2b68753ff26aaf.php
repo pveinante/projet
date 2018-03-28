@@ -15,27 +15,37 @@ class __TwigTemplate_ccfbefc0ead1af44ab5911fb484291570823df8857d6dd2bde6bf7f485c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b843f34bdcb8db8e2aba83be7b8ad07ee4210e22979a64d5437c960d3bb7a44b = $this->env->getExtension("native_profiler");
-        $__internal_b843f34bdcb8db8e2aba83be7b8ad07ee4210e22979a64d5437c960d3bb7a44b->enter($__internal_b843f34bdcb8db8e2aba83be7b8ad07ee4210e22979a64d5437c960d3bb7a44b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:show_content.html.twig"));
+        $__internal_afde15f87688411fc94a5d4d9b8f8547bee33e3bee92a1d3005e727685ede16a = $this->env->getExtension("native_profiler");
+        $__internal_afde15f87688411fc94a5d4d9b8f8547bee33e3bee92a1d3005e727685ede16a->enter($__internal_afde15f87688411fc94a5d4d9b8f8547bee33e3bee92a1d3005e727685ede16a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:show_content.html.twig"));
 
         // line 1
-        echo "<div class=\"fos_user_user_show\">
-    <p>";
-        // line 2
+        echo "
+
+<div class=\"panel panel-default\">
+    <div class=\"panel-heading\"><h2><b><i class=\"fa fa-user\" aria-hidden=\"true\"></i> Votre profil</b></h2></div>
+        <div class=\"list-group\">
+            <div class=\"list-group-item\">
+                <div class=\"fos_user_user_show\">
+                    <p>";
+        // line 8
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("profile.show.username", array(), "FOSUserBundle"), "html", null, true);
         echo ": ";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username", array()), "html", null, true);
         echo "</p>
-    <p>";
-        // line 3
+                    <p>";
+        // line 9
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("profile.show.email", array(), "FOSUserBundle"), "html", null, true);
         echo ": ";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "email", array()), "html", null, true);
         echo "</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 ";
         
-        $__internal_b843f34bdcb8db8e2aba83be7b8ad07ee4210e22979a64d5437c960d3bb7a44b->leave($__internal_b843f34bdcb8db8e2aba83be7b8ad07ee4210e22979a64d5437c960d3bb7a44b_prof);
+        $__internal_afde15f87688411fc94a5d4d9b8f8547bee33e3bee92a1d3005e727685ede16a->leave($__internal_afde15f87688411fc94a5d4d9b8f8547bee33e3bee92a1d3005e727685ede16a_prof);
 
     }
 
@@ -51,11 +61,21 @@ class __TwigTemplate_ccfbefc0ead1af44ab5911fb484291570823df8857d6dd2bde6bf7f485c
 
     public function getDebugInfo()
     {
-        return array (  31 => 3,  25 => 2,  22 => 1,);
+        return array (  37 => 9,  31 => 8,  22 => 1,);
     }
 }
-/* <div class="fos_user_user_show">*/
-/*     <p>{{ 'profile.show.username'|trans({}, 'FOSUserBundle') }}: {{ user.username }}</p>*/
-/*     <p>{{ 'profile.show.email'|trans({}, 'FOSUserBundle') }}: {{ user.email }}</p>*/
+/* */
+/* */
+/* <div class="panel panel-default">*/
+/*     <div class="panel-heading"><h2><b><i class="fa fa-user" aria-hidden="true"></i> Votre profil</b></h2></div>*/
+/*         <div class="list-group">*/
+/*             <div class="list-group-item">*/
+/*                 <div class="fos_user_user_show">*/
+/*                     <p>{{ 'profile.show.username'|trans({}, 'FOSUserBundle') }}: {{ user.username }}</p>*/
+/*                     <p>{{ 'profile.show.email'|trans({}, 'FOSUserBundle') }}: {{ user.email }}</p>*/
+/*                 </div>*/
+/*             </div>*/
+/*         </div>*/
+/*     </div>*/
 /* </div>*/
 /* */

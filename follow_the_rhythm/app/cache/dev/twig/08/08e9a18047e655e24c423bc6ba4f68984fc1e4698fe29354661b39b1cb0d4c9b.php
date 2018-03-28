@@ -1,6 +1,6 @@
 <?php
 
-/* EasyAdminBundle:css:easyadmin.css.twig */
+/* @EasyAdmin/css/easyadmin.css.twig */
 class __TwigTemplate_b7a0b23a978dd50fbdb4c5bc22ca76f9238319deb2175e0fb99cab3c807e692f extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_b7a0b23a978dd50fbdb4c5bc22ca76f9238319deb2175e0fb99cab3c807
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_44f7e9393e2888ae44978ac59edf190af32c118eae0dd83cb89296ae3144c9ee = $this->env->getExtension("native_profiler");
-        $__internal_44f7e9393e2888ae44978ac59edf190af32c118eae0dd83cb89296ae3144c9ee->enter($__internal_44f7e9393e2888ae44978ac59edf190af32c118eae0dd83cb89296ae3144c9ee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EasyAdminBundle:css:easyadmin.css.twig"));
+        $__internal_ddbe91157a3c7b8166dd19d19b84fc00da1998a986be50685e98bb7e9c71158c = $this->env->getExtension("native_profiler");
+        $__internal_ddbe91157a3c7b8166dd19d19b84fc00da1998a986be50685e98bb7e9c71158c->enter($__internal_ddbe91157a3c7b8166dd19d19b84fc00da1998a986be50685e98bb7e9c71158c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/css/easyadmin.css.twig"));
 
         // line 4
         echo "
@@ -1867,13 +1867,13 @@ body.error .error-message {
 }
 ";
         
-        $__internal_44f7e9393e2888ae44978ac59edf190af32c118eae0dd83cb89296ae3144c9ee->leave($__internal_44f7e9393e2888ae44978ac59edf190af32c118eae0dd83cb89296ae3144c9ee_prof);
+        $__internal_ddbe91157a3c7b8166dd19d19b84fc00da1998a986be50685e98bb7e9c71158c->leave($__internal_ddbe91157a3c7b8166dd19d19b84fc00da1998a986be50685e98bb7e9c71158c_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "EasyAdminBundle:css:easyadmin.css.twig";
+        return "@EasyAdmin/css/easyadmin.css.twig";
     }
 
     public function isTraitable()

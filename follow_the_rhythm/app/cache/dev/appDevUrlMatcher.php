@@ -229,28 +229,13 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         if (0 === strpos($pathinfo, '/forum')) {
-            // follow_the_rhythm_categorieNews
-            if ($pathinfo === '/forum/news') {
-                return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::categorieNewsAction',  '_route' => 'follow_the_rhythm_categorieNews',);
-            }
-
-            // follow_the_rhythm_categorieEspacePrive
-            if ($pathinfo === '/forum/espacePrive') {
-                return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::categorieEspacePriveAction',  '_route' => 'follow_the_rhythm_categorieEspacePrive',);
-            }
-
-            // follow_the_rhythm_categorieConcert
-            if ($pathinfo === '/forum/concert') {
-                return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::categorieConcertAction',  '_route' => 'follow_the_rhythm_categorieConcert',);
-            }
-
-            // follow_the_rhythm_categoriePromotions
-            if ($pathinfo === '/forum/promotion') {
-                return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::categoriePromotionAction',  '_route' => 'follow_the_rhythm_categoriePromotions',);
+            // follow_the_rhythm_categorie
+            if (0 === strpos($pathinfo, '/forum/categorie') && preg_match('#^/forum/categorie/(?P<catId>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'follow_the_rhythm_categorie')), array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::categorieAction',));
             }
 
             // follow_the_rhythm_messages
-            if (0 === strpos($pathinfo, '/forum/topic') && preg_match('#^/forum/topic/(?P<topicId>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/forum/topic') && preg_match('#^/forum/topic/(?P<topicId>[^/]++)/(?P<page>[^/]++)/(?P<nbParPage>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'follow_the_rhythm_messages')), array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::messagesAction',));
             }
 

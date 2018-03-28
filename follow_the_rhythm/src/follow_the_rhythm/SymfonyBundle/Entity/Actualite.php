@@ -78,7 +78,7 @@ class Actualite
        /**
      *
      * @ORM\ManyToOne(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Moderateur")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $moderateur;
 
@@ -290,5 +290,10 @@ class Actualite
     public function removeArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste)
     {
         $this->artiste->removeElement($artiste);
+    }
+    
+        public function _toString()
+    {
+            return $this;
     }
 }

@@ -21,20 +21,20 @@ class __TwigTemplate_e24760ea05ef0602eeb920c2575f89da6930b1b986e7c5e1c026c4b9bcd
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_19785de7e4cb3a743116183d990f3265e0bd4c147780339a78fe88e3e6d1f018 = $this->env->getExtension("native_profiler");
-        $__internal_19785de7e4cb3a743116183d990f3265e0bd4c147780339a78fe88e3e6d1f018->enter($__internal_19785de7e4cb3a743116183d990f3265e0bd4c147780339a78fe88e3e6d1f018_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:pageUtilisateur.html.twig"));
+        $__internal_4b92dcea438a7bcc14e487ae882f63fae2958025c1ae23271e3bde300ca19871 = $this->env->getExtension("native_profiler");
+        $__internal_4b92dcea438a7bcc14e487ae882f63fae2958025c1ae23271e3bde300ca19871->enter($__internal_4b92dcea438a7bcc14e487ae882f63fae2958025c1ae23271e3bde300ca19871_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:pageUtilisateur.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_19785de7e4cb3a743116183d990f3265e0bd4c147780339a78fe88e3e6d1f018->leave($__internal_19785de7e4cb3a743116183d990f3265e0bd4c147780339a78fe88e3e6d1f018_prof);
+        $__internal_4b92dcea438a7bcc14e487ae882f63fae2958025c1ae23271e3bde300ca19871->leave($__internal_4b92dcea438a7bcc14e487ae882f63fae2958025c1ae23271e3bde300ca19871_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_a15dcac2c8cb540d2af2ff448e05e848ef1ff503fcf8295f452aee9da7666fa2 = $this->env->getExtension("native_profiler");
-        $__internal_a15dcac2c8cb540d2af2ff448e05e848ef1ff503fcf8295f452aee9da7666fa2->enter($__internal_a15dcac2c8cb540d2af2ff448e05e848ef1ff503fcf8295f452aee9da7666fa2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_471c66cd26d2d8b1a4bc081732cc69770bdcd421e0a404a058c6b3905f1980cf = $this->env->getExtension("native_profiler");
+        $__internal_471c66cd26d2d8b1a4bc081732cc69770bdcd421e0a404a058c6b3905f1980cf->enter($__internal_471c66cd26d2d8b1a4bc081732cc69770bdcd421e0a404a058c6b3905f1980cf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<body>
@@ -44,7 +44,7 @@ class __TwigTemplate_e24760ea05ef0602eeb920c2575f89da6930b1b986e7c5e1c026c4b9bcd
       <!--default panel content-->
         <div class=\"panel-heading\"><h2><b>";
         // line 9
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["utilisateur"]) ? $context["utilisateur"] : $this->getContext($context, "utilisateur")), "pseudo", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username", array()), "html", null, true);
         echo "</h2></b></div>
      
         <div class=\"list-group\">
@@ -91,7 +91,7 @@ class __TwigTemplate_e24760ea05ef0602eeb920c2575f89da6930b1b986e7c5e1c026c4b9bcd
 </body>
 ";
         
-        $__internal_a15dcac2c8cb540d2af2ff448e05e848ef1ff503fcf8295f452aee9da7666fa2->leave($__internal_a15dcac2c8cb540d2af2ff448e05e848ef1ff503fcf8295f452aee9da7666fa2_prof);
+        $__internal_471c66cd26d2d8b1a4bc081732cc69770bdcd421e0a404a058c6b3905f1980cf->leave($__internal_471c66cd26d2d8b1a4bc081732cc69770bdcd421e0a404a058c6b3905f1980cf_prof);
 
     }
 
@@ -118,7 +118,7 @@ class __TwigTemplate_e24760ea05ef0602eeb920c2575f89da6930b1b986e7c5e1c026c4b9bcd
 /*     <div class="row">*/
 /*       <div class="panel panel-default">*/
 /*       <!--default panel content-->*/
-/*         <div class="panel-heading"><h2><b>{{utilisateur.pseudo}}</h2></b></div>*/
+/*         <div class="panel-heading"><h2><b>{{user.username}}</h2></b></div>*/
 /*      */
 /*         <div class="list-group">*/
 /*             <div class="list-group-item">*/

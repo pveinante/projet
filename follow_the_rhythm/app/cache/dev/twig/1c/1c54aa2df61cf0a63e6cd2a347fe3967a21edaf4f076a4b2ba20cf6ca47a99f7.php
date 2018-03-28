@@ -21,44 +21,60 @@ class __TwigTemplate_30d71c44aa2e70d27efad3b75ae9a51e0383610d7d218f2b8f99281ff66
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a7a400ab0d0c599df22b6ee6678009f05714dcc140cab96b7078726d520052d7 = $this->env->getExtension("native_profiler");
-        $__internal_a7a400ab0d0c599df22b6ee6678009f05714dcc140cab96b7078726d520052d7->enter($__internal_a7a400ab0d0c599df22b6ee6678009f05714dcc140cab96b7078726d520052d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:messages.html.twig"));
+        $__internal_e0384ebf189cf40d3a590909f4b5524c863906fac0cb30f48f8330c2d00a651d = $this->env->getExtension("native_profiler");
+        $__internal_e0384ebf189cf40d3a590909f4b5524c863906fac0cb30f48f8330c2d00a651d->enter($__internal_e0384ebf189cf40d3a590909f4b5524c863906fac0cb30f48f8330c2d00a651d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:messages.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_a7a400ab0d0c599df22b6ee6678009f05714dcc140cab96b7078726d520052d7->leave($__internal_a7a400ab0d0c599df22b6ee6678009f05714dcc140cab96b7078726d520052d7_prof);
+        $__internal_e0384ebf189cf40d3a590909f4b5524c863906fac0cb30f48f8330c2d00a651d->leave($__internal_e0384ebf189cf40d3a590909f4b5524c863906fac0cb30f48f8330c2d00a651d_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_3b67ef2268c3396cebdada6657b973e5519d3af7fd92ceb7d1dbc18fede757d0 = $this->env->getExtension("native_profiler");
-        $__internal_3b67ef2268c3396cebdada6657b973e5519d3af7fd92ceb7d1dbc18fede757d0->enter($__internal_3b67ef2268c3396cebdada6657b973e5519d3af7fd92ceb7d1dbc18fede757d0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_53578b9456e47876169c57fa345e237e5a20beee857388761284bb3616988800 = $this->env->getExtension("native_profiler");
+        $__internal_53578b9456e47876169c57fa345e237e5a20beee857388761284bb3616988800->enter($__internal_53578b9456e47876169c57fa345e237e5a20beee857388761284bb3616988800_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "
+  <script>
+    function changerNbParPage()
+    {
+      \$lien = document.getElementById(\"nb\").value;
+      location.href = \$lien;
+    }
+  </script>
+  
   <div class=\"container\">
     <div class=\"row\">
       <div class=\"panel panel-default\">
         <div class=\"panel-heading\"><h2><b><span class=\"fa fa-commenting\"></span> ";
-        // line 8
+        // line 16
         echo twig_escape_filter($this->env, (isset($context["titre"]) ? $context["titre"] : $this->getContext($context, "titre")), "html", null, true);
         echo "</b></h2>
+         Nombre de messages par page : <select onChange='changerNbParPage()' id='nb'>
+          <option value='";
+        // line 18
+        echo twig_escape_filter($this->env, (isset($context["nbParPage"]) ? $context["nbParPage"] : $this->getContext($context, "nbParPage")), "html", null, true);
+        echo "' selected>Nombre courant : ";
+        echo twig_escape_filter($this->env, (isset($context["nbParPage"]) ? $context["nbParPage"] : $this->getContext($context, "nbParPage")), "html", null, true);
+        echo "</option><option value=5>5</option><option value=10>10</option><option value=25>25</option><option value=50>50</option>
+        </select>
         </div>
      
       <div class=\"list-group\">
 
       <!--AFFICHAGE DES MESSAGES-->
       ";
-        // line 14
+        // line 25
         if (twig_test_empty((isset($context["tabMessage"]) ? $context["tabMessage"] : $this->getContext($context, "tabMessage")))) {
-            // line 15
+            // line 26
             echo "            <div class=\"container\">
 \t            <div class =\"row\">
 \t\t            <div class =\"col-lg-12\">
 \t\t\t            <h5>Aucun message. Soyez le premier à parler de \"";
-            // line 18
+            // line 29
             echo twig_escape_filter($this->env, (isset($context["titre"]) ? $context["titre"] : $this->getContext($context, "titre")), "html", null, true);
             echo "\" !</h5>
 \t\t            </div>
@@ -66,48 +82,65 @@ class __TwigTemplate_30d71c44aa2e70d27efad3b75ae9a51e0383610d7d218f2b8f99281ff66
             </div>
             ";
         } else {
-            // line 23
+            // line 34
             echo "        ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["tabMessage"]) ? $context["tabMessage"] : $this->getContext($context, "tabMessage")));
             foreach ($context['_seq'] as $context["_key"] => $context["messageCourant"]) {
-                // line 24
+                // line 35
                 echo "        
-          <div class=\"list-group-item\">
+          ";
+                // line 36
+                if (($this->getAttribute($this->getAttribute($context["messageCourant"], "topic", array()), "id", array()) == (isset($context["topicCourant"]) ? $context["topicCourant"] : $this->getContext($context, "topicCourant")))) {
+                    // line 37
+                    echo "          <div class=\"list-group-item\">
             <p></p><label>";
-                // line 26
-                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tabCreateur"]) ? $context["tabCreateur"] : $this->getContext($context, "tabCreateur")), $this->getAttribute($context["messageCourant"], "id", array()), array(), "array"), "html", null, true);
-                echo " le 27/03/2018 à 10.00</label></p>
+                    // line 38
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tabCreateur"]) ? $context["tabCreateur"] : $this->getContext($context, "tabCreateur")), $this->getAttribute($context["messageCourant"], "id", array()), array(), "array"), "html", null, true);
+                    echo " le ";
+                    echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["messageCourant"], "date", array()), "d-m-Y"), "html", null, true);
+                    echo " à ";
+                    echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["messageCourant"], "date", array()), "H.i"), "html", null, true);
+                    echo "</label></p>
             <p align=\"justify\"><label>";
-                // line 27
-                echo twig_escape_filter($this->env, $this->getAttribute($context["messageCourant"], "contenu", array()), "html", null, true);
-                echo "</label></p>
+                    // line 39
+                    echo twig_escape_filter($this->env, $this->getAttribute($context["messageCourant"], "contenu", array()), "html", null, true);
+                    echo "</label></p>
           </div>
-        ";
+          ";
+                }
+                // line 42
+                echo "        ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['messageCourant'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 30
+            // line 43
             echo "      ";
         }
-        // line 31
+        // line 44
         echo "      <!--AFFICHAGE DU FORMULAIRE-->
+      <div class=\"list-group\">
+        <div class=\"list-group-item\">
           <form method=\"post\" id=soumettreMessageForm name=\"formulaireMessage\" ";
-        // line 32
+        // line 47
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formulaireMessage"]) ? $context["formulaireMessage"] : $this->getContext($context, "formulaireMessage")), 'enctype');
         echo ">
               ";
-        // line 33
+        // line 48
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formulaireMessage"]) ? $context["formulaireMessage"] : $this->getContext($context, "formulaireMessage")), 'widget');
         echo "
-            <input type=submit class=\"btn btn-primary\" onsubmit=\"return false\" onclick=\"return confirm('Vous confirmez?');\">
-            <a href=\"";
-        // line 35
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueil", array("page" => 1, "sens" => 1)), "html", null, true);
-        echo "\"><input type=button class=\"btn btn-primary\" value=\"Annuler\" onclick=\"return confirm('Êtes vous sûr? Les données saisies seront effacées');\"></a></br>
+            <input type=submit class=\"btn btn-primary\" onsubmit=\"return false\" onclick=\"return confirm('Vous allez soumettre un message sur le topic ";
+        // line 49
+        echo twig_escape_filter($this->env, (isset($context["titre"]) ? $context["titre"] : $this->getContext($context, "titre")), "html", null, true);
+        echo ". Voulez-vous continuer ?');\"><a href=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_messages", array("topicId" => (isset($context["topicCourant"]) ? $context["topicCourant"] : $this->getContext($context, "topicCourant")), "page" => 1, "nbParPage" => (isset($context["nbParPage"]) ? $context["nbParPage"] : $this->getContext($context, "nbParPage")))), "html", null, true);
+        echo "\"><input type=button class=\"btn btn-primary\" value=\"Annuler\" onclick=\"return confirm('Êtes vous sûr? Les données saisies seront effacées');\"></a>
+            <a title=\"Renvoie à l'accueil du forum.\" href=\"/follow_the_rhythm/web/app_dev.php/accueilForum\"><button type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Retour au forum</button></a><a title=\"Renvoie à l'accueil de Follow the Rhythm.\" href=\"/follow_the_rhythm/web/app_dev.php/accueil/1/1\"><button style='margin-left: 4px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Retour à l'accueil</button></a></br>
             </br>
           </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -123,11 +156,15 @@ class __TwigTemplate_30d71c44aa2e70d27efad3b75ae9a51e0383610d7d218f2b8f99281ff66
   }*/
 </script>
 ";
-        // line 53
-        echo "<div align=\"center\"><a href=\"#\"><button class=\"btn btn-primary\"><i class=\"fa fa-angle-double-up\"></i> Haut de page <i class=\"fa fa-angle-double-up\"></i></button></a></div>
+        // line 70
+        echo "<div align=\"center\"><a title='Remonter en haut de la page courante' href=\"#\"><button class=\"btn btn-primary\"><i class=\"fa fa-angle-double-up\"></i> Haut de page <i class=\"fa fa-angle-double-up\"></i></button></a></div>
+<div align=center>";
+        // line 71
+        $this->loadTemplate("::pagination_2.html.twig", "follow_the_rhythmSymfonyBundle:Symfony:messages.html.twig", 71)->display($context);
+        echo "</div>
 ";
         
-        $__internal_3b67ef2268c3396cebdada6657b973e5519d3af7fd92ceb7d1dbc18fede757d0->leave($__internal_3b67ef2268c3396cebdada6657b973e5519d3af7fd92ceb7d1dbc18fede757d0_prof);
+        $__internal_53578b9456e47876169c57fa345e237e5a20beee857388761284bb3616988800->leave($__internal_53578b9456e47876169c57fa345e237e5a20beee857388761284bb3616988800_prof);
 
     }
 
@@ -143,17 +180,28 @@ class __TwigTemplate_30d71c44aa2e70d27efad3b75ae9a51e0383610d7d218f2b8f99281ff66
 
     public function getDebugInfo()
     {
-        return array (  127 => 53,  107 => 35,  102 => 33,  98 => 32,  95 => 31,  92 => 30,  83 => 27,  79 => 26,  75 => 24,  70 => 23,  62 => 18,  57 => 15,  55 => 14,  46 => 8,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  163 => 71,  160 => 70,  135 => 49,  131 => 48,  127 => 47,  122 => 44,  119 => 43,  113 => 42,  107 => 39,  99 => 38,  96 => 37,  94 => 36,  91 => 35,  86 => 34,  78 => 29,  73 => 26,  71 => 25,  59 => 18,  54 => 16,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
 /* */
 /* {% block contenuCentral %}*/
 /* */
+/*   <script>*/
+/*     function changerNbParPage()*/
+/*     {*/
+/*       $lien = document.getElementById("nb").value;*/
+/*       location.href = $lien;*/
+/*     }*/
+/*   </script>*/
+/*   */
 /*   <div class="container">*/
 /*     <div class="row">*/
 /*       <div class="panel panel-default">*/
 /*         <div class="panel-heading"><h2><b><span class="fa fa-commenting"></span> {{titre}}</b></h2>*/
+/*          Nombre de messages par page : <select onChange='changerNbParPage()' id='nb'>*/
+/*           <option value='{{nbParPage}}' selected>Nombre courant : {{nbParPage}}</option><option value=5>5</option><option value=10>10</option><option value=25>25</option><option value=50>50</option>*/
+/*         </select>*/
 /*         </div>*/
 /*      */
 /*       <div class="list-group">*/
@@ -170,19 +218,25 @@ class __TwigTemplate_30d71c44aa2e70d27efad3b75ae9a51e0383610d7d218f2b8f99281ff66
 /*             {% else %}*/
 /*         {% for messageCourant in tabMessage %}*/
 /*         */
+/*           {% if messageCourant.topic.id == topicCourant %}*/
 /*           <div class="list-group-item">*/
-/*             <p></p><label>{{tabCreateur[messageCourant.id]}} le 27/03/2018 à 10.00</label></p>*/
+/*             <p></p><label>{{tabCreateur[messageCourant.id]}} le {{ messageCourant.date|date('d-m-Y') }} à {{messageCourant.date|date('H.i')}}</label></p>*/
 /*             <p align="justify"><label>{{messageCourant.contenu}}</label></p>*/
 /*           </div>*/
+/*           {% endif %}*/
 /*         {% endfor %}*/
 /*       {% endif %}*/
 /*       <!--AFFICHAGE DU FORMULAIRE-->*/
+/*       <div class="list-group">*/
+/*         <div class="list-group-item">*/
 /*           <form method="post" id=soumettreMessageForm name="formulaireMessage" {{form_enctype(formulaireMessage)}}>*/
 /*               {{ form_widget(formulaireMessage)}}*/
-/*             <input type=submit class="btn btn-primary" onsubmit="return false" onclick="return confirm('Vous confirmez?');">*/
-/*             <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a></br>*/
+/*             <input type=submit class="btn btn-primary" onsubmit="return false" onclick="return confirm('Vous allez soumettre un message sur le topic {{titre}}. Voulez-vous continuer ?');"><a href="{{path('follow_the_rhythm_messages',{'topicId': topicCourant, 'page': 1, 'nbParPage': nbParPage})}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a>*/
+/*             <a title="Renvoie à l'accueil du forum." href="/follow_the_rhythm/web/app_dev.php/accueilForum"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour au forum</button></a><a title="Renvoie à l'accueil de Follow the Rhythm." href="/follow_the_rhythm/web/app_dev.php/accueil/1/1"><button style='margin-left: 4px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour à l'accueil</button></a></br>*/
 /*             </br>*/
 /*           </form>*/
+/*           </div>*/
+/*         </div>*/
 /*       </div>*/
 /*     </div>*/
 /*   </div>*/
@@ -198,7 +252,8 @@ class __TwigTemplate_30d71c44aa2e70d27efad3b75ae9a51e0383610d7d218f2b8f99281ff66
 /*   }*//* */
 /* </script>*/
 /* {#Pagination#}*/
-/* <div align="center"><a href="#"><button class="btn btn-primary"><i class="fa fa-angle-double-up"></i> Haut de page <i class="fa fa-angle-double-up"></i></button></a></div>*/
+/* <div align="center"><a title='Remonter en haut de la page courante' href="#"><button class="btn btn-primary"><i class="fa fa-angle-double-up"></i> Haut de page <i class="fa fa-angle-double-up"></i></button></a></div>*/
+/* <div align=center>{% include "::pagination_2.html.twig" %}</div>*/
 /* {% endblock %}*/
 /* */
 /* */

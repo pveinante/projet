@@ -24,7 +24,7 @@
     </head>
 
     <body background="{{ asset('upload/images/bg3.jpg') }}" style="background-size: cover;">
-            <a href="/follow_the_rhythm/web/app_dev.php/accueil/1/1"> <div style="background-size: auto 128px; background-position: center;" class="header col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <a title="Revenir à la page d'accueil Follow The Rhythm !" href="/follow_the_rhythm/web/app_dev.php/accueil/1/1"> <div style="position: fixed; width: 100%; z-index: 99; background-size: auto 128px; background-position: center;" class="header col-lg-12 col-md-12 col-sm-12 col-xs-12">
             {#Titre de la page avec lien vers la page d'accueil#}
                     {% block header %}
                         <!-- <p align="center"><a href ="{#path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1}) #}"><img class=img-responsive src="{# asset('upload/images/Follow2.png') #}" style=width:20% /></a></p>
@@ -38,18 +38,18 @@
         {#Espace entre la banière et le menu #}
         <div class="row">
             <div class="col-sm-12">
-                </br>
+                </br></br></br></br></br></br></br>
             </div>
         </div>
         
         <div class="container">
             <div class="row">
                 <div class="btn-group" role="group">
-                    <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><button type="button" class="btn btn-default"><i class="fa fa-list"></i> Actualités</button></a>
-                    <a href="{{path('follow_the_rhythm_accueilForum')}}"> <button type="button" class="btn btn-default"><i class="	fa fa-wechat"></i> Forum</button></a>
-                    <a href="{{path('follow_the_rhythm_contacts')}}"> <button type="button" class="btn btn-default"><i class="fa fa-address-book"></i> Nous contacter</button></a>
-                    <a href="{{path('follow_the_rhythm_aide')}}"> <button type="button" class="btn btn-default"><i class="fa fa-question-circle" aria-hidden="true"></i> Aide</button></a>
-                    <a href="{{path('follow_the_rhythm_aide')}}"> <button type="button" class="btn btn-default"><i class="fa fa-user" aria-hidden="true"></i> Se connecter</button></a>
+                    <a title='Afficher les actualités musicales du moment.' href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><button type="button" class="btn btn-default"><i class="fa fa-list"></i> Actualités</button></a>
+                    <a title='Aller au forum pour consulter les topics ou discuter avec la communauté.' href="{{path('follow_the_rhythm_accueilForum')}}"> <button type="button" class="btn btn-default"><i class="	fa fa-wechat"></i> Forum</button></a>
+                    <a title='Voir les informations sur les développeurs et le commanditaire de ce site.' href="{{path('follow_the_rhythm_contacts')}}"> <button type="button" class="btn btn-default"><i class="fa fa-address-book"></i> Nous contacter</button></a>
+                    <a title="Obtenir de l'aide sur l'utilisation du site"  href="{{path('follow_the_rhythm_aide')}}"> <button type="button" class="btn btn-default"><i class="fa fa-question-circle" aria-hidden="true"></i> Aide</button></a>
+                    <a title='Se connecter pour bénéficier de tous les avantages Follow The Rhythm !' href="{{path('fos_user_security_login')}}"> <button type="button" class="btn btn-default"><i class="fa fa-user" aria-hidden="true"></i> Se connecter</button></a>
                 </div>
                     <!--
                     <div class="btn-group" role="group" data-toggle="buttons">
@@ -70,16 +70,22 @@
                 {% endblock %}
             </div>
        </div>
+       
+       <div class="row">
+            <div class="col-sm-12">
+                </br></br></br></br></br></br></br>
+            </div>
+        </div>
         
-        <div class="row">
+        <div class="row footer" style='position: fixed; z-index: 99; bottom: 0; width: 100%; background-color: rgba(0, 0, 0, 0.8);'>
             <div class="col-sm-12">
                 {#IL FAUT JUSTIFIER LE TEXTE#}
                 {% block footer %}
                 <hr>
                     <font color="white">Tous droits réservés © 2018</font></br>
-                    <font color="white">Ce site est un projet de 2nde année réalisé par des étudiants de DUT informatique de l'<a href="{{'https://www.iutbayonne.univ-pau.fr/' }}"><FONT COLOR="#00CED1">IUT de Bayonne et du Pays Basque</FONT></a></font></Br>
-                    <a href="{{path('follow_the_rhythm_contacts')}}">Nous contacter !</a>
-                    <a href="{{path('follow_the_rhythm_credits')}}">Crédits</a> </Br>
+                    <font color="white">Ce site est un projet de 2nde année réalisé par des étudiants de DUT informatique de l'<a title="Aller sur le site Web de l'IUT de Bayonne et du pays Basque" href="{{'https://www.iutbayonne.univ-pau.fr/' }}"><FONT COLOR="#00CED1">IUT de Bayonne et du Pays Basque</FONT></a></font></Br>
+                    <a title="Voir les informations sur les développeurs et le commanditaire de ce site." href="{{path('follow_the_rhythm_contacts')}}">Nous contacter !</a>
+                    <a title="Voir les crédits du site." href="{{path('follow_the_rhythm_credits')}}">Crédits</a> </Br>
                     <h1> </h1>
                 {% endblock %}
             </div>

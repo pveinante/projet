@@ -1,4 +1,14 @@
-<div class="fos_user_user_show">
-    <p>{{ 'profile.show.username'|trans({}, 'FOSUserBundle') }}: {{ user.username }}</p>
-    <p>{{ 'profile.show.email'|trans({}, 'FOSUserBundle') }}: {{ user.email }}</p>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading"><h2><b><i class="fa fa-user" aria-hidden="true"></i> Votre profil</b></h2></div>
+        <div class="list-group">
+            <div class="list-group-item">
+                <div class="fos_user_user_show">
+                    <p>{{ 'profile.show.username'|trans({}, 'FOSUserBundle') }}: {{ user.username }}</p>
+                    <p>{{ 'profile.show.email'|trans({}, 'FOSUserBundle') }}: {{ user.email }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

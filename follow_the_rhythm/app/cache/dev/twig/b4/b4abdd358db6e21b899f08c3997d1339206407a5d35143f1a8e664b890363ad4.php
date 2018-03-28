@@ -21,20 +21,20 @@ class __TwigTemplate_619ac1f1566f9d6971bc10ba265c8d618424a82c9a58761e62a059680d5
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f9a07506c1bfa8c37ebec7616c6e6649ecb7691b887fd26697753b3f752c612f = $this->env->getExtension("native_profiler");
-        $__internal_f9a07506c1bfa8c37ebec7616c6e6649ecb7691b887fd26697753b3f752c612f->enter($__internal_f9a07506c1bfa8c37ebec7616c6e6649ecb7691b887fd26697753b3f752c612f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:pageConcert.html.twig"));
+        $__internal_89494692999d157c9a7042f390a04973acf03b3ca3750d0d3eaab9f5d60d82c8 = $this->env->getExtension("native_profiler");
+        $__internal_89494692999d157c9a7042f390a04973acf03b3ca3750d0d3eaab9f5d60d82c8->enter($__internal_89494692999d157c9a7042f390a04973acf03b3ca3750d0d3eaab9f5d60d82c8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:pageConcert.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f9a07506c1bfa8c37ebec7616c6e6649ecb7691b887fd26697753b3f752c612f->leave($__internal_f9a07506c1bfa8c37ebec7616c6e6649ecb7691b887fd26697753b3f752c612f_prof);
+        $__internal_89494692999d157c9a7042f390a04973acf03b3ca3750d0d3eaab9f5d60d82c8->leave($__internal_89494692999d157c9a7042f390a04973acf03b3ca3750d0d3eaab9f5d60d82c8_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_69ca072fb5df112879a8b98cf6afd1e965a4daf5d57f1220ce66aeab65672964 = $this->env->getExtension("native_profiler");
-        $__internal_69ca072fb5df112879a8b98cf6afd1e965a4daf5d57f1220ce66aeab65672964->enter($__internal_69ca072fb5df112879a8b98cf6afd1e965a4daf5d57f1220ce66aeab65672964_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_ee48b9f23593b9517802d8b476fcc3808c27ddcd338ccbc43a2181751d122725 = $this->env->getExtension("native_profiler");
+        $__internal_ee48b9f23593b9517802d8b476fcc3808c27ddcd338ccbc43a2181751d122725->enter($__internal_ee48b9f23593b9517802d8b476fcc3808c27ddcd338ccbc43a2181751d122725_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<body>
@@ -51,7 +51,7 @@ class __TwigTemplate_619ac1f1566f9d6971bc10ba265c8d618424a82c9a58761e62a059680d5
         // line 11
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["concert"]) ? $context["concert"] : $this->getContext($context, "concert")), "dateConcert", array()), "d/m/Y"), "html", null, true);
         echo "</label>
-            <input type=\"button\" class=\"btn btn-primary\" value=\"SUIVRE\" onclick=\"allerConcert();\"suivre>
+            <input type=\"button\" class=\"btn btn-primary\" value=\"Suivre\" onclick=\"allerConcert();\"suivre>
         </div>
      
        
@@ -105,7 +105,7 @@ function allerConcert(){
 </script>
 ";
         
-        $__internal_69ca072fb5df112879a8b98cf6afd1e965a4daf5d57f1220ce66aeab65672964->leave($__internal_69ca072fb5df112879a8b98cf6afd1e965a4daf5d57f1220ce66aeab65672964_prof);
+        $__internal_ee48b9f23593b9517802d8b476fcc3808c27ddcd338ccbc43a2181751d122725->leave($__internal_ee48b9f23593b9517802d8b476fcc3808c27ddcd338ccbc43a2181751d122725_prof);
 
     }
 
@@ -135,7 +135,7 @@ function allerConcert(){
 /*         <div class="panel-heading">*/
 /*             <h2><b>{{concert.nom}}</b></h2> */
 /*             <label>{{concert.dateConcert|date("d/m/Y")}}</label>*/
-/*             <input type="button" class="btn btn-primary" value="SUIVRE" onclick="allerConcert();"suivre>*/
+/*             <input type="button" class="btn btn-primary" value="Suivre" onclick="allerConcert();"suivre>*/
 /*         </div>*/
 /*      */
 /*        */

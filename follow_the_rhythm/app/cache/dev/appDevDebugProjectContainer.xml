@@ -36,7 +36,7 @@
     <parameter key="mailer_user">null</parameter>
     <parameter key="mailer_password">null</parameter>
     <parameter key="secret">ThisTokenIsNotSoSecretChangeIt</parameter>
-    <parameter key="locale">en</parameter>
+    <parameter key="locale">fr</parameter>
     <parameter key="controller_resolver.class">Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver</parameter>
     <parameter key="controller_name_converter.class">Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser</parameter>
     <parameter key="response_listener.class">Symfony\Component\HttpKernel\EventListener\ResponseListener</parameter>
@@ -89,7 +89,7 @@
     <parameter key="kernel.http_method_override">true</parameter>
     <parameter key="kernel.trusted_hosts" type="collection"/>
     <parameter key="kernel.trusted_proxies" type="collection"/>
-    <parameter key="kernel.default_locale">en</parameter>
+    <parameter key="kernel.default_locale">fr</parameter>
     <parameter key="session.class">Symfony\Component\HttpFoundation\Session\Session</parameter>
     <parameter key="session.flashbag.class">Symfony\Component\HttpFoundation\Session\Flash\FlashBag</parameter>
     <parameter key="session.attribute_bag.class">Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag</parameter>
@@ -102,6 +102,7 @@
     <parameter key="session.handler.write_check.class">Symfony\Component\HttpFoundation\Session\Storage\Handler\WriteCheckSessionHandler</parameter>
     <parameter key="session_listener.class">Symfony\Bundle\FrameworkBundle\EventListener\SessionListener</parameter>
     <parameter key="session.storage.options" type="collection">
+      <parameter key="cookie_lifetime">64100</parameter>
       <parameter key="cookie_httponly">true</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
@@ -556,6 +557,49 @@
       <parameter>Default</parameter>
     </parameter>
     <parameter key="easyadmin.config" type="collection">
+      <parameter key="site_name">Follow The Rhythm</parameter>
+      <parameter key="entities" type="collection">
+        <parameter key="Actualite" type="collection">
+          <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Actualite</parameter>
+          <parameter key="name">Actualite</parameter>
+        </parameter>
+        <parameter key="Artiste" type="collection">
+          <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Artiste</parameter>
+          <parameter key="name">Artiste</parameter>
+        </parameter>
+        <parameter key="Categorie" type="collection">
+          <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Categorie</parameter>
+          <parameter key="name">Categorie</parameter>
+        </parameter>
+        <parameter key="Concert" type="collection">
+          <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Concert</parameter>
+          <parameter key="name">Concert</parameter>
+        </parameter>
+        <parameter key="Message" type="collection">
+          <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Message</parameter>
+          <parameter key="name">Message</parameter>
+        </parameter>
+        <parameter key="Moderateur" type="collection">
+          <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Moderateur</parameter>
+          <parameter key="name">Moderateur</parameter>
+        </parameter>
+        <parameter key="Notification" type="collection">
+          <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Notification</parameter>
+          <parameter key="name">Notification</parameter>
+        </parameter>
+        <parameter key="Signalement" type="collection">
+          <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Signalement</parameter>
+          <parameter key="name">Signalement</parameter>
+        </parameter>
+        <parameter key="Topic" type="collection">
+          <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Topic</parameter>
+          <parameter key="name">Topic</parameter>
+        </parameter>
+        <parameter key="User" type="collection">
+          <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\User</parameter>
+          <parameter key="name">User</parameter>
+        </parameter>
+      </parameter>
       <parameter key="design" type="collection">
         <parameter key="assets" type="collection">
           <parameter key="css" type="collection"/>
@@ -573,7 +617,6 @@
         </parameter>
         <parameter key="menu" type="collection"/>
       </parameter>
-      <parameter key="site_name">EasyAdmin</parameter>
       <parameter key="formats" type="collection">
         <parameter key="date">Y-m-d</parameter>
         <parameter key="time">H:i:s</parameter>
@@ -596,7 +639,6 @@
         <parameter key="actions" type="collection"/>
         <parameter key="max_results">10</parameter>
       </parameter>
-      <parameter key="entities" type="collection"/>
     </parameter>
     <parameter key="easyadmin.cache.dir">/home/ubuntu/workspace/follow_the_rhythm/app/cache/dev/easy_admin</parameter>
     <parameter key="web_profiler.controller.profiler.class">Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController</parameter>
@@ -702,7 +744,7 @@
     <service id="locale_listener" class="Symfony\Component\HttpKernel\EventListener\LocaleListener">
       <tag name="kernel.event_subscriber"/>
       <argument type="service" id="request_stack"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="service" id="router" on-invalid="ignore"/>
     </service>
     <service id="translator_listener" class="Symfony\Component\HttpKernel\EventListener\TranslatorListener">
@@ -1263,7 +1305,7 @@
       </call>
       <call method="setFallbackLocales">
         <argument type="collection">
-          <argument>en</argument>
+          <argument>fr</argument>
         </argument>
       </call>
     </service>
@@ -1454,6 +1496,7 @@
     </service>
     <service id="session.storage.native" class="Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage">
       <argument type="collection">
+        <argument key="cookie_lifetime">64100</argument>
         <argument key="cookie_httponly">true</argument>
         <argument key="gc_probability">1</argument>
       </argument>
@@ -2268,7 +2311,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider" public="false">
-            <argument type="service" id="fos_user.user_provider.username"/>
+            <argument type="service" id="fos_user.user_provider.username_email"/>
             <argument type="service" id="security.user_checker.main"/>
             <argument>main</argument>
             <argument type="service" id="security.encoder_factory"/>
@@ -2276,8 +2319,15 @@
           </service>
         </argument>
         <argument type="service">
+          <service class="Symfony\Component\Security\Core\Authentication\Provider\RememberMeAuthenticationProvider" public="false">
+            <argument type="service" id="security.user_checker.main"/>
+            <argument>ThisTokenIsNotSoSecretChangeIt</argument>
+            <argument>main</argument>
+          </service>
+        </argument>
+        <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5aba11c97beac4.45940272</argument>
+            <argument>5aba589669e134.20939128</argument>
           </service>
         </argument>
       </argument>
@@ -2461,7 +2511,7 @@
           <service class="Symfony\Component\Security\Http\Firewall\ContextListener" public="false">
             <argument type="service" id="security.token_storage"/>
             <argument type="collection">
-              <argument type="service" id="fos_user.user_provider.username"/>
+              <argument type="service" id="fos_user.user_provider.username_email"/>
             </argument>
             <argument>main</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -2496,6 +2546,28 @@
             <call method="addHandler">
               <argument type="service">
                 <service class="Symfony\Component\Security\Http\Logout\SessionLogoutHandler" public="false"/>
+              </argument>
+            </call>
+            <call method="addHandler">
+              <argument type="service">
+                <service class="Symfony\Component\Security\Http\RememberMe\TokenBasedRememberMeServices" public="false">
+                  <argument type="collection">
+                    <argument type="service" id="fos_user.user_provider.username_email"/>
+                  </argument>
+                  <argument>ThisTokenIsNotSoSecretChangeIt</argument>
+                  <argument>main</argument>
+                  <argument type="collection">
+                    <argument key="lifetime">64100</argument>
+                    <argument key="name">REMEMBERME</argument>
+                    <argument key="path">/</argument>
+                    <argument key="domain">null</argument>
+                    <argument key="secure">false</argument>
+                    <argument key="httponly">true</argument>
+                    <argument key="always_remember_me">false</argument>
+                    <argument key="remember_me_parameter">_remember_me</argument>
+                  </argument>
+                  <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+                </service>
               </argument>
             </call>
           </service>
@@ -2558,9 +2630,9 @@
               </service>
             </argument>
             <argument type="collection">
+              <argument key="require_previous_session">false</argument>
               <argument key="check_path">/login_check</argument>
               <argument key="use_forward">false</argument>
-              <argument key="require_previous_session">true</argument>
               <argument key="username_parameter">_username</argument>
               <argument key="password_parameter">_password</argument>
               <argument key="csrf_parameter">_csrf_token</argument>
@@ -2570,12 +2642,64 @@
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
             <argument type="service" id="security.csrf.token_manager"/>
+            <call method="setRememberMeServices">
+              <argument type="service">
+                <service class="Symfony\Component\Security\Http\RememberMe\TokenBasedRememberMeServices" public="false">
+                  <argument type="collection">
+                    <argument type="service" id="fos_user.user_provider.username_email"/>
+                  </argument>
+                  <argument>ThisTokenIsNotSoSecretChangeIt</argument>
+                  <argument>main</argument>
+                  <argument type="collection">
+                    <argument key="lifetime">64100</argument>
+                    <argument key="name">REMEMBERME</argument>
+                    <argument key="path">/</argument>
+                    <argument key="domain">null</argument>
+                    <argument key="secure">false</argument>
+                    <argument key="httponly">true</argument>
+                    <argument key="always_remember_me">false</argument>
+                    <argument key="remember_me_parameter">_remember_me</argument>
+                  </argument>
+                  <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+                </service>
+              </argument>
+            </call>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Symfony\Component\Security\Http\Firewall\RememberMeListener" public="false">
+            <argument type="service" id="security.token_storage"/>
+            <argument type="service">
+              <service class="Symfony\Component\Security\Http\RememberMe\TokenBasedRememberMeServices" public="false">
+                <argument type="collection">
+                  <argument type="service" id="fos_user.user_provider.username_email"/>
+                </argument>
+                <argument>ThisTokenIsNotSoSecretChangeIt</argument>
+                <argument>main</argument>
+                <argument type="collection">
+                  <argument key="lifetime">64100</argument>
+                  <argument key="name">REMEMBERME</argument>
+                  <argument key="path">/</argument>
+                  <argument key="domain">null</argument>
+                  <argument key="secure">false</argument>
+                  <argument key="httponly">true</argument>
+                  <argument key="always_remember_me">false</argument>
+                  <argument key="remember_me_parameter">_remember_me</argument>
+                </argument>
+                <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+              </service>
+            </argument>
+            <argument type="service" id="security.authentication.manager"/>
+            <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+            <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
+            <argument>true</argument>
+            <argument type="service" id="security.authentication.session_strategy"/>
           </service>
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5aba11c97beac4.45940272</argument>
+            <argument>5aba589669e134.20939128</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -3209,7 +3333,7 @@
       <argument type="service" id="security.authentication.session_strategy"/>
       <argument type="service" id="service_container"/>
     </service>
-    <service id="fos_user.user_provider.username" class="FOS\UserBundle\Security\UserProvider" public="false">
+    <service id="fos_user.user_provider.username_email" class="FOS\UserBundle\Security\EmailUserProvider" public="false">
       <argument type="service" id="fos_user.user_manager"/>
     </service>
     <service id="fos_user.util.user_manipulator" class="FOS\UserBundle\Util\UserManipulator">
@@ -3293,6 +3417,49 @@
       <argument type="service" id="easyadmin.cache.manager"/>
       <argument type="service" id="property_accessor"/>
       <argument type="collection">
+        <argument key="site_name">Follow The Rhythm</argument>
+        <argument key="entities" type="collection">
+          <argument key="Actualite" type="collection">
+            <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Actualite</argument>
+            <argument key="name">Actualite</argument>
+          </argument>
+          <argument key="Artiste" type="collection">
+            <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Artiste</argument>
+            <argument key="name">Artiste</argument>
+          </argument>
+          <argument key="Categorie" type="collection">
+            <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Categorie</argument>
+            <argument key="name">Categorie</argument>
+          </argument>
+          <argument key="Concert" type="collection">
+            <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Concert</argument>
+            <argument key="name">Concert</argument>
+          </argument>
+          <argument key="Message" type="collection">
+            <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Message</argument>
+            <argument key="name">Message</argument>
+          </argument>
+          <argument key="Moderateur" type="collection">
+            <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Moderateur</argument>
+            <argument key="name">Moderateur</argument>
+          </argument>
+          <argument key="Notification" type="collection">
+            <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Notification</argument>
+            <argument key="name">Notification</argument>
+          </argument>
+          <argument key="Signalement" type="collection">
+            <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Signalement</argument>
+            <argument key="name">Signalement</argument>
+          </argument>
+          <argument key="Topic" type="collection">
+            <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Topic</argument>
+            <argument key="name">Topic</argument>
+          </argument>
+          <argument key="User" type="collection">
+            <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\User</argument>
+            <argument key="name">User</argument>
+          </argument>
+        </argument>
         <argument key="design" type="collection">
           <argument key="assets" type="collection">
             <argument key="css" type="collection"/>
@@ -3310,7 +3477,6 @@
           </argument>
           <argument key="menu" type="collection"/>
         </argument>
-        <argument key="site_name">EasyAdmin</argument>
         <argument key="formats" type="collection">
           <argument key="date">Y-m-d</argument>
           <argument key="time">H:i:s</argument>
@@ -3333,7 +3499,6 @@
           <argument key="actions" type="collection"/>
           <argument key="max_results">10</argument>
         </argument>
-        <argument key="entities" type="collection"/>
       </argument>
       <argument>true</argument>
       <call method="addConfigPass">
@@ -3350,7 +3515,7 @@
             <tag name="easyadmin.config_pass" priority="80"/>
             <argument type="service" id="service_container"/>
             <argument>true</argument>
-            <argument>en</argument>
+            <argument>fr</argument>
           </service>
         </argument>
       </call>

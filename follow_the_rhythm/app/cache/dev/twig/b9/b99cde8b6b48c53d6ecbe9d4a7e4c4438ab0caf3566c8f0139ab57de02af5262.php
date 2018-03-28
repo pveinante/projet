@@ -21,26 +21,26 @@ class __TwigTemplate_e586d131729b9163c17ac8f2001678d1fd7da4139d6da96671acd9768be
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b3cc65a9629ad7c68528cf5e041a6e37858334be55e24890d416637e1938ce76 = $this->env->getExtension("native_profiler");
-        $__internal_b3cc65a9629ad7c68528cf5e041a6e37858334be55e24890d416637e1938ce76->enter($__internal_b3cc65a9629ad7c68528cf5e041a6e37858334be55e24890d416637e1938ce76_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:accueilForum.html.twig"));
+        $__internal_cf9ce3ea8a6c0fe2fd81813f6c6f52ee8d426079168b823718db0a528afd47fa = $this->env->getExtension("native_profiler");
+        $__internal_cf9ce3ea8a6c0fe2fd81813f6c6f52ee8d426079168b823718db0a528afd47fa->enter($__internal_cf9ce3ea8a6c0fe2fd81813f6c6f52ee8d426079168b823718db0a528afd47fa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:accueilForum.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_b3cc65a9629ad7c68528cf5e041a6e37858334be55e24890d416637e1938ce76->leave($__internal_b3cc65a9629ad7c68528cf5e041a6e37858334be55e24890d416637e1938ce76_prof);
+        $__internal_cf9ce3ea8a6c0fe2fd81813f6c6f52ee8d426079168b823718db0a528afd47fa->leave($__internal_cf9ce3ea8a6c0fe2fd81813f6c6f52ee8d426079168b823718db0a528afd47fa_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_aef4cf995bb2405c50fa0e53f0bc4f9ed58a0c442968acb75f1c1f1ed430fe90 = $this->env->getExtension("native_profiler");
-        $__internal_aef4cf995bb2405c50fa0e53f0bc4f9ed58a0c442968acb75f1c1f1ed430fe90->enter($__internal_aef4cf995bb2405c50fa0e53f0bc4f9ed58a0c442968acb75f1c1f1ed430fe90_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_270208a5578bcebdfba27647ab755d0723467f070d14bd0b4098bb8e69235c0a = $this->env->getExtension("native_profiler");
+        $__internal_270208a5578bcebdfba27647ab755d0723467f070d14bd0b4098bb8e69235c0a->enter($__internal_270208a5578bcebdfba27647ab755d0723467f070d14bd0b4098bb8e69235c0a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<div class=\"container\">
     <div class=\"row\">
         <div class=\"panel panel-default\">
-            <div class=\"panel-heading\"><h2><b><i class=\"fa fa-wechat\"></i> Forum</b></h2></div>
+            <div class=\"panel-heading\"><h2><b><i class=\"fa fa-wechat\"></i> Forum</b><a title=\"Renvoie à l'accueil de Follow the Rhythm.\" href=\"/follow_the_rhythm/web/app_dev.php/accueil/1/1\"><button style='margin-left: 32px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Retour à l'accueil</button></a></h2></div>
             <div class=\"container\">
 \t            <div class =\"row\">
 \t\t            <div class =\"col-lg-6\">
@@ -57,27 +57,105 @@ class __TwigTemplate_e586d131729b9163c17ac8f2001678d1fd7da4139d6da96671acd9768be
 \t\t            </div>
 \t            </div>
             </div>
-            <div class=\"list-group\">
-                <div class=\"list-group-item\">
-                    <div align=\"justify\"> 
-                        <a href=\"";
+            <div class=\"container\">
+\t            <div class =\"row\">
+\t\t            <div class =\"col-lg-6\">
+\t\t\t            <h5><a title=\"Discuter des news du moment.\" href=\"";
         // line 27
-        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_categorieNews");
-        echo "\"> News</a></br><hr>
-                        <a href=\"";
-        // line 28
-        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_categorieEspacePrive");
-        echo "\"> Espace privé</a></br><hr>
-                        <a href=\"";
-        // line 29
-        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_categorieConcert");
-        echo "\"> Concerts</a></br><hr>
-                        <a href=\"";
+        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_categorie", array("catId" => 1));
+        echo "\"> News</a></h5>
+\t\t            </div>
+\t\t            <div class =\"col-lg-1\">
+\t\t\t            <h5 align=\"center\">";
         // line 30
-        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_categoriePromotions");
-        echo "\"> Promotions</a></br><hr>
-                    </div>
-                </div>
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tabTopics"]) ? $context["tabTopics"] : $this->getContext($context, "tabTopics")), 1, array(), "array"), "html", null, true);
+        echo "</h5>
+\t\t            </div>
+\t\t            <div class =\"col-lg-1\">
+\t\t\t            <h5 align=\"center\">";
+        // line 33
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tabNbMessTopics"]) ? $context["tabNbMessTopics"] : $this->getContext($context, "tabNbMessTopics")), 1, array(), "array"), "html", null, true);
+        echo "</h5>
+\t\t            </div>
+\t\t            <div class =\"col-lg-4\">
+\t\t\t            <h5 align=\"center\">News</h5>
+\t\t            </div>
+\t            </div>
+            </div>
+            <div class=\"container\">
+\t            <div class =\"row\">
+\t\t            <div class =\"col-lg-6\">
+\t\t\t            <h5><a title=\"Entrer dans l'espace privé.\" href=\"";
+        // line 43
+        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_categorie", array("catId" => 2));
+        echo "\"> Espace Privé</a></h5>
+\t\t            </div>
+\t\t            <div class =\"col-lg-1\">
+\t\t\t            <h5 align=\"center\">";
+        // line 46
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tabTopics"]) ? $context["tabTopics"] : $this->getContext($context, "tabTopics")), 2, array(), "array"), "html", null, true);
+        echo "</h5>
+\t\t            </div>
+\t\t            <div class =\"col-lg-1\">
+\t\t\t            <h5 align=\"center\">";
+        // line 49
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tabNbMessTopics"]) ? $context["tabNbMessTopics"] : $this->getContext($context, "tabNbMessTopics")), 2, array(), "array"), "html", null, true);
+        echo "</h5>
+\t\t            </div>
+\t\t            <div class =\"col-lg-4\">
+\t\t\t            <h5 align=\"center\">News</h5>
+\t\t            </div>
+\t            </div>
+            </div>
+            <div class=\"container\">
+\t            <div class =\"row\">
+\t\t            <div class =\"col-lg-6\">
+\t\t\t            <h5><a title=\"Discuter des prochains concerts.\" href=\"";
+        // line 59
+        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_categorie", array("catId" => 3));
+        echo "\"> Concerts</a></h5>
+\t\t            </div>
+\t\t            <div class =\"col-lg-1\">
+\t\t\t            <h5 align=\"center\">";
+        // line 62
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tabTopics"]) ? $context["tabTopics"] : $this->getContext($context, "tabTopics")), 3, array(), "array"), "html", null, true);
+        echo "</h5>
+\t\t            </div>
+\t\t            <div class =\"col-lg-1\">
+\t\t\t            <h5 align=\"center\">";
+        // line 65
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tabNbMessTopics"]) ? $context["tabNbMessTopics"] : $this->getContext($context, "tabNbMessTopics")), 3, array(), "array"), "html", null, true);
+        echo "</h5>
+\t\t            </div>
+\t\t            <div class =\"col-lg-4\">
+\t\t\t            <h5 align=\"center\">News</h5>
+\t\t            </div>
+\t            </div>
+            </div>
+            <div class=\"container\">
+\t            <div class =\"row\">
+\t\t            <div class =\"col-lg-6\">
+\t\t\t            <h5><a title=\"Discuter des promotions.\" href=\"";
+        // line 75
+        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_categorie", array("catId" => 4));
+        echo "\"> Promotion</a></h5>
+\t\t            </div>
+\t\t            <div class =\"col-lg-1\">
+\t\t\t            <h5 align=\"center\">";
+        // line 78
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tabTopics"]) ? $context["tabTopics"] : $this->getContext($context, "tabTopics")), 4, array(), "array"), "html", null, true);
+        echo "</h5>
+\t\t            </div>
+\t\t            <div class =\"col-lg-1\">
+\t\t\t            <h5 align=\"center\">";
+        // line 81
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tabNbMessTopics"]) ? $context["tabNbMessTopics"] : $this->getContext($context, "tabNbMessTopics")), 4, array(), "array"), "html", null, true);
+        echo "</h5>
+\t\t            </div>
+\t\t            <div class =\"col-lg-4\">
+\t\t\t            <h5 align=\"center\">News</h5>
+\t\t            </div>
+\t            </div>
             </div>
         </div>
     </div>
@@ -85,7 +163,7 @@ class __TwigTemplate_e586d131729b9163c17ac8f2001678d1fd7da4139d6da96671acd9768be
     
 ";
         
-        $__internal_aef4cf995bb2405c50fa0e53f0bc4f9ed58a0c442968acb75f1c1f1ed430fe90->leave($__internal_aef4cf995bb2405c50fa0e53f0bc4f9ed58a0c442968acb75f1c1f1ed430fe90_prof);
+        $__internal_270208a5578bcebdfba27647ab755d0723467f070d14bd0b4098bb8e69235c0a->leave($__internal_270208a5578bcebdfba27647ab755d0723467f070d14bd0b4098bb8e69235c0a_prof);
 
     }
 
@@ -101,7 +179,7 @@ class __TwigTemplate_e586d131729b9163c17ac8f2001678d1fd7da4139d6da96671acd9768be
 
     public function getDebugInfo()
     {
-        return array (  77 => 30,  73 => 29,  69 => 28,  65 => 27,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  152 => 81,  146 => 78,  140 => 75,  127 => 65,  121 => 62,  115 => 59,  102 => 49,  96 => 46,  90 => 43,  77 => 33,  71 => 30,  65 => 27,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -110,7 +188,7 @@ class __TwigTemplate_e586d131729b9163c17ac8f2001678d1fd7da4139d6da96671acd9768be
 /* <div class="container">*/
 /*     <div class="row">*/
 /*         <div class="panel panel-default">*/
-/*             <div class="panel-heading"><h2><b><i class="fa fa-wechat"></i> Forum</b></h2></div>*/
+/*             <div class="panel-heading"><h2><b><i class="fa fa-wechat"></i> Forum</b><a title="Renvoie à l'accueil de Follow the Rhythm." href="/follow_the_rhythm/web/app_dev.php/accueil/1/1"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour à l'accueil</button></a></h2></div>*/
 /*             <div class="container">*/
 /* 	            <div class ="row">*/
 /* 		            <div class ="col-lg-6">*/
@@ -127,15 +205,69 @@ class __TwigTemplate_e586d131729b9163c17ac8f2001678d1fd7da4139d6da96671acd9768be
 /* 		            </div>*/
 /* 	            </div>*/
 /*             </div>*/
-/*             <div class="list-group">*/
-/*                 <div class="list-group-item">*/
-/*                     <div align="justify"> */
-/*                         <a href="{{path('follow_the_rhythm_categorieNews')}}"> News</a></br><hr>*/
-/*                         <a href="{{path('follow_the_rhythm_categorieEspacePrive')}}"> Espace privé</a></br><hr>*/
-/*                         <a href="{{path('follow_the_rhythm_categorieConcert')}}"> Concerts</a></br><hr>*/
-/*                         <a href="{{path('follow_the_rhythm_categoriePromotions')}}"> Promotions</a></br><hr>*/
-/*                     </div>*/
-/*                 </div>*/
+/*             <div class="container">*/
+/* 	            <div class ="row">*/
+/* 		            <div class ="col-lg-6">*/
+/* 			            <h5><a title="Discuter des news du moment." href="{{path('follow_the_rhythm_categorie',{'catId':1})}}"> News</a></h5>*/
+/* 		            </div>*/
+/* 		            <div class ="col-lg-1">*/
+/* 			            <h5 align="center">{{tabTopics[1]}}</h5>*/
+/* 		            </div>*/
+/* 		            <div class ="col-lg-1">*/
+/* 			            <h5 align="center">{{tabNbMessTopics[1]}}</h5>*/
+/* 		            </div>*/
+/* 		            <div class ="col-lg-4">*/
+/* 			            <h5 align="center">News</h5>*/
+/* 		            </div>*/
+/* 	            </div>*/
+/*             </div>*/
+/*             <div class="container">*/
+/* 	            <div class ="row">*/
+/* 		            <div class ="col-lg-6">*/
+/* 			            <h5><a title="Entrer dans l'espace privé." href="{{path('follow_the_rhythm_categorie',{'catId':2})}}"> Espace Privé</a></h5>*/
+/* 		            </div>*/
+/* 		            <div class ="col-lg-1">*/
+/* 			            <h5 align="center">{{tabTopics[2]}}</h5>*/
+/* 		            </div>*/
+/* 		            <div class ="col-lg-1">*/
+/* 			            <h5 align="center">{{tabNbMessTopics[2]}}</h5>*/
+/* 		            </div>*/
+/* 		            <div class ="col-lg-4">*/
+/* 			            <h5 align="center">News</h5>*/
+/* 		            </div>*/
+/* 	            </div>*/
+/*             </div>*/
+/*             <div class="container">*/
+/* 	            <div class ="row">*/
+/* 		            <div class ="col-lg-6">*/
+/* 			            <h5><a title="Discuter des prochains concerts." href="{{path('follow_the_rhythm_categorie',{'catId':3})}}"> Concerts</a></h5>*/
+/* 		            </div>*/
+/* 		            <div class ="col-lg-1">*/
+/* 			            <h5 align="center">{{tabTopics[3]}}</h5>*/
+/* 		            </div>*/
+/* 		            <div class ="col-lg-1">*/
+/* 			            <h5 align="center">{{tabNbMessTopics[3]}}</h5>*/
+/* 		            </div>*/
+/* 		            <div class ="col-lg-4">*/
+/* 			            <h5 align="center">News</h5>*/
+/* 		            </div>*/
+/* 	            </div>*/
+/*             </div>*/
+/*             <div class="container">*/
+/* 	            <div class ="row">*/
+/* 		            <div class ="col-lg-6">*/
+/* 			            <h5><a title="Discuter des promotions." href="{{path('follow_the_rhythm_categorie',{'catId':4})}}"> Promotion</a></h5>*/
+/* 		            </div>*/
+/* 		            <div class ="col-lg-1">*/
+/* 			            <h5 align="center">{{tabTopics[4]}}</h5>*/
+/* 		            </div>*/
+/* 		            <div class ="col-lg-1">*/
+/* 			            <h5 align="center">{{tabNbMessTopics[4]}}</h5>*/
+/* 		            </div>*/
+/* 		            <div class ="col-lg-4">*/
+/* 			            <h5 align="center">News</h5>*/
+/* 		            </div>*/
+/* 	            </div>*/
 /*             </div>*/
 /*         </div>*/
 /*     </div>*/

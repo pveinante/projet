@@ -52,9 +52,8 @@ class Concert
 
    /**
      *
-     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste", mappedBy="concert")
-     * @ORM\JoinTable(name="concerts_artistes")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste", mappedBy="concert",cascade={"persist"})
+     * @ORM\JoinTable(name="artiste_concert")
      */
     private $artiste;
 
@@ -149,6 +148,20 @@ class Concert
         $this->utilisateur = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+
+    /**
+     * Set artiste
+     *
+     * @param \follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste
+     *
+     * @return Concert
+     */
+    public function setArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste)
+    {
+        $this->artiste = $artiste;
+
+        return $this;
+    }
 
     /**
      * Add artiste

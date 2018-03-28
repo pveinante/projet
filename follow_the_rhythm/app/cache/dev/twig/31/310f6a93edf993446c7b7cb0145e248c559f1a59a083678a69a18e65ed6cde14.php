@@ -21,20 +21,20 @@ class __TwigTemplate_9839bd4bfb2a44669a04248c3ce7ba46c548fe4d0aabef7b290e60ac222
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e08c18b8436692882cef43963cc6265f2ef52886099c7d025179edba32c70d54 = $this->env->getExtension("native_profiler");
-        $__internal_e08c18b8436692882cef43963cc6265f2ef52886099c7d025179edba32c70d54->enter($__internal_e08c18b8436692882cef43963cc6265f2ef52886099c7d025179edba32c70d54_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:soumettreTopic.html.twig"));
+        $__internal_82e2f5d497a4560d023fd26a2acd0b737d88eef00202bd6f4ad915d1c8722c05 = $this->env->getExtension("native_profiler");
+        $__internal_82e2f5d497a4560d023fd26a2acd0b737d88eef00202bd6f4ad915d1c8722c05->enter($__internal_82e2f5d497a4560d023fd26a2acd0b737d88eef00202bd6f4ad915d1c8722c05_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:soumettreTopic.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_e08c18b8436692882cef43963cc6265f2ef52886099c7d025179edba32c70d54->leave($__internal_e08c18b8436692882cef43963cc6265f2ef52886099c7d025179edba32c70d54_prof);
+        $__internal_82e2f5d497a4560d023fd26a2acd0b737d88eef00202bd6f4ad915d1c8722c05->leave($__internal_82e2f5d497a4560d023fd26a2acd0b737d88eef00202bd6f4ad915d1c8722c05_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_d568ae636e960f709d942dbf883f5714f51de114ac207cfea4b6bc2d7dc3f4e3 = $this->env->getExtension("native_profiler");
-        $__internal_d568ae636e960f709d942dbf883f5714f51de114ac207cfea4b6bc2d7dc3f4e3->enter($__internal_d568ae636e960f709d942dbf883f5714f51de114ac207cfea4b6bc2d7dc3f4e3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_7b27c30f66b687349318c93d5df80ed52f68e028ed204aae5131da873307ab7e = $this->env->getExtension("native_profiler");
+        $__internal_7b27c30f66b687349318c93d5df80ed52f68e028ed204aae5131da873307ab7e->enter($__internal_7b27c30f66b687349318c93d5df80ed52f68e028ed204aae5131da873307ab7e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<body onload=\"hideV();\">
@@ -59,7 +59,10 @@ class __TwigTemplate_9839bd4bfb2a44669a04248c3ce7ba46c548fe4d0aabef7b290e60ac222
         // line 16
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formulaireTopic"]) ? $context["formulaireTopic"] : $this->getContext($context, "formulaireTopic")), 'widget');
         echo "
-            <input type=submit class=\"btn btn-primary\" onsubmit=\"return false\" onclick=\"return confirm('Vous confirmez?');\">
+            <input type=submit class=\"btn btn-primary\" onsubmit=\"return false\" onclick=\"return confirm('Vous allez créer un topic dans la catégorie ";
+        // line 17
+        echo twig_escape_filter($this->env, (isset($context["categorie_nom"]) ? $context["categorie_nom"] : $this->getContext($context, "categorie_nom")), "html", null, true);
+        echo ". Voulez-vous continuer ?');\">
             <a href=\"";
         // line 18
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueil", array("page" => 1, "sens" => 1)), "html", null, true);
@@ -178,7 +181,7 @@ class __TwigTemplate_9839bd4bfb2a44669a04248c3ce7ba46c548fe4d0aabef7b290e60ac222
 
 ";
         
-        $__internal_d568ae636e960f709d942dbf883f5714f51de114ac207cfea4b6bc2d7dc3f4e3->leave($__internal_d568ae636e960f709d942dbf883f5714f51de114ac207cfea4b6bc2d7dc3f4e3_prof);
+        $__internal_7b27c30f66b687349318c93d5df80ed52f68e028ed204aae5131da873307ab7e->leave($__internal_7b27c30f66b687349318c93d5df80ed52f68e028ed204aae5131da873307ab7e_prof);
 
     }
 
@@ -194,7 +197,7 @@ class __TwigTemplate_9839bd4bfb2a44669a04248c3ce7ba46c548fe4d0aabef7b290e60ac222
 
     public function getDebugInfo()
     {
-        return array (  83 => 31,  78 => 29,  65 => 18,  60 => 16,  56 => 15,  47 => 9,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  86 => 31,  81 => 29,  68 => 18,  64 => 17,  60 => 16,  56 => 15,  47 => 9,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -213,7 +216,7 @@ class __TwigTemplate_9839bd4bfb2a44669a04248c3ce7ba46c548fe4d0aabef7b290e60ac222
 /*           <!--AFFICHAGE DU FORMULAIRE-->*/
 /*           <form method="post" id=soumettreTopicForm name="formSoumettreTopic" {{form_enctype(formulaireTopic)}}>*/
 /*               {{ form_widget(formulaireTopic)}}*/
-/*             <input type=submit class="btn btn-primary" onsubmit="return false" onclick="return confirm('Vous confirmez?');">*/
+/*             <input type=submit class="btn btn-primary" onsubmit="return false" onclick="return confirm('Vous allez créer un topic dans la catégorie {{categorie_nom}}. Voulez-vous continuer ?');">*/
 /*             <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a></br>*/
 /*             </br>*/
 /*           </form>*/

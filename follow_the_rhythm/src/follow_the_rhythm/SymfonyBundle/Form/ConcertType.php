@@ -24,6 +24,7 @@ class ConcertType extends AbstractType
             ->add('artiste','entity', array('label'=>'Artistes Concernés',
                                      'class' => 'follow_the_rhythmSymfonyBundle:Artiste',
                                      'multiple' => 'true',
+                                     'expanded'=> 'true',
                                      'choice_label' => function($groupConcert){return $groupConcert->getNomDeScene();}
                                      ))
         ;

@@ -40,12 +40,12 @@ class Message
      *
      * @ORM\Column(name="nbSignalement", type="integer")
      */
-    private $nbSignalement;
+    private $nbSignalement = 0;
 
    /**
      *
      * @ORM\ManyToOne(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\User")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $utilisateur;
     

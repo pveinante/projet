@@ -1,6 +1,6 @@
 <?php
 
-/* EasyAdminBundle:default/includes:_select2_widget.html.twig */
+/* @EasyAdmin/default/includes/_select2_widget.html.twig */
 class __TwigTemplate_a4f3e600b4267d472d2c48a04fd52f54bd4d89aa0c7e49f3ab06d123fe711b93 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_a4f3e600b4267d472d2c48a04fd52f54bd4d89aa0c7e49f3ab06d123fe7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b4b8a4381c7c9f598ddcd14c3b9ded2ec1558720ce7bd84a2dc61fc20812137e = $this->env->getExtension("native_profiler");
-        $__internal_b4b8a4381c7c9f598ddcd14c3b9ded2ec1558720ce7bd84a2dc61fc20812137e->enter($__internal_b4b8a4381c7c9f598ddcd14c3b9ded2ec1558720ce7bd84a2dc61fc20812137e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EasyAdminBundle:default/includes:_select2_widget.html.twig"));
+        $__internal_0e4b456240a42d758514c0f6945d387b5b20f1df9c23805e282e21dd6ffca7ec = $this->env->getExtension("native_profiler");
+        $__internal_0e4b456240a42d758514c0f6945d387b5b20f1df9c23805e282e21dd6ffca7ec->enter($__internal_0e4b456240a42d758514c0f6945d387b5b20f1df9c23805e282e21dd6ffca7ec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/includes/_select2_widget.html.twig"));
 
         // line 1
         $context["_select2_locales"] = array(0 => "ar", 1 => "az", 2 => "bg", 3 => "ca", 4 => "cs", 5 => "da", 6 => "de", 7 => "el", 8 => "en", 9 => "es", 10 => "et", 11 => "eu", 12 => "fa", 13 => "fi", 14 => "fr", 15 => "gl", 16 => "he", 17 => "hi", 18 => "hr", 19 => "hu", 20 => "id", 21 => "is", 22 => "it", 23 => "ja", 24 => "km", 25 => "ko", 26 => "lt", 27 => "lv", 28 => "mk", 29 => "ms", 30 => "nb", 31 => "nl", 32 => "pl", 33 => "pt-BR", 34 => "pt", 35 => "ro", 36 => "ru", 37 => "sk", 38 => "sr-Cyrl", 39 => "sr", 40 => "sv", 41 => "th", 42 => "tr", 43 => "uk", 44 => "vi", 45 => "zh-CN", 46 => "zh-TW");
@@ -47,13 +47,13 @@ class __TwigTemplate_a4f3e600b4267d472d2c48a04fd52f54bd4d89aa0c7e49f3ab06d123fe7
 </script>
 ";
         
-        $__internal_b4b8a4381c7c9f598ddcd14c3b9ded2ec1558720ce7bd84a2dc61fc20812137e->leave($__internal_b4b8a4381c7c9f598ddcd14c3b9ded2ec1558720ce7bd84a2dc61fc20812137e_prof);
+        $__internal_0e4b456240a42d758514c0f6945d387b5b20f1df9c23805e282e21dd6ffca7ec->leave($__internal_0e4b456240a42d758514c0f6945d387b5b20f1df9c23805e282e21dd6ffca7ec_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "EasyAdminBundle:default/includes:_select2_widget.html.twig";
+        return "@EasyAdmin/default/includes/_select2_widget.html.twig";
     }
 
     public function isTraitable()

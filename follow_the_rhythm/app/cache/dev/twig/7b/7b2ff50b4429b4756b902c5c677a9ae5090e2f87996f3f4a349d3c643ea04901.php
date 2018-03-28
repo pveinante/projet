@@ -1,6 +1,6 @@
 <?php
 
-/* @EasyAdmin/default/includes/_delete_form.html.twig */
+/* EasyAdminBundle:default/includes:_delete_form.html.twig */
 class __TwigTemplate_1e7ba32eab06c393365abd157e3987cff34d1fb687fddd8b98b03afd30ba4139 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_1e7ba32eab06c393365abd157e3987cff34d1fb687fddd8b98b03afd30b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_eaacc2a29a47c2c9a9f049f0c6a2bd034e62171ffc2af938e18ac952916f4c93 = $this->env->getExtension("native_profiler");
-        $__internal_eaacc2a29a47c2c9a9f049f0c6a2bd034e62171ffc2af938e18ac952916f4c93->enter($__internal_eaacc2a29a47c2c9a9f049f0c6a2bd034e62171ffc2af938e18ac952916f4c93_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/includes/_delete_form.html.twig"));
+        $__internal_80a5426b3934982e84704f63e978115f2302756ff2da181fc64da9e68317323a = $this->env->getExtension("native_profiler");
+        $__internal_80a5426b3934982e84704f63e978115f2302756ff2da181fc64da9e68317323a->enter($__internal_80a5426b3934982e84704f63e978115f2302756ff2da181fc64da9e68317323a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EasyAdminBundle:default/includes:_delete_form.html.twig"));
 
         // line 1
         echo         // line 2
@@ -77,13 +77,13 @@ class __TwigTemplate_1e7ba32eab06c393365abd157e3987cff34d1fb687fddd8b98b03afd30b
 </div>
 ";
         
-        $__internal_eaacc2a29a47c2c9a9f049f0c6a2bd034e62171ffc2af938e18ac952916f4c93->leave($__internal_eaacc2a29a47c2c9a9f049f0c6a2bd034e62171ffc2af938e18ac952916f4c93_prof);
+        $__internal_80a5426b3934982e84704f63e978115f2302756ff2da181fc64da9e68317323a->leave($__internal_80a5426b3934982e84704f63e978115f2302756ff2da181fc64da9e68317323a_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "@EasyAdmin/default/includes/_delete_form.html.twig";
+        return "EasyAdminBundle:default/includes:_delete_form.html.twig";
     }
 
     public function isTraitable()

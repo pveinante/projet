@@ -30,22 +30,16 @@ class MessageRepository extends \Doctrine\ORM\EntityRepository
             );
         }
         
-         $gestionnaireEntite=$this->_em;
+        $gestionnaireEntite=$this->_em;
         //On créé la requête
         
         //On définie la valeur de l'identifiant du concert dont on cherche l'artiste
     
-        /* $qb = $this->createQueryBuilder('a')
-            ->where('CURRENT_DATE()+1 >= a.date')
+        $qb = $this->createQueryBuilder('a')
+            ->where('a.topic = '.$topic)
             ->orderBy('a.date', 'ASC');
         
         $query = $qb->getQuery();
-        */
-        $requete=$gestionnaireEntite->createQuery('SELECT m.contenu FROM follow_the_rhythmSymfonyBundle:Message m WHERE m.topic = '.$topic);
-        
-        //On définie la valeur de l'identifiant du concert dont on cherche l'artiste
-    
-        $query=$requete->getResult();
 
         $premierResultat = ($page - 1) * $nbMaxParPage;
         $query->setFirstResult($premierResultat)->setMaxResults($nbMaxParPage);

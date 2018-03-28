@@ -198,4 +198,8 @@ class Message
         return $this;
     }
     
+         public function _toString()
+    {
+            return $this->getContenu();
+    }
 }

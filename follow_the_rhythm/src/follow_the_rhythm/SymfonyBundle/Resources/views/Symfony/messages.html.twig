@@ -46,7 +46,8 @@
         <div class="list-group-item">
           <form method="post" id=soumettreMessageForm name="formulaireMessage" {{form_enctype(formulaireMessage)}}>
               {{ form_widget(formulaireMessage)}}
-            <input type=submit class="btn btn-primary" onsubmit="return false" onclick="return confirm('Vous allez soumettre un message sur le topic {{titre}}. Voulez-vous continuer ?');"><a href="{{path('follow_the_rhythm_messages',{'topicId': topicCourant, 'page': 1, 'nbParPage': nbParPage})}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a>
+              <span id='caracteres'>100 caractères restants</span><br />
+              <input type=submit class="btn btn-primary" onsubmit="return false" onclick="return confirm('Vous allez soumettre un message sur le topic {{titre}}. Voulez-vous continuer ?');"><a href="{{path('follow_the_rhythm_messages',{'topicId': topicCourant, 'page': 1, 'nbParPage': nbParPage})}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a>
             <a title="Renvoie à l'accueil du forum." href="/follow_the_rhythm/web/app_dev.php/accueilForum"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour au forum</button></a><a title="Renvoie à l'accueil de Follow the Rhythm." href="/follow_the_rhythm/web/app_dev.php/accueil/1/1"><button style='margin-left: 4px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour à l'accueil</button></a></br>
             </br>
           </form>
@@ -56,8 +57,17 @@
     </div>
   </div>
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+                function actualiserCaracteres()
+                {
+                  if (document.getElementById("message_message").value.length < 159)
+                  document.getElementById("caracteres").firstChild.nodeValue = 160 - document.getElementById("message_message").value.length + " caractères restants.";
+                  else document.getElementById("caracteres").firstChild.nodeValue = 160 - document.getElementById("message_message").value.length + " caractère restant.";
+                } 
+              </script>
+<script>
+var timer = setInterval(actualiserCaracteres, 100);
   function isNotConnected(){
     alert("Il faut être connecté pour accéder à cette fonctionnalité");
   }

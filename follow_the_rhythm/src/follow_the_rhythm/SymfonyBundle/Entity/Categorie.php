@@ -93,4 +93,9 @@ class Categorie
     {
         return $this->nom;
     }
+    
+         public function _toString()
+    {
+            return $this->getNom();
+    }
 }

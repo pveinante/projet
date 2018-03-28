@@ -21,20 +21,20 @@ class __TwigTemplate_30d71c44aa2e70d27efad3b75ae9a51e0383610d7d218f2b8f99281ff66
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e0384ebf189cf40d3a590909f4b5524c863906fac0cb30f48f8330c2d00a651d = $this->env->getExtension("native_profiler");
-        $__internal_e0384ebf189cf40d3a590909f4b5524c863906fac0cb30f48f8330c2d00a651d->enter($__internal_e0384ebf189cf40d3a590909f4b5524c863906fac0cb30f48f8330c2d00a651d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:messages.html.twig"));
+        $__internal_ff88da3e63a1ed12512eaa0650cf698db7b547ba1a54cafa8e9566a2a7b57108 = $this->env->getExtension("native_profiler");
+        $__internal_ff88da3e63a1ed12512eaa0650cf698db7b547ba1a54cafa8e9566a2a7b57108->enter($__internal_ff88da3e63a1ed12512eaa0650cf698db7b547ba1a54cafa8e9566a2a7b57108_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:messages.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_e0384ebf189cf40d3a590909f4b5524c863906fac0cb30f48f8330c2d00a651d->leave($__internal_e0384ebf189cf40d3a590909f4b5524c863906fac0cb30f48f8330c2d00a651d_prof);
+        $__internal_ff88da3e63a1ed12512eaa0650cf698db7b547ba1a54cafa8e9566a2a7b57108->leave($__internal_ff88da3e63a1ed12512eaa0650cf698db7b547ba1a54cafa8e9566a2a7b57108_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_53578b9456e47876169c57fa345e237e5a20beee857388761284bb3616988800 = $this->env->getExtension("native_profiler");
-        $__internal_53578b9456e47876169c57fa345e237e5a20beee857388761284bb3616988800->enter($__internal_53578b9456e47876169c57fa345e237e5a20beee857388761284bb3616988800_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_e4f22f667cb866a57344d427b963d0bfe6b7ef0ddb08926c128616e8cfb916fb = $this->env->getExtension("native_profiler");
+        $__internal_e4f22f667cb866a57344d427b963d0bfe6b7ef0ddb08926c128616e8cfb916fb->enter($__internal_e4f22f667cb866a57344d427b963d0bfe6b7ef0ddb08926c128616e8cfb916fb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "
@@ -130,8 +130,9 @@ class __TwigTemplate_30d71c44aa2e70d27efad3b75ae9a51e0383610d7d218f2b8f99281ff66
         // line 48
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formulaireMessage"]) ? $context["formulaireMessage"] : $this->getContext($context, "formulaireMessage")), 'widget');
         echo "
-            <input type=submit class=\"btn btn-primary\" onsubmit=\"return false\" onclick=\"return confirm('Vous allez soumettre un message sur le topic ";
-        // line 49
+              <span id='caracteres'>100 caractères restants</span><br />
+              <input type=submit class=\"btn btn-primary\" onsubmit=\"return false\" onclick=\"return confirm('Vous allez soumettre un message sur le topic ";
+        // line 50
         echo twig_escape_filter($this->env, (isset($context["titre"]) ? $context["titre"] : $this->getContext($context, "titre")), "html", null, true);
         echo ". Voulez-vous continuer ?');\"><a href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_messages", array("topicId" => (isset($context["topicCourant"]) ? $context["topicCourant"] : $this->getContext($context, "topicCourant")), "page" => 1, "nbParPage" => (isset($context["nbParPage"]) ? $context["nbParPage"] : $this->getContext($context, "nbParPage")))), "html", null, true);
@@ -145,8 +146,17 @@ class __TwigTemplate_30d71c44aa2e70d27efad3b75ae9a51e0383610d7d218f2b8f99281ff66
     </div>
   </div>
 </div>
-
+<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
 <script>
+                function actualiserCaracteres()
+                {
+                  if (document.getElementById(\"message_message\").value.length < 159)
+                  document.getElementById(\"caracteres\").firstChild.nodeValue = 160 - document.getElementById(\"message_message\").value.length + \" caractères restants.\";
+                  else document.getElementById(\"caracteres\").firstChild.nodeValue = 160 - document.getElementById(\"message_message\").value.length + \" caractère restant.\";
+                } 
+              </script>
+<script>
+var timer = setInterval(actualiserCaracteres, 100);
   function isNotConnected(){
     alert(\"Il faut être connecté pour accéder à cette fonctionnalité\");
   }
@@ -156,15 +166,15 @@ class __TwigTemplate_30d71c44aa2e70d27efad3b75ae9a51e0383610d7d218f2b8f99281ff66
   }*/
 </script>
 ";
-        // line 70
+        // line 80
         echo "<div align=\"center\"><a title='Remonter en haut de la page courante' href=\"#\"><button class=\"btn btn-primary\"><i class=\"fa fa-angle-double-up\"></i> Haut de page <i class=\"fa fa-angle-double-up\"></i></button></a></div>
 <div align=center>";
-        // line 71
-        $this->loadTemplate("::pagination_2.html.twig", "follow_the_rhythmSymfonyBundle:Symfony:messages.html.twig", 71)->display($context);
+        // line 81
+        $this->loadTemplate("::pagination_2.html.twig", "follow_the_rhythmSymfonyBundle:Symfony:messages.html.twig", 81)->display($context);
         echo "</div>
 ";
         
-        $__internal_53578b9456e47876169c57fa345e237e5a20beee857388761284bb3616988800->leave($__internal_53578b9456e47876169c57fa345e237e5a20beee857388761284bb3616988800_prof);
+        $__internal_e4f22f667cb866a57344d427b963d0bfe6b7ef0ddb08926c128616e8cfb916fb->leave($__internal_e4f22f667cb866a57344d427b963d0bfe6b7ef0ddb08926c128616e8cfb916fb_prof);
 
     }
 
@@ -180,7 +190,7 @@ class __TwigTemplate_30d71c44aa2e70d27efad3b75ae9a51e0383610d7d218f2b8f99281ff66
 
     public function getDebugInfo()
     {
-        return array (  163 => 71,  160 => 70,  135 => 49,  131 => 48,  127 => 47,  122 => 44,  119 => 43,  113 => 42,  107 => 39,  99 => 38,  96 => 37,  94 => 36,  91 => 35,  86 => 34,  78 => 29,  73 => 26,  71 => 25,  59 => 18,  54 => 16,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  173 => 81,  170 => 80,  136 => 50,  131 => 48,  127 => 47,  122 => 44,  119 => 43,  113 => 42,  107 => 39,  99 => 38,  96 => 37,  94 => 36,  91 => 35,  86 => 34,  78 => 29,  73 => 26,  71 => 25,  59 => 18,  54 => 16,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -231,7 +241,8 @@ class __TwigTemplate_30d71c44aa2e70d27efad3b75ae9a51e0383610d7d218f2b8f99281ff66
 /*         <div class="list-group-item">*/
 /*           <form method="post" id=soumettreMessageForm name="formulaireMessage" {{form_enctype(formulaireMessage)}}>*/
 /*               {{ form_widget(formulaireMessage)}}*/
-/*             <input type=submit class="btn btn-primary" onsubmit="return false" onclick="return confirm('Vous allez soumettre un message sur le topic {{titre}}. Voulez-vous continuer ?');"><a href="{{path('follow_the_rhythm_messages',{'topicId': topicCourant, 'page': 1, 'nbParPage': nbParPage})}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a>*/
+/*               <span id='caracteres'>100 caractères restants</span><br />*/
+/*               <input type=submit class="btn btn-primary" onsubmit="return false" onclick="return confirm('Vous allez soumettre un message sur le topic {{titre}}. Voulez-vous continuer ?');"><a href="{{path('follow_the_rhythm_messages',{'topicId': topicCourant, 'page': 1, 'nbParPage': nbParPage})}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a>*/
 /*             <a title="Renvoie à l'accueil du forum." href="/follow_the_rhythm/web/app_dev.php/accueilForum"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour au forum</button></a><a title="Renvoie à l'accueil de Follow the Rhythm." href="/follow_the_rhythm/web/app_dev.php/accueil/1/1"><button style='margin-left: 4px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour à l'accueil</button></a></br>*/
 /*             </br>*/
 /*           </form>*/
@@ -241,8 +252,17 @@ class __TwigTemplate_30d71c44aa2e70d27efad3b75ae9a51e0383610d7d218f2b8f99281ff66
 /*     </div>*/
 /*   </div>*/
 /* </div>*/
-/* */
+/* <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>*/
 /* <script>*/
+/*                 function actualiserCaracteres()*/
+/*                 {*/
+/*                   if (document.getElementById("message_message").value.length < 159)*/
+/*                   document.getElementById("caracteres").firstChild.nodeValue = 160 - document.getElementById("message_message").value.length + " caractères restants.";*/
+/*                   else document.getElementById("caracteres").firstChild.nodeValue = 160 - document.getElementById("message_message").value.length + " caractère restant.";*/
+/*                 } */
+/*               </script>*/
+/* <script>*/
+/* var timer = setInterval(actualiserCaracteres, 100);*/
 /*   function isNotConnected(){*/
 /*     alert("Il faut être connecté pour accéder à cette fonctionnalité");*/
 /*   }*/

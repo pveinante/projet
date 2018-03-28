@@ -67,6 +67,15 @@ class User extends BaseUser
      *      )
      */
     private $myFriends;
+    
+     /**
+     * @ORM\OneToOne(targetEntity="Invitation")
+     * @ORM\JoinColumn(referencedColumnName="code")
+     * @Assert\NotNull(message="Your invitation is wrong", groups={"Registration"})
+     */
+    protected $invitation;
+
+   
 
     /**
      * Get id
@@ -262,5 +271,21 @@ class User extends BaseUser
     public function getMyFriends()
     {
         return $this->myFriends;
+    }
+    
+     public function setInvitation(Invitation $invitation)
+    {
+        $this->invitation = $invitation;
+    }
+
+    public function getInvitation()
+    {
+        return $this->invitation;
+    }
+    
+    
+    public function _toString()
+    {
+            return $this->getNbSignalement();
     }
 }

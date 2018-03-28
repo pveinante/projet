@@ -1,6 +1,6 @@
 <?php
 
-/* @EasyAdmin/default/field_association.html.twig */
+/* EasyAdminBundle:default:field_association.html.twig */
 class __TwigTemplate_b4538c28103096a90f71d2121cf33fdae3505b5220681170551960090d6b7b8e extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_b4538c28103096a90f71d2121cf33fdae3505b5220681170551960090d6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_579ed0531ccc5a387fca0d7e285a9d94d5d98f3a93b4b38f1fe8c30959243e7a = $this->env->getExtension("native_profiler");
-        $__internal_579ed0531ccc5a387fca0d7e285a9d94d5d98f3a93b4b38f1fe8c30959243e7a->enter($__internal_579ed0531ccc5a387fca0d7e285a9d94d5d98f3a93b4b38f1fe8c30959243e7a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/field_association.html.twig"));
+        $__internal_1496620fb6ca255b40abbe7fc593a4f78b4139c41af284aa14569f4fe4cbc18d = $this->env->getExtension("native_profiler");
+        $__internal_1496620fb6ca255b40abbe7fc593a4f78b4139c41af284aa14569f4fe4cbc18d->enter($__internal_1496620fb6ca255b40abbe7fc593a4f78b4139c41af284aa14569f4fe4cbc18d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EasyAdminBundle:default:field_association.html.twig"));
 
         // line 2
         if (twig_test_iterable((isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")))) {
@@ -119,13 +119,13 @@ array_key_exists("link_parameters", $context)) {
 ";
         }
         
-        $__internal_579ed0531ccc5a387fca0d7e285a9d94d5d98f3a93b4b38f1fe8c30959243e7a->leave($__internal_579ed0531ccc5a387fca0d7e285a9d94d5d98f3a93b4b38f1fe8c30959243e7a_prof);
+        $__internal_1496620fb6ca255b40abbe7fc593a4f78b4139c41af284aa14569f4fe4cbc18d->leave($__internal_1496620fb6ca255b40abbe7fc593a4f78b4139c41af284aa14569f4fe4cbc18d_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "@EasyAdmin/default/field_association.html.twig";
+        return "EasyAdminBundle:default:field_association.html.twig";
     }
 
     public function isTraitable()

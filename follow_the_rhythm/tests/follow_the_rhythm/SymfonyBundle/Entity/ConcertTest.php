@@ -123,5 +123,7 @@ class ConcertTest extends \PHPUnit_Framework_TestCase
  
         $this->assertEquals($date, $resultat); 
     }
+    
+}
 	
 ?>

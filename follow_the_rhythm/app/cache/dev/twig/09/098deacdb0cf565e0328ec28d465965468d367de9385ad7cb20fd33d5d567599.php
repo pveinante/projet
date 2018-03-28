@@ -1,6 +1,6 @@
 <?php
 
-/* @EasyAdmin/default/field_toggle.html.twig */
+/* EasyAdminBundle:default:field_toggle.html.twig */
 class __TwigTemplate_d07c65e3b615d7d48753862f73a5fe434593d11f2ee94353721951969c155ec6 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_d07c65e3b615d7d48753862f73a5fe434593d11f2ee94353721951969c1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a94ab6bf5d2d46966b23fdaa1cf39589c660766f93fac55608eac674e8c7ce57 = $this->env->getExtension("native_profiler");
-        $__internal_a94ab6bf5d2d46966b23fdaa1cf39589c660766f93fac55608eac674e8c7ce57->enter($__internal_a94ab6bf5d2d46966b23fdaa1cf39589c660766f93fac55608eac674e8c7ce57_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/field_toggle.html.twig"));
+        $__internal_990376f889fc8f19f680339900d7163d15fd1b57c3ffe04690d34ccec63ab81d = $this->env->getExtension("native_profiler");
+        $__internal_990376f889fc8f19f680339900d7163d15fd1b57c3ffe04690d34ccec63ab81d->enter($__internal_990376f889fc8f19f680339900d7163d15fd1b57c3ffe04690d34ccec63ab81d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EasyAdminBundle:default:field_toggle.html.twig"));
 
         // line 2
         echo "
@@ -54,13 +54,13 @@ class __TwigTemplate_d07c65e3b615d7d48753862f73a5fe434593d11f2ee94353721951969c1
 ";
         }
         
-        $__internal_a94ab6bf5d2d46966b23fdaa1cf39589c660766f93fac55608eac674e8c7ce57->leave($__internal_a94ab6bf5d2d46966b23fdaa1cf39589c660766f93fac55608eac674e8c7ce57_prof);
+        $__internal_990376f889fc8f19f680339900d7163d15fd1b57c3ffe04690d34ccec63ab81d->leave($__internal_990376f889fc8f19f680339900d7163d15fd1b57c3ffe04690d34ccec63ab81d_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "@EasyAdmin/default/field_toggle.html.twig";
+        return "EasyAdminBundle:default:field_toggle.html.twig";
     }
 
     public function isTraitable()

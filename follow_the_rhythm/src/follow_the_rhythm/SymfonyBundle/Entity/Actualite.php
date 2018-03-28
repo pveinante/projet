@@ -1,6 +1,7 @@
 <?php
 
 namespace follow_the_rhythm\SymfonyBundle\Entity;
+//namespace Doctrine\Common\Collections;
 
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
@@ -294,6 +295,6 @@ class Actualite
     
         public function _toString()
     {
-            return $this;
+            return $this->getTitre();
     }
 }

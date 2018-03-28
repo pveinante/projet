@@ -77,7 +77,7 @@ class ArtisteTest extends \PHPUnit_Framework_TestCase
         $artiste->setNomDeScene("Johnny Hallyday"); 
 		$resultat = $artiste->getNomDeScene();
         $this->assertEquals("Johnny Hallyday", $resultat); 
-    
+    }
 	
 	// TEST DE LA METHODE getNbFollower()
     public function testGetNbFollower() 

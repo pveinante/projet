@@ -223,4 +223,9 @@ class Concert
     {
         return $this->dateConcert;
     }
+    
+            public function _toString()
+    {
+            return $this->getNom();
+    }
 }

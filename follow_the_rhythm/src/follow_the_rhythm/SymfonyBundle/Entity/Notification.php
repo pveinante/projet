@@ -123,4 +123,9 @@ class Notification
     {
         return $this->utilisateur;
     }
+    
+            public function _toString()
+    {
+            return $this->getTexte();
+    }
 }

@@ -154,4 +154,9 @@ class Signalement
     {
         return $this->topic;
     }
+    
+        public function _toString()
+    {
+            return $this->getMessage();
+    }
 }

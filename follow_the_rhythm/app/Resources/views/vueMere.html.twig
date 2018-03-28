@@ -49,12 +49,17 @@
                     <a title='Aller au forum pour consulter les topics ou discuter avec la communauté.' href="{{path('follow_the_rhythm_accueilForum')}}"> <button type="button" class="btn btn-default"><i class="	fa fa-wechat"></i> Forum</button></a>
                     <a title='Voir les informations sur les développeurs et le commanditaire de ce site.' href="{{path('follow_the_rhythm_contacts')}}"> <button type="button" class="btn btn-default"><i class="fa fa-address-book"></i> Nous contacter</button></a>
                     <a title="Obtenir de l'aide sur l'utilisation du site"  href="{{path('follow_the_rhythm_aide')}}"> <button type="button" class="btn btn-default"><i class="fa fa-question-circle" aria-hidden="true"></i> Aide</button></a>
-                    <a title='Se connecter pour bénéficier de tous les avantages Follow The Rhythm !' href="{{path('fos_user_security_login')}}"> <button type="button" class="btn btn-default"><i class="fa fa-user" aria-hidden="true"></i> Se connecter</button></a>
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <a title='Se déconnecter de Follow The Rhythm' href="{{path('fos_user_security_logout')}}"> <button type="button" class="btn btn-default"><i class="fa fa-user" aria-hidden="true"></i> Se déconnecter ({{ app.user.username }})</button></a>
+                    {% else %}
+                        <a title='Se connecter pour bénéficier de tous les avantages Follow The Rhythm !' href="{{path('fos_user_security_login')}}"> <button type="button" class="btn btn-default"><i class="fa fa-user" aria-hidden="true"></i> Se connecter</button></a>
+                    {% endif %}
+                    
                 </div>
                     <!--
                     <div class="btn-group" role="group" data-toggle="buttons">
-                    <button type="button" class="btn btn-secondary"><a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><i class="fa fa-list"></i> Actualités</a></button>
-                    <button type="button" class="btn btn-secondary"><a href="{{path('follow_the_rhythm_accueilForum')}}"><i class="	fa fa-wechat"></i> Forum</a></button>
+                    <button type="button" class="btn btn-secondary"><a href="{#path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})#}"><i class="fa fa-list"></i> Actualités</a></button>
+                    <button type="button" class="btn btn-secondary"><a href="{#path('follow_the_rhythm_accueilForum')#}"><i class="	fa fa-wechat"></i> Forum</a></button>
                     </div>
                     -->
                 </div>

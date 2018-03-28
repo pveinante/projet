@@ -293,8 +293,8 @@ class Actualite
         $this->artiste->removeElement($artiste);
     }
     
-        public function _toString()
+        public function __toString()
     {
-            return $this->getTitre();
+            return $this->titre;
     }
 }

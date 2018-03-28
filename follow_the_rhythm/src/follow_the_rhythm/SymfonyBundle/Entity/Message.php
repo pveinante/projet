@@ -198,8 +198,8 @@ class Message
         return $this;
     }
     
-         public function _toString()
+         public function __toString()
     {
-            return $this->getContenu();
+            return $this->contenu;
     }
 }

@@ -215,9 +215,9 @@ class Artiste
      /**
      * To String
      */
-    public function _toString()
+    public function __toString()
     {
-            return $this->getNomComplet();
+            return $this->nomComplet;
     }
  
 }

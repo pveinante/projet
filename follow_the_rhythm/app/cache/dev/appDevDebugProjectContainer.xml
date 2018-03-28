@@ -4,7 +4,7 @@
     <parameter key="kernel.root_dir">/home/ubuntu/workspace/follow_the_rhythm/app</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.name">ap_</parameter>
+    <parameter key="kernel.name">app</parameter>
     <parameter key="kernel.cache_dir">/home/ubuntu/workspace/follow_the_rhythm/app/cache/dev</parameter>
     <parameter key="kernel.logs_dir">/home/ubuntu/workspace/follow_the_rhythm/app/logs</parameter>
     <parameter key="kernel.bundles" type="collection">
@@ -579,10 +579,6 @@
           <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Message</parameter>
           <parameter key="name">Message</parameter>
         </parameter>
-        <parameter key="Moderateur" type="collection">
-          <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Moderateur</parameter>
-          <parameter key="name">Moderateur</parameter>
-        </parameter>
         <parameter key="Notification" type="collection">
           <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Notification</parameter>
           <parameter key="name">Notification</parameter>
@@ -598,6 +594,10 @@
         <parameter key="User" type="collection">
           <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\User</parameter>
           <parameter key="name">User</parameter>
+        </parameter>
+        <parameter key="Invitation" type="collection">
+          <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Invitation</parameter>
+          <parameter key="name">Invitation</parameter>
         </parameter>
       </parameter>
       <parameter key="design" type="collection">
@@ -724,13 +724,13 @@
     </parameter>
   </parameters>
   <services>
-    <service id="app.form.registration" class="AppBundle\Form\RegistrationFormType">
+    <service id="app.form.registration" class="follow_the_rhythm\SymfonyBundle\Form\RegistrationFormType">
       <tag name="form.type" alias="app_user_registration"/>
     </service>
-    <service id="app.form.invitation" class="AppBundle\Form\InvitationFormType">
+    <service id="app.form.invitation" class="follow_the_rhythm\SymfonyBundle\Form\InvitationFormType">
       <tag name="form.type" alias="app_invitation_type"/>
       <argument type="service">
-        <service class="AppBundle\Form\DataTransformer\InvitationToCodeTransformer" public="false">
+        <service class="follow_the_rhythm\SymfonyBundle\Form\DataTransformer\InvitationToCodeTransformer" public="false">
           <argument type="service" id="doctrine.orm.default_entity_manager"/>
         </service>
       </argument>
@@ -1544,9 +1544,9 @@
             <argument type="service" id="service_container"/>
             <argument type="collection">
               <argument key="app_user_registration">app.form.registration</argument>
-              <argument key="AppBundle\Form\RegistrationFormType">app.form.registration</argument>
+              <argument key="follow_the_rhythm\SymfonyBundle\Form\RegistrationFormType">app.form.registration</argument>
               <argument key="app_invitation_type">app.form.invitation</argument>
-              <argument key="AppBundle\Form\InvitationFormType">app.form.invitation</argument>
+              <argument key="follow_the_rhythm\SymfonyBundle\Form\InvitationFormType">app.form.invitation</argument>
               <argument key="form">form.type.form</argument>
               <argument key="Symfony\Component\Form\Extension\Core\Type\FormType">form.type.form</argument>
               <argument key="birthday">form.type.birthday</argument>
@@ -2342,7 +2342,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5abb960fec9a38.82914590</argument>
+            <argument>5abb9d10d410d3.00621573</argument>
           </service>
         </argument>
       </argument>
@@ -2714,7 +2714,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5abb960fec9a38.82914590</argument>
+            <argument>5abb9d10d410d3.00621573</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -3454,10 +3454,6 @@
             <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Message</argument>
             <argument key="name">Message</argument>
           </argument>
-          <argument key="Moderateur" type="collection">
-            <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Moderateur</argument>
-            <argument key="name">Moderateur</argument>
-          </argument>
           <argument key="Notification" type="collection">
             <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Notification</argument>
             <argument key="name">Notification</argument>
@@ -3473,6 +3469,10 @@
           <argument key="User" type="collection">
             <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\User</argument>
             <argument key="name">User</argument>
+          </argument>
+          <argument key="Invitation" type="collection">
+            <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Invitation</argument>
+            <argument key="name">Invitation</argument>
           </argument>
         </argument>
         <argument key="design" type="collection">

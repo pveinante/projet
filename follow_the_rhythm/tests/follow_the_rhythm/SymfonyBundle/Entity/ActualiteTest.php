@@ -2,9 +2,9 @@
 
 // CLASSE DE TEST UNITAIRE DE LA CLASSE Actualite
 
-namespace tests\follow_the_rhythm\SymfonyBundle\Entity; 
-
-use follow_the_rhythm\SymfonyBundle\Entity\Actualite; 
+namespace src\follow_the_rhythm\SymfonyBundle\Entity; 
+include("/follow_the_rhythm/src/follow_the_rhythm/SymfonyBundle/Entity/Actualite.php");
+use follow_the_rhythm\src\follow_the_rhythm\SymfonyBundle\Entity\Actualite; 
  
 class ActualiteTest extends \PHPUnit_Framework_TestCase 
 { 

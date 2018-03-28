@@ -33,7 +33,7 @@ class PropertyConfigPassTest extends \PHPUnit_Framework_TestCase
                             'property' => 'relations',
                             'type' => 'collection',
                             'type_options' => array(
-                                'entry_type' => 'AppBundle\Form\Type\EntityRelationType',
+                                'entry_type' => 'follow_the_rhythm\SymfonyBundle\Form\Type\EntityRelationType',
                             ),
                         ),
                     ),
@@ -57,7 +57,7 @@ class PropertyConfigPassTest extends \PHPUnit_Framework_TestCase
         // Assert that option from custom form type is still set.
         $this->assertSame(
             $relationsFormConfig['type_options']['entry_type'],
-            'AppBundle\Form\Type\EntityRelationType'
+            'follow_the_rhythm\SymfonyBundle\Form\Type\EntityRelationType'
         );
     }
 
@@ -100,7 +100,7 @@ class PropertyConfigPassTest extends \PHPUnit_Framework_TestCase
             $relationsFormConfig['type_options'],
             array(
                 'em' => 'default',
-                'class' => 'AppBundle\Form\Type\EntityRelationType',
+                'class' => 'follow_the_rhythm\SymfonyBundle\Form\Type\EntityRelationType',
                 'multiple' => false,
                 'expanded' => true,
             )
@@ -145,7 +145,7 @@ class PropertyConfigPassTest extends \PHPUnit_Framework_TestCase
             $relationsFormConfig['type_options'],
             array(
                 'em' => 'default',
-                'class' => 'AppBundle\Form\Type\EntityRelationType',
+                'class' => 'follow_the_rhythm\SymfonyBundle\Form\Type\EntityRelationType',
                 'multiple' => false,
                 'expanded' => true,
             )
@@ -163,7 +163,7 @@ class PropertyConfigPassTest extends \PHPUnit_Framework_TestCase
                     'Symfony\Bridge\Doctrine\Form\Type\EntityType',
                     array(
                         'em' => 'default',
-                        'class' => 'AppBundle\Form\Type\EntityRelationType',
+                        'class' => 'follow_the_rhythm\SymfonyBundle\Form\Type\EntityRelationType',
                         'multiple' => true,
                     ),
                     Guess::HIGH_CONFIDENCE

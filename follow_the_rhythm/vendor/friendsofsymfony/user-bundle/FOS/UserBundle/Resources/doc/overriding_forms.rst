@@ -71,7 +71,7 @@ the form type hierarchy and then adds the custom ``name`` field.
     <?php
     // src/AppBundle/Form/RegistrationType.php
 
-    namespace AppBundle\Form;
+    namespace follow_the_rhythm\SymfonyBundle\Form;
 
     use Symfony\Component\Form\AbstractType;
     use Symfony\Component\Form\FormBuilderInterface;
@@ -115,7 +115,7 @@ Below is an example of configuring your form type as a service:
         # app/config/services.yml
         services:
             app.form.registration:
-                class: AppBundle\Form\RegistrationType
+                class: follow_the_rhythm\SymfonyBundle\Form\RegistrationType
                 tags:
                     - { name: form.type, alias: app_user_registration }
 
@@ -130,7 +130,7 @@ Below is an example of configuring your form type as a service:
 
             <services>
 
-                <service id="app.form.registration" class="AppBundle\Form\RegistrationType">
+                <service id="app.form.registration" class="follow_the_rhythm\SymfonyBundle\Form\RegistrationType">
                     <tag name="form.type" alias="app_user_registration" />
                 </service>
 
@@ -177,7 +177,7 @@ protected ``onSuccess`` method.
     <?php
     // src/AppBundle/Form/Handler/RegistrationFormHandler.php
 
-    namespace AppBundle\Form\Handler;
+    namespace follow_the_rhythm\SymfonyBundle\Form\Handler;
 
     use FOS\UserBundle\Form\Handler\RegistrationFormHandler as BaseHandler;
     use FOS\UserBundle\Model\UserInterface;
@@ -211,7 +211,7 @@ successful submission.
     <?php
     // src/AppBundle/Form/Handler/RegistrationFormHandler.php
 
-    namespace AppBundle\Form\Handler;
+    namespace follow_the_rhythm\SymfonyBundle\Form\Handler;
 
     use FOS\UserBundle\Form\Handler\RegistrationFormHandler as BaseHandler;
 
@@ -252,7 +252,7 @@ configuring your form handler as a service:
         # app/config/services.yml
         services:
             app.form.handler.registration:
-                class: AppBundle\Form\Handler\RegistrationFormHandler
+                class: follow_the_rhythm\SymfonyBundle\Form\Handler\RegistrationFormHandler
                 arguments: ["@fos_user.registration.form", "@request", "@fos_user.user_manager", "@fos_user.mailer", "@fos_user.util.token_generator"]
                 scope: request
                 public: false
@@ -268,7 +268,7 @@ configuring your form handler as a service:
 
             <services>
 
-                <service id="app.form.handler.registration" class="AppBundle\Form\Handler\RegistrationFormHandler" scope="request" public="false">
+                <service id="app.form.handler.registration" class="follow_the_rhythm\SymfonyBundle\Form\Handler\RegistrationFormHandler" scope="request" public="false">
                     <argument type="service" id="fos_user.registration.form" />
                     <argument type="service" id="request" />
                     <argument type="service" id="fos_user.user_manager" />

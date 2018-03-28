@@ -1,5 +1,5 @@
 <?php
-// src/AppBundle/Form/DataTransformer/InvitationToCodeTransformer.php
+// src/follow_the_rhythm\SymfonyBundle/Form/DataTransformer/InvitationToCodeTransformer.php
 
 namespace follow_the_rhythm\SymfonyBundle\Form\DataTransformer;
 
@@ -45,9 +45,9 @@ class InvitationToCodeTransformer implements DataTransformerInterface
 
         $dql = <<<DQL
 SELECT i
-FROM follow_the_rhythmSymfonyBundle:Invitation i
+FROM follow_the_rhythm\SymfonyBundle:Invitation i
 WHERE i.code = :code
-AND NOT EXISTS(SELECT 1 FROM follow_the_rhythmSymfonyBundle:User u WHERE u.invitation = i)
+AND NOT EXISTS(SELECT 1 FROM follow_the_rhythm\SymfonyBundle:User u WHERE u.invitation = i)
 DQL;
 
         return $this->entityManager

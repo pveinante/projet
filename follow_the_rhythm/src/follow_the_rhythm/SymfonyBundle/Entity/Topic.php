@@ -186,8 +186,8 @@ class Topic
         return $this->categorie;
     }
     
-            public function _toString()
+            public function __toString()
     {
-            return $this->getTitre();
+            return $this->titre;
     }
 }

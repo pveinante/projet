@@ -155,8 +155,8 @@ class Signalement
         return $this->topic;
     }
     
-        public function _toString()
+        public function __toString()
     {
-            return $this->getMessage();
+            return $this->message;
     }
 }

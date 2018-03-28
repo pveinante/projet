@@ -110,7 +110,7 @@ Override the default registration form with your own::
     <?php
     // src/AppBundle/Form/RegistrationFormType.php
 
-    namespace AppBundle\Form;
+    namespace follow_the_rhythm\SymfonyBundle\Form;
 
     use Symfony\Component\Form\AbstractType;
     use Symfony\Component\Form\FormBuilderInterface;
@@ -138,13 +138,13 @@ Create the invitation field::
     <?php
     // src/AppBundle/Form/InvitationFormType.php
 
-    namespace AppBundle\Form;
+    namespace follow_the_rhythm\SymfonyBundle\Form;
 
     use Symfony\Component\Form\AbstractType;
     use Symfony\Component\Form\FormBuilderInterface;
     use Symfony\Component\OptionsResolver\OptionsResolverInterface;
     use Doctrine\ORM\EntityRepository;
-    use AppBundle\Form\DataTransformer\InvitationToCodeTransformer;
+    use follow_the_rhythm\SymfonyBundle\Form\InvitationToCodeTransformer;
 
     class InvitationFormType extends AbstractType
     {
@@ -184,7 +184,7 @@ Create the custom data transformer::
     <?php
     // src/AppBundle/Form/InvitationToCodeTransformer.php
 
-    namespace AppBundle\Form\DataTransformer;
+    namespace follow_the_rhythm\SymfonyBundle\Form\DataTransformer;
 
     use AppBundle\Entity\Invitation;
     use Doctrine\ORM\EntityManager;
@@ -251,18 +251,18 @@ Register your custom form type in the container:
         # app/config/services.yml
         services:
             app.form.registration:
-                class: AppBundle\Form\RegistrationFormType
+                class: follow_the_rhythm\SymfonyBundle\Form\RegistrationFormType
                 tags:
                     - { name: "form.type", alias: "app_user_registration" }
 
             app.form.invitation:
-                class: AppBundle\Form\InvitationFormType
+                class: follow_the_rhythm\SymfonyBundle\Form\InvitationFormType
                 arguments: ['@app.form.data_transformer.invitation']
                 tags:
                     - { name: "form.type", alias: "app_invitation_type" }
 
             app.form.data_transformer.invitation:
-                class: AppBundle\Form\DataTransformer\InvitationToCodeTransformer
+                class: follow_the_rhythm\SymfonyBundle\Form\DataTransformer\InvitationToCodeTransformer
                 arguments: ['@doctrine.orm.entity_manager']
                 public: false
 
@@ -278,17 +278,17 @@ Register your custom form type in the container:
 
             <services>
 
-                <service id="app.form.registration" class="AppBundle\Form\RegistrationFormType">
+                <service id="app.form.registration" class="follow_the_rhythm\SymfonyBundle\Form\RegistrationFormType">
                     <tag name="form.type" alias="app_user_registration" />
                 </service>
 
-                <service id="app.form.invitation" class="AppBundle\Form\InvitationFormType">
+                <service id="app.form.invitation" class="follow_the_rhythm\SymfonyBundle\Form\InvitationFormType">
                     <argument type="service" id="app.form.data_transformer.invitation"/>
                     <tag name="form.type" alias="app_invitation_type" />
                 </service>
 
                 <service id="app.form.data_transformer.invitation"
-                    class="AppBundle\Form\DataTransformer\InvitationToCodeTransformer"
+                    class="follow_the_rhythm\SymfonyBundle\Form\DataTransformer\InvitationToCodeTransformer"
                     public="false
                 >
                     <argument type="service" id="doctrine.orm.entity_manager"/>

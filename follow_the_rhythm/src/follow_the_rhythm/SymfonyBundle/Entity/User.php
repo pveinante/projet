@@ -284,8 +284,8 @@ class User extends BaseUser
     }
     
     
-    public function _toString()
+    public function __toString()
     {
-            return $this->getNbSignalement();
+            return $this->nbSignalement;
     }
 }

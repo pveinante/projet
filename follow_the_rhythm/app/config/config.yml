@@ -92,8 +92,6 @@ easy_admin:
             class: follow_the_rhythm\SymfonyBundle\Entity\Concert
         Message:
             class: follow_the_rhythm\SymfonyBundle\Entity\Message
-        Moderateur:
-            class: follow_the_rhythm\SymfonyBundle\Entity\Moderateur
         Notification:
             class: follow_the_rhythm\SymfonyBundle\Entity\Notification
         Signalement:
@@ -102,3 +100,5 @@ easy_admin:
             class: follow_the_rhythm\SymfonyBundle\Entity\Topic
         User:
             class: follow_the_rhythm\SymfonyBundle\Entity\User
+        Invitation:
+            class: follow_the_rhythm\SymfonyBundle\Entity\Invitation

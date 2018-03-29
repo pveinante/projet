@@ -10,4 +10,12 @@ namespace follow_the_rhythm\SymfonyBundle\Repository;
  */
 class TopicRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getSearchTopic($recherche) 
+	{
+        $gestionnaireEntite=$this->_em;
+        
+        $requete=$gestionnaireEntite->createQuery('SELECT t FROM follow_the_rhythmSymfonyBundle:Topic t where t.titre LIKE :recherche');
+        $requete->setParameter('recherche','%'.$recherche.'%');
+		return $requete->getResult();
+	}
 }

@@ -24,5 +24,13 @@ class ConcertRepository extends \Doctrine\ORM\EntityRepository
         return $artiste;
     }
     
+    public function getSearchConcert($recherche) 
+	{
+        $gestionnaireEntite=$this->_em;
+        
+        $requete=$gestionnaireEntite->createQuery('SELECT c FROM follow_the_rhythmSymfonyBundle:Concert c where c.nom LIKE :recherche');
+        $requete->setParameter('recherche','%'.$recherche.'%');
+		return $requete->getResult();
+	}
 
 }

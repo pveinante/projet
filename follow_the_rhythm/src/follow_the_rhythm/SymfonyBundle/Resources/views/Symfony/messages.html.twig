@@ -11,13 +11,14 @@
   </script>
   
   <div class="container">
-    <div class="row">
       <div class="panel panel-default">
         <div class="panel-heading"><h2><b><span class="fa fa-commenting"></span> {{titre}}</b></h2>
          Nombre de messages par page : <select onChange='changerNbParPage()' id='nb'>
           <option value='{{nbParPage}}' selected>Nombre courant : {{nbParPage}}</option><option value=5>5</option><option value=10>10</option><option value=25>25</option><option value=50>50</option>
         </select>
         </div>
+            <div class="row">
+              <div class="col-lg-12">
      
       <div class="list-group">
 
@@ -35,8 +36,9 @@
         
           {% if messageCourant.topic.id == topicCourant %}
           <div class="list-group-item">
-            <p></p><label>{{tabCreateur[messageCourant.id]}} le {{ messageCourant.date|date('d-m-Y') }} à {{messageCourant.date|date('H.i')}}</label></p>
+            <p></p><label>{{tabCreateur[messageCourant.id]}} le {{ messageCourant.date|date('d-m-Y') }} à {{messageCourant.date|date('H.i')}}{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %} <span class='glyphicon glyphicon-play'></span> <a onclick='return confirm("Merci de votre prévention. Etes-vous sûr de voulour signaler ce message ?")' href='{{path('follow_the_rhythm_signaler',{'message':messageCourant.id})}}' title='Signaler comme message inapproprié'>Signaler</a>{% endif %}</label></p>
             <p align="justify"><label>{{messageCourant.contenu}}</label></p>
+            
           </div>
           {% endif %}
         {% endfor %}
@@ -44,16 +46,21 @@
       <!--AFFICHAGE DU FORMULAIRE-->
       <div class="list-group">
         <div class="list-group-item">
-          <form method="post" id=soumettreMessageForm name="formulaireMessage" {{form_enctype(formulaireMessage)}}>
-              {{ form_widget(formulaireMessage)}}
-              <span id='caracteres'>100 caractères restants</span><br />
-              <input type=submit class="btn btn-primary" onsubmit="return false" onclick="return confirm('Vous allez soumettre un message sur le topic {{titre}}. Voulez-vous continuer ?');"><a href="{{path('follow_the_rhythm_messages',{'topicId': topicCourant, 'page': 1, 'nbParPage': nbParPage})}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a>
-            <a title="Renvoie à l'accueil du forum." href="/follow_the_rhythm/web/app_dev.php/accueilForum"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour au forum</button></a><a title="Renvoie à l'accueil de Follow the Rhythm." href="/follow_the_rhythm/web/app_dev.php/accueil/1/1"><button style='margin-left: 4px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour à l'accueil</button></a></br>
-            </br>
-          </form>
+          {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            <form method="post" id=soumettreMessageForm name="formulaireMessage" {{form_enctype(formulaireMessage)}}>
+                {{ form_widget(formulaireMessage)}}
+                <span id='caracteres'>100 caractères restants</span><br /><br />
+                <input type=submit class="btn btn-primary" onsubmit="return false" onclick="return confirm('Vous allez soumettre un message sur le topic {{titre}}. Voulez-vous continuer ?');"><a href="{{path('follow_the_rhythm_messages',{'topicId': topicCourant, 'page': 1, 'nbParPage': nbParPage})}}">   <input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a>
+              <a title="Renvoie à l'accueil du forum." href="/follow_the_rhythm/web/app_dev.php/accueilForum"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour au forum</button></a><a title="Renvoie à l'accueil de Follow the Rhythm." href="/follow_the_rhythm/web/app_dev.php/accueil/1/1/25"><button style='margin-left: 4px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour à l'accueil</button></a></br>
+              </br>
+            </form>
+          {% else %}
+            <a title="Connexion à Follow The Rhythm" href="/follow_the_rhythm/web/app_dev.php/login"><button type="button" class="btn btn-primary"><span class="fa fa-user"></span> Connectez-vous à votre compte </button></a> pour ajouter un message.
+          {% endif %}
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </div>
@@ -62,8 +69,8 @@
                 function actualiserCaracteres()
                 {
                   if (document.getElementById("message_message").value.length < 159)
-                  document.getElementById("caracteres").firstChild.nodeValue = 160 - document.getElementById("message_message").value.length + " caractères restants.";
-                  else document.getElementById("caracteres").firstChild.nodeValue = 160 - document.getElementById("message_message").value.length + " caractère restant.";
+                  document.getElementById("caracteres").firstChild.nodeValue = 160 - document.getElementById("message_message").value.length + " caractères restants";
+                  else document.getElementById("caracteres").firstChild.nodeValue = 160 - document.getElementById("message_message").value.length + " caractère restant";
                 } 
               </script>
 <script>

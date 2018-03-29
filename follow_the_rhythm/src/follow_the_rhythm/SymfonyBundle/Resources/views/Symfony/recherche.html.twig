@@ -1,0 +1,67 @@
+{% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}
+    
+{% block contenuCentral %}
+<style>
+	.footer
+	{
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+	}
+</style>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h2><b><span class="glyphicon glyphicon-search"></span> Résultat de la recherche pour "{{ recherche }}"</b><a title="Renvoie à l'accueil de Follow the Rhythm." href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 2, 'nbParPage': 25})}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour à l'accueil</button></a></h2></div>
+        <div class="row">
+        	<div class="col-lg-12">
+               <div class="container">
+                    <div class ="row">
+        	            <div class ="col-lg-3">
+    			            <label><b><h3>Artistes</h3></b>
+    			            {% for artisteCourant in resultRechercheArtiste %}
+        		                <p><a title="Aller à la page de {{artisteCourant}}." href="{{path('follow_the_rhythm_pageArtiste',{'id':artisteCourant.id})}}">{{artisteCourant.nomDeScene}}</a></p>
+        		            {% endfor %}
+        		            </label>
+    		            </div>
+        	        </div>
+                </div>
+                <div class="container">
+                    <div class ="row">
+    		            <div class ="col-lg-3">
+    			            <label><b><h3>Concerts</h3></b>
+    			            {% for concertCourant in resultRechercheConcert %}
+        		                <p><a title="Aller à la page du concert." href="{{path('follow_the_rhythm_pageConcert',{'id':concertCourant.id})}}" >{{concertCourant}}</a></p>
+        		            {% endfor %}
+        		            </label>
+    		            </div>
+    	            </div>
+                </div>
+                <div class="container">
+                    <div class ="row">
+        	            <div class ="col-lg-3">
+        		            <label><b><h3>Topics</h3></b>
+        		            {% for topicCourant in resultRechercheTopic %}
+        		                <p><a href="{{path('follow_the_rhythm_messages',{'topicId':topicCourant.id, 'page':1, 'nbParPage':25})}}">{{topicCourant}}</a></p>
+        		            {% endfor %}
+        		            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class ="row">
+        	            <div class ="col-lg-3">
+        		            <label><b><h3>Utilisateurs</h3></b>
+        		            {% for topicCourant in resultRechercheTopic %}
+        		                <p><a href="{{path('follow_the_rhythm_messages',{'topicId':topicCourant.id, 'page':1, 'nbParPage':25})}}">{{topicCourant}}</a></p>
+        		            {% endfor %}
+        		            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}

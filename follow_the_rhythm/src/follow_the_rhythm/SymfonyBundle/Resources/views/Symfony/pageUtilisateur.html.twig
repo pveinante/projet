@@ -3,12 +3,12 @@
 {% block contenuCentral %}
 <body>
   <div class="container">
-    <div class="row">
       <div class="panel panel-default">
       <!--default panel content-->
         <div class="panel-heading"><h2><b>{{user.username}}</h2></b></div>
-     
-        <div class="list-group">
+     <div class="row">
+       <div class="col-lg-12">
+           <div class="list-group">
             <div class="list-group-item">
             <p align="center"><img src="{{ asset('upload/images/Stickman.png') }}" /></p>
                <p><button class="btn btn-primary" onclick="isNotConnected();">Ajouter</button></p>
@@ -21,6 +21,7 @@
                     {% endfor %}
         </div>
       </div>
+    </div>
     </div>
   </div>
 </div>

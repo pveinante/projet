@@ -21,33 +21,33 @@ class __TwigTemplate_e24760ea05ef0602eeb920c2575f89da6930b1b986e7c5e1c026c4b9bcd
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2e7c678e32dbe2017d58dc054ade642ba46c9bbb07fe77687d291eb5b378295a = $this->env->getExtension("native_profiler");
-        $__internal_2e7c678e32dbe2017d58dc054ade642ba46c9bbb07fe77687d291eb5b378295a->enter($__internal_2e7c678e32dbe2017d58dc054ade642ba46c9bbb07fe77687d291eb5b378295a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:pageUtilisateur.html.twig"));
+        $__internal_1002e39334a8965767da76be463230d4726a28a4d28f519ee28082f5a593b304 = $this->env->getExtension("native_profiler");
+        $__internal_1002e39334a8965767da76be463230d4726a28a4d28f519ee28082f5a593b304->enter($__internal_1002e39334a8965767da76be463230d4726a28a4d28f519ee28082f5a593b304_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:pageUtilisateur.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_2e7c678e32dbe2017d58dc054ade642ba46c9bbb07fe77687d291eb5b378295a->leave($__internal_2e7c678e32dbe2017d58dc054ade642ba46c9bbb07fe77687d291eb5b378295a_prof);
+        $__internal_1002e39334a8965767da76be463230d4726a28a4d28f519ee28082f5a593b304->leave($__internal_1002e39334a8965767da76be463230d4726a28a4d28f519ee28082f5a593b304_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_40a9762204ceccbc4a7b320f62164903d960c92ff7eac495c0b7f0103e617d92 = $this->env->getExtension("native_profiler");
-        $__internal_40a9762204ceccbc4a7b320f62164903d960c92ff7eac495c0b7f0103e617d92->enter($__internal_40a9762204ceccbc4a7b320f62164903d960c92ff7eac495c0b7f0103e617d92_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_3b8bbb8e9cad8f9958fb30abe6a315d00832b7ccb77084ad592f4484b21c8634 = $this->env->getExtension("native_profiler");
+        $__internal_3b8bbb8e9cad8f9958fb30abe6a315d00832b7ccb77084ad592f4484b21c8634->enter($__internal_3b8bbb8e9cad8f9958fb30abe6a315d00832b7ccb77084ad592f4484b21c8634_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<body>
   <div class=\"container\">
-    <div class=\"row\">
       <div class=\"panel panel-default\">
       <!--default panel content-->
         <div class=\"panel-heading\"><h2><b>";
-        // line 9
+        // line 8
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username", array()), "html", null, true);
         echo "</h2></b></div>
-     
-        <div class=\"list-group\">
+     <div class=\"row\">
+       <div class=\"col-lg-12\">
+           <div class=\"list-group\">
             <div class=\"list-group-item\">
             <p align=\"center\"><img src=\"";
         // line 13
@@ -79,6 +79,7 @@ class __TwigTemplate_e24760ea05ef0602eeb920c2575f89da6930b1b986e7c5e1c026c4b9bcd
         echo "        </div>
       </div>
     </div>
+    </div>
   </div>
 </div>
 
@@ -91,7 +92,7 @@ class __TwigTemplate_e24760ea05ef0602eeb920c2575f89da6930b1b986e7c5e1c026c4b9bcd
 </body>
 ";
         
-        $__internal_40a9762204ceccbc4a7b320f62164903d960c92ff7eac495c0b7f0103e617d92->leave($__internal_40a9762204ceccbc4a7b320f62164903d960c92ff7eac495c0b7f0103e617d92_prof);
+        $__internal_3b8bbb8e9cad8f9958fb30abe6a315d00832b7ccb77084ad592f4484b21c8634->leave($__internal_3b8bbb8e9cad8f9958fb30abe6a315d00832b7ccb77084ad592f4484b21c8634_prof);
 
     }
 
@@ -107,7 +108,7 @@ class __TwigTemplate_e24760ea05ef0602eeb920c2575f89da6930b1b986e7c5e1c026c4b9bcd
 
     public function getDebugInfo()
     {
-        return array (  79 => 22,  68 => 19,  64 => 17,  60 => 16,  54 => 13,  47 => 9,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  79 => 22,  68 => 19,  64 => 17,  60 => 16,  54 => 13,  46 => 8,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -115,12 +116,12 @@ class __TwigTemplate_e24760ea05ef0602eeb920c2575f89da6930b1b986e7c5e1c026c4b9bcd
 /* {% block contenuCentral %}*/
 /* <body>*/
 /*   <div class="container">*/
-/*     <div class="row">*/
 /*       <div class="panel panel-default">*/
 /*       <!--default panel content-->*/
 /*         <div class="panel-heading"><h2><b>{{user.username}}</h2></b></div>*/
-/*      */
-/*         <div class="list-group">*/
+/*      <div class="row">*/
+/*        <div class="col-lg-12">*/
+/*            <div class="list-group">*/
 /*             <div class="list-group-item">*/
 /*             <p align="center"><img src="{{ asset('upload/images/Stickman.png') }}" /></p>*/
 /*                <p><button class="btn btn-primary" onclick="isNotConnected();">Ajouter</button></p>*/
@@ -133,6 +134,7 @@ class __TwigTemplate_e24760ea05ef0602eeb920c2575f89da6930b1b986e7c5e1c026c4b9bcd
 /*                     {% endfor %}*/
 /*         </div>*/
 /*       </div>*/
+/*     </div>*/
 /*     </div>*/
 /*   </div>*/
 /* </div>*/

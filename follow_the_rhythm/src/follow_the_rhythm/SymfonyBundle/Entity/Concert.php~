@@ -145,23 +145,8 @@ class Concert
     {
         $this->actualite = new \Doctrine\Common\Collections\ArrayCollection();
         $this->artiste = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->utilisateur = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
-
-    /**
-     * Set artiste
-     *
-     * @param \follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste
-     *
-     * @return Concert
-     */
-    public function setArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste)
-    {
-        $this->artiste = $artiste;
-
-        return $this;
-    }
 
     /**
      * Add artiste
@@ -222,5 +207,10 @@ class Concert
     public function getDateConcert()
     {
         return $this->dateConcert;
+    }
+    
+            public function __toString()
+    {
+            return $this->nom;
     }
 }

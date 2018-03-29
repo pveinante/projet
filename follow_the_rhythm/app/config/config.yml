@@ -75,9 +75,9 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: follow_the_rhythm\SymfonyBundle\Entity\User
-    registration:
-        form:
-            type: app_user_registration
+    #registration:
+    #    form:
+    #        type: app_user_registration
 
 easy_admin:
     site_name: 'Follow The Rhythm'
@@ -100,5 +100,3 @@ easy_admin:
             class: follow_the_rhythm\SymfonyBundle\Entity\Topic
         User:
             class: follow_the_rhythm\SymfonyBundle\Entity\User
-        Invitation:
-            class: follow_the_rhythm\SymfonyBundle\Entity\Invitation

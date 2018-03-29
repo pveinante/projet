@@ -21,38 +21,40 @@ class __TwigTemplate_5f80f176fb76d7f99445b850f93e4e52e06dd362f855fa18660b3f368a7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d4f0fda8bce8955d78973fbcd3c3ae7d20362fb8ce267ccbb65043b804982076 = $this->env->getExtension("native_profiler");
-        $__internal_d4f0fda8bce8955d78973fbcd3c3ae7d20362fb8ce267ccbb65043b804982076->enter($__internal_d4f0fda8bce8955d78973fbcd3c3ae7d20362fb8ce267ccbb65043b804982076_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:credits.html.twig"));
+        $__internal_5d953e0d547fe31385f0d039899af5fb954a82565d727bab8bbad709171da72c = $this->env->getExtension("native_profiler");
+        $__internal_5d953e0d547fe31385f0d039899af5fb954a82565d727bab8bbad709171da72c->enter($__internal_5d953e0d547fe31385f0d039899af5fb954a82565d727bab8bbad709171da72c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:credits.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d4f0fda8bce8955d78973fbcd3c3ae7d20362fb8ce267ccbb65043b804982076->leave($__internal_d4f0fda8bce8955d78973fbcd3c3ae7d20362fb8ce267ccbb65043b804982076_prof);
+        $__internal_5d953e0d547fe31385f0d039899af5fb954a82565d727bab8bbad709171da72c->leave($__internal_5d953e0d547fe31385f0d039899af5fb954a82565d727bab8bbad709171da72c_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_079d5cd04aff450307ac3dcea790c3ddcadb0017377d6e468bdebf4f15fca364 = $this->env->getExtension("native_profiler");
-        $__internal_079d5cd04aff450307ac3dcea790c3ddcadb0017377d6e468bdebf4f15fca364->enter($__internal_079d5cd04aff450307ac3dcea790c3ddcadb0017377d6e468bdebf4f15fca364_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_558483648efafff48ec7b2164eb769ab8e672a9e9956b964f2b41103b6ea4b21 = $this->env->getExtension("native_profiler");
+        $__internal_558483648efafff48ec7b2164eb769ab8e672a9e9956b964f2b41103b6ea4b21->enter($__internal_558483648efafff48ec7b2164eb769ab8e672a9e9956b964f2b41103b6ea4b21_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "       
     <div class=\"container\">
-        <div class=\"row\">
+
             <div class=\"panel panel-default\">
                 <div class=\"panel-heading\"><h2><b><span class=\"glyphicon glyphicon-file\"></span> Crédits</b></h2>
                 </div>
+                        <div class=\"row\">
+                            <div class=\"col-lg-12\">
                 <div class=\"list-group\">
                     <div class=\"list-group-item\">
                         <div align=\"justify\"> 
                             <h3><b>Ce projet a été réalisé dans le cadre d'un projet de DUT informatique de l' 
                             <a href=\"";
-        // line 14
+        // line 16
         echo "https://www.iutbayonne.univ-pau.fr/";
         echo "\"><FONT COLOR=\"#0000FF\">IUT de Bayonne et du Pays Basque</FONT></a>
                             par des <a href=";
-        // line 15
+        // line 17
         echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_contacts");
         echo "><FONT COLOR=\"#0000FF\">étudiants</FONT></a>
                             de seconde année lors de l'année universitaire 2017/2018.</b></h3></Br>
@@ -116,11 +118,12 @@ class __TwigTemplate_5f80f176fb76d7f99445b850f93e4e52e06dd362f855fa18660b3f368a7
                     </div>
                 </div>
             </div>
+            </div>
         </div>
     </div>
 ";
         
-        $__internal_079d5cd04aff450307ac3dcea790c3ddcadb0017377d6e468bdebf4f15fca364->leave($__internal_079d5cd04aff450307ac3dcea790c3ddcadb0017377d6e468bdebf4f15fca364_prof);
+        $__internal_558483648efafff48ec7b2164eb769ab8e672a9e9956b964f2b41103b6ea4b21->leave($__internal_558483648efafff48ec7b2164eb769ab8e672a9e9956b964f2b41103b6ea4b21_prof);
 
     }
 
@@ -136,7 +139,7 @@ class __TwigTemplate_5f80f176fb76d7f99445b850f93e4e52e06dd362f855fa18660b3f368a7
 
     public function getDebugInfo()
     {
-        return array (  56 => 15,  52 => 14,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  58 => 17,  54 => 16,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -144,10 +147,12 @@ class __TwigTemplate_5f80f176fb76d7f99445b850f93e4e52e06dd362f855fa18660b3f368a7
 /* {% block contenuCentral %}*/
 /*        */
 /*     <div class="container">*/
-/*         <div class="row">*/
+/* */
 /*             <div class="panel panel-default">*/
 /*                 <div class="panel-heading"><h2><b><span class="glyphicon glyphicon-file"></span> Crédits</b></h2>*/
 /*                 </div>*/
+/*                         <div class="row">*/
+/*                             <div class="col-lg-12">*/
 /*                 <div class="list-group">*/
 /*                     <div class="list-group-item">*/
 /*                         <div align="justify"> */
@@ -214,6 +219,7 @@ class __TwigTemplate_5f80f176fb76d7f99445b850f93e4e52e06dd362f855fa18660b3f368a7
 /*                         </div>*/
 /*                     </div>*/
 /*                 </div>*/
+/*             </div>*/
 /*             </div>*/
 /*         </div>*/
 /*     </div>*/

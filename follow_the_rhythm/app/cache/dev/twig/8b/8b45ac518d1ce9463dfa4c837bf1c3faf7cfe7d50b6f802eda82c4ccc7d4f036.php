@@ -21,37 +21,80 @@ class __TwigTemplate_fa6d473191d74585fd92ffa3e7cc15d69f508477c1370c626b253c94517
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a5fe573788b9f4de4195ccc07eab74df013634cfc8cc590de7aae4a970e5ca6c = $this->env->getExtension("native_profiler");
-        $__internal_a5fe573788b9f4de4195ccc07eab74df013634cfc8cc590de7aae4a970e5ca6c->enter($__internal_a5fe573788b9f4de4195ccc07eab74df013634cfc8cc590de7aae4a970e5ca6c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorie.html.twig"));
+        $__internal_12a26a2dcae982a1407972a3261fcd907125c80d8f75cca0c4ced5c62d0d846a = $this->env->getExtension("native_profiler");
+        $__internal_12a26a2dcae982a1407972a3261fcd907125c80d8f75cca0c4ced5c62d0d846a->enter($__internal_12a26a2dcae982a1407972a3261fcd907125c80d8f75cca0c4ced5c62d0d846a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:categorie.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_a5fe573788b9f4de4195ccc07eab74df013634cfc8cc590de7aae4a970e5ca6c->leave($__internal_a5fe573788b9f4de4195ccc07eab74df013634cfc8cc590de7aae4a970e5ca6c_prof);
+        $__internal_12a26a2dcae982a1407972a3261fcd907125c80d8f75cca0c4ced5c62d0d846a->leave($__internal_12a26a2dcae982a1407972a3261fcd907125c80d8f75cca0c4ced5c62d0d846a_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_a6bb4748a04ccecfbf07cc642e281be7dd6adfaa509f3bf8651c6b3dae92333d = $this->env->getExtension("native_profiler");
-        $__internal_a6bb4748a04ccecfbf07cc642e281be7dd6adfaa509f3bf8651c6b3dae92333d->enter($__internal_a6bb4748a04ccecfbf07cc642e281be7dd6adfaa509f3bf8651c6b3dae92333d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_361e3e79e927bce79d39e8323db67b7d168aa7da4291ab98d2da1ea4fed34eb2 = $this->env->getExtension("native_profiler");
+        $__internal_361e3e79e927bce79d39e8323db67b7d168aa7da4291ab98d2da1ea4fed34eb2->enter($__internal_361e3e79e927bce79d39e8323db67b7d168aa7da4291ab98d2da1ea4fed34eb2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<div class=\"container\">
-    <div class=\"row\">
         <div class=\"panel panel-default\">
             <div class=\"panel-heading\"><h2><b><i class=\"fa fa-";
-        // line 7
+        // line 6
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["icon"]) ? $context["icon"] : $this->getContext($context, "icon")), (isset($context["catId"]) ? $context["catId"] : $this->getContext($context, "catId")), array(), "array"), "html", null, true);
         echo "\" aria-hidden=\"true\"></i> ";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["cat"]) ? $context["cat"] : $this->getContext($context, "cat")), (isset($context["catId"]) ? $context["catId"] : $this->getContext($context, "catId")), array(), "array"), "html", null, true);
-        echo "</b><a title='Créer un nouveau topic dans cette catégorie.' href=\"";
-        echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreTopicNews");
-        echo "\"><button style='margin-left: 32px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Nouveau topic</button></a></h2></div>
+        echo "</b>
             ";
-        // line 8
+        // line 7
+        if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+            // line 8
+            echo "            ";
+            if (((isset($context["catId"]) ? $context["catId"] : $this->getContext($context, "catId")) == 1)) {
+                // line 9
+                echo "           \t\t<a title='Créer un nouveau topic dans cette catégorie.' href=\"";
+                echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreTopicNews");
+                echo "\"><button style='margin-left: 32px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Nouveau topic</button></a>
+            ";
+            }
+            // line 11
+            echo "            ";
+            if (((isset($context["catId"]) ? $context["catId"] : $this->getContext($context, "catId")) == 2)) {
+                // line 12
+                echo "           \t\t<a title='Créer un nouveau topic dans cette catégorie.' href=\"";
+                echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreTopicEspacePrive");
+                echo "\"><button style='margin-left: 32px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Nouveau topic</button></a>
+            ";
+            }
+            // line 14
+            echo "            ";
+            if (((isset($context["catId"]) ? $context["catId"] : $this->getContext($context, "catId")) == 3)) {
+                // line 15
+                echo "           \t\t<a title='Créer un nouveau topic dans cette catégorie.' href=\"";
+                echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreTopicConcerts");
+                echo "\"><button style='margin-left: 32px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Nouveau topic</button></a>
+            ";
+            }
+            // line 17
+            echo "            ";
+            if (((isset($context["catId"]) ? $context["catId"] : $this->getContext($context, "catId")) == 4)) {
+                // line 18
+                echo "           \t\t<a title='Créer un nouveau topic dans cette catégorie.' href=\"";
+                echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_soumettreTopicPromotions");
+                echo "\"><button style='margin-left: 32px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Nouveau topic</button></a>
+            ";
+            }
+            // line 20
+            echo "            ";
+        }
+        // line 21
+        echo "            </h2></div>
+                <div class=\"row\">
+                \t<div class=\"col-lg-12\">
+            ";
+        // line 24
         if (twig_test_empty((isset($context["tabTopics"]) ? $context["tabTopics"] : $this->getContext($context, "tabTopics")))) {
-            // line 9
+            // line 25
             echo "            <div class=\"container\">
 \t            <div class =\"row\">
 \t\t            <div class =\"col-lg-12\">
@@ -61,7 +104,7 @@ class __TwigTemplate_fa6d473191d74585fd92ffa3e7cc15d69f508477c1370c626b253c94517
             </div>
             ";
         } else {
-            // line 17
+            // line 33
             echo "            <div class=\"container\">
 \t            <div class =\"row\">
 \t\t            <div class =\"col-lg-6\">
@@ -79,16 +122,16 @@ class __TwigTemplate_fa6d473191d74585fd92ffa3e7cc15d69f508477c1370c626b253c94517
 \t            </div>
             </div>
             ";
-            // line 33
+            // line 49
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["tabTopics"]) ? $context["tabTopics"] : $this->getContext($context, "tabTopics")));
             foreach ($context['_seq'] as $context["_key"] => $context["topicCourant"]) {
-                // line 34
+                // line 50
                 echo "                <div class=\"container\">
 \t            <div class =\"row\">
 \t\t            <div class =\"col-lg-6\">
 \t\t\t            <a href=\"";
-                // line 37
+                // line 53
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_messages", array("topicId" => $this->getAttribute($context["topicCourant"], "id", array()), "page" => 1, "nbParPage" => 25)), "html", null, true);
                 echo "\"><h5>";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["topicCourant"], "titre", array()), "html", null, true);
@@ -96,7 +139,7 @@ class __TwigTemplate_fa6d473191d74585fd92ffa3e7cc15d69f508477c1370c626b253c94517
 \t\t            </div>
 \t\t            <div class =\"col-lg-2\">
 \t\t\t            <a href=\"";
-                // line 40
+                // line 56
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_pageUtilisateur", array("id" => $this->getAttribute($this->getAttribute($context["topicCourant"], "utilisateur", array()), "id", array()))), "html", null, true);
                 echo "\"><h5 align=\"center\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["topicCourant"], "utilisateur", array()), "username", array()), "html", null, true);
@@ -104,13 +147,13 @@ class __TwigTemplate_fa6d473191d74585fd92ffa3e7cc15d69f508477c1370c626b253c94517
 \t\t            </div>
 \t\t            <div class =\"col-lg-1\">
 \t\t\t            <h5 align=\"center\">";
-                // line 43
+                // line 59
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tabNbMessages"]) ? $context["tabNbMessages"] : $this->getContext($context, "tabNbMessages")), $this->getAttribute($context["topicCourant"], "id", array()), array(), "array"), "html", null, true);
                 echo "</h5> 
 \t\t            </div>
 \t\t            <div class =\"col-lg-3\">
 \t\t\t            <h5 align=\"center\">";
-                // line 46
+                // line 62
                 if (($this->getAttribute((isset($context["tabNbMessages"]) ? $context["tabNbMessages"] : $this->getContext($context, "tabNbMessages")), $this->getAttribute($context["topicCourant"], "id", array()), array(), "array") != 0)) {
                     echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["dateD"]) ? $context["dateD"] : $this->getContext($context, "dateD")), $this->getAttribute($context["topicCourant"], "id", array()), array(), "array"), "d-m-Y"), "html", null, true);
                     echo " à ";
@@ -125,11 +168,13 @@ class __TwigTemplate_fa6d473191d74585fd92ffa3e7cc15d69f508477c1370c626b253c94517
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['topicCourant'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 51
+            // line 67
             echo "            ";
         }
-        // line 52
-        echo "            <a title=\"Renvoie à l'accueil du forum.\" href=\"/follow_the_rhythm/web/app_dev.php/accueilaccueilForum\"><button style='margin-top: 32px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Retour au forum</button></a><a title=\"Renvoie à l'accueil de Follow the Rhythm.\" href=\"/follow_the_rhythm/web/app_dev.php/accueil/1/1\"><button style='margin-left: 8px; margin-top: 32px;' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Retour à l'accueil</button></a>
+        // line 68
+        echo "\t            \t<a title=\"Renvoie à l'accueil du forum.\" href=\"/follow_the_rhythm/web/app_dev.php/accueilForum\"><button style='margin: 16px' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Retour au forum</button></a>
+\t            \t<a title=\"Renvoie à l'accueil de Follow the Rhythm.\" href=\"/follow_the_rhythm/web/app_dev.php/accueil/1/1/25\"><button style='margin: 16px' type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-arrow-left\"></span> Retour à l'accueil</button></a>
+                </div>
                 </div>
             </div>
         </div>
@@ -138,7 +183,7 @@ class __TwigTemplate_fa6d473191d74585fd92ffa3e7cc15d69f508477c1370c626b253c94517
     
 ";
         
-        $__internal_a6bb4748a04ccecfbf07cc642e281be7dd6adfaa509f3bf8651c6b3dae92333d->leave($__internal_a6bb4748a04ccecfbf07cc642e281be7dd6adfaa509f3bf8651c6b3dae92333d_prof);
+        $__internal_361e3e79e927bce79d39e8323db67b7d168aa7da4291ab98d2da1ea4fed34eb2->leave($__internal_361e3e79e927bce79d39e8323db67b7d168aa7da4291ab98d2da1ea4fed34eb2_prof);
 
     }
 
@@ -154,16 +199,32 @@ class __TwigTemplate_fa6d473191d74585fd92ffa3e7cc15d69f508477c1370c626b253c94517
 
     public function getDebugInfo()
     {
-        return array (  132 => 52,  129 => 51,  114 => 46,  108 => 43,  100 => 40,  92 => 37,  87 => 34,  83 => 33,  65 => 17,  55 => 9,  53 => 8,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  175 => 68,  172 => 67,  157 => 62,  151 => 59,  143 => 56,  135 => 53,  130 => 50,  126 => 49,  108 => 33,  98 => 25,  96 => 24,  91 => 21,  88 => 20,  82 => 18,  79 => 17,  73 => 15,  70 => 14,  64 => 12,  61 => 11,  55 => 9,  52 => 8,  50 => 7,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
 /*     */
 /* {% block contenuCentral %}*/
 /* <div class="container">*/
-/*     <div class="row">*/
 /*         <div class="panel panel-default">*/
-/*             <div class="panel-heading"><h2><b><i class="fa fa-{{icon[catId]}}" aria-hidden="true"></i> {{cat[catId]}}</b><a title='Créer un nouveau topic dans cette catégorie.' href="{{path('follow_the_rhythm_soumettreTopicNews')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a></h2></div>*/
+/*             <div class="panel-heading"><h2><b><i class="fa fa-{{icon[catId]}}" aria-hidden="true"></i> {{cat[catId]}}</b>*/
+/*             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}*/
+/*             {%if catId == 1 %}*/
+/*            		<a title='Créer un nouveau topic dans cette catégorie.' href="{{path('follow_the_rhythm_soumettreTopicNews')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a>*/
+/*             {% endif %}*/
+/*             {%if catId == 2 %}*/
+/*            		<a title='Créer un nouveau topic dans cette catégorie.' href="{{path('follow_the_rhythm_soumettreTopicEspacePrive')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a>*/
+/*             {% endif %}*/
+/*             {%if catId == 3 %}*/
+/*            		<a title='Créer un nouveau topic dans cette catégorie.' href="{{path('follow_the_rhythm_soumettreTopicConcerts')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a>*/
+/*             {% endif %}*/
+/*             {%if catId == 4 %}*/
+/*            		<a title='Créer un nouveau topic dans cette catégorie.' href="{{path('follow_the_rhythm_soumettreTopicPromotions')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a>*/
+/*             {% endif %}*/
+/*             {% endif %}*/
+/*             </h2></div>*/
+/*                 <div class="row">*/
+/*                 	<div class="col-lg-12">*/
 /*             {% if tabTopics is empty %}*/
 /*             <div class="container">*/
 /* 	            <div class ="row">*/
@@ -208,7 +269,9 @@ class __TwigTemplate_fa6d473191d74585fd92ffa3e7cc15d69f508477c1370c626b253c94517
 /*             </div>*/
 /*             {% endfor %}*/
 /*             {% endif %}*/
-/*             <a title="Renvoie à l'accueil du forum." href="/follow_the_rhythm/web/app_dev.php/accueilaccueilForum"><button style='margin-top: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour au forum</button></a><a title="Renvoie à l'accueil de Follow the Rhythm." href="/follow_the_rhythm/web/app_dev.php/accueil/1/1"><button style='margin-left: 8px; margin-top: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour à l'accueil</button></a>*/
+/* 	            	<a title="Renvoie à l'accueil du forum." href="/follow_the_rhythm/web/app_dev.php/accueilForum"><button style='margin: 16px' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour au forum</button></a>*/
+/* 	            	<a title="Renvoie à l'accueil de Follow the Rhythm." href="/follow_the_rhythm/web/app_dev.php/accueil/1/1/25"><button style='margin: 16px' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour à l'accueil</button></a>*/
+/*                 </div>*/
 /*                 </div>*/
 /*             </div>*/
 /*         </div>*/

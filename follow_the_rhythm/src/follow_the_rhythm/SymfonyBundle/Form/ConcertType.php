@@ -7,6 +7,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use follow_the_rhythm\SymfonyBundle\Entity\Concert;
+use follow_the_rhythm\SymfonyBundle\Form\ArtisteType;
 
 class ConcertType extends AbstractType
 {
@@ -24,10 +25,9 @@ class ConcertType extends AbstractType
             ->add('artiste','entity', array('label'=>'Artistes Concernés',
                                      'class' => 'follow_the_rhythmSymfonyBundle:Artiste',
                                      'multiple' => 'true',
-                                     'expanded'=> 'true',
                                      'choice_label' => function($groupConcert){return $groupConcert->getNomDeScene();}
                                      ))
-        ;
+            ;
     }
     
     /**

@@ -16,7 +16,6 @@ class ActualiteType extends AbstractType
     {
         $builder
         ->add('titre','text')
-        
         ->add('artiste', 'collection', array (
                                               'type' => new ArtisteType(),
                                               'allow_add' => true,

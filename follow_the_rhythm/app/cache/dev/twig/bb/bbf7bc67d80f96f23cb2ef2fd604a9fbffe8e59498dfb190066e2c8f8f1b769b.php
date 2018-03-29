@@ -21,78 +21,131 @@ class __TwigTemplate_f677a229a04b1e16e6141af9a2f0e6353b583e9b953488127fd905d9083
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4c776d57cc7557e60a4311035030ba83a08c87403d86e6b65a5fdd34c30f523e = $this->env->getExtension("native_profiler");
-        $__internal_4c776d57cc7557e60a4311035030ba83a08c87403d86e6b65a5fdd34c30f523e->enter($__internal_4c776d57cc7557e60a4311035030ba83a08c87403d86e6b65a5fdd34c30f523e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:pageArtiste.html.twig"));
+        $__internal_1fd096f8a5d5e296c288692e22462f76d6f5172e28add466e061ba35fa6bfefd = $this->env->getExtension("native_profiler");
+        $__internal_1fd096f8a5d5e296c288692e22462f76d6f5172e28add466e061ba35fa6bfefd->enter($__internal_1fd096f8a5d5e296c288692e22462f76d6f5172e28add466e061ba35fa6bfefd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:pageArtiste.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4c776d57cc7557e60a4311035030ba83a08c87403d86e6b65a5fdd34c30f523e->leave($__internal_4c776d57cc7557e60a4311035030ba83a08c87403d86e6b65a5fdd34c30f523e_prof);
+        $__internal_1fd096f8a5d5e296c288692e22462f76d6f5172e28add466e061ba35fa6bfefd->leave($__internal_1fd096f8a5d5e296c288692e22462f76d6f5172e28add466e061ba35fa6bfefd_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_1415ac4a9670571072dadf48ed7859efc2b9d23e27dce0cd864ab1bfe5e4149d = $this->env->getExtension("native_profiler");
-        $__internal_1415ac4a9670571072dadf48ed7859efc2b9d23e27dce0cd864ab1bfe5e4149d->enter($__internal_1415ac4a9670571072dadf48ed7859efc2b9d23e27dce0cd864ab1bfe5e4149d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_3cfae34e836e68fb8fcb5453332c78047980a308fa2838c2b915f1c657a8ace6 = $this->env->getExtension("native_profiler");
+        $__internal_3cfae34e836e68fb8fcb5453332c78047980a308fa2838c2b915f1c657a8ace6->enter($__internal_3cfae34e836e68fb8fcb5453332c78047980a308fa2838c2b915f1c657a8ace6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<body>
   <div class=\"container\">
-    <div class=\"row\">
       <div class=\"panel panel-default\">
       <!--default panel content-->
         <div class=\"panel-heading\"><h2><b><i class=\"fa fa-user-circle\"></i> ";
-        // line 9
+        // line 8
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nomDeScene", array()), "html", null, true);
         echo "</b></h2></div>
-     
+         <div class=\"row\">
+           <div class=\"col-lg-12\">
         <div class=\"list-group\">
             <div class=\"list-group-item\">
             <p align=\"center\"><img src=\"";
         // line 13
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("upload/images/Stickman.png"), "html", null, true);
         echo "\" /></p>
-               <p><button class=\"btn btn-primary\" onclick=\"isNotConnected();\">Suivre</button> ";
+            ";
         // line 14
-        if (($this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nbFollower", array()) > 1)) {
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nbFollower", array()), "html", null, true);
-            echo " followers ";
+        if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+            // line 15
+            echo "              ";
+            if ((isset($context["dejaSuivi"]) ? $context["dejaSuivi"] : $this->getContext($context, "dejaSuivi"))) {
+                // line 16
+                echo "                <a title='Ne plus suivre ";
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nomDeScene", array()), "html", null, true);
+                echo "' href='";
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_nePlusSuivreArtiste", array("artiste" => $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "id", array()))), "html", null, true);
+                echo "'><p><button class=\"btn btn-primary\">Ne plus suivre</button></a> ";
+                if (($this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nbFollower", array()) > 1)) {
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nbFollower", array()), "html", null, true);
+                    echo " followers ";
+                } else {
+                    echo " ";
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nbFollower", array()), "html", null, true);
+                    echo " follower ";
+                }
+                echo " </p>
+              ";
+            } else {
+                // line 18
+                echo "                <a title='Suivre ";
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nomDeScene", array()), "html", null, true);
+                echo "' href='";
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_suivreArtiste", array("artiste" => $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "id", array()))), "html", null, true);
+                echo "'><p><button class=\"btn btn-primary\">Suivre</button></a> ";
+                if (($this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nbFollower", array()) > 1)) {
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nbFollower", array()), "html", null, true);
+                    echo " followers ";
+                } else {
+                    echo " ";
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nbFollower", array()), "html", null, true);
+                    echo " follower ";
+                }
+                echo " </p>
+             ";
+            }
+            // line 20
+            echo "            ";
         } else {
-            echo " ";
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nbFollower", array()), "html", null, true);
-            echo " follower ";
+            // line 21
+            echo "              <a title='Connectez-vous pour suivre ";
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nomDeScene", array()), "html", null, true);
+            echo "' href='";
+            echo $this->env->getExtension('routing')->getPath("fos_user_security_login");
+            echo "'><p><button class=\"btn btn-primary\">Connectez-vous pour suivre ";
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nomDeScene", array()), "html", null, true);
+            echo "</button></a> ";
+            if (($this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nbFollower", array()) > 1)) {
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nbFollower", array()), "html", null, true);
+                echo " followers ";
+            } else {
+                echo " ";
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nbFollower", array()), "html", null, true);
+                echo " follower ";
+            }
+            echo " </p>
+            ";
         }
-        echo " </p>
+        // line 23
+        echo "               
                <p><h4>Nom complet de l'artiste: ";
-        // line 15
+        // line 24
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nomComplet", array()), "html", null, true);
         echo "</h4></p>
                <p><label><b><h3>Actualités concernant ";
-        // line 16
+        // line 25
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")), "nomDeScene", array()), "html", null, true);
         echo "</h3></b></label></p>
         
                     ";
-        // line 18
+        // line 27
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["tabActualites"]) ? $context["tabActualites"] : $this->getContext($context, "tabActualites")));
         foreach ($context['_seq'] as $context["_key"] => $context["actualiteCourante"]) {
-            // line 19
+            // line 28
             echo "                      
                       <div class=\"list-group-item\"><h2><label>";
-            // line 20
+            // line 29
             echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "titre", array()), "html", null, true);
             echo "</label></h2>
                     <!-- si pas de concert concerné -->
                       ";
-            // line 22
+            // line 31
             if (twig_test_empty($this->getAttribute($context["actualiteCourante"], "concert", array()))) {
-                // line 23
+                // line 32
                 echo "                          <p><label>Pas de concert lié</label></p>
                       ";
             } else {
-                // line 25
+                // line 34
                 echo "                          <p><label>Concert lié : <a href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_pageConcert", array("id" => $this->getAttribute($this->getAttribute($context["actualiteCourante"], "concert", array()), "id", array()))), "html", null, true);
                 echo "\" >";
@@ -100,55 +153,69 @@ class __TwigTemplate_f677a229a04b1e16e6141af9a2f0e6353b583e9b953488127fd905d9083
                 echo "</a> </label></p>
                       ";
             }
-            // line 27
+            // line 36
             echo "                          <p><label>";
             echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "description", array()), "html", null, true);
             echo "</label></p>
                           <p><label>Date : ";
-            // line 28
+            // line 37
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["actualiteCourante"], "dateActualite", array()), "d/m/Y"), "html", null, true);
             echo "</label></p>
                     <!--Si coup(s) de coeur > 1-->
                       ";
-            // line 30
-            if (($this->getAttribute($context["actualiteCourante"], "nbCoupDeCoeurs", array()) > 1)) {
-                // line 31
-                echo "                          <button type=\"button\" class=\"btn btn-primary\"  onclick=\"isNotConnected();\">♥ Coup de cœur</button> ";
-                echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "nbCoupDeCoeurs", array()), "html", null, true);
-                echo " Coups de cœur 
+            // line 39
+            if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+                // line 40
+                echo "                        ";
+                if (($this->getAttribute($context["actualiteCourante"], "nbCoupDeCoeurs", array()) > 1)) {
+                    // line 41
+                    echo "                            <a href='' title=\"J'adore cet article !\"><button type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-heart\"></span> Coup de cœur</button></a> ";
+                    echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "nbCoupDeCoeurs", array()), "html", null, true);
+                    echo " Coups de cœurs 
+                        ";
+                } else {
+                    // line 43
+                    echo "                            <a href='' title=\"J'adore cet article !\"><button type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-heart\"></span> Coup de cœur</button></a> ";
+                    echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "nbCoupDeCoeurs", array()), "html", null, true);
+                    echo " Coup de cœur
+                        ";
+                }
+                // line 44
+                echo "   
                       ";
             } else {
-                // line 33
-                echo "                          <button type=\"button\" class=\"btn btn-primary\"  onclick=\"isNotConnected();\">♥ Coup de cœur</button> ";
-                echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "nbCoupDeCoeurs", array()), "html", null, true);
-                echo " Coup de cœur
+                // line 46
+                echo "                        ";
+                if (($this->getAttribute($context["actualiteCourante"], "nbCoupDeCoeurs", array()) > 1)) {
+                    // line 47
+                    echo "                            <a href='' title=\"J'adore cet article !\"><button type=\"button\" class=\"btn btn-primary\"  onclick=\"isNotConnected();\"><span class=\"glyphicon glyphicon-heart\"></span> Coup de cœur</button></a> ";
+                    echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "nbCoupDeCoeurs", array()), "html", null, true);
+                    echo " Coups de cœurs 
+                        ";
+                } else {
+                    // line 49
+                    echo "                            <a href='' title=\"J'adore cet article !\"><button type=\"button\" class=\"btn btn-primary\"  onclick=\"isNotConnected();\"><span class=\"glyphicon glyphicon-heart\"></span> Coup de cœur</button></a> ";
+                    echo twig_escape_filter($this->env, $this->getAttribute($context["actualiteCourante"], "nbCoupDeCoeurs", array()), "html", null, true);
+                    echo " Coup de cœur
+                        ";
+                }
+                // line 50
+                echo "   
                       ";
             }
-            // line 34
-            echo "   
-                      ";
-            // line 35
-            if (twig_test_empty($this->getAttribute($context["actualiteCourante"], "moderateur", array()))) {
-                // line 36
-                echo "                      ";
-            } else {
-                // line 37
-                echo "                         <!-- <p><label>Soumis par : ";
-                echo "</label></p> -->
-                      ";
-            }
-            // line 38
+            // line 51
             echo "  
-                      
+                                  
                         </div>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['actualiteCourante'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 55
         echo "        </div>
       </div>
+    </div>
     </div>
   </div>
 </div>
@@ -162,7 +229,7 @@ class __TwigTemplate_f677a229a04b1e16e6141af9a2f0e6353b583e9b953488127fd905d9083
 
 ";
         
-        $__internal_1415ac4a9670571072dadf48ed7859efc2b9d23e27dce0cd864ab1bfe5e4149d->leave($__internal_1415ac4a9670571072dadf48ed7859efc2b9d23e27dce0cd864ab1bfe5e4149d_prof);
+        $__internal_3cfae34e836e68fb8fcb5453332c78047980a308fa2838c2b915f1c657a8ace6->leave($__internal_3cfae34e836e68fb8fcb5453332c78047980a308fa2838c2b915f1c657a8ace6_prof);
 
     }
 
@@ -178,7 +245,7 @@ class __TwigTemplate_f677a229a04b1e16e6141af9a2f0e6353b583e9b953488127fd905d9083
 
     public function getDebugInfo()
     {
-        return array (  150 => 42,  141 => 38,  136 => 37,  133 => 36,  131 => 35,  128 => 34,  122 => 33,  116 => 31,  114 => 30,  109 => 28,  104 => 27,  96 => 25,  92 => 23,  90 => 22,  85 => 20,  82 => 19,  78 => 18,  73 => 16,  69 => 15,  58 => 14,  54 => 13,  47 => 9,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  216 => 55,  207 => 51,  203 => 50,  197 => 49,  191 => 47,  188 => 46,  184 => 44,  178 => 43,  172 => 41,  169 => 40,  167 => 39,  162 => 37,  157 => 36,  149 => 34,  145 => 32,  143 => 31,  138 => 29,  135 => 28,  131 => 27,  126 => 25,  122 => 24,  119 => 23,  100 => 21,  97 => 20,  80 => 18,  63 => 16,  60 => 15,  58 => 14,  54 => 13,  46 => 8,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -186,15 +253,24 @@ class __TwigTemplate_f677a229a04b1e16e6141af9a2f0e6353b583e9b953488127fd905d9083
 /* {% block contenuCentral %}*/
 /* <body>*/
 /*   <div class="container">*/
-/*     <div class="row">*/
 /*       <div class="panel panel-default">*/
 /*       <!--default panel content-->*/
 /*         <div class="panel-heading"><h2><b><i class="fa fa-user-circle"></i> {{artiste.nomDeScene}}</b></h2></div>*/
-/*      */
+/*          <div class="row">*/
+/*            <div class="col-lg-12">*/
 /*         <div class="list-group">*/
 /*             <div class="list-group-item">*/
 /*             <p align="center"><img src="{{ asset('upload/images/Stickman.png') }}" /></p>*/
-/*                <p><button class="btn btn-primary" onclick="isNotConnected();">Suivre</button> {% if artiste.nbFollower > 1 %}{{artiste.nbFollower}} followers {% else %} {{artiste.nbFollower}} follower {% endif %} </p>*/
+/*             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}*/
+/*               {% if dejaSuivi %}*/
+/*                 <a title='Ne plus suivre {{artiste.nomDeScene}}' href='{{path('follow_the_rhythm_nePlusSuivreArtiste',{'artiste':artiste.id})}}'><p><button class="btn btn-primary">Ne plus suivre</button></a> {% if artiste.nbFollower > 1 %}{{artiste.nbFollower}} followers {% else %} {{artiste.nbFollower}} follower {% endif %} </p>*/
+/*               {% else %}*/
+/*                 <a title='Suivre {{artiste.nomDeScene}}' href='{{path('follow_the_rhythm_suivreArtiste',{'artiste':artiste.id})}}'><p><button class="btn btn-primary">Suivre</button></a> {% if artiste.nbFollower > 1 %}{{artiste.nbFollower}} followers {% else %} {{artiste.nbFollower}} follower {% endif %} </p>*/
+/*              {% endif %}*/
+/*             {% else %}*/
+/*               <a title='Connectez-vous pour suivre {{artiste.nomDeScene}}' href='{{path('fos_user_security_login')}}'><p><button class="btn btn-primary">Connectez-vous pour suivre {{artiste.nomDeScene}}</button></a> {% if artiste.nbFollower > 1 %}{{artiste.nbFollower}} followers {% else %} {{artiste.nbFollower}} follower {% endif %} </p>*/
+/*             {% endif %}*/
+/*                */
 /*                <p><h4>Nom complet de l'artiste: {{artiste.nomComplet}}</h4></p>*/
 /*                <p><label><b><h3>Actualités concernant {{artiste.nomDeScene}}</h3></b></label></p>*/
 /*         */
@@ -210,20 +286,25 @@ class __TwigTemplate_f677a229a04b1e16e6141af9a2f0e6353b583e9b953488127fd905d9083
 /*                           <p><label>{{actualiteCourante.description}}</label></p>*/
 /*                           <p><label>Date : {{actualiteCourante.dateActualite|date("d/m/Y")}}</label></p>*/
 /*                     <!--Si coup(s) de coeur > 1-->*/
-/*                       {% if actualiteCourante.nbCoupDeCoeurs > 1 %}*/
-/*                           <button type="button" class="btn btn-primary"  onclick="isNotConnected();">♥ Coup de cœur</button> {{actualiteCourante.nbCoupDeCoeurs}} Coups de cœur */
+/*                       {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}*/
+/*                         {% if actualiteCourante.nbCoupDeCoeurs > 1 %}*/
+/*                             <a href='' title="J'adore cet article !"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Coup de cœur</button></a> {{actualiteCourante.nbCoupDeCoeurs}} Coups de cœurs */
+/*                         {% else %}*/
+/*                             <a href='' title="J'adore cet article !"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Coup de cœur</button></a> {{actualiteCourante.nbCoupDeCoeurs}} Coup de cœur*/
+/*                         {% endif %}   */
 /*                       {% else %}*/
-/*                           <button type="button" class="btn btn-primary"  onclick="isNotConnected();">♥ Coup de cœur</button> {{actualiteCourante.nbCoupDeCoeurs}} Coup de cœur*/
-/*                       {% endif %}   */
-/*                       {% if actualiteCourante.moderateur is empty %}*/
-/*                       {% else %}*/
-/*                          <!-- <p><label>Soumis par : {#actualiteCourante.moderateur.id#}</label></p> -->*/
+/*                         {% if actualiteCourante.nbCoupDeCoeurs > 1 %}*/
+/*                             <a href='' title="J'adore cet article !"><button type="button" class="btn btn-primary"  onclick="isNotConnected();"><span class="glyphicon glyphicon-heart"></span> Coup de cœur</button></a> {{actualiteCourante.nbCoupDeCoeurs}} Coups de cœurs */
+/*                         {% else %}*/
+/*                             <a href='' title="J'adore cet article !"><button type="button" class="btn btn-primary"  onclick="isNotConnected();"><span class="glyphicon glyphicon-heart"></span> Coup de cœur</button></a> {{actualiteCourante.nbCoupDeCoeurs}} Coup de cœur*/
+/*                         {% endif %}   */
 /*                       {% endif %}  */
-/*                       */
+/*                                   */
 /*                         </div>*/
 /*         {% endfor %}*/
 /*         </div>*/
 /*       </div>*/
+/*     </div>*/
 /*     </div>*/
 /*   </div>*/
 /* </div>*/

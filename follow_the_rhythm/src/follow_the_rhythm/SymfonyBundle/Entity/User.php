@@ -3,6 +3,7 @@
 
 namespace follow_the_rhythm\SymfonyBundle\Entity;
 
+
 use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -45,15 +46,6 @@ class User extends BaseUser
      */
     private $concert;
 
-      /**
-     *
-     * @ORM\OneToOne(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Moderateur")
-     * @ORM\JoinColumn(name="moderateur_id", referencedColumnName="id", nullable=true)
-     */
-    private $moderateur;
-
-
-
     /**
      * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\User", mappedBy="myFriends")
      */
@@ -68,12 +60,6 @@ class User extends BaseUser
      */
     private $myFriends;
     
-     /**
-     * @ORM\OneToOne(targetEntity="Invitation")
-     * @ORM\JoinColumn(referencedColumnName="code")
-     * @Assert\NotNull(message="Your invitation is wrong", groups={"Registration"})
-     */
-    protected $invitation;
 
    
 
@@ -182,30 +168,6 @@ class User extends BaseUser
     }
 
     /**
-     * Set moderateur
-     *
-     * @param \follow_the_rhythm\SymfonyBundle\Entity\Moderateur $moderateur
-     *
-     * @return User
-     */
-    public function setModerateur(\follow_the_rhythm\SymfonyBundle\Entity\Moderateur $moderateur = null)
-    {
-        $this->moderateur = $moderateur;
-
-        return $this;
-    }
-
-    /**
-     * Get moderateur
-     *
-     * @return \follow_the_rhythm\SymfonyBundle\Entity\Moderateur
-     */
-    public function getModerateur()
-    {
-        return $this->moderateur;
-    }
-
-    /**
      * Add usersIAdd
      *
      * @param \follow_the_rhythm\SymfonyBundle\Entity\User $usersIAdd
@@ -273,19 +235,15 @@ class User extends BaseUser
         return $this->myFriends;
     }
     
-     public function setInvitation(Invitation $invitation)
-    {
-        $this->invitation = $invitation;
-    }
-
-    public function getInvitation()
-    {
-        return $this->invitation;
-    }
     
     
     public function __toString()
     {
-            return $this->nbSignalement;
+            return $this->username;
+    }
+    
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 }

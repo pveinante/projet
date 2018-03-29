@@ -1,6 +1,6 @@
 <?php
 
-/* EasyAdminBundle:default/includes:_actions.html.twig */
+/* @EasyAdmin/default/includes/_actions.html.twig */
 class __TwigTemplate_c34603e221851b36b6fdbc1e4507209057a0fef8d7f8981002334a3662fd2904 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_c34603e221851b36b6fdbc1e4507209057a0fef8d7f8981002334a3662f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_587c554eec9c6a8399b3a6b97c498b4f574920869c71cb205c42032e4194b740 = $this->env->getExtension("native_profiler");
-        $__internal_587c554eec9c6a8399b3a6b97c498b4f574920869c71cb205c42032e4194b740->enter($__internal_587c554eec9c6a8399b3a6b97c498b4f574920869c71cb205c42032e4194b740_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EasyAdminBundle:default/includes:_actions.html.twig"));
+        $__internal_120ddb11e70594cfe2c2f63e0a7fc49704ea9148abefcb17d0720e32cce3bac3 = $this->env->getExtension("native_profiler");
+        $__internal_120ddb11e70594cfe2c2f63e0a7fc49704ea9148abefcb17d0720e32cce3bac3->enter($__internal_120ddb11e70594cfe2c2f63e0a7fc49704ea9148abefcb17d0720e32cce3bac3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/includes/_actions.html.twig"));
 
         // line 1
         $context['_parent'] = $context;
@@ -74,13 +74,13 @@ class __TwigTemplate_c34603e221851b36b6fdbc1e4507209057a0fef8d7f8981002334a3662f
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['action'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_587c554eec9c6a8399b3a6b97c498b4f574920869c71cb205c42032e4194b740->leave($__internal_587c554eec9c6a8399b3a6b97c498b4f574920869c71cb205c42032e4194b740_prof);
+        $__internal_120ddb11e70594cfe2c2f63e0a7fc49704ea9148abefcb17d0720e32cce3bac3->leave($__internal_120ddb11e70594cfe2c2f63e0a7fc49704ea9148abefcb17d0720e32cce3bac3_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "EasyAdminBundle:default/includes:_actions.html.twig";
+        return "@EasyAdmin/default/includes/_actions.html.twig";
     }
 
     public function isTraitable()

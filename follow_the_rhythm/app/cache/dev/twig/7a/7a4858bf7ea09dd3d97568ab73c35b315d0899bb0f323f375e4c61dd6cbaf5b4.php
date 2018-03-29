@@ -21,28 +21,30 @@ class __TwigTemplate_bd7b00dad971a5e5509ed8f7ad5ea85dab1a8ed2d39fb1b58331060efb2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_048111331a93888d83fae047d550bb908898508ba47bdf5f18a97a3528d1339c = $this->env->getExtension("native_profiler");
-        $__internal_048111331a93888d83fae047d550bb908898508ba47bdf5f18a97a3528d1339c->enter($__internal_048111331a93888d83fae047d550bb908898508ba47bdf5f18a97a3528d1339c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:contacts.html.twig"));
+        $__internal_e9ad60e82881b6c78055c63d7c5138083451ce7d5f8513bd54ebca3c5e2f40dc = $this->env->getExtension("native_profiler");
+        $__internal_e9ad60e82881b6c78055c63d7c5138083451ce7d5f8513bd54ebca3c5e2f40dc->enter($__internal_e9ad60e82881b6c78055c63d7c5138083451ce7d5f8513bd54ebca3c5e2f40dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:contacts.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_048111331a93888d83fae047d550bb908898508ba47bdf5f18a97a3528d1339c->leave($__internal_048111331a93888d83fae047d550bb908898508ba47bdf5f18a97a3528d1339c_prof);
+        $__internal_e9ad60e82881b6c78055c63d7c5138083451ce7d5f8513bd54ebca3c5e2f40dc->leave($__internal_e9ad60e82881b6c78055c63d7c5138083451ce7d5f8513bd54ebca3c5e2f40dc_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_3f9a0fc6082110e950afa4362be17704791b9fb955d6dbec87d88c27e0099f6e = $this->env->getExtension("native_profiler");
-        $__internal_3f9a0fc6082110e950afa4362be17704791b9fb955d6dbec87d88c27e0099f6e->enter($__internal_3f9a0fc6082110e950afa4362be17704791b9fb955d6dbec87d88c27e0099f6e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_aa9eadc43c202646f1f0fdf4c9135c98a7a4e858beeee08e67e1d42e43acf7ea = $this->env->getExtension("native_profiler");
+        $__internal_aa9eadc43c202646f1f0fdf4c9135c98a7a4e858beeee08e67e1d42e43acf7ea->enter($__internal_aa9eadc43c202646f1f0fdf4c9135c98a7a4e858beeee08e67e1d42e43acf7ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "       
     <div class=\"container\">
-        <div class=\"row\">
             <div class=\"panel panel-default\">
+                
                 <div class=\"panel-heading\"><h2><b><span class=\"glyphicon glyphicon-user\"></span> Contacts</b></h2> 
                 </div>
+                <div class=\"row\">
+                    <div class=\"col-lg-12\">
                 <div class=\"list-group\">
                     <div class=\"list-group-item\">
                         <div align=\"justify\"> 
@@ -94,12 +96,13 @@ class __TwigTemplate_bd7b00dad971a5e5509ed8f7ad5ea85dab1a8ed2d39fb1b58331060efb2
                     </div>
                 </div>
             </div>
+            </div>
         </div>
     </div>
     
 ";
         
-        $__internal_3f9a0fc6082110e950afa4362be17704791b9fb955d6dbec87d88c27e0099f6e->leave($__internal_3f9a0fc6082110e950afa4362be17704791b9fb955d6dbec87d88c27e0099f6e_prof);
+        $__internal_aa9eadc43c202646f1f0fdf4c9135c98a7a4e858beeee08e67e1d42e43acf7ea->leave($__internal_aa9eadc43c202646f1f0fdf4c9135c98a7a4e858beeee08e67e1d42e43acf7ea_prof);
 
     }
 
@@ -123,10 +126,12 @@ class __TwigTemplate_bd7b00dad971a5e5509ed8f7ad5ea85dab1a8ed2d39fb1b58331060efb2
 /* {% block contenuCentral %}*/
 /*        */
 /*     <div class="container">*/
-/*         <div class="row">*/
 /*             <div class="panel panel-default">*/
+/*                 */
 /*                 <div class="panel-heading"><h2><b><span class="glyphicon glyphicon-user"></span> Contacts</b></h2> */
 /*                 </div>*/
+/*                 <div class="row">*/
+/*                     <div class="col-lg-12">*/
 /*                 <div class="list-group">*/
 /*                     <div class="list-group-item">*/
 /*                         <div align="justify"> */
@@ -177,6 +182,7 @@ class __TwigTemplate_bd7b00dad971a5e5509ed8f7ad5ea85dab1a8ed2d39fb1b58331060efb2
 /*                         </div>*/
 /*                     </div>*/
 /*                 </div>*/
+/*             </div>*/
 /*             </div>*/
 /*         </div>*/
 /*     </div>*/

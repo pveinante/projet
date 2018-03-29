@@ -3,15 +3,24 @@
 {% block contenuCentral %}
 <body>
   <div class="container">
-    <div class="row">
       <div class="panel panel-default">
       <!--default panel content-->
         <div class="panel-heading"><h2><b><i class="fa fa-user-circle"></i> {{artiste.nomDeScene}}</b></h2></div>
-     
+         <div class="row">
+           <div class="col-lg-12">
         <div class="list-group">
             <div class="list-group-item">
             <p align="center"><img src="{{ asset('upload/images/Stickman.png') }}" /></p>
-               <p><button class="btn btn-primary" onclick="isNotConnected();">Suivre</button> {% if artiste.nbFollower > 1 %}{{artiste.nbFollower}} followers {% else %} {{artiste.nbFollower}} follower {% endif %} </p>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+              {% if dejaSuivi %}
+                <a title='Ne plus suivre {{artiste.nomDeScene}}' href='{{path('follow_the_rhythm_nePlusSuivreArtiste',{'artiste':artiste.id})}}'><p><button class="btn btn-primary">Ne plus suivre</button></a> {% if artiste.nbFollower > 1 %}{{artiste.nbFollower}} followers {% else %} {{artiste.nbFollower}} follower {% endif %} </p>
+              {% else %}
+                <a title='Suivre {{artiste.nomDeScene}}' href='{{path('follow_the_rhythm_suivreArtiste',{'artiste':artiste.id})}}'><p><button class="btn btn-primary">Suivre</button></a> {% if artiste.nbFollower > 1 %}{{artiste.nbFollower}} followers {% else %} {{artiste.nbFollower}} follower {% endif %} </p>
+             {% endif %}
+            {% else %}
+              <a title='Connectez-vous pour suivre {{artiste.nomDeScene}}' href='{{path('fos_user_security_login')}}'><p><button class="btn btn-primary">Connectez-vous pour suivre {{artiste.nomDeScene}}</button></a> {% if artiste.nbFollower > 1 %}{{artiste.nbFollower}} followers {% else %} {{artiste.nbFollower}} follower {% endif %} </p>
+            {% endif %}
+               
                <p><h4>Nom complet de l'artiste: {{artiste.nomComplet}}</h4></p>
                <p><label><b><h3>Actualités concernant {{artiste.nomDeScene}}</h3></b></label></p>
         
@@ -27,20 +36,25 @@
                           <p><label>{{actualiteCourante.description}}</label></p>
                           <p><label>Date : {{actualiteCourante.dateActualite|date("d/m/Y")}}</label></p>
                     <!--Si coup(s) de coeur > 1-->
-                      {% if actualiteCourante.nbCoupDeCoeurs > 1 %}
-                          <button type="button" class="btn btn-primary"  onclick="isNotConnected();">♥ Coup de cœur</button> {{actualiteCourante.nbCoupDeCoeurs}} Coups de cœur 
+                      {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        {% if actualiteCourante.nbCoupDeCoeurs > 1 %}
+                            <a href='' title="J'adore cet article !"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Coup de cœur</button></a> {{actualiteCourante.nbCoupDeCoeurs}} Coups de cœurs 
+                        {% else %}
+                            <a href='' title="J'adore cet article !"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Coup de cœur</button></a> {{actualiteCourante.nbCoupDeCoeurs}} Coup de cœur
+                        {% endif %}   
                       {% else %}
-                          <button type="button" class="btn btn-primary"  onclick="isNotConnected();">♥ Coup de cœur</button> {{actualiteCourante.nbCoupDeCoeurs}} Coup de cœur
-                      {% endif %}   
-                      {% if actualiteCourante.moderateur is empty %}
-                      {% else %}
-                         <!-- <p><label>Soumis par : {#actualiteCourante.moderateur.id#}</label></p> -->
+                        {% if actualiteCourante.nbCoupDeCoeurs > 1 %}
+                            <a href='' title="J'adore cet article !"><button type="button" class="btn btn-primary"  onclick="isNotConnected();"><span class="glyphicon glyphicon-heart"></span> Coup de cœur</button></a> {{actualiteCourante.nbCoupDeCoeurs}} Coups de cœurs 
+                        {% else %}
+                            <a href='' title="J'adore cet article !"><button type="button" class="btn btn-primary"  onclick="isNotConnected();"><span class="glyphicon glyphicon-heart"></span> Coup de cœur</button></a> {{actualiteCourante.nbCoupDeCoeurs}} Coup de cœur
+                        {% endif %}   
                       {% endif %}  
-                      
+                                  
                         </div>
         {% endfor %}
         </div>
       </div>
+    </div>
     </div>
   </div>
 </div>

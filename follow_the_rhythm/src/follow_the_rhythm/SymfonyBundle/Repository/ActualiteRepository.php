@@ -25,18 +25,6 @@ class ActualiteRepository extends \Doctrine\ORM\EntityRepository
         return $requete->getResult();
     }
     
-   /* public function getSearchList ($formvalue) 
-	{
-        $gestionnaireEntite=$this->_em;
-        
-        $requete=$gestionnaireEntite->createQuery('SELECT a FROM follow_the_rhythmSymfonyBundle:Actualite where a. LIKE :formvalue');
-		$qb = $this->createQueryBuilder('a');
- 
-		$qb->where('a. LIKE :formvalue')
-			  ->orWhere('a.process LIKE :formvalue')
-			  ->setParameter('formvalue', '%'. $formvalue .'%');
-		return $requete->getResult();
-	}*/
     
     
     //fonction copiée/collée sur internet
@@ -51,7 +39,7 @@ class ActualiteRepository extends \Doctrine\ORM\EntityRepository
      *
      * @return Paginator
      */
-    public function findAllPagineEtTrieDesc($page, $nbMaxParPage)
+    public function findAllPagineEtTrieDesc($page, $nbMaxParPage, $artistes)
     {
         if (!is_numeric($page)) {
             throw new InvalidArgumentException(
@@ -80,9 +68,19 @@ class ActualiteRepository extends \Doctrine\ORM\EntityRepository
         //On retourne le résultat de la requête
         
     */
-         $qb = $this->createQueryBuilder('a')
-            ->where('CURRENT_DATE()+1 >= a.dateActualite')
-            ->orderBy('a.dateActualite', 'DESC');
+        if ($artistes)
+        {
+            $qb = $this->createQueryBuilder('a')
+                ->where('CURRENT_DATE()+1 >= a.dateActualite')
+                ->andWhere('a.concert IS NULL')
+                ->orderBy('a.dateActualite', 'DESC');
+        }
+        else
+        {
+            $qb = $this->createQueryBuilder('a')
+                ->where('CURRENT_DATE()+1 >= a.dateActualite')
+                ->orderBy('a.dateActualite', 'DESC');
+        }
         
         $query = $qb->getQuery();
 
@@ -98,7 +96,7 @@ class ActualiteRepository extends \Doctrine\ORM\EntityRepository
         return $paginator;
     }
     
-    public function findAllPagineEtTrieAsc($page, $nbMaxParPage)
+    public function findAllPagineEtTrieAsc($page, $nbMaxParPage, $artistes)
     {
         if (!is_numeric($page)) {
             throw new InvalidArgumentException(
@@ -124,9 +122,19 @@ class ActualiteRepository extends \Doctrine\ORM\EntityRepository
     
         $query=$requete->getResult();
     */
-        $qb = $this->createQueryBuilder('a')
-            ->where('CURRENT_DATE()+1 >= a.dateActualite')
-            ->orderBy('a.dateActualite', 'ASC');
+        if ($artistes)
+        {
+            $qb = $this->createQueryBuilder('a')
+                ->where('CURRENT_DATE()+1 >= a.dateActualite')
+                ->andWhere('a.concert IS NULL')
+                ->orderBy('a.dateActualite', 'ASC');
+        }
+        else
+        {
+            $qb = $this->createQueryBuilder('a')
+                ->where('CURRENT_DATE()+1 >= a.dateActualite')
+                ->orderBy('a.dateActualite', 'ASC');
+        }
         
         $query = $qb->getQuery();
 

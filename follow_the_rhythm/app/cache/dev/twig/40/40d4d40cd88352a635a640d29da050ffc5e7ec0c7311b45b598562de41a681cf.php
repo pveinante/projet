@@ -21,29 +21,29 @@ class __TwigTemplate_5fa6807ab58a5fe87dfd9ad90804a4c07fe516d865d78b7115eb558e819
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c769e050c5b5ce2eefa85087c180e584c599b2775da8690272cb44e9233dbb46 = $this->env->getExtension("native_profiler");
-        $__internal_c769e050c5b5ce2eefa85087c180e584c599b2775da8690272cb44e9233dbb46->enter($__internal_c769e050c5b5ce2eefa85087c180e584c599b2775da8690272cb44e9233dbb46_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:soumettreActualite.html.twig"));
+        $__internal_edfc0c5dd7eed7e8f4c6c79861213337da82a8d77d5184880bc437da9a6f8897 = $this->env->getExtension("native_profiler");
+        $__internal_edfc0c5dd7eed7e8f4c6c79861213337da82a8d77d5184880bc437da9a6f8897->enter($__internal_edfc0c5dd7eed7e8f4c6c79861213337da82a8d77d5184880bc437da9a6f8897_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:soumettreActualite.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c769e050c5b5ce2eefa85087c180e584c599b2775da8690272cb44e9233dbb46->leave($__internal_c769e050c5b5ce2eefa85087c180e584c599b2775da8690272cb44e9233dbb46_prof);
+        $__internal_edfc0c5dd7eed7e8f4c6c79861213337da82a8d77d5184880bc437da9a6f8897->leave($__internal_edfc0c5dd7eed7e8f4c6c79861213337da82a8d77d5184880bc437da9a6f8897_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_7fd77fb74593164ff9e4975fb8d3850f639f483499d791a9df2c2339877a56dc = $this->env->getExtension("native_profiler");
-        $__internal_7fd77fb74593164ff9e4975fb8d3850f639f483499d791a9df2c2339877a56dc->enter($__internal_7fd77fb74593164ff9e4975fb8d3850f639f483499d791a9df2c2339877a56dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_a6e76b54f2e7c8a921d77634cb35885d71f4634f284ddf47f11bc2b98ff7fe5e = $this->env->getExtension("native_profiler");
+        $__internal_a6e76b54f2e7c8a921d77634cb35885d71f4634f284ddf47f11bc2b98ff7fe5e->enter($__internal_a6e76b54f2e7c8a921d77634cb35885d71f4634f284ddf47f11bc2b98ff7fe5e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<body onload=\"hideV();\">
   <div class=\"container\">
-    <div class=\"row\">
       <div class=\"panel panel-default\">
       <!--default panel content-->
         <div class=\"panel-heading\"><h2><b>Soumettre une actualité</b></h2></div>
-     
+     <div class=\"row\">
+       <div class=\"col-lg-12\">
       <div class=\"list-group\">
         <div class=\"list-group-item\">
            
@@ -60,7 +60,7 @@ class __TwigTemplate_5fa6807ab58a5fe87dfd9ad90804a4c07fe516d865d78b7115eb558e819
             <input type=button class=\"btn btn-primary\" value=\"Visualiser\" onclick=\"visualiser();\">
             <a href=\"";
         // line 19
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueil", array("page" => 1, "sens" => 1)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueil", array("page" => 1, "sens" => 1, "nbParPage" => 25)), "html", null, true);
         echo "\"><input type=button class=\"btn btn-primary\" value=\"Annuler\" onclick=\"return confirm('Êtes vous sûr? Les données saisies seront effacées');\"></a></br>
             </br>
             <p></p><a href=\"";
@@ -83,9 +83,9 @@ class __TwigTemplate_5fa6807ab58a5fe87dfd9ad90804a4c07fe516d865d78b7115eb558e819
             <p><label id=\"dateVs\"></label></p>
             <button type=\"button\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-heart\"></span> Coup de cœur</button> 0 Coups de cœurs 
           </form>
-          
         </div>
       </div>
+    </div>
     </div>
   </div>
 </div>
@@ -196,7 +196,7 @@ class __TwigTemplate_5fa6807ab58a5fe87dfd9ad90804a4c07fe516d865d78b7115eb558e819
 
 ";
         
-        $__internal_7fd77fb74593164ff9e4975fb8d3850f639f483499d791a9df2c2339877a56dc->leave($__internal_7fd77fb74593164ff9e4975fb8d3850f639f483499d791a9df2c2339877a56dc_prof);
+        $__internal_a6e76b54f2e7c8a921d77634cb35885d71f4634f284ddf47f11bc2b98ff7fe5e->leave($__internal_a6e76b54f2e7c8a921d77634cb35885d71f4634f284ddf47f11bc2b98ff7fe5e_prof);
 
     }
 
@@ -220,11 +220,11 @@ class __TwigTemplate_5fa6807ab58a5fe87dfd9ad90804a4c07fe516d865d78b7115eb558e819
 /* {% block contenuCentral %}*/
 /* <body onload="hideV();">*/
 /*   <div class="container">*/
-/*     <div class="row">*/
 /*       <div class="panel panel-default">*/
 /*       <!--default panel content-->*/
 /*         <div class="panel-heading"><h2><b>Soumettre une actualité</b></h2></div>*/
-/*      */
+/*      <div class="row">*/
+/*        <div class="col-lg-12">*/
 /*       <div class="list-group">*/
 /*         <div class="list-group-item">*/
 /*            */
@@ -233,7 +233,7 @@ class __TwigTemplate_5fa6807ab58a5fe87dfd9ad90804a4c07fe516d865d78b7115eb558e819
 /*               {{ form_widget(formulaireActualite)}}*/
 /*             <input type=submit class="btn btn-primary" onsubmit="return false" onclick="return confirm('Vous confirmez?');">*/
 /*             <input type=button class="btn btn-primary" value="Visualiser" onclick="visualiser();">*/
-/*             <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a></br>*/
+/*             <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1, 'nbParPage': 25})}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a></br>*/
 /*             </br>*/
 /*             <p></p><a href="{{path('follow_the_rhythm_concert')}}"><button class="btn btn-primary" type="button">Ajouter un nouveau concert</button></a></p>*/
 /*             <p></p><a href="{{path('follow_the_rhythm_artiste')}}"><button class="btn btn-primary" type="button">Ajouter un nouvel artiste</button></a></p>*/
@@ -249,9 +249,9 @@ class __TwigTemplate_5fa6807ab58a5fe87dfd9ad90804a4c07fe516d865d78b7115eb558e819
 /*             <p><label id="dateVs"></label></p>*/
 /*             <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Coup de cœur</button> 0 Coups de cœurs */
 /*           </form>*/
-/*           */
 /*         </div>*/
 /*       </div>*/
+/*     </div>*/
 /*     </div>*/
 /*   </div>*/
 /* </div>*/

@@ -1,6 +1,6 @@
 <?php
 
-/* EasyAdminBundle:data_collector:icon.svg.twig */
+/* @EasyAdmin/data_collector/icon.svg.twig */
 class __TwigTemplate_a7e7888dd5a071250bd6c1eca1de1eb8dbc958b9327e7a5c7a9fac6344660320 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_a7e7888dd5a071250bd6c1eca1de1eb8dbc958b9327e7a5c7a9fac63446
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d77766b158db81a448e133ee00f28fdc1e215ffce2230699a923246c46dc33e6 = $this->env->getExtension("native_profiler");
-        $__internal_d77766b158db81a448e133ee00f28fdc1e215ffce2230699a923246c46dc33e6->enter($__internal_d77766b158db81a448e133ee00f28fdc1e215ffce2230699a923246c46dc33e6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EasyAdminBundle:data_collector:icon.svg.twig"));
+        $__internal_46f31e4560c0312056d57a722ca650391d2e40fa22c3d6305f89533ba98351d5 = $this->env->getExtension("native_profiler");
+        $__internal_46f31e4560c0312056d57a722ca650391d2e40fa22c3d6305f89533ba98351d5->enter($__internal_46f31e4560c0312056d57a722ca650391d2e40fa22c3d6305f89533ba98351d5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/data_collector/icon.svg.twig"));
 
         // line 1
         echo "<svg xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" height=\"";
@@ -31,13 +31,13 @@ class __TwigTemplate_a7e7888dd5a071250bd6c1eca1de1eb8dbc958b9327e7a5c7a9fac63446
 </svg>
 ";
         
-        $__internal_d77766b158db81a448e133ee00f28fdc1e215ffce2230699a923246c46dc33e6->leave($__internal_d77766b158db81a448e133ee00f28fdc1e215ffce2230699a923246c46dc33e6_prof);
+        $__internal_46f31e4560c0312056d57a722ca650391d2e40fa22c3d6305f89533ba98351d5->leave($__internal_46f31e4560c0312056d57a722ca650391d2e40fa22c3d6305f89533ba98351d5_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "EasyAdminBundle:data_collector:icon.svg.twig";
+        return "@EasyAdmin/data_collector/icon.svg.twig";
     }
 
     public function isTraitable()

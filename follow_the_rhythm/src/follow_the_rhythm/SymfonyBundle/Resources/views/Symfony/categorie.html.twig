@@ -2,9 +2,25 @@
     
 {% block contenuCentral %}
 <div class="container">
-    <div class="row">
         <div class="panel panel-default">
-            <div class="panel-heading"><h2><b><i class="fa fa-{{icon[catId]}}" aria-hidden="true"></i> {{cat[catId]}}</b><a title='Créer un nouveau topic dans cette catégorie.' href="{{path('follow_the_rhythm_soumettreTopicNews')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a></h2></div>
+            <div class="panel-heading"><h2><b><i class="fa fa-{{icon[catId]}}" aria-hidden="true"></i> {{cat[catId]}}</b>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            {%if catId == 1 %}
+           		<a title='Créer un nouveau topic dans cette catégorie.' href="{{path('follow_the_rhythm_soumettreTopicNews')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a>
+            {% endif %}
+            {%if catId == 2 %}
+           		<a title='Créer un nouveau topic dans cette catégorie.' href="{{path('follow_the_rhythm_soumettreTopicEspacePrive')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a>
+            {% endif %}
+            {%if catId == 3 %}
+           		<a title='Créer un nouveau topic dans cette catégorie.' href="{{path('follow_the_rhythm_soumettreTopicConcerts')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a>
+            {% endif %}
+            {%if catId == 4 %}
+           		<a title='Créer un nouveau topic dans cette catégorie.' href="{{path('follow_the_rhythm_soumettreTopicPromotions')}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nouveau topic</button></a>
+            {% endif %}
+            {% endif %}
+            </h2></div>
+                <div class="row">
+                	<div class="col-lg-12">
             {% if tabTopics is empty %}
             <div class="container">
 	            <div class ="row">
@@ -49,7 +65,9 @@
             </div>
             {% endfor %}
             {% endif %}
-            <a title="Renvoie à l'accueil du forum." href="/follow_the_rhythm/web/app_dev.php/accueilaccueilForum"><button style='margin-top: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour au forum</button></a><a title="Renvoie à l'accueil de Follow the Rhythm." href="/follow_the_rhythm/web/app_dev.php/accueil/1/1"><button style='margin-left: 8px; margin-top: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour à l'accueil</button></a>
+	            	<a title="Renvoie à l'accueil du forum." href="/follow_the_rhythm/web/app_dev.php/accueilForum"><button style='margin: 16px' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour au forum</button></a>
+	            	<a title="Renvoie à l'accueil de Follow the Rhythm." href="/follow_the_rhythm/web/app_dev.php/accueil/1/1/25"><button style='margin: 16px' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour à l'accueil</button></a>
+                </div>
                 </div>
             </div>
         </div>

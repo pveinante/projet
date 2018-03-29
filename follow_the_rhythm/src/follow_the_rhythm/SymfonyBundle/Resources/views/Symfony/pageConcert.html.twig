@@ -3,34 +3,45 @@
 {% block contenuCentral %}
 <body>
   <div class="container">
-    <div class="row">
       <div class="panel panel-default">
       <!--default panel content-->
         <div class="panel-heading">
+
             <h2><b>{{concert.nom}}</b></h2> 
             <label>{{concert.dateConcert|date("d/m/Y")}}</label>
-            <input type="button" class="btn btn-primary" value="Suivre" onclick="allerConcert();"suivre>
-        </div>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+              {% if dejaSuivi %}
+                <a title='Ne plus suivre {{concert.nom}}' href='{{path('follow_the_rhythm_nePlusSuivreConcert',{'concert':concert.id})}}'><p><button class="btn btn-primary">Ne plus suivre</button></a></p>
+              {% else %}
+                <a title='Suivre {{concert.nom}}' href='{{path('follow_the_rhythm_suivreConcert',{'concert':concert.id})}}'><p><button class="btn btn-primary">Suivre</button></a></p>
+             {% endif %}
+             {% else %}
+               <a title='Connectez-vous pour suivre {{concert.nom}}' href='{{path('fos_user_security_login')}}'><input type="button" class="btn btn-primary" value="Connectez-vous pour suivre {{concert.nom}}." onclick="allerConcert();"></a>
+            {% endif %}
+           </div>
+          <div class="row">
+            <div class="col-lg-12">
      
-       
+     
      
         <div class="list-group">
             
             <div class="list-group-item">
-                <p><label><h3>Lieu</h3></label></p>
+                <p><label><b><h3>Lieu</h3></b></label></p>
                 <p><label>{{concert.lieu}}</label></p>
             </div>
             <div class="list-group-item">
-                <p><label><h3>Description</h3></label></p>
+                <p><label><b><h3>Description</h3></b></label></p>
                 <p><label>{{concert.description}}</label></p>
             </div>
             <div class="list-group-item">
-                <p><label><h3>Artiste participant</h3></label></p>
+                <p><label><b><h3>Artiste participant</h3></b></label></p>
                 {% for artisteCourant in artiste %}
                    <p> <label> <a href="{{path('follow_the_rhythm_pageArtiste',{'id':artisteCourant.id})}}" >{{artisteCourant.nomDeScene}}</a></label></p>
                 {% endfor %}
             </div>
         </div>
+      </div>
       </div>
     </div>
   </div>

@@ -5,7 +5,7 @@ follow_the_rhythm_bienvenue:
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:index }
     
 follow_the_rhythm_accueil:
-    path:     /accueil/{page}/{sens}
+    path:     /accueil/{page}/{sens}/{nbParPage}
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:index }
 
 follow_the_rhythm_artiste:
@@ -61,7 +61,7 @@ follow_the_rhythm_accueilForum:
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:accueilForum }
         
 follow_the_rhythm_accueilArtistesUniquement:
-    path:   /accueilArtistesUniquement/{page}/{sens}
+    path:   /accueilArtistesUniquement/{page}/{sens}/{nbParPage}
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:accueilArtistesUniquement }
     
 follow_the_rhythm_modifierSupprimerActualite:
@@ -75,7 +75,31 @@ follow_the_rhythm_modifierActualite:
 follow_the_rhythm_aide:
     path:     /aide
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:aide }
+    
+follow_the_rhythm_suivreArtiste:
+    path:     /suivreArtiste/{artiste}
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:suivreArtiste }
+    
+follow_the_rhythm_nePlusSuivreArtiste:
+    path:     /nePlusSuivreArtiste/{artiste}
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:nePlusSuivreArtiste }
+    
+follow_the_rhythm_suivreConcert:
+    path:     /suivreConcert/{concert}
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:suivreConcert }
 
+follow_the_rhythm_nePlusSuivreConcert:
+    path:     /nePlusSuivreConcert/{concert}
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:nePlusSuivreConcert }
+    
+follow_the_rhythm_coupDeCoeur:
+    path:     /coupDeCoeur/{actualite}
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:coupDeCoeur }
+    
+follow_the_rhythm_signaler:
+    path:     /signaler/{message}
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:signaler }
+    
 #-----------------------------------------------------------------------------------------------------------------------------------
 #Forum 
 
@@ -87,7 +111,14 @@ follow_the_rhythm_messages:
     path:     /forum/topic/{topicId}/{page}/{nbParPage}
     defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:messages }
     
+    
+#-----------------------------------------------------------------------------------------------------------------------------------
+#Recherche
 
+follow_the_rhythm_recherche:
+    path:   /recherche/{recherche}
+    defaults: { _controller: follow_the_rhythmSymfonyBundle:Symfony:recherche }
+    
 #-----------------------------------------------------------------------------------------------------------------------------------
 #JSON 
 

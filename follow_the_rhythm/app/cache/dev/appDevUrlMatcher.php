@@ -116,7 +116,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         if (0 === strpos($pathinfo, '/a')) {
             // follow_the_rhythm_accueil
-            if (0 === strpos($pathinfo, '/accueil') && preg_match('#^/accueil/(?P<page>[^/]++)/(?P<sens>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/accueil') && preg_match('#^/accueil/(?P<page>[^/]++)/(?P<sens>[^/]++)/(?P<nbParPage>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'follow_the_rhythm_accueil')), array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::indexAction',));
             }
 
@@ -204,7 +204,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             // follow_the_rhythm_accueilArtistesUniquement
-            if (0 === strpos($pathinfo, '/accueilArtistesUniquement') && preg_match('#^/accueilArtistesUniquement/(?P<page>[^/]++)/(?P<sens>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/accueilArtistesUniquement') && preg_match('#^/accueilArtistesUniquement/(?P<page>[^/]++)/(?P<sens>[^/]++)/(?P<nbParPage>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'follow_the_rhythm_accueilArtistesUniquement')), array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::accueilArtistesUniquementAction',));
             }
 
@@ -228,6 +228,36 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::aideAction',  '_route' => 'follow_the_rhythm_aide',);
         }
 
+        // follow_the_rhythm_suivreArtiste
+        if (0 === strpos($pathinfo, '/suivreArtiste') && preg_match('#^/suivreArtiste/(?P<artiste>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'follow_the_rhythm_suivreArtiste')), array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::suivreArtisteAction',));
+        }
+
+        // follow_the_rhythm_nePlusSuivreArtiste
+        if (0 === strpos($pathinfo, '/nePlusSuivreArtiste') && preg_match('#^/nePlusSuivreArtiste/(?P<artiste>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'follow_the_rhythm_nePlusSuivreArtiste')), array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::nePlusSuivreArtisteAction',));
+        }
+
+        // follow_the_rhythm_suivreConcert
+        if (0 === strpos($pathinfo, '/suivreConcert') && preg_match('#^/suivreConcert/(?P<concert>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'follow_the_rhythm_suivreConcert')), array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::suivreConcertAction',));
+        }
+
+        // follow_the_rhythm_nePlusSuivreConcert
+        if (0 === strpos($pathinfo, '/nePlusSuivreConcert') && preg_match('#^/nePlusSuivreConcert/(?P<concert>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'follow_the_rhythm_nePlusSuivreConcert')), array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::nePlusSuivreConcertAction',));
+        }
+
+        // follow_the_rhythm_coupDeCoeur
+        if (0 === strpos($pathinfo, '/coupDeCoeur') && preg_match('#^/coupDeCoeur/(?P<actualite>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'follow_the_rhythm_coupDeCoeur')), array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::coupDeCoeurAction',));
+        }
+
+        // follow_the_rhythm_signaler
+        if (0 === strpos($pathinfo, '/signaler') && preg_match('#^/signaler/(?P<message>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'follow_the_rhythm_signaler')), array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::signalerAction',));
+        }
+
         if (0 === strpos($pathinfo, '/forum')) {
             // follow_the_rhythm_categorie
             if (0 === strpos($pathinfo, '/forum/categorie') && preg_match('#^/forum/categorie/(?P<catId>[^/]++)$#s', $pathinfo, $matches)) {
@@ -239,6 +269,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'follow_the_rhythm_messages')), array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::messagesAction',));
             }
 
+        }
+
+        // follow_the_rhythm_recherche
+        if (0 === strpos($pathinfo, '/recherche') && preg_match('#^/recherche/(?P<recherche>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'follow_the_rhythm_recherche')), array (  '_controller' => 'follow_the_rhythm\\SymfonyBundle\\Controller\\SymfonyController::rechercheAction',));
         }
 
         // follow_the_rhythm_news

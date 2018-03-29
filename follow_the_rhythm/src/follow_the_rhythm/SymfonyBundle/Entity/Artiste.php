@@ -54,6 +54,7 @@ class Artiste
      *
      * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Concert", inversedBy="artiste",cascade={"persist"})
      * @ORM\JoinTable(name="artiste_concert")
+     * @ORM\JoinColumn(nullable=true);
      */
     private $concert;
 
@@ -151,7 +152,6 @@ class Artiste
      *
      * @param \follow_the_rhythm\SymfonyBundle\Entity\Concert $concert
      *
-     * @return Artiste
      */
     public function addConcert(\follow_the_rhythm\SymfonyBundle\Entity\Concert $concert)
     {
@@ -205,7 +205,6 @@ class Artiste
      *
      * @param \follow_the_rhythm\SymfonyBundle\Entity\Actualite $actualite
      *
-     * @return Artiste
      */
     public function addActualite(\follow_the_rhythm\SymfonyBundle\Entity\Actualite $actualite)
     {

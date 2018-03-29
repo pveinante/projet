@@ -1,6 +1,6 @@
 <?php
 
-/* EasyAdminBundle:default:flash_messages.html.twig */
+/* @EasyAdmin/default/flash_messages.html.twig */
 class __TwigTemplate_80e4fb4f0b0d2f56cafc82756a331822b6539125e889628d3acc79cf164adcfd extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_80e4fb4f0b0d2f56cafc82756a331822b6539125e889628d3acc79cf164
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ad39e00aeb3cb2a3b6533407922c6d93e691dd06421f3d1858fd9049200e207b = $this->env->getExtension("native_profiler");
-        $__internal_ad39e00aeb3cb2a3b6533407922c6d93e691dd06421f3d1858fd9049200e207b->enter($__internal_ad39e00aeb3cb2a3b6533407922c6d93e691dd06421f3d1858fd9049200e207b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EasyAdminBundle:default:flash_messages.html.twig"));
+        $__internal_e03754bb26fc732fb5ef4505e44d131477f443f80d4fb1dd17f2c95e04941cd6 = $this->env->getExtension("native_profiler");
+        $__internal_e03754bb26fc732fb5ef4505e44d131477f443f80d4fb1dd17f2c95e04941cd6->enter($__internal_e03754bb26fc732fb5ef4505e44d131477f443f80d4fb1dd17f2c95e04941cd6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/flash_messages.html.twig"));
 
         // line 1
         if (( !(null === $this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array())) && $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "started", array()))) {
@@ -57,13 +57,13 @@ class __TwigTemplate_80e4fb4f0b0d2f56cafc82756a331822b6539125e889628d3acc79cf164
 ";
         }
         
-        $__internal_ad39e00aeb3cb2a3b6533407922c6d93e691dd06421f3d1858fd9049200e207b->leave($__internal_ad39e00aeb3cb2a3b6533407922c6d93e691dd06421f3d1858fd9049200e207b_prof);
+        $__internal_e03754bb26fc732fb5ef4505e44d131477f443f80d4fb1dd17f2c95e04941cd6->leave($__internal_e03754bb26fc732fb5ef4505e44d131477f443f80d4fb1dd17f2c95e04941cd6_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "EasyAdminBundle:default:flash_messages.html.twig";
+        return "@EasyAdmin/default/flash_messages.html.twig";
     }
 
     public function isTraitable()

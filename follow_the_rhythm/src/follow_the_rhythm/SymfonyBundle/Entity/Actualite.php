@@ -76,10 +76,10 @@ class Actualite
      */
     private $concert;
     
-       /**
+     /**
      *
-     * @ORM\ManyToOne(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Moderateur")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\ManyToOne(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $moderateur;
 
@@ -296,5 +296,10 @@ class Actualite
         public function __toString()
     {
             return $this->titre;
+    }
+    
+    public function nbArtistes()
+    {
+        return $this->artiste->length;
     }
 }

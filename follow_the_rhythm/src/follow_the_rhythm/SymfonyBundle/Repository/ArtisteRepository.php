@@ -29,4 +29,13 @@ class ArtisteRepository extends EntityRepository
         
     }
     
+    public function getSearchArtiste($recherche) 
+	{
+        $gestionnaireEntite=$this->_em;
+        
+        $requete=$gestionnaireEntite->createQuery('SELECT a FROM follow_the_rhythmSymfonyBundle:Artiste a where a.nomDeScene LIKE :recherche');
+        $requete->setParameter('recherche','%'.$recherche.'%');
+		return $requete->getResult();
+	}
+    
 }

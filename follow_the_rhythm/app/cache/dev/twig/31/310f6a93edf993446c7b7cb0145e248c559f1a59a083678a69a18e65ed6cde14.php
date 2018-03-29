@@ -21,32 +21,32 @@ class __TwigTemplate_9839bd4bfb2a44669a04248c3ce7ba46c548fe4d0aabef7b290e60ac222
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6737d1eecf07a0d7a961f4e641a919a3fdc04a7979e3b787e639ef8aed4d330a = $this->env->getExtension("native_profiler");
-        $__internal_6737d1eecf07a0d7a961f4e641a919a3fdc04a7979e3b787e639ef8aed4d330a->enter($__internal_6737d1eecf07a0d7a961f4e641a919a3fdc04a7979e3b787e639ef8aed4d330a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:soumettreTopic.html.twig"));
+        $__internal_18142b65afbd209e9d307befaa5c9fbeb985c415481b50305bf2ba080c9de85c = $this->env->getExtension("native_profiler");
+        $__internal_18142b65afbd209e9d307befaa5c9fbeb985c415481b50305bf2ba080c9de85c->enter($__internal_18142b65afbd209e9d307befaa5c9fbeb985c415481b50305bf2ba080c9de85c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:soumettreTopic.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_6737d1eecf07a0d7a961f4e641a919a3fdc04a7979e3b787e639ef8aed4d330a->leave($__internal_6737d1eecf07a0d7a961f4e641a919a3fdc04a7979e3b787e639ef8aed4d330a_prof);
+        $__internal_18142b65afbd209e9d307befaa5c9fbeb985c415481b50305bf2ba080c9de85c->leave($__internal_18142b65afbd209e9d307befaa5c9fbeb985c415481b50305bf2ba080c9de85c_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_5889707271bf964a8c5dfddaaef00fb45b61e6f516e8806f91a1eaad07fab219 = $this->env->getExtension("native_profiler");
-        $__internal_5889707271bf964a8c5dfddaaef00fb45b61e6f516e8806f91a1eaad07fab219->enter($__internal_5889707271bf964a8c5dfddaaef00fb45b61e6f516e8806f91a1eaad07fab219_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_b07b881c619e9b1a7e92f4f5d67361dc9f18778086f4598fe01f17490f480506 = $this->env->getExtension("native_profiler");
+        $__internal_b07b881c619e9b1a7e92f4f5d67361dc9f18778086f4598fe01f17490f480506->enter($__internal_b07b881c619e9b1a7e92f4f5d67361dc9f18778086f4598fe01f17490f480506_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<body onload=\"hideV();\">
   <div class=\"container\">
-    <div class=\"row\">
       <div class=\"panel panel-default\">
       <!--default panel content-->
         <div class=\"panel-heading\"><h2><span class=\"glyphicon glyphicon-plus\"></span><b> Nouveau Topic - ";
-        // line 9
+        // line 8
         echo twig_escape_filter($this->env, (isset($context["categorie_nom"]) ? $context["categorie_nom"] : $this->getContext($context, "categorie_nom")), "html", null, true);
         echo "</b></h2></div>
-     
+     <div class=\"row\">
+         <div class=\"col-lg-12\">
       <div class=\"list-group\">
         <div class=\"list-group-item\">
            
@@ -72,17 +72,18 @@ class __TwigTemplate_9839bd4bfb2a44669a04248c3ce7ba46c548fe4d0aabef7b290e60ac222
         </div>
       </div>
     </div>
+    </div>
   </div>
 </div>
 </body>
 
 ";
-        // line 29
+        // line 30
         echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/jquery.js"), "html", null, true);
         echo "\"></script>
 ";
-        // line 31
+        // line 32
         echo "<script type=\"text/javascript\">
    \$(document).ready(function() {
         // On récupère la balise <div>qui contient l'attribut « data-prototype » qui nous intéresse.
@@ -181,7 +182,7 @@ class __TwigTemplate_9839bd4bfb2a44669a04248c3ce7ba46c548fe4d0aabef7b290e60ac222
 
 ";
         
-        $__internal_5889707271bf964a8c5dfddaaef00fb45b61e6f516e8806f91a1eaad07fab219->leave($__internal_5889707271bf964a8c5dfddaaef00fb45b61e6f516e8806f91a1eaad07fab219_prof);
+        $__internal_b07b881c619e9b1a7e92f4f5d67361dc9f18778086f4598fe01f17490f480506->leave($__internal_b07b881c619e9b1a7e92f4f5d67361dc9f18778086f4598fe01f17490f480506_prof);
 
     }
 
@@ -197,7 +198,7 @@ class __TwigTemplate_9839bd4bfb2a44669a04248c3ce7ba46c548fe4d0aabef7b290e60ac222
 
     public function getDebugInfo()
     {
-        return array (  86 => 31,  81 => 29,  68 => 18,  64 => 17,  60 => 16,  56 => 15,  47 => 9,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  87 => 32,  82 => 30,  68 => 18,  64 => 17,  60 => 16,  56 => 15,  46 => 8,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -205,11 +206,11 @@ class __TwigTemplate_9839bd4bfb2a44669a04248c3ce7ba46c548fe4d0aabef7b290e60ac222
 /* {% block contenuCentral %}*/
 /* <body onload="hideV();">*/
 /*   <div class="container">*/
-/*     <div class="row">*/
 /*       <div class="panel panel-default">*/
 /*       <!--default panel content-->*/
 /*         <div class="panel-heading"><h2><span class="glyphicon glyphicon-plus"></span><b> Nouveau Topic - {{categorie_nom}}</b></h2></div>*/
-/*      */
+/*      <div class="row">*/
+/*          <div class="col-lg-12">*/
 /*       <div class="list-group">*/
 /*         <div class="list-group-item">*/
 /*            */
@@ -222,6 +223,7 @@ class __TwigTemplate_9839bd4bfb2a44669a04248c3ce7ba46c548fe4d0aabef7b290e60ac222
 /*           </form>*/
 /*         </div>*/
 /*       </div>*/
+/*     </div>*/
 /*     </div>*/
 /*   </div>*/
 /* </div>*/

@@ -15,12 +15,12 @@ class __TwigTemplate_d18405d3cd0d450746e677bf6f416da9173f0244826fce16ea6cd7cb95b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a8d7c10c9388906585eeb24224b4d516379b940073880e5936ff797bc7a75d84 = $this->env->getExtension("native_profiler");
-        $__internal_a8d7c10c9388906585eeb24224b4d516379b940073880e5936ff797bc7a75d84->enter($__internal_a8d7c10c9388906585eeb24224b4d516379b940073880e5936ff797bc7a75d84_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Registration:register_content.html.twig"));
+        $__internal_fe0a4beaf411c7a9500a37d5c94436fc335609c377fe17bb7e0a2ef43db50668 = $this->env->getExtension("native_profiler");
+        $__internal_fe0a4beaf411c7a9500a37d5c94436fc335609c377fe17bb7e0a2ef43db50668->enter($__internal_fe0a4beaf411c7a9500a37d5c94436fc335609c377fe17bb7e0a2ef43db50668_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Registration:register_content.html.twig"));
 
         // line 1
         echo "<div class=\"panel panel-default\">
-    <div class=\"panel-heading\"><h2><b><i class=\"fa fa-user\" aria-hidden=\"true\"></i> Se connecter</b></h2></div>
+    <div class=\"panel-heading\"><h2><b><i class=\"fa fa-user\" aria-hidden=\"true\"></i> Inscription</b></h2></div>
         <div class=\"list-group\">
             <div class=\"list-group-item\">
             
@@ -48,7 +48,7 @@ class __TwigTemplate_d18405d3cd0d450746e677bf6f416da9173f0244826fce16ea6cd7cb95b
 
 ";
         
-        $__internal_a8d7c10c9388906585eeb24224b4d516379b940073880e5936ff797bc7a75d84->leave($__internal_a8d7c10c9388906585eeb24224b4d516379b940073880e5936ff797bc7a75d84_prof);
+        $__internal_fe0a4beaf411c7a9500a37d5c94436fc335609c377fe17bb7e0a2ef43db50668->leave($__internal_fe0a4beaf411c7a9500a37d5c94436fc335609c377fe17bb7e0a2ef43db50668_prof);
 
     }
 
@@ -68,7 +68,7 @@ class __TwigTemplate_d18405d3cd0d450746e677bf6f416da9173f0244826fce16ea6cd7cb95b
     }
 }
 /* <div class="panel panel-default">*/
-/*     <div class="panel-heading"><h2><b><i class="fa fa-user" aria-hidden="true"></i> Se connecter</b></h2></div>*/
+/*     <div class="panel-heading"><h2><b><i class="fa fa-user" aria-hidden="true"></i> Inscription</b></h2></div>*/
 /*         <div class="list-group">*/
 /*             <div class="list-group-item">*/
 /*             */

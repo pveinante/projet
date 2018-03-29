@@ -2,13 +2,13 @@
     <ul class="pagination">
         {% if pagination.page > 1 %}
             <li>
-                <a title="Première page" href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': 1, 'sens': 1})) }}">
+                <a title="Première page" href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': 1, 'sens': 1, 'nbParPage': nbParPage})) }}">
                     <<
                 </a>
             </li>
             <li>
                 <a title="Page précédente" href="{{ path(pagination.nomRoute,
-                pagination.paramsRoute|merge({'page': pagination.page-1, 'sens': 1})) }}">
+                pagination.paramsRoute|merge({'page': pagination.page-1, 'sens': 1, 'nbParPage': nbParPage})) }}">
                     <
                 </a>
             </li>
@@ -17,7 +17,7 @@
         {# Affichage de toutes les pages entre p-4 et p+4 sauf si < 1 ou > nbPages #}
         {% for p in range(max(pagination.page-4, 1), min(pagination.page+4, pagination.nbPages)) %}
             <li {% if p == pagination.page %}class="active"{% endif %}>
-                <a title="Page {{ p }}" href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': p, 'sens': 1})) }}">
+                <a title="Page {{ p }}" href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': p, 'sens': 1, 'nbParPage': nbParPage})) }}">
                     {{ p }}
                 </a>
             </li>
@@ -26,13 +26,13 @@
         {% if pagination.page < pagination.nbPages %}
             <li>
                 <a title="Page suivante" href="{{ path(pagination.nomRoute,
-                pagination.paramsRoute|merge({'page': pagination.page+1, 'sens': 1})) }}">
+                pagination.paramsRoute|merge({'page': pagination.page+1, 'sens': 1, 'nbParPage': nbParPage})) }}">
                     >
                 </a>
             </li>
             <li>
                 <a title="Dernière page" href="{{ path(pagination.nomRoute,
-                pagination.paramsRoute|merge({'page': pagination.nbPages, 'sens': 1})) }}">
+                pagination.paramsRoute|merge({'page': pagination.nbPages, 'sens': 1, 'nbParPage': nbParPage})) }}">
                     >>
                 </a>
             </li>

@@ -1,6 +1,6 @@
 <?php
 
-/* EasyAdminBundle:default:field_string.html.twig */
+/* @EasyAdmin/default/field_string.html.twig */
 class __TwigTemplate_1b4d6f6d48efa8e6715a01fc227a9b499650bd4ed4b39faf0cbb7fd8b88bee94 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_1b4d6f6d48efa8e6715a01fc227a9b499650bd4ed4b39faf0cbb7fd8b88
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d1d26e17d35cc80c7f8d283c001f19645eaacdcd96e24d3bf704a3a21473ad21 = $this->env->getExtension("native_profiler");
-        $__internal_d1d26e17d35cc80c7f8d283c001f19645eaacdcd96e24d3bf704a3a21473ad21->enter($__internal_d1d26e17d35cc80c7f8d283c001f19645eaacdcd96e24d3bf704a3a21473ad21_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EasyAdminBundle:default:field_string.html.twig"));
+        $__internal_764368ff3e20f84b1bf92691f4a4fd18bcb375341e1feb2f0d1b1b06a149c46c = $this->env->getExtension("native_profiler");
+        $__internal_764368ff3e20f84b1bf92691f4a4fd18bcb375341e1feb2f0d1b1b06a149c46c->enter($__internal_764368ff3e20f84b1bf92691f4a4fd18bcb375341e1feb2f0d1b1b06a149c46c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@EasyAdmin/default/field_string.html.twig"));
 
         // line 1
         if (((isset($context["view"]) ? $context["view"] : $this->getContext($context, "view")) == "show")) {
@@ -33,13 +33,13 @@ class __TwigTemplate_1b4d6f6d48efa8e6715a01fc227a9b499650bd4ed4b39faf0cbb7fd8b88
 ";
         }
         
-        $__internal_d1d26e17d35cc80c7f8d283c001f19645eaacdcd96e24d3bf704a3a21473ad21->leave($__internal_d1d26e17d35cc80c7f8d283c001f19645eaacdcd96e24d3bf704a3a21473ad21_prof);
+        $__internal_764368ff3e20f84b1bf92691f4a4fd18bcb375341e1feb2f0d1b1b06a149c46c->leave($__internal_764368ff3e20f84b1bf92691f4a4fd18bcb375341e1feb2f0d1b1b06a149c46c_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "EasyAdminBundle:default:field_string.html.twig";
+        return "@EasyAdmin/default/field_string.html.twig";
     }
 
     public function isTraitable()

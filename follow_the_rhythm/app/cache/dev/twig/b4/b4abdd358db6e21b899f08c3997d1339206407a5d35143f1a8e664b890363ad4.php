@@ -21,24 +21,24 @@ class __TwigTemplate_619ac1f1566f9d6971bc10ba265c8d618424a82c9a58761e62a059680d5
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1ff0bbdb03f5910a9396c7b2600ba39ff3ed9794482d9ee96305578a891e47b5 = $this->env->getExtension("native_profiler");
-        $__internal_1ff0bbdb03f5910a9396c7b2600ba39ff3ed9794482d9ee96305578a891e47b5->enter($__internal_1ff0bbdb03f5910a9396c7b2600ba39ff3ed9794482d9ee96305578a891e47b5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:pageConcert.html.twig"));
+        $__internal_95a400cd52226b996f5fccdba653b3957ea05f3405ab3f0ee7102c98062c85b9 = $this->env->getExtension("native_profiler");
+        $__internal_95a400cd52226b996f5fccdba653b3957ea05f3405ab3f0ee7102c98062c85b9->enter($__internal_95a400cd52226b996f5fccdba653b3957ea05f3405ab3f0ee7102c98062c85b9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:pageConcert.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1ff0bbdb03f5910a9396c7b2600ba39ff3ed9794482d9ee96305578a891e47b5->leave($__internal_1ff0bbdb03f5910a9396c7b2600ba39ff3ed9794482d9ee96305578a891e47b5_prof);
+        $__internal_95a400cd52226b996f5fccdba653b3957ea05f3405ab3f0ee7102c98062c85b9->leave($__internal_95a400cd52226b996f5fccdba653b3957ea05f3405ab3f0ee7102c98062c85b9_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_06a2ca7bc36a8712fd213197c7862275e42f9d70c22d3bb396780cf9839394f9 = $this->env->getExtension("native_profiler");
-        $__internal_06a2ca7bc36a8712fd213197c7862275e42f9d70c22d3bb396780cf9839394f9->enter($__internal_06a2ca7bc36a8712fd213197c7862275e42f9d70c22d3bb396780cf9839394f9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_393389355a8e63554a8a66fea9e7de118ddf837468b0e815255dd393f0d33e79 = $this->env->getExtension("native_profiler");
+        $__internal_393389355a8e63554a8a66fea9e7de118ddf837468b0e815255dd393f0d33e79->enter($__internal_393389355a8e63554a8a66fea9e7de118ddf837468b0e815255dd393f0d33e79_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
-        echo "<body>
-  <div class=\"container\">
+        echo "<body  onload='setTimeout(TrouverAdresse, 10)'>
+    <div class=\"container\">
       <div class=\"panel panel-default\">
       <!--default panel content-->
         <div class=\"panel-heading\">
@@ -95,28 +95,43 @@ class __TwigTemplate_619ac1f1566f9d6971bc10ba265c8d618424a82c9a58761e62a059680d5
      
         <div class=\"list-group\">
             
-            <div class=\"list-group-item\">
+            <div style='height: 370px;' class=\"list-group-item\">
                 <p><label><b><h3>Lieu</h3></b></label></p>
-                <p><label>";
+                <p><label id='lieu'>";
         // line 31
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["concert"]) ? $context["concert"] : $this->getContext($context, "concert")), "lieu", array()), "html", null, true);
         echo "</label></p>
+                <div id=\"map-canvas\" style=\"float:right;height:220px;width:100%\"></div>
             </div>
             <div class=\"list-group-item\">
                 <p><label><b><h3>Description</h3></b></label></p>
-                <p><label>";
-        // line 35
+                <p style='text-align: justify;'><label>";
+        // line 36
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["concert"]) ? $context["concert"] : $this->getContext($context, "concert")), "description", array()), "html", null, true);
         echo "</label></p>
             </div>
             <div class=\"list-group-item\">
-                <p><label><b><h3>Artiste participant</h3></b></label></p>
                 ";
         // line 39
+        if ((twig_length_filter($this->env, (isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste"))) > 1)) {
+            // line 40
+            echo "                    <p><label><b><h3>Artistes participants (";
+            echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste"))), "html", null, true);
+            echo ")</h3></b></label></p>
+                ";
+        } else {
+            // line 42
+            echo "                    <p><label><b><h3>Artiste participant (";
+            echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste"))), "html", null, true);
+            echo ")</h3></b></label></p>
+                ";
+        }
+        // line 44
+        echo "                ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["artiste"]) ? $context["artiste"] : $this->getContext($context, "artiste")));
         foreach ($context['_seq'] as $context["_key"] => $context["artisteCourant"]) {
-            // line 40
+            // line 45
             echo "                   <p> <label> <a href=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_pageArtiste", array("id" => $this->getAttribute($context["artisteCourant"], "id", array()))), "html", null, true);
             echo "\" >";
@@ -127,7 +142,7 @@ class __TwigTemplate_619ac1f1566f9d6971bc10ba265c8d618424a82c9a58761e62a059680d5
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['artisteCourant'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 47
         echo "            </div>
         </div>
       </div>
@@ -141,9 +156,56 @@ function allerConcert(){
   alert(\"Il faut être connecté pour accéder à cette fonctionnalité\");
 }
 </script>
+
+
+<script type=\"text/javascript\" src=\"https://maps.googleapis.com/maps/api/js?sensor=false&language=fr\">
+</script>
+<script type=\"text/javascript\">
+var geocoder;
+var map;
+// initialisation de la carte Google Map de départ
+function initialiserCarte() {
+  geocoder = new google.maps.Geocoder();
+  // Ici j'ai mis la latitude et longitude du vieux Port de Marseille pour centrer la carte de départ
+  var latlng = new google.maps.LatLng(43.295309,5.374457);
+  var mapOptions = {
+    zoom      : 13,
+    center    : latlng,
+    mapTypeId : google.maps.MapTypeId.ROADMAP
+  }
+  // map-canvas est le conteneur HTML de la carte Google Map
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+}
+ 
+function TrouverAdresse() {
+  // Récupération de l'adresse tapée dans le formulaire
+  var adresse = document.getElementById('lieu').innerHTML;
+  geocoder.geocode( { 'address': adresse}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      map.setCenter(results[0].geometry.location);
+      // Récupération des coordonnées GPS du lieu tapé dans le formulaire
+      var strposition = results[0].geometry.location+\"\";
+      strposition=strposition.replace('(', '');
+      strposition=strposition.replace(')', '');
+      // Affichage des coordonnées dans le <span>
+      document.getElementById('text_latlng').innerHTML='Coordonnées : '+strposition;
+      // Création du marqueur du lieu (épingle)
+      var marker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location
+      });
+    } else {
+      document.getElementById('map-canvas').style.visibility = hidden;
+    }
+  });
+}
+// Lancement de la construction de la carte google map
+google.maps.event.addDomListener(window, 'load', initialiserCarte);
+</script>
+
 ";
         
-        $__internal_06a2ca7bc36a8712fd213197c7862275e42f9d70c22d3bb396780cf9839394f9->leave($__internal_06a2ca7bc36a8712fd213197c7862275e42f9d70c22d3bb396780cf9839394f9_prof);
+        $__internal_393389355a8e63554a8a66fea9e7de118ddf837468b0e815255dd393f0d33e79->leave($__internal_393389355a8e63554a8a66fea9e7de118ddf837468b0e815255dd393f0d33e79_prof);
 
     }
 
@@ -159,14 +221,14 @@ function allerConcert(){
 
     public function getDebugInfo()
     {
-        return array (  131 => 42,  120 => 40,  116 => 39,  109 => 35,  102 => 31,  90 => 21,  80 => 19,  77 => 18,  69 => 16,  61 => 14,  58 => 13,  56 => 12,  52 => 11,  48 => 10,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  146 => 47,  135 => 45,  130 => 44,  124 => 42,  118 => 40,  116 => 39,  110 => 36,  102 => 31,  90 => 21,  80 => 19,  77 => 18,  69 => 16,  61 => 14,  58 => 13,  56 => 12,  52 => 11,  48 => 10,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
 /* */
 /* {% block contenuCentral %}*/
-/* <body>*/
-/*   <div class="container">*/
+/* <body  onload='setTimeout(TrouverAdresse, 10)'>*/
+/*     <div class="container">*/
 /*       <div class="panel panel-default">*/
 /*       <!--default panel content-->*/
 /*         <div class="panel-heading">*/
@@ -190,16 +252,21 @@ function allerConcert(){
 /*      */
 /*         <div class="list-group">*/
 /*             */
-/*             <div class="list-group-item">*/
+/*             <div style='height: 370px;' class="list-group-item">*/
 /*                 <p><label><b><h3>Lieu</h3></b></label></p>*/
-/*                 <p><label>{{concert.lieu}}</label></p>*/
+/*                 <p><label id='lieu'>{{concert.lieu}}</label></p>*/
+/*                 <div id="map-canvas" style="float:right;height:220px;width:100%"></div>*/
 /*             </div>*/
 /*             <div class="list-group-item">*/
 /*                 <p><label><b><h3>Description</h3></b></label></p>*/
-/*                 <p><label>{{concert.description}}</label></p>*/
+/*                 <p style='text-align: justify;'><label>{{concert.description}}</label></p>*/
 /*             </div>*/
 /*             <div class="list-group-item">*/
-/*                 <p><label><b><h3>Artiste participant</h3></b></label></p>*/
+/*                 {% if artiste|length > 1 %}*/
+/*                     <p><label><b><h3>Artistes participants ({{artiste|length}})</h3></b></label></p>*/
+/*                 {% else %}*/
+/*                     <p><label><b><h3>Artiste participant ({{artiste|length}})</h3></b></label></p>*/
+/*                 {% endif %}*/
 /*                 {% for artisteCourant in artiste %}*/
 /*                    <p> <label> <a href="{{path('follow_the_rhythm_pageArtiste',{'id':artisteCourant.id})}}" >{{artisteCourant.nomDeScene}}</a></label></p>*/
 /*                 {% endfor %}*/
@@ -216,4 +283,51 @@ function allerConcert(){
 /*   alert("Il faut être connecté pour accéder à cette fonctionnalité");*/
 /* }*/
 /* </script>*/
+/* */
+/* */
+/* <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&language=fr">*/
+/* </script>*/
+/* <script type="text/javascript">*/
+/* var geocoder;*/
+/* var map;*/
+/* // initialisation de la carte Google Map de départ*/
+/* function initialiserCarte() {*/
+/*   geocoder = new google.maps.Geocoder();*/
+/*   // Ici j'ai mis la latitude et longitude du vieux Port de Marseille pour centrer la carte de départ*/
+/*   var latlng = new google.maps.LatLng(43.295309,5.374457);*/
+/*   var mapOptions = {*/
+/*     zoom      : 13,*/
+/*     center    : latlng,*/
+/*     mapTypeId : google.maps.MapTypeId.ROADMAP*/
+/*   }*/
+/*   // map-canvas est le conteneur HTML de la carte Google Map*/
+/*   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);*/
+/* }*/
+/*  */
+/* function TrouverAdresse() {*/
+/*   // Récupération de l'adresse tapée dans le formulaire*/
+/*   var adresse = document.getElementById('lieu').innerHTML;*/
+/*   geocoder.geocode( { 'address': adresse}, function(results, status) {*/
+/*     if (status == google.maps.GeocoderStatus.OK) {*/
+/*       map.setCenter(results[0].geometry.location);*/
+/*       // Récupération des coordonnées GPS du lieu tapé dans le formulaire*/
+/*       var strposition = results[0].geometry.location+"";*/
+/*       strposition=strposition.replace('(', '');*/
+/*       strposition=strposition.replace(')', '');*/
+/*       // Affichage des coordonnées dans le <span>*/
+/*       document.getElementById('text_latlng').innerHTML='Coordonnées : '+strposition;*/
+/*       // Création du marqueur du lieu (épingle)*/
+/*       var marker = new google.maps.Marker({*/
+/*           map: map,*/
+/*           position: results[0].geometry.location*/
+/*       });*/
+/*     } else {*/
+/*       document.getElementById('map-canvas').style.visibility = hidden;*/
+/*     }*/
+/*   });*/
+/* }*/
+/* // Lancement de la construction de la carte google map*/
+/* google.maps.event.addDomListener(window, 'load', initialiserCarte);*/
+/* </script>*/
+/* */
 /* {% endblock %}*/

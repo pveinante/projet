@@ -298,7 +298,7 @@ class SymfonyController extends Controller
         $artiste->setNbFollower(0);
         $gestionnaireEntite->persist($artiste);
         $gestionnaireEntite->flush();
-        return $this->redirect($this->generateUrl('follow_the_rhythm_accueil',array('page'=>1, 'sens'=>1)));
+        return $this->redirect($this->generateUrl('follow_the_rhythm_accueil',array('page'=>1, 'sens'=>1, 'nbParPage'=>25)));
       }
       
       //On envoie les données à la vue artiste
@@ -333,7 +333,7 @@ class SymfonyController extends Controller
         //On enregistre l'objet $concert dans la BD
         $gestionnaireEntite->persist($concert);
         $gestionnaireEntite->flush();
-        return $this->redirect($this->generateUrl('follow_the_rhythm_accueil',array('page'=>1, 'sens'=>1)));
+        return $this->redirect($this->generateUrl('follow_the_rhythm_accueil',array('page'=>1, 'sens'=>1, 'nbParPage'=>25)));
       }
       
       //On envoie les données à la vue concert
@@ -507,7 +507,7 @@ class SymfonyController extends Controller
      public function categorieAction($catId = 1){
        
       $cat[1] = "News";
-      $cat[2] = "EspacePrivé";
+      $cat[2] = "Espace Privé";
       $cat[3] = "Concerts";
       $cat[4] = "Promotions";
       
@@ -561,6 +561,9 @@ class SymfonyController extends Controller
       $repositoryTopic = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Topic');
       $tabTopics = $repositoryTopic->findBy(["id" => $topicId]);
       
+      $repositoryCat = $gestionnaireEntite->getRepository('follow_the_rhythmSymfonyBundle:Categorie');
+      $tabCat = $repositoryCat->findBy(["id" => $tabTopics[0]->getCategorie()->getId()]);
+      
       // on récupère le pesudo du créateur de chaque message
       foreach ($tabMessages as $message)
       {
@@ -603,7 +606,7 @@ class SymfonyController extends Controller
     
       }
       return $this->render('follow_the_rhythmSymfonyBundle:Symfony:messages.html.twig',
-      array('tabMessage'=>$tabMessages, 'tabCreateur' => $tabCreateur, 'titre' => $tabTopics[0]->getTitre(), 'topicCourant' => $topicId, 'pagination'=>$pagination, 'nbParPage' => $nbParPage, 'formulaireMessage' => $formulaireMessage->createView()));
+      array('tabMessage'=>$tabMessages, 'cat' => $tabCat[0], 'tabCreateur' => $tabCreateur, 'titre' => $tabTopics[0]->getTitre(), 'topicCourant' => $topicId, 'pagination'=>$pagination, 'nbParPage' => $nbParPage, 'formulaireMessage' => $formulaireMessage->createView()));
       
     }
     

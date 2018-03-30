@@ -12,16 +12,24 @@
 </style>
 <div class="container">
     <div class="panel panel-default">
-        <div class="panel-heading"><h2><b><span class="glyphicon glyphicon-search"></span> Résultat de la recherche pour "{{ recherche }}"</b><a title="Renvoie à l'accueil de Follow the Rhythm." href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 2, 'nbParPage': 25})}}"><button style='margin-left: 32px;' type="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour à l'accueil</button></a></h2></div>
+        {% if (resultRechercheArtiste|length + resultRechercheConcert|length + resultRechercheTopic|length)>1 %}
+            <div class="panel-heading"><h2><b><span class="glyphicon glyphicon-search"></span> Résultat de la recherche pour "{{ recherche }}" ({{resultRechercheArtiste|length + resultRechercheConcert|length + resultRechercheTopic|length}} resultats trouvés)</b></h2></div>
+        {% else %}
+            <div class="panel-heading"><h2><b><span class="glyphicon glyphicon-search"></span> Résultat de la recherche pour "{{ recherche }}" ({{resultRechercheArtiste|length + resultRechercheConcert|length + resultRechercheTopic|length}} resultat trouvé)</b></h2></div>
+        {% endif %}
         <div class="row">
         	<div class="col-lg-12">
                <div class="container">
                     <div class ="row">
         	            <div class ="col-lg-3">
-    			            <label><b><h3>Artistes</h3></b>
-    			            {% for artisteCourant in resultRechercheArtiste %}
-        		                <p><a title="Aller à la page de {{artisteCourant}}." href="{{path('follow_the_rhythm_pageArtiste',{'id':artisteCourant.id})}}">{{artisteCourant.nomDeScene}}</a></p>
-        		            {% endfor %}
+    			            <label><b><h3>Artistes ({{resultRechercheArtiste|length}})</h3></b>
+    			            {% if resultRechercheArtiste is empty %}
+    			                <p>Pas d'artistes trouvés pour "{{ recherche }}"</p>
+    			            {% else %}
+        			            {% for artisteCourant in resultRechercheArtiste %}
+            		                <p><a title="Aller à la page de {{artisteCourant}}." href="{{path('follow_the_rhythm_pageArtiste',{'id':artisteCourant.id})}}">{{artisteCourant.nomDeScene}}</a></p>
+            		            {% endfor %}
+        		            {% endif %}
         		            </label>
     		            </div>
         	        </div>
@@ -29,10 +37,14 @@
                 <div class="container">
                     <div class ="row">
     		            <div class ="col-lg-3">
-    			            <label><b><h3>Concerts</h3></b>
+    			            <label><b><h3>Concerts  ({{resultRechercheConcert|length}})</h3></b>
+    			               {% if resultRechercheConcert is empty %}
+    			                <p>Pas de concerts trouvés pour "{{ recherche }}"</p>
+    			            {% else %}
     			            {% for concertCourant in resultRechercheConcert %}
         		                <p><a title="Aller à la page du concert." href="{{path('follow_the_rhythm_pageConcert',{'id':concertCourant.id})}}" >{{concertCourant}}</a></p>
         		            {% endfor %}
+        		            {% endif %}
         		            </label>
     		            </div>
     	            </div>
@@ -40,21 +52,14 @@
                 <div class="container">
                     <div class ="row">
         	            <div class ="col-lg-3">
-        		            <label><b><h3>Topics</h3></b>
+        		            <label><b><h3>Topics  ({{resultRechercheTopic|length}})</h3></b>
+        		            {% if resultRechercheTopic is empty %}
+    			                <p>Pas de topics trouvés pour "{{ recherche }}"</p>
+    			            {% else %}
         		            {% for topicCourant in resultRechercheTopic %}
         		                <p><a href="{{path('follow_the_rhythm_messages',{'topicId':topicCourant.id, 'page':1, 'nbParPage':25})}}">{{topicCourant}}</a></p>
         		            {% endfor %}
-        		            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class ="row">
-        	            <div class ="col-lg-3">
-        		            <label><b><h3>Utilisateurs</h3></b>
-        		            {% for topicCourant in resultRechercheTopic %}
-        		                <p><a href="{{path('follow_the_rhythm_messages',{'topicId':topicCourant.id, 'page':1, 'nbParPage':25})}}">{{topicCourant}}</a></p>
-        		            {% endfor %}
+        		            {% endif %}
         		            </label>
                         </div>
                     </div>

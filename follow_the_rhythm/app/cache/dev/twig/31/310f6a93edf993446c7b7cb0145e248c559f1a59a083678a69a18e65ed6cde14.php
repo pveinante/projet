@@ -21,20 +21,20 @@ class __TwigTemplate_9839bd4bfb2a44669a04248c3ce7ba46c548fe4d0aabef7b290e60ac222
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_18142b65afbd209e9d307befaa5c9fbeb985c415481b50305bf2ba080c9de85c = $this->env->getExtension("native_profiler");
-        $__internal_18142b65afbd209e9d307befaa5c9fbeb985c415481b50305bf2ba080c9de85c->enter($__internal_18142b65afbd209e9d307befaa5c9fbeb985c415481b50305bf2ba080c9de85c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:soumettreTopic.html.twig"));
+        $__internal_999f8a5451922593358e7e2733adbaef8a38e3d3e6d6b3f0eb21ec4dc0480586 = $this->env->getExtension("native_profiler");
+        $__internal_999f8a5451922593358e7e2733adbaef8a38e3d3e6d6b3f0eb21ec4dc0480586->enter($__internal_999f8a5451922593358e7e2733adbaef8a38e3d3e6d6b3f0eb21ec4dc0480586_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:soumettreTopic.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_18142b65afbd209e9d307befaa5c9fbeb985c415481b50305bf2ba080c9de85c->leave($__internal_18142b65afbd209e9d307befaa5c9fbeb985c415481b50305bf2ba080c9de85c_prof);
+        $__internal_999f8a5451922593358e7e2733adbaef8a38e3d3e6d6b3f0eb21ec4dc0480586->leave($__internal_999f8a5451922593358e7e2733adbaef8a38e3d3e6d6b3f0eb21ec4dc0480586_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_b07b881c619e9b1a7e92f4f5d67361dc9f18778086f4598fe01f17490f480506 = $this->env->getExtension("native_profiler");
-        $__internal_b07b881c619e9b1a7e92f4f5d67361dc9f18778086f4598fe01f17490f480506->enter($__internal_b07b881c619e9b1a7e92f4f5d67361dc9f18778086f4598fe01f17490f480506_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_f917137636f2b7fdba83be8ea5117afd398bf81e556f61f41d985500de59d8e7 = $this->env->getExtension("native_profiler");
+        $__internal_f917137636f2b7fdba83be8ea5117afd398bf81e556f61f41d985500de59d8e7->enter($__internal_f917137636f2b7fdba83be8ea5117afd398bf81e556f61f41d985500de59d8e7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<body onload=\"hideV();\">
@@ -65,7 +65,7 @@ class __TwigTemplate_9839bd4bfb2a44669a04248c3ce7ba46c548fe4d0aabef7b290e60ac222
         echo ". Voulez-vous continuer ?');\">
             <a href=\"";
         // line 18
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueil", array("page" => 1, "sens" => 1)), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("follow_the_rhythm_accueil", array("page" => 1, "sens" => 1, "nbParPage" => 25)), "html", null, true);
         echo "\"><input type=button class=\"btn btn-primary\" value=\"Annuler\" onclick=\"return confirm('Êtes vous sûr? Les données saisies seront effacées');\"></a></br>
             </br>
           </form>
@@ -182,7 +182,7 @@ class __TwigTemplate_9839bd4bfb2a44669a04248c3ce7ba46c548fe4d0aabef7b290e60ac222
 
 ";
         
-        $__internal_b07b881c619e9b1a7e92f4f5d67361dc9f18778086f4598fe01f17490f480506->leave($__internal_b07b881c619e9b1a7e92f4f5d67361dc9f18778086f4598fe01f17490f480506_prof);
+        $__internal_f917137636f2b7fdba83be8ea5117afd398bf81e556f61f41d985500de59d8e7->leave($__internal_f917137636f2b7fdba83be8ea5117afd398bf81e556f61f41d985500de59d8e7_prof);
 
     }
 
@@ -218,7 +218,7 @@ class __TwigTemplate_9839bd4bfb2a44669a04248c3ce7ba46c548fe4d0aabef7b290e60ac222
 /*           <form method="post" id=soumettreTopicForm name="formSoumettreTopic" {{form_enctype(formulaireTopic)}}>*/
 /*               {{ form_widget(formulaireTopic)}}*/
 /*             <input type=submit class="btn btn-primary" onsubmit="return false" onclick="return confirm('Vous allez créer un topic dans la catégorie {{categorie_nom}}. Voulez-vous continuer ?');">*/
-/*             <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1})}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a></br>*/
+/*             <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1, 'nbParPage':25})}}"><input type=button class="btn btn-primary" value="Annuler" onclick="return confirm('Êtes vous sûr? Les données saisies seront effacées');"></a></br>*/
 /*             </br>*/
 /*           </form>*/
 /*         </div>*/

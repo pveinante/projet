@@ -21,20 +21,20 @@ class __TwigTemplate_e586d131729b9163c17ac8f2001678d1fd7da4139d6da96671acd9768be
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_114cbc7fe980e5abbd5e5a759b25544da11b35b3fecc3a140b1ebb15fe1ee3d7 = $this->env->getExtension("native_profiler");
-        $__internal_114cbc7fe980e5abbd5e5a759b25544da11b35b3fecc3a140b1ebb15fe1ee3d7->enter($__internal_114cbc7fe980e5abbd5e5a759b25544da11b35b3fecc3a140b1ebb15fe1ee3d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:accueilForum.html.twig"));
+        $__internal_62e38cf820410ca06d8cb6770f501cfcadb4aef6d3e3b0610b42527526bbd4d4 = $this->env->getExtension("native_profiler");
+        $__internal_62e38cf820410ca06d8cb6770f501cfcadb4aef6d3e3b0610b42527526bbd4d4->enter($__internal_62e38cf820410ca06d8cb6770f501cfcadb4aef6d3e3b0610b42527526bbd4d4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:accueilForum.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_114cbc7fe980e5abbd5e5a759b25544da11b35b3fecc3a140b1ebb15fe1ee3d7->leave($__internal_114cbc7fe980e5abbd5e5a759b25544da11b35b3fecc3a140b1ebb15fe1ee3d7_prof);
+        $__internal_62e38cf820410ca06d8cb6770f501cfcadb4aef6d3e3b0610b42527526bbd4d4->leave($__internal_62e38cf820410ca06d8cb6770f501cfcadb4aef6d3e3b0610b42527526bbd4d4_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_f12171d18be4a3b930656473f9d775c618f97c500031ddeb835427b2a150be66 = $this->env->getExtension("native_profiler");
-        $__internal_f12171d18be4a3b930656473f9d775c618f97c500031ddeb835427b2a150be66->enter($__internal_f12171d18be4a3b930656473f9d775c618f97c500031ddeb835427b2a150be66_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_7a175a7ee0c0e685cf7009858b56d236a1fd5f006ad46790c06e1c18eaf4cddb = $this->env->getExtension("native_profiler");
+        $__internal_7a175a7ee0c0e685cf7009858b56d236a1fd5f006ad46790c06e1c18eaf4cddb->enter($__internal_7a175a7ee0c0e685cf7009858b56d236a1fd5f006ad46790c06e1c18eaf4cddb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "<style>
@@ -211,7 +211,7 @@ class __TwigTemplate_e586d131729b9163c17ac8f2001678d1fd7da4139d6da96671acd9768be
 \t\t\t            <h5><a title=\"Discuter des promotions.\" href=\"";
         // line 91
         echo $this->env->getExtension('routing')->getPath("follow_the_rhythm_categorie", array("catId" => 4));
-        echo "\"> Promotion</a></h5>
+        echo "\"> Promotions</a></h5>
 \t\t            </div>
 \t\t            <div class =\"col-lg-1\">
 \t\t\t            <h5 align=\"center\">";
@@ -252,20 +252,19 @@ class __TwigTemplate_e586d131729b9163c17ac8f2001678d1fd7da4139d6da96671acd9768be
 \t            </div>
             </div>
             <div class=\"list-group-item\"><b><label><span class=\"glyphicon glyphicon-list-alt\"></span> Règles du forum</label></b></h2>
-\t\t\t\t<label color=\"#777777\">
+\t\t\t\t
 \t\t\t\t<p style=\"text-align:justify;\">
 \t\t\t\tLes contributions contraires aux bons usages (racisme, pornographie, atteinte à la vie privée, injures, liens vers des sites (ou
-\t\t\t\tphotos) à caractère pornographique etc.) seront supprimés.</br>
-\t\t\t\tLes messages jugés sensibles (à caractère politique, religieux... etc) pourront être supprimés pour éviter d'éventuels conflits.
-\t\t\t\t<b>Modération du forum</b>
-\t\t\t\tL'administrateur et les modérateurs ne sont pas responsable du contenu des messages postés par les utilisateurs du forum. <br />
-\t\t\t\tLes topics des utilisateurs sont contrôlés régulièrement mais pas exhaustivement (modération à posteriori).</br>
+\t\t\t\tphotos) à caractère pornographique...) seront supprimées.</br>
+\t\t\t\tLes messages jugés sensibles (à caractère politique, religieux...) pourront être supprimés pour éviter d'éventuels conflits.<br />
+\t\t\t\tL'administrateur et les modérateurs ne sont pas responsables du contenu des messages postés par les utilisateurs du forum. <br />
+\t\t\t\tLes topics des utilisateurs sont contrôlés régulièrement mais pas exhaustivement (modération <i>a posteriori</i>).</br>
 \t\t\t\tChaque membre de la communauté peut (et doit) signaler tout message enfreignant une règle grave (messages qui nécessitent une
 \t\t\t\tmodération urgente) grâce au bouton \"Signaler\"</br>
-\t\t\t\tLa modération se réserve la possibilité de supprimer ou ne pas valider tout message qui pourrait aller à l'encontre des intérêts 
+\t\t\t\tL'administrateur et les modérateurs se réservent la possibilité de supprimer ou ne pas valider tout message qui pourrait aller à l'encontre des intérêts 
 \t\t\t\tde la communauté.
 \t\t\t\t</p>
-\t\t\t\t</label>
+\t\t\t\t
             </div>
         </div>
         </div>
@@ -274,7 +273,7 @@ class __TwigTemplate_e586d131729b9163c17ac8f2001678d1fd7da4139d6da96671acd9768be
     
 ";
         
-        $__internal_f12171d18be4a3b930656473f9d775c618f97c500031ddeb835427b2a150be66->leave($__internal_f12171d18be4a3b930656473f9d775c618f97c500031ddeb835427b2a150be66_prof);
+        $__internal_7a175a7ee0c0e685cf7009858b56d236a1fd5f006ad46790c06e1c18eaf4cddb->leave($__internal_7a175a7ee0c0e685cf7009858b56d236a1fd5f006ad46790c06e1c18eaf4cddb_prof);
 
     }
 
@@ -383,7 +382,7 @@ class __TwigTemplate_e586d131729b9163c17ac8f2001678d1fd7da4139d6da96671acd9768be
 /*             <div class="container">*/
 /* 	            <div class ="row">*/
 /* 		            <div class ="col-lg-3">*/
-/* 			            <h5><a title="Discuter des promotions." href="{{path('follow_the_rhythm_categorie',{'catId':4})}}"> Promotion</a></h5>*/
+/* 			            <h5><a title="Discuter des promotions." href="{{path('follow_the_rhythm_categorie',{'catId':4})}}"> Promotions</a></h5>*/
 /* 		            </div>*/
 /* 		            <div class ="col-lg-1">*/
 /* 			            <h5 align="center">{{tabTopics[4]}}</h5>*/
@@ -399,20 +398,19 @@ class __TwigTemplate_e586d131729b9163c17ac8f2001678d1fd7da4139d6da96671acd9768be
 /* 	            </div>*/
 /*             </div>*/
 /*             <div class="list-group-item"><b><label><span class="glyphicon glyphicon-list-alt"></span> Règles du forum</label></b></h2>*/
-/* 				<label color="#777777">*/
+/* 				*/
 /* 				<p style="text-align:justify;">*/
 /* 				Les contributions contraires aux bons usages (racisme, pornographie, atteinte à la vie privée, injures, liens vers des sites (ou*/
-/* 				photos) à caractère pornographique etc.) seront supprimés.</br>*/
-/* 				Les messages jugés sensibles (à caractère politique, religieux... etc) pourront être supprimés pour éviter d'éventuels conflits.*/
-/* 				<b>Modération du forum</b>*/
-/* 				L'administrateur et les modérateurs ne sont pas responsable du contenu des messages postés par les utilisateurs du forum. <br />*/
-/* 				Les topics des utilisateurs sont contrôlés régulièrement mais pas exhaustivement (modération à posteriori).</br>*/
+/* 				photos) à caractère pornographique...) seront supprimées.</br>*/
+/* 				Les messages jugés sensibles (à caractère politique, religieux...) pourront être supprimés pour éviter d'éventuels conflits.<br />*/
+/* 				L'administrateur et les modérateurs ne sont pas responsables du contenu des messages postés par les utilisateurs du forum. <br />*/
+/* 				Les topics des utilisateurs sont contrôlés régulièrement mais pas exhaustivement (modération <i>a posteriori</i>).</br>*/
 /* 				Chaque membre de la communauté peut (et doit) signaler tout message enfreignant une règle grave (messages qui nécessitent une*/
 /* 				modération urgente) grâce au bouton "Signaler"</br>*/
-/* 				La modération se réserve la possibilité de supprimer ou ne pas valider tout message qui pourrait aller à l'encontre des intérêts */
+/* 				L'administrateur et les modérateurs se réservent la possibilité de supprimer ou ne pas valider tout message qui pourrait aller à l'encontre des intérêts */
 /* 				de la communauté.*/
 /* 				</p>*/
-/* 				</label>*/
+/* 				*/
 /*             </div>*/
 /*         </div>*/
 /*         </div>*/

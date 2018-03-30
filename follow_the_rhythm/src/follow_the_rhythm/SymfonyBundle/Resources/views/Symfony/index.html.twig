@@ -31,10 +31,13 @@
               <a href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1, 'nbParPage': nbParPage})}}" title="Trie les actualités de la plus récente à la plus ancienne"><button class="btn btn-secondary" type="button"><span class="glyphicon glyphicon-time"></span><span class="glyphicon glyphicon-sort-by-order-alt"></span>Antéchronologique</button></a>          
           </div>
            </div>
-
+          </div>
+          <div class="row">
+            <div class='col-lg-6' style='margin-top: 8px;'>
             <p>Nombre de messages par page : <select onChange='changerNbParPage()' id='nb'></p>
           <option value='{{nbParPage}}' selected>Nombre courant : {{nbParPage}}</option><option value=5>5</option><option value=10>10</option><option value=25>25</option><option value=50>50</option>
         </select>
+        </div>
      <!--     <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Trier par ordre<span class="caret"></span></button>
             <ul class="dropdown-menu">
@@ -53,7 +56,7 @@
           <label>Options modérateur : </label> <a title="Ajoute une nouvelle actualité sur Follow The Rhythm !" href="{{path('follow_the_rhythm_soumettreActualite')}}"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Soumettre actualité</button></a>
           <a title="Modifie les infos d'une actualité ou en supprimer une." href="{{path('follow_the_rhythm_modifierSupprimerActualite')}}"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Modifier/Supprimer actualité</button></a>
                   <div class="pull-right">
-                  <a title="Modifier les donnees du site." href="{{path('admin')}}"><button type="button" class="btn btn-primary"><span class="fa fa-database"></span> Accès base de données</button></a>
+                  <a target='_blank' title="Modifier les donnees du site." href="{{path('admin')}}"><button type="button" class="btn btn-primary"><span class="fa fa-database"></span> Accès base de données</button></a>
                   </div>
         </div>
       {% endif %}

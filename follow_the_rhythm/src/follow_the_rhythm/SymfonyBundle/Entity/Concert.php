@@ -52,7 +52,7 @@ class Concert
 
    /**
      *
-     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste", mappedBy="concert",cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="follow_the_rhythm\SymfonyBundle\Entity\Artiste", mappedBy="concert")
      * @ORM\JoinTable(name="artiste_concert")
      * @ORM\JoinColumn=(nullable=false);
      */
@@ -155,7 +155,7 @@ class Concert
      *
      * @return Concert
      */
-    public function setArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste = null)
+    public function setArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste)
     {
         $this->artiste = $artiste;
 

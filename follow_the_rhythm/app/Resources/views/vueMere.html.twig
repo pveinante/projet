@@ -23,7 +23,7 @@
         {#fin de la mise en place du code html#}
     </head>
 
-    <body background="{{ asset('upload/images/bg3.jpg') }}" style="background-size: cover; height: 100%;">
+    <body background="{{ asset('upload/images/bg3.jpg') }}" style="background-size: cover; height: 100%; background-filter: blur(4px);">
             <a title="Revenir à la page d'accueil Follow The Rhythm !" href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1, 'nbParPage': 25})}}"> <div style="position: fixed; width: 100%; z-index: 99; background-size: auto 128px; background-position: center;" class="header col-lg-12 col-md-12 col-sm-12 col-xs-12">
             {#Titre de la page avec lien vers la page d'accueil#}
                     {% block header %}
@@ -35,18 +35,18 @@
             </a>
         {#fin du code responsable du titre#}
         
-        <div style='z-index: 99; width: 100%; height: 36px; top: 128px; position: fixed; left: 0; background-color: rgba(0, 0, 0, 1);' class="container">
+        <div style='z-index: 99; width: 100%; height: 36px; line-height: 36px; vertical-align: middle; top: 128px; position: fixed; left: 0; background-color: rgba(0, 0, 0, 1);' class="container">
             <div class="row">
                 
                     <p style='margin-left: 128px; width: 100%; position: fixed; text-align: left;'><a title='Afficher les actualités musicales du moment.' href="{{path('follow_the_rhythm_accueil',{'page': 1, 'sens': 1, 'nbParPage': 25})}}"><button style='background-color: black; color: white; border: 0' type="button" class="btn btn-default"><i class="fa fa-list"></i> Actualités</button></a>
                     <a title='Aller au forum pour consulter les topics ou discuter avec la communauté.' href="{{path('follow_the_rhythm_accueilForum')}}"> <button style='background-color: black; color: white; border: 0' type="button" class="btn btn-default"><i class="	fa fa-wechat"></i> Forum</button></a>
-                    <input type="text" style='margin-left: 64px; width: 450px; background-color: black; color: rgb(200, 200, 200); border: 0; border-bottom: 1px solid grey;' placeholder="Rechercher des utilisateurs, artistes, concerts, topics, actualités..." id=recherche />
+                    <input type="text" style='line-height: 24px; margin-left: 64px; width: 380px; background-color: black; color: rgb(200, 200, 200); border: 0; border-bottom: 1px solid grey;' placeholder="Rechercher des artistes, concerts, topics..." id=recherche />
                     <a href='#' id='go'><button style='background-color: rgb(32, 32, 32); color: white; border: 0; border-radius: 0;' type="button" class="btn btn-secondary" onclick="paramRecherche();">Go!</button></a>
                     </p>
-                    <p style='margin-right: 128px; width: 25%; position: fixed; right: 0; text-align: right;'><a title='Voir les informations sur les développeurs et le commanditaire de ce site.' href="{{path('follow_the_rhythm_contacts')}}"> <button style='background-color: black; color: white; border: 0' type="button" class="btn btn-default"><i class="fa fa-address-book"></i> Nous contacter</button></a>
+                    <p style='margin-right: 128px; width: 40%; position: fixed; right: 0; text-align: right;'><a title='Voir les informations sur les développeurs et le commanditaire de ce site.' href="{{path('follow_the_rhythm_contacts')}}"> <button style='background-color: black; color: white; border: 0' type="button" class="btn btn-default"><i class="fa fa-address-book"></i> Nous contacter</button></a>
                     <a title="Obtenir de l'aide sur l'utilisation du site"  href="{{path('follow_the_rhythm_aide')}}"> <button style='background-color: black; color: white; border: 0' type="button" class="btn btn-default"><i class="fa fa-question-circle" aria-hidden="true"></i> Aide</button></a>
                     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                        <a title='Se déconnecter de Follow The Rhythm' href="{{path('fos_user_security_logout')}}"> <button style='background-color: black; color: white; border: 0' type="button" class="btn btn-default"><i class="fa fa-user" aria-hidden="true"></i> Se déconnecter ({{ app.user.username }})</button></a>
+                        <a title='Se déconnecter de Follow The Rhythm' href="{{path('fos_user_security_logout')}}"> <button style='background-color: black; color: white; border: 0' type="button" class="btn btn-default"><i class="fa fa-power-off" aria-hidden="true"></i> Se déconnecter ({{ app.user.username }})</button></a>
                     {% else %}
                         <a title='Se connecter pour bénéficier de tous les avantages Follow The Rhythm !' href="{{path('fos_user_security_login')}}"> <button style='background-color: black; color: white; border: 0' type="button" class="btn btn-default"><i class="fa fa-user" aria-hidden="true"></i> Se connecter</button></a>
                     {% endif %}
@@ -77,7 +77,7 @@
                 {#IL FAUT JUSTIFIER LE TEXTE#}
                 {% block footer %}
                     <p style='text-align: left; width: 85%; position: absolute;'><font color="white">Tous droits réservés © 2018</font> | 
-                    <font color="white">Ce site est un projet de 2nde année réalisé par des étudiants de DUT informatique de l'<a title="Aller sur le site Web de l'IUT de Bayonne et du pays Basque" href="{{'https://www.iutbayonne.univ-pau.fr/' }}"><FONT COLOR="#00CED1">IUT de Bayonne et du Pays Basque</FONT></a></font></p>
+                    <font color="white">Ce site est un projet de 2nde année réalisé par des étudiants de DUT informatique de l'<a target='_blank' title="Aller sur le site Web de l'IUT de Bayonne et du pays Basque" href="{{'https://www.iutbayonne.univ-pau.fr/' }}"><FONT COLOR="#00CED1">IUT de Bayonne et du Pays Basque</FONT></a></font></p>
                     <p style='text-align: right; width: 15%; position: absolute; right: 0; margin-right: 32px;'><a title="Voir les informations sur les développeurs et le commanditaire de ce site." href="{{path('follow_the_rhythm_contacts')}}">Nous contacter !</a>
                     <a title="Voir les crédits du site." href="{{path('follow_the_rhythm_credits')}}">Crédits</a></p>
                 {% endblock %}
@@ -92,6 +92,7 @@
                   function paramRecherche(){
                     var lien=document.getElementById("go");
                     var recherche2 = document.getElementById("recherche").value;
+                    if (document.getElementById("recherche").value.length > 0)
                     lien.setAttribute("href","https://follow-the-rhythm-jbelderrain.c9users.io/follow_the_rhythm/web/app_dev.php/recherche/"+recherche2);
                     
                   }

@@ -4,7 +4,7 @@
     <parameter key="kernel.root_dir">/home/ubuntu/workspace/follow_the_rhythm/app</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.name">ap_</parameter>
+    <parameter key="kernel.name">app</parameter>
     <parameter key="kernel.cache_dir">/home/ubuntu/workspace/follow_the_rhythm/app/cache/dev</parameter>
     <parameter key="kernel.logs_dir">/home/ubuntu/workspace/follow_the_rhythm/app/logs</parameter>
     <parameter key="kernel.bundles" type="collection">
@@ -561,38 +561,65 @@
       <parameter key="entities" type="collection">
         <parameter key="Actualite" type="collection">
           <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Actualite</parameter>
+          <parameter key="form" type="collection">
+            <parameter key="title">Actualité</parameter>
+          </parameter>
           <parameter key="name">Actualite</parameter>
         </parameter>
         <parameter key="Artiste" type="collection">
           <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Artiste</parameter>
+          <parameter key="form" type="collection">
+            <parameter key="title">Artiste</parameter>
+          </parameter>
           <parameter key="name">Artiste</parameter>
         </parameter>
         <parameter key="Categorie" type="collection">
           <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Categorie</parameter>
+          <parameter key="form" type="collection">
+            <parameter key="title">Catégorie</parameter>
+          </parameter>
           <parameter key="name">Categorie</parameter>
         </parameter>
         <parameter key="Concert" type="collection">
           <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Concert</parameter>
+          <parameter key="form" type="collection">
+            <parameter key="title">Concert</parameter>
+          </parameter>
           <parameter key="name">Concert</parameter>
         </parameter>
         <parameter key="Message" type="collection">
           <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Message</parameter>
+          <parameter key="form" type="collection">
+            <parameter key="title">Message</parameter>
+          </parameter>
           <parameter key="name">Message</parameter>
         </parameter>
         <parameter key="Notification" type="collection">
           <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Notification</parameter>
+          <parameter key="form" type="collection">
+            <parameter key="title">Notification</parameter>
+          </parameter>
           <parameter key="name">Notification</parameter>
         </parameter>
         <parameter key="Signalement" type="collection">
           <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Signalement</parameter>
+          <parameter key="form" type="collection">
+            <parameter key="title">Signalement</parameter>
+          </parameter>
           <parameter key="name">Signalement</parameter>
         </parameter>
         <parameter key="Topic" type="collection">
           <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\Topic</parameter>
+          <parameter key="form" type="collection">
+            <parameter key="title">Topic</parameter>
+          </parameter>
           <parameter key="name">Topic</parameter>
         </parameter>
         <parameter key="User" type="collection">
           <parameter key="class">follow_the_rhythm\SymfonyBundle\Entity\User</parameter>
+          <parameter key="form" type="collection">
+            <parameter key="title">Utilisateur</parameter>
+          </parameter>
           <parameter key="name">User</parameter>
         </parameter>
       </parameter>
@@ -2328,7 +2355,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5abcaa67949b78.24858549</argument>
+            <argument>5abde8ecdea675.70078050</argument>
           </service>
         </argument>
       </argument>
@@ -2700,7 +2727,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5abcaa67949b78.24858549</argument>
+            <argument>5abde8ecdea675.70078050</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -3422,38 +3449,65 @@
         <argument key="entities" type="collection">
           <argument key="Actualite" type="collection">
             <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Actualite</argument>
+            <argument key="form" type="collection">
+              <argument key="title">Actualité</argument>
+            </argument>
             <argument key="name">Actualite</argument>
           </argument>
           <argument key="Artiste" type="collection">
             <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Artiste</argument>
+            <argument key="form" type="collection">
+              <argument key="title">Artiste</argument>
+            </argument>
             <argument key="name">Artiste</argument>
           </argument>
           <argument key="Categorie" type="collection">
             <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Categorie</argument>
+            <argument key="form" type="collection">
+              <argument key="title">Catégorie</argument>
+            </argument>
             <argument key="name">Categorie</argument>
           </argument>
           <argument key="Concert" type="collection">
             <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Concert</argument>
+            <argument key="form" type="collection">
+              <argument key="title">Concert</argument>
+            </argument>
             <argument key="name">Concert</argument>
           </argument>
           <argument key="Message" type="collection">
             <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Message</argument>
+            <argument key="form" type="collection">
+              <argument key="title">Message</argument>
+            </argument>
             <argument key="name">Message</argument>
           </argument>
           <argument key="Notification" type="collection">
             <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Notification</argument>
+            <argument key="form" type="collection">
+              <argument key="title">Notification</argument>
+            </argument>
             <argument key="name">Notification</argument>
           </argument>
           <argument key="Signalement" type="collection">
             <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Signalement</argument>
+            <argument key="form" type="collection">
+              <argument key="title">Signalement</argument>
+            </argument>
             <argument key="name">Signalement</argument>
           </argument>
           <argument key="Topic" type="collection">
             <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\Topic</argument>
+            <argument key="form" type="collection">
+              <argument key="title">Topic</argument>
+            </argument>
             <argument key="name">Topic</argument>
           </argument>
           <argument key="User" type="collection">
             <argument key="class">follow_the_rhythm\SymfonyBundle\Entity\User</argument>
+            <argument key="form" type="collection">
+              <argument key="title">Utilisateur</argument>
+            </argument>
             <argument key="name">User</argument>
           </argument>
         </argument>

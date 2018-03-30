@@ -257,7 +257,7 @@ class Concert extends \follow_the_rhythm\SymfonyBundle\Entity\Concert implements
     /**
      * {@inheritDoc}
      */
-    public function setArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste = NULL)
+    public function setArtiste(\follow_the_rhythm\SymfonyBundle\Entity\Artiste $artiste)
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setArtiste', array($artiste));

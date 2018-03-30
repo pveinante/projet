@@ -21,20 +21,20 @@ class __TwigTemplate_30d71c44aa2e70d27efad3b75ae9a51e0383610d7d218f2b8f99281ff66
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1ae041a1b2900d935678a60c48905ea8c6205902b9a7aa3cd554dcbfa556b96c = $this->env->getExtension("native_profiler");
-        $__internal_1ae041a1b2900d935678a60c48905ea8c6205902b9a7aa3cd554dcbfa556b96c->enter($__internal_1ae041a1b2900d935678a60c48905ea8c6205902b9a7aa3cd554dcbfa556b96c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:messages.html.twig"));
+        $__internal_965b6e1c35ada28db61e0d1a75e4c2fc283d6834b8e0a5ad79385437cf3e30b7 = $this->env->getExtension("native_profiler");
+        $__internal_965b6e1c35ada28db61e0d1a75e4c2fc283d6834b8e0a5ad79385437cf3e30b7->enter($__internal_965b6e1c35ada28db61e0d1a75e4c2fc283d6834b8e0a5ad79385437cf3e30b7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "follow_the_rhythmSymfonyBundle:Symfony:messages.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1ae041a1b2900d935678a60c48905ea8c6205902b9a7aa3cd554dcbfa556b96c->leave($__internal_1ae041a1b2900d935678a60c48905ea8c6205902b9a7aa3cd554dcbfa556b96c_prof);
+        $__internal_965b6e1c35ada28db61e0d1a75e4c2fc283d6834b8e0a5ad79385437cf3e30b7->leave($__internal_965b6e1c35ada28db61e0d1a75e4c2fc283d6834b8e0a5ad79385437cf3e30b7_prof);
 
     }
 
     // line 3
     public function block_contenuCentral($context, array $blocks = array())
     {
-        $__internal_788538b8e33c26d8f20a4e3c06f7aa3509212166a8dc51b0beb0f8ee0e000020 = $this->env->getExtension("native_profiler");
-        $__internal_788538b8e33c26d8f20a4e3c06f7aa3509212166a8dc51b0beb0f8ee0e000020->enter($__internal_788538b8e33c26d8f20a4e3c06f7aa3509212166a8dc51b0beb0f8ee0e000020_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
+        $__internal_5653fdb9e830268588f0b751730877dac64c5a2a01ebb0ae0467eeac2fa8238a = $this->env->getExtension("native_profiler");
+        $__internal_5653fdb9e830268588f0b751730877dac64c5a2a01ebb0ae0467eeac2fa8238a->enter($__internal_5653fdb9e830268588f0b751730877dac64c5a2a01ebb0ae0467eeac2fa8238a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "contenuCentral"));
 
         // line 4
         echo "
@@ -51,7 +51,9 @@ class __TwigTemplate_30d71c44aa2e70d27efad3b75ae9a51e0383610d7d218f2b8f99281ff66
         <div class=\"panel-heading\"><h2><b><span class=\"fa fa-commenting\"></span> ";
         // line 15
         echo twig_escape_filter($this->env, (isset($context["titre"]) ? $context["titre"] : $this->getContext($context, "titre")), "html", null, true);
-        echo "</b></h2>
+        echo " (";
+        echo twig_escape_filter($this->env, (isset($context["cat"]) ? $context["cat"] : $this->getContext($context, "cat")), "html", null, true);
+        echo ")</b></h2>
          Nombre de messages par page : <select onChange='changerNbParPage()' id='nb'>
           <option value='";
         // line 17
@@ -192,7 +194,7 @@ var timer = setInterval(actualiserCaracteres, 100);
         echo "</div>
 ";
         
-        $__internal_788538b8e33c26d8f20a4e3c06f7aa3509212166a8dc51b0beb0f8ee0e000020->leave($__internal_788538b8e33c26d8f20a4e3c06f7aa3509212166a8dc51b0beb0f8ee0e000020_prof);
+        $__internal_5653fdb9e830268588f0b751730877dac64c5a2a01ebb0ae0467eeac2fa8238a->leave($__internal_5653fdb9e830268588f0b751730877dac64c5a2a01ebb0ae0467eeac2fa8238a_prof);
 
     }
 
@@ -208,7 +210,7 @@ var timer = setInterval(actualiserCaracteres, 100);
 
     public function getDebugInfo()
     {
-        return array (  191 => 88,  188 => 87,  160 => 60,  156 => 58,  146 => 53,  141 => 51,  136 => 50,  134 => 49,  129 => 46,  126 => 45,  120 => 44,  113 => 40,  100 => 39,  97 => 38,  95 => 37,  92 => 36,  87 => 35,  79 => 30,  74 => 27,  72 => 26,  58 => 17,  53 => 15,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  193 => 88,  190 => 87,  162 => 60,  158 => 58,  148 => 53,  143 => 51,  138 => 50,  136 => 49,  131 => 46,  128 => 45,  122 => 44,  115 => 40,  102 => 39,  99 => 38,  97 => 37,  94 => 36,  89 => 35,  81 => 30,  76 => 27,  74 => 26,  60 => 17,  53 => 15,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "::vueMere.html.twig" %} {#La vue fille hérite de la vue mère#}*/
@@ -225,7 +227,7 @@ var timer = setInterval(actualiserCaracteres, 100);
 /*   */
 /*   <div class="container">*/
 /*       <div class="panel panel-default">*/
-/*         <div class="panel-heading"><h2><b><span class="fa fa-commenting"></span> {{titre}}</b></h2>*/
+/*         <div class="panel-heading"><h2><b><span class="fa fa-commenting"></span> {{titre}} ({{cat}})</b></h2>*/
 /*          Nombre de messages par page : <select onChange='changerNbParPage()' id='nb'>*/
 /*           <option value='{{nbParPage}}' selected>Nombre courant : {{nbParPage}}</option><option value=5>5</option><option value=10>10</option><option value=25>25</option><option value=50>50</option>*/
 /*         </select>*/

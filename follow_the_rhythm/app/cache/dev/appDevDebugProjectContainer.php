@@ -828,7 +828,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getEasyadmin_Config_ManagerService()
     {
-        $this->services['easyadmin.config.manager'] = $instance = new \EasyCorp\Bundle\EasyAdminBundle\Configuration\ConfigManager($this->get('easyadmin.cache.manager'), $this->get('property_accessor'), array('site_name' => 'Follow The Rhythm', 'entities' => array('Actualite' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Actualite', 'name' => 'Actualite'), 'Artiste' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste', 'name' => 'Artiste'), 'Categorie' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Categorie', 'name' => 'Categorie'), 'Concert' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert', 'name' => 'Concert'), 'Message' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Message', 'name' => 'Message'), 'Notification' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Notification', 'name' => 'Notification'), 'Signalement' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Signalement', 'name' => 'Signalement'), 'Topic' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Topic', 'name' => 'Topic'), 'User' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\User', 'name' => 'User')), 'design' => array('assets' => array('css' => array(), 'js' => array(), 'favicon' => array('path' => 'favicon.ico', 'mime_type' => 'image/x-icon')), 'theme' => 'default', 'color_scheme' => 'dark', 'brand_color' => '#205081', 'form_theme' => array(0 => '@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig'), 'menu' => array()), 'formats' => array('date' => 'Y-m-d', 'time' => 'H:i:s', 'datetime' => 'F j, Y H:i'), 'disabled_actions' => array(), 'translation_domain' => 'messages', 'list' => array('actions' => array(), 'max_results' => 15), 'search' => array(), 'edit' => array('actions' => array()), 'new' => array('actions' => array()), 'show' => array('actions' => array(), 'max_results' => 10)), true);
+        $this->services['easyadmin.config.manager'] = $instance = new \EasyCorp\Bundle\EasyAdminBundle\Configuration\ConfigManager($this->get('easyadmin.cache.manager'), $this->get('property_accessor'), array('site_name' => 'Follow The Rhythm', 'entities' => array('Actualite' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Actualite', 'form' => array('title' => 'Actualité'), 'name' => 'Actualite'), 'Artiste' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste', 'form' => array('title' => 'Artiste'), 'name' => 'Artiste'), 'Categorie' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Categorie', 'form' => array('title' => 'Catégorie'), 'name' => 'Categorie'), 'Concert' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert', 'form' => array('title' => 'Concert'), 'name' => 'Concert'), 'Message' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Message', 'form' => array('title' => 'Message'), 'name' => 'Message'), 'Notification' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Notification', 'form' => array('title' => 'Notification'), 'name' => 'Notification'), 'Signalement' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Signalement', 'form' => array('title' => 'Signalement'), 'name' => 'Signalement'), 'Topic' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Topic', 'form' => array('title' => 'Topic'), 'name' => 'Topic'), 'User' => array('class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\User', 'form' => array('title' => 'Utilisateur'), 'name' => 'User')), 'design' => array('assets' => array('css' => array(), 'js' => array(), 'favicon' => array('path' => 'favicon.ico', 'mime_type' => 'image/x-icon')), 'theme' => 'default', 'color_scheme' => 'dark', 'brand_color' => '#205081', 'form_theme' => array(0 => '@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig'), 'menu' => array()), 'formats' => array('date' => 'Y-m-d', 'time' => 'H:i:s', 'datetime' => 'F j, Y H:i'), 'disabled_actions' => array(), 'translation_domain' => 'messages', 'list' => array('actions' => array(), 'max_results' => 15), 'search' => array(), 'edit' => array('actions' => array()), 'new' => array('actions' => array()), 'show' => array('actions' => array(), 'max_results' => 10)), true);
 
         $instance->addConfigPass(new \EasyCorp\Bundle\EasyAdminBundle\Configuration\NormalizerConfigPass($this));
         $instance->addConfigPass(new \EasyCorp\Bundle\EasyAdminBundle\Configuration\DesignConfigPass($this, true, 'fr'));
@@ -2617,7 +2617,7 @@ class appDevDebugProjectContainer extends Container
         $s = new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $g, $h, $n, 'main', $q, $r, array('require_previous_session' => false, 'check_path' => '/login_check', 'use_forward' => false, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'csrf_token_id' => 'authenticate', 'post_only' => true), $a, $d, $this->get('security.csrf.token_manager'));
         $s->setRememberMeServices($o);
 
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($m, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $c), 'main', $a, $d), 2 => $p, 3 => $s, 4 => new \Symfony\Component\Security\Http\Firewall\RememberMeListener($b, $o, $g, $a, $d, true, $h), 5 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5abcaa67949b78.24858549', $a, $g), 6 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $m, $g)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $n, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $n, '/login', false), NULL, NULL, $a, false));
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($m, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $c), 'main', $a, $d), 2 => $p, 3 => $s, 4 => new \Symfony\Component\Security\Http\Firewall\RememberMeListener($b, $o, $g, $a, $d, true, $h), 5 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5abde8ecdea675.70078050', $a, $g), 6 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $m, $g)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $n, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $n, '/login', false), NULL, NULL, $a, false));
     }
 
     /**
@@ -3990,7 +3990,7 @@ class appDevDebugProjectContainer extends Container
     {
         $a = $this->get('security.user_checker.main');
 
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('fos_user.user_provider.username_email'), $a, 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\RememberMeAuthenticationProvider($a, 'ThisTokenIsNotSoSecretChangeIt', 'main'), 2 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5abcaa67949b78.24858549')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('fos_user.user_provider.username_email'), $a, 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\RememberMeAuthenticationProvider($a, 'ThisTokenIsNotSoSecretChangeIt', 'main'), 2 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5abde8ecdea675.70078050')), true);
 
         $instance->setEventDispatcher($this->get('debug.event_dispatcher'));
 
@@ -4175,7 +4175,7 @@ class appDevDebugProjectContainer extends Container
             'kernel.root_dir' => $this->targetDirs[2],
             'kernel.environment' => 'dev',
             'kernel.debug' => true,
-            'kernel.name' => 'ap_',
+            'kernel.name' => 'app',
             'kernel.cache_dir' => __DIR__,
             'kernel.logs_dir' => ($this->targetDirs[2].'/logs'),
             'kernel.bundles' => array(
@@ -4740,38 +4740,65 @@ class appDevDebugProjectContainer extends Container
                 'entities' => array(
                     'Actualite' => array(
                         'class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Actualite',
+                        'form' => array(
+                            'title' => 'Actualité',
+                        ),
                         'name' => 'Actualite',
                     ),
                     'Artiste' => array(
                         'class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Artiste',
+                        'form' => array(
+                            'title' => 'Artiste',
+                        ),
                         'name' => 'Artiste',
                     ),
                     'Categorie' => array(
                         'class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Categorie',
+                        'form' => array(
+                            'title' => 'Catégorie',
+                        ),
                         'name' => 'Categorie',
                     ),
                     'Concert' => array(
                         'class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Concert',
+                        'form' => array(
+                            'title' => 'Concert',
+                        ),
                         'name' => 'Concert',
                     ),
                     'Message' => array(
                         'class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Message',
+                        'form' => array(
+                            'title' => 'Message',
+                        ),
                         'name' => 'Message',
                     ),
                     'Notification' => array(
                         'class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Notification',
+                        'form' => array(
+                            'title' => 'Notification',
+                        ),
                         'name' => 'Notification',
                     ),
                     'Signalement' => array(
                         'class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Signalement',
+                        'form' => array(
+                            'title' => 'Signalement',
+                        ),
                         'name' => 'Signalement',
                     ),
                     'Topic' => array(
                         'class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\Topic',
+                        'form' => array(
+                            'title' => 'Topic',
+                        ),
                         'name' => 'Topic',
                     ),
                     'User' => array(
                         'class' => 'follow_the_rhythm\\SymfonyBundle\\Entity\\User',
+                        'form' => array(
+                            'title' => 'Utilisateur',
+                        ),
                         'name' => 'User',
                     ),
                 ),

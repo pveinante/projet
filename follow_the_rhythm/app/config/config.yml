@@ -84,19 +84,37 @@ easy_admin:
     entities:
         Actualite:
             class: follow_the_rhythm\SymfonyBundle\Entity\Actualite
+            form:
+                title: "Actualité"
         Artiste:
             class: follow_the_rhythm\SymfonyBundle\Entity\Artiste
+            form:
+                title: "Artiste"
         Categorie:
             class: follow_the_rhythm\SymfonyBundle\Entity\Categorie
+            form:
+                title: "Catégorie"
         Concert:
             class: follow_the_rhythm\SymfonyBundle\Entity\Concert
+            form:
+                title: "Concert"            
         Message:
             class: follow_the_rhythm\SymfonyBundle\Entity\Message
+            form:
+                title: "Message"
         Notification:
             class: follow_the_rhythm\SymfonyBundle\Entity\Notification
+            form:
+                title: "Notification"
         Signalement:
             class: follow_the_rhythm\SymfonyBundle\Entity\Signalement
+            form:
+                title: "Signalement"
         Topic:
             class: follow_the_rhythm\SymfonyBundle\Entity\Topic
+            form:
+                title: "Topic"
         User:
             class: follow_the_rhythm\SymfonyBundle\Entity\User
+            form:
+                title: "Utilisateur"

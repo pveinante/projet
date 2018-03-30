@@ -156,6 +156,8 @@ class Artiste
     public function addConcert(\follow_the_rhythm\SymfonyBundle\Entity\Concert $concert)
     {
         $this->concert[] = $concert;
+        
+        return $this;
     }
 
     /**
@@ -209,6 +211,8 @@ class Artiste
     public function addActualite(\follow_the_rhythm\SymfonyBundle\Entity\Actualite $actualite)
     {
             $this->actualite[]=$actualite;
+            
+            return $this;
     }
     
      /**
